@@ -1,52 +1,89 @@
-# The Division of Research: Information Access and Independent-Book Capacity in LLM Investment Teams
+# The Division of Research
 
-Code, frozen caches, and reproducibility record for the ICAIF '26 paper
-*The Division of Research: Information Access and Independent-Book Capacity in LLM Investment Teams*
-(Doohwi Cha, Minjae Lee, Minsuk Sung, Juyeong Lee, Donghwa Seo, Seunghan Son, Yoontae Hwang).
+**Information Access and Independent-Book Capacity in LLM Investment Teams** — ICAIF '26 (Milan, November 14–17, 2026).
+Doohwi Cha, Minjae Lee, Minsuk Sung, Juyeong Lee, Donghwa Seo, Seunghan Son, Yoontae Hwang.
 
-- `The_Division_of_Research_ICAIF26.pdf` — camera-ready paper (9 pages).
-- `paper/` — LaTeX source of the camera-ready paper (`acmart`, `sigconf`). Generated number macros live in `paper/tables/`.
-- `reproducibility/` — executed-protocol record referenced in §4.1 of the paper:
-  - `reproducibility_review.pdf` — rendered record (routes, observed providers, both frozen 7×32 access matrices, all 32 field definitions and transformations, the full executed prompt template, and the API output schema).
-  - `repro_protocol.json` — machine-readable protocol (routes, symbols, fields, matrices, request settings, schema hash).
-  - `repro_prompt_template.txt`, `repro_prompt_examples.json` — the executed user-message template and three fully rendered prompts (shared / mixed / coherent) with packet and prompt hashes.
-  - `repro_response_format.json` — the exact `response_format` sent to the API.
-- `src/` — analysis and collection scripts. Every quantity reported in the paper is regenerated from frozen caches by deterministic scripts; no script in this repository calls a model API unless invoked explicitly with collection flags.
-- `data/` — frozen packets, price/volume inputs, cached model responses (`data/cohort_agents_information_capacity_*.json`), experiment plans, and result files (`data/results/`).
+An LLM investment team is characterized jointly by its model roster and its information-access matrix. This
+repository holds the camera-ready paper, the executed-protocol record, the analysis code, and the frozen caches
+that regenerate every number in the paper. The experiment is a bundled shared-versus-split access contrast on
+proposed books; it measures geometric breadth, not predictive quality, alpha, or fundable capacity.
 
-## Reproducing reported quantities
+## Headline Findings
 
-Python ≥ 3.10 with `pip install -r requirements.txt`. Run scripts from the repository root; they read
-frozen caches under `data/` and write to `data/results/`. Analysis scripts do not call model APIs.
+Pooled U.S. panel: 34 month-ends (July 2023 – April 2026), 14 large-cap stocks, seven requested OpenRouter routes,
+32 point-in-time fields, 13,090 archived books. At seven seats, shared access (every seat reads the full packet)
+produces `N_eff = 2.05` effective books, versus `3.98` under mixed split access and `3.89` under coherent split
+access; the assignment-averaged mixed-minus-shared gain is `+1.93` (95% three-month moving-block interval
+`[+1.76, +2.09]`) and is positive on all 34 dates. Split access lowers same-side overlap, proposed external gross,
+order concentration, and common-book correlation. Mixed access also uses 68% fewer prompt tokens and 52% less
+model-reported request cost. Both splits exceed shared access in harmonized U.S., European, and crypto-perpetual
+panels; there coherent exceeds mixed, reversing the pooled ordering. A long-only sensitivity is descriptive only.
 
-Main entry points (one per reported panel; see each script's module docstring and `--help` for options):
+## Layout
 
-| Reported object | Script |
-|---|---|
-| Effective-Book Curve, pooled Table 2 rows, 22-date complementary row | `src/cohort_information_capacity_audited_curve_analysis.py` |
-| Order diagnostics and audited architecture results | `src/cohort_information_capacity_audited_analysis.py` |
-| Moving-block bootstrap intervals | `src/cohort_information_capacity_block_bootstrap.py` |
-| Assignment sensitivity (§5.3; all 5,040 route-to-packet bijections per date and design) | `src/cohort_information_capacity_assignment_dispersion.py` |
-| Repeated-generation panel | `src/cohort_information_capacity_repeatability_analysis.py` |
-| Risk-space effective dimension | `src/cohort_information_capacity_risk_space.py` |
-| Harmonized U.S. / Europe / crypto panels (`--market us|europe|crypto`) | `src/cohort_information_capacity_crossmarket_analysis.py` |
-| Long-only sensitivity (Table 4, Figure 5) | `src/cohort_information_capacity_audited_longonly_analysis.py` |
-| Paper number macros (`paper/tables/numbers.tex`) and figures | `src/icaif_v4_assets.py` |
-| Rendered prompt examples in the record | `src/export_information_capacity_prompt_examples.py` |
+```text
+the-division-of-research/
+|-- The_Division_of_Research_ICAIF26.pdf   # camera-ready paper (9 pages)
+|-- paper/            # LaTeX source: main.tex, tables/*.tex (generated macros), fig_*.pdf, refs.bib, acmart.cls
+|-- reproducibility/  # executed-protocol record (PDF + LaTeX) and machine-readable protocol/prompt/schema files
+|-- src/              # measurements, experiment analyses, collectors, table and figure generators
+|-- data/             # frozen packets, price/volume inputs, cached model responses
+|-- data/results/     # plans and machine-readable outputs used by the paper
+`-- requirements.txt
+```
 
-Cached model responses: `data/cohort_agents_information_capacity_*.json` (pooled U.S. audited curve, architecture,
-integrity, repeatability, long-only, and `_us` / `_europe` / `_crypto` harmonized panels). Frozen packets:
-`data/information_diversity_integrity*_packets.json` and `data/information_capacity_{us,europe,crypto}_packets.json`.
+`reproducibility/` contains the record referenced in §4.1 of the paper: requested and canonical route identifiers,
+observed providers, both frozen 7×32 access matrices, all 32 field definitions and transformations, the full
+executed prompt template (`repro_prompt_template.txt`), three fully rendered prompts with packet and prompt hashes
+(`repro_prompt_examples.json`), and the exact API `response_format` (`repro_response_format.json`).
 
-Smoke check performed before publishing: from a clean checkout of this repository,
-`python3 src/cohort_information_capacity_assignment_dispersion.py` regenerated
-`data/results/information_capacity_assignment_dispersion_results.json` with values numerically identical to the shipped file.
+## Reproduce The Paper
 
-## Scope and provenance
+Python ≥ 3.10. The offline path uses the cached responses under `data/` and needs no API key.
 
-- Requested routes are OpenRouter endpoints as named in the paper (§4.1); the record also lists the realized routed provider for every archived response. These identify requested endpoints, not immutable model weights.
-- The caches contain the full archived responses, request metadata, prompt and packet hashes, and seed metadata (including recovery offsets). Treat them as the frozen experimental record; re-collecting from the APIs will not reproduce the same responses.
-- Valuation prices and share counts are split-adjusted to a July 20, 2026 corporate-action cutoff; return, volatility, drawdown, and beta fields use an adjusted-close series. Source URLs, cutoffs, and hashes accompany the frozen packets (`data/information_diversity_integrity_packets.json`, `data/information_diversity_us_price_basis.json`).
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+python3 src/cohort_information_capacity_audited_curve_analysis.py      # Effective-Book Curve, Table 2 pooled + 22-date rows
+python3 src/cohort_information_capacity_audited_analysis.py            # order diagnostics, audited architecture results
+python3 src/cohort_information_capacity_block_bootstrap.py             # moving-block bootstrap intervals
+python3 src/cohort_information_capacity_assignment_dispersion.py       # §5.3 assignment sensitivity (5,040 bijections/date/design)
+python3 src/cohort_information_capacity_repeatability_analysis.py      # six-date repeated-generation panel
+python3 src/cohort_information_capacity_risk_space.py                  # risk-space effective dimension
+python3 src/cohort_information_capacity_crossmarket_analysis.py --market us
+python3 src/cohort_information_capacity_crossmarket_analysis.py --market europe
+python3 src/cohort_information_capacity_crossmarket_analysis.py --market crypto
+python3 src/cohort_information_capacity_audited_longonly_analysis.py   # long-only sensitivity (Table 4, Figure 5)
+python3 src/export_information_capacity_prompt_examples.py             # rendered prompt examples
+python3 src/icaif_v4_assets.py                                         # paper/tables/*.tex macros and paper/fig_*.pdf
+```
+
+Verified before publishing (2026-10-11, clean `git clone`, no `OPENROUTER_API_KEY` in the environment): every
+command above exits 0; the regenerated `data/results/*_results.json`, `*_summary.csv`,
+`information_capacity_crossmarket_combined.json`, and `information_capacity_assignment_dispersion_results.json`
+are numerically identical to the shipped files (differences limited to run timestamps and the provenance hashes
+that embed them); `paper/tables/numbers.tex`, `paper/tables/assignment_dispersion_numbers.tex`, and all five
+`paper/fig_*.pdf` are byte-identical to the shipped files. Total wall time is roughly 20 minutes on a laptop.
+
+To intentionally refresh the external LLM caches, set `OPENROUTER_API_KEY` in the shell and run the relevant
+collector (`src/cohort_information_capacity_experiment.py`, `..._crossmarket_experiment.py`, `..._integrity.py`).
+Reruns will not reproduce the archived responses: requested routes name OpenRouter endpoints, not immutable
+model weights, and serving providers can vary. Never commit an API key or `.env` file.
+
+## Data Provenance
+
+- Prices and market series come from Yahoo Finance; accounting and filings from SEC EDGAR. Observation and
+  filing cutoffs exclude dates after each decision date, and forward returns never enter a prompt.
+- Valuation prices and share counts are split-adjusted to a July 20, 2026 corporate-action cutoff; return,
+  volatility, drawdown, and beta fields use an adjusted-close series. Neither is a historical download-vintage
+  archive. Source URLs, cutoffs, and hashes accompany the frozen packets
+  (`data/information_diversity_integrity_packets.json`, `data/information_diversity_us_price_basis.json`).
+- Model registration uses the `created` timestamp in the July 21, 2026 OpenRouter catalog snapshot
+  (`data/results/information_capacity_integrity_model_catalog.json`). Caches store the requested model,
+  canonical slug, routed provider, generation ID, prompt and packet hashes, and seed metadata including
+  recovery offsets.
 - Nothing in this repository is investment advice. See the Disclaimer in the paper.
 
 ## Citation
