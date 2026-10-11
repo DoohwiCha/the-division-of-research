@@ -1,0 +1,63 @@
+{
+  "schema_version": "information-capacity-europe-price-basis-v1",
+  "basis": "Yahoo dividend-unadjusted, split-adjusted quote close",
+  "sources": {
+    "ASML.AS": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ASML.AS?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "e52b3559e576ab0a43f4aced4fd558ae8eb44f1b5be6f07eab2a1bdb3ab2237e"
+    },
+    "SAP.DE": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SAP.DE?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "d71b6404f4e64999a227f76424b1dba471e41aec0d3cb289bbc06d3363b380f4"
+    },
+    "MC.PA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "73133edea5ba7b304037ee6cb445d60ea6bb97c9c5f7aee10afc44dda4cd7b8a"
+    },
+    "TTE.PA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TTE.PA?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "35b1ae40ff6c182ffd92f928cf6187177d7be7a6d000ea960d5e0600f4064e2f"
+    },
+    "SIE.DE": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SIE.DE?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "03b5c8b976ff73fd4f1d97094248acec9dbffd1e21c493c5e820188d03a69c3f"
+    },
+    "AIR.PA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AIR.PA?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "8e4e09b5f2d54c238971e2edeed0257b10132ab50a567a610625e021f2951ea6"
+    },
+    "SAN.MC": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SAN.MC?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "2e8230183be403dd7b3591e148e4fc92303357271b2bcaebcb22a65eec39d8dc"
+    },
+    "SU.PA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SU.PA?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "0ebe84c96a4721be6ef67e70cbe5a71fff8b158be087f6b03ebb20e17344c94c"
+    },
+    "OR.PA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/OR.PA?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "a5bb47cbd1217e845630158a41805a398b5a8a1cf7df72121e4b36f903705345"
+    },
+    "ALV.DE": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALV.DE?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "820b513899cf88fac33346e7a2dd0cb242075c34ed2a9377f1c011ea5a566fe0"
+    },
+    "DTE.DE": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DTE.DE?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "a45cb0686b87486ee8f76959dfb8b5a18af1cb712a97cd3a0a7a829f949b8946"
+    },
+    "ENEL.MI": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ENEL.MI?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "330c77175a08d0451b5d84dddf76fee399f9f4c27b3aa277d172566d91d0a263"
+    },
+    "BNP.PA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BNP.PA?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "06f87eecefcbfd212e2a2e3e744feb0e18ed7bbc476e82374a7c7d3e9dc421d2"
+    },
+    "BAS.DE": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAS.DE?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "7f8778c867fe13444134a012bc1abd828aca2807e39873e840ed11df19403a7d"
+    }
+  },
+  "sha256": "432608d759a70e063d598793e2bb3b71e632e1ca3214fca871c589993a6124b0"
+}

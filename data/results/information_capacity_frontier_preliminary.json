@@ -1,0 +1,265 @@
+{
+  "schema_version": "information-capacity-frontier-preliminary-v1",
+  "analysis_status": "cached-evidence preliminary; no new model calls",
+  "curve_identity": "N_eff(K) = K / [1 + (K-1) kappa_K]",
+  "curve_samples": "34 date-level means; K=1 is the one-book identity and K=2,3,4 are observed",
+  "curves": {
+    "shared": {
+      "n_dates": 34,
+      "levels": {
+        "1": {
+          "mean": 1.0,
+          "date_bootstrap_95": [
+            1.0,
+            1.0
+          ]
+        },
+        "2": {
+          "mean": 1.4812448947794008,
+          "date_bootstrap_95": [
+            1.4250916695931721,
+            1.535756116945866
+          ]
+        },
+        "3": {
+          "mean": 1.7507987680445964,
+          "date_bootstrap_95": [
+            1.651518836669633,
+            1.849008285787038
+          ]
+        },
+        "4": {
+          "mean": 1.9223186396528888,
+          "date_bootstrap_95": [
+            1.7901725695227728,
+            2.054788016848659
+          ]
+        }
+      },
+      "marginal_capacity": {
+        "1_to_2": {
+          "mean": 0.4812448947794008,
+          "date_bootstrap_95": [
+            0.4250916695931721,
+            0.535756116945866
+          ]
+        },
+        "2_to_3": {
+          "mean": 0.26955387326519564,
+          "date_bootstrap_95": [
+            0.225861081171366,
+            0.31420623605789894
+          ]
+        },
+        "3_to_4": {
+          "mean": 0.1715198716082924,
+          "date_bootstrap_95": [
+            0.13831723597571574,
+            0.20621925685639247
+          ]
+        }
+      },
+      "second_differences": {
+        "at_K2": {
+          "mean": -0.21169102151420516,
+          "date_bootstrap_95": [
+            -0.22668527213496922,
+            -0.19508531841701438
+          ]
+        },
+        "at_K3": {
+          "mean": -0.09803400165690324,
+          "date_bootstrap_95": [
+            -0.1091534409455046,
+            -0.08643404705063219
+          ]
+        }
+      },
+      "constant_kappa_fit": {
+        "kappa": 0.3582462896465466,
+        "kappa_date_bootstrap_95": [
+          0.3132434195623848,
+          0.4095442476065575
+        ],
+        "implied_saturation_1_over_kappa": 2.7913757347958055,
+        "implied_saturation_date_bootstrap_95": [
+          2.4417386055077706,
+          3.1924054506984514
+        ],
+        "rmse_K2_to_K4": 0.006264895075709491,
+        "rmse_date_bootstrap_95": [
+          0.001391082429937623,
+          0.011576602271821173
+        ],
+        "scope": "descriptive fit over observed K=2,3,4; saturation is model-implied, not observed"
+      },
+      "identity_kappa_by_K": {
+        "2": 0.350215624066577,
+        "3": 0.35675180230752357,
+        "4": 0.360273494291296
+      }
+    },
+    "domain": {
+      "n_dates": 34,
+      "levels": {
+        "1": {
+          "mean": 1.0,
+          "date_bootstrap_95": [
+            1.0,
+            1.0
+          ]
+        },
+        "2": {
+          "mean": 1.787147531046807,
+          "date_bootstrap_95": [
+            1.7705612530742778,
+            1.801808901479535
+          ]
+        },
+        "3": {
+          "mean": 2.4033973373739674,
+          "date_bootstrap_95": [
+            2.3641319734371664,
+            2.439218708870229
+          ]
+        },
+        "4": {
+          "mean": 2.8981006238183777,
+          "date_bootstrap_95": [
+            2.834119166072243,
+            2.957528977054538
+          ]
+        }
+      },
+      "marginal_capacity": {
+        "1_to_2": {
+          "mean": 0.787147531046807,
+          "date_bootstrap_95": [
+            0.7705612530742779,
+            0.8018089014795352
+          ]
+        },
+        "2_to_3": {
+          "mean": 0.6162498063271604,
+          "date_bootstrap_95": [
+            0.5933748629447856,
+            0.6375829114776024
+          ]
+        },
+        "3_to_4": {
+          "mean": 0.4947032864444103,
+          "date_bootstrap_95": [
+            0.46940371535196285,
+            0.5187663059432666
+          ]
+        }
+      },
+      "second_differences": {
+        "at_K2": {
+          "mean": -0.1708977247196466,
+          "date_bootstrap_95": [
+            -0.17891537562332138,
+            -0.16315376448750488
+          ]
+        },
+        "at_K3": {
+          "mean": -0.12154651988275011,
+          "date_bootstrap_95": [
+            -0.1262769561624101,
+            -0.11700161555205273
+          ]
+        }
+      },
+      "constant_kappa_fit": {
+        "kappa": 0.1257295825510795,
+        "kappa_date_bootstrap_95": [
+          0.11654763654295365,
+          0.13605184480613286
+        ],
+        "implied_saturation_1_over_kappa": 7.953577668117488,
+        "implied_saturation_date_bootstrap_95": [
+          7.350139216714472,
+          8.58018257315307
+        ],
+        "rmse_K2_to_K4": 0.007950570873583496,
+        "rmse_date_bootstrap_95": [
+          0.0055179291476598205,
+          0.010495099260908773
+        ],
+        "scope": "descriptive fit over observed K=2,3,4; saturation is model-implied, not observed"
+      },
+      "identity_kappa_by_K": {
+        "2": 0.11910178944684913,
+        "3": 0.12411652733166056,
+        "4": 0.12673810876056013
+      }
+    }
+  },
+  "information_architecture": {
+    "definition": "normalized mutual information between analyst seat and research-domain label",
+    "shared_full_packet": 0.0,
+    "random_partition": {
+      "mean": 0.0707620288812571,
+      "min": 0.03620102145636777,
+      "max": 0.12469569200010393
+    },
+    "domain_assignment": 1.0
+  },
+  "frontier_points": [
+    {
+      "design": "shared",
+      "access_separation": 0.0,
+      "domain_specialization": 0.0,
+      "signed_N_eff": 1.9223186396528888,
+      "signed_same_side_overlap": 0.5898911039011617,
+      "signed_order_concentration": 1.4140870698866055,
+      "signed_forward_return": 0.0007652992262420713,
+      "long_only_active_N_eff": 2.0907367861169273,
+      "long_only_active_overlap": 0.5588233182132949,
+      "annualized_tracking_error": 0.04723446064334805,
+      "information_ratio": 0.2497845380294404,
+      "sharpe_ratio": 1.2569212573617898,
+      "mean_monthly_turnover": 0.18119649611988697,
+      "mean_team_prompt_tokens": 10044.35294117647,
+      "mean_team_reported_cost": 0.016777385263865546,
+      "capacity_cost_pareto": false
+    },
+    {
+      "design": "random",
+      "access_separation": 1.0,
+      "domain_specialization": 0.0707620288812571,
+      "signed_N_eff": 2.741223493677355,
+      "signed_same_side_overlap": 0.41078624791160984,
+      "signed_order_concentration": 0.9312728311215369,
+      "signed_forward_return": 0.0010751594812705553,
+      "long_only_active_N_eff": 2.7430949156457185,
+      "long_only_active_overlap": 0.40960815797762457,
+      "annualized_tracking_error": 0.030649872688367878,
+      "information_ratio": 0.47338642392720676,
+      "sharpe_ratio": 1.2938205420049267,
+      "mean_monthly_turnover": 0.14087265387206477,
+      "mean_team_prompt_tokens": 4135.768907563025,
+      "mean_team_reported_cost": 0.009717005726470588,
+      "capacity_cost_pareto": true
+    },
+    {
+      "design": "domain",
+      "access_separation": 1.0,
+      "domain_specialization": 1.0,
+      "signed_N_eff": 2.981958603374622,
+      "signed_same_side_overlap": 0.366457345278861,
+      "signed_order_concentration": 0.7385069646497961,
+      "signed_forward_return": 0.0006646149434556053,
+      "long_only_active_N_eff": 2.9498794165656155,
+      "long_only_active_overlap": 0.36927246912919853,
+      "annualized_tracking_error": 0.024901790371219465,
+      "information_ratio": 0.5095337473548681,
+      "sharpe_ratio": 1.3327076495394345,
+      "mean_monthly_turnover": 0.10792014364102942,
+      "mean_team_prompt_tokens": 3678.584033613445,
+      "mean_team_reported_cost": 0.009815586420168065,
+      "capacity_cost_pareto": true
+    }
+  ],
+  "claim_boundary": "The K=2..4 curve is observed. Values beyond K=4 in the figure are constant-kappa visual extrapolations and are not used as empirical evidence."
+}

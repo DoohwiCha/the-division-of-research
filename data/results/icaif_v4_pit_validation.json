@@ -1,0 +1,101 @@
+{
+  "schema_version": "icaif-v4-post-audit-pit-validation-v2",
+  "integrity_correction_id": "2026-07-21-sec-history-unified-prompt-v1",
+  "primary_packet_checks": {
+    "schema_versions": [
+      "information-diversity-packets-v3-sec-history-corrected"
+    ],
+    "n_snapshots": 34,
+    "n_unique_dates": 34,
+    "maximum_share_filing_age_days": 363,
+    "issues": [],
+    "passed": true
+  },
+  "crossmarket_packet_checks": {
+    "dates_per_market": {
+      "us": 12,
+      "europe": 12,
+      "crypto": 12
+    },
+    "fields_per_market": {
+      "us": 32,
+      "europe": 32,
+      "crypto": 32
+    },
+    "issues": [],
+    "passed": true
+  },
+  "prompt_cache_checks": [
+    {
+      "label": "audited shared",
+      "planned": 238,
+      "matched": 238,
+      "unique_generation_ids": 238,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "label": "audited K=7 split",
+      "planned": 3332,
+      "matched": 3332,
+      "unique_generation_ids": 3332,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "label": "audited K=2..6 curve",
+      "planned": 9520,
+      "matched": 9520,
+      "unique_generation_ids": 9520,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "label": "audited long-only",
+      "planned": 3570,
+      "matched": 3570,
+      "unique_generation_ids": 3570,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "label": "cross-market us",
+      "planned": 4620,
+      "matched": 4620,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "label": "cross-market europe",
+      "planned": 4620,
+      "matched": 4620,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "label": "cross-market crypto",
+      "planned": 4620,
+      "matched": 4620,
+      "issues": [],
+      "passed": true
+    }
+  ],
+  "prompt_records_checked": 30520,
+  "evaluation_window_checks": {
+    "n_windows": 34,
+    "first": {
+      "decision_date": "2023-07-31",
+      "start_session": "2023-08-01",
+      "end_session": "2023-08-31"
+    },
+    "last": {
+      "decision_date": "2026-04-30",
+      "start_session": "2026-05-01",
+      "end_session": "2026-05-29"
+    },
+    "issues": [],
+    "passed": true
+  },
+  "scope": "historical packets are point-in-time; causal access contrasts are conditional on one current model-vintage window and fixed universes",
+  "passed": true
+}

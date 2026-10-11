@@ -1,0 +1,116 @@
+{
+  "schema_version": "information-capacity-prompt-examples-v1",
+  "purpose": "Exact prompt renderings for reproducibility; no model call is made. The calendar date is hidden in every rendered prompt, while ticker identities remain visible.",
+  "example_selection": {
+    "rule": "earliest primary packet and first frozen model route",
+    "date": "2023-07-31",
+    "requested_model": "openai/gpt-4o"
+  },
+  "sources": {
+    "packet_files": [
+      {
+        "path": "data/information_diversity_integrity_packets.json",
+        "sha256": "e52d1d76e8012e691a913767d7e05f163e2729ee98f288b90bcdbe28337936d7"
+      },
+      {
+        "path": "data/information_diversity_integrity_confirmatory_packets.json",
+        "sha256": "065c5ed11dde35a9d5aad1d22827d5ffecc55c03d3ee3fbb24977bc80154b71c"
+      }
+    ],
+    "assignment_plan": {
+      "path": "data/results/information_capacity_audited_architecture_plan.json",
+      "sha256": "920c64dd7dab4eadfe1293fc34f807fd427a874fc555b9d5d3c64e0a32213d4b",
+      "assignment_sha256": "62dac5bf0f016fef5c40159f02ad5b097228c80f801b140f938584d6fea35cf3"
+    }
+  },
+  "examples": {
+    "shared_full": {
+      "date": "2023-07-31",
+      "sample": "complement",
+      "architecture": "shared",
+      "condition": "shared_full",
+      "packet_index": 0,
+      "field_ids": [
+        "market.ret_7d",
+        "market.ret_30d",
+        "market.ret_90d",
+        "market.vol_30d",
+        "market.drawdown_90d",
+        "market.adv_bn",
+        "fundamentals.pe",
+        "fundamentals.price_to_sales",
+        "fundamentals.price_to_book",
+        "fundamentals.roa",
+        "fundamentals.debt_to_assets",
+        "fundamentals.cash_to_assets",
+        "fundamentals.revenue_growth",
+        "fundamentals.accounting_age",
+        "events.eight_k_30d",
+        "events.eight_k_90d",
+        "events.earnings_release_90d",
+        "events.material_event_90d",
+        "events.days_since_latest_8k",
+        "events.days_since_periodic_filing",
+        "events.latest_8k_items",
+        "risk.market_beta",
+        "risk.downside_beta",
+        "risk.market_corr",
+        "risk.idio_vol",
+        "risk.max_drawdown_1y",
+        "risk.ten_year_yield",
+        "risk.three_month_yield",
+        "risk.yield_curve_spread",
+        "risk.vix",
+        "risk.equity_market_return_3m",
+        "risk.high_yield_return_3m"
+      ],
+      "requested_model": "openai/gpt-4o",
+      "temperature": 0.7,
+      "prompt_spec_version": "information-capacity-neutral-packet-v3-unified-object",
+      "prompt_sha256": "acb46b8a41dc454f1e8c09392fe027a6785656778e4161517242008a20a91c64",
+      "packet_sha256": "1c2dc7859ebdbcb5bf44c2da6927821200e95f3e98af50871a7267d4f3532480",
+      "request_payload_sha256": "06dc33d3a7ac766df46559ff9325c8b05cdcedac3c1eaa16380c0586e721b912",
+      "rendered_prompt": "You are an institutional U.S. equity analyst. Construct a one-month active long/short book that seeks the best expected risk-adjusted return from the supplied evidence. Do not create different positions merely to appear diversified.\n\nYou receive one packet from a research workflow. Its field composition was fixed before model collection. Use only the supplied packet. Do not infer missing fields, import current facts, or use outside knowledge. The calendar date is intentionally hidden.\n\nCOMMON UNIVERSE\nticker company               sector                    \nAAPL   Apple                 Information Technology    \nMSFT   Microsoft             Information Technology    \nNVDA   NVIDIA                Information Technology    \nGOOGL  Alphabet              Communication Services    \nMETA   Meta Platforms        Communication Services    \nAMZN   Amazon                Consumer Discretionary    \nTSLA   Tesla                 Consumer Discretionary    \nWMT    Walmart               Consumer Staples          \nPG     Procter & Gamble      Consumer Staples          \nJPM    JPMorgan Chase        Financials                \nBAC    Bank of America       Financials                \nXOM    Exxon Mobil           Energy                    \nJNJ    Johnson & Johnson     Health Care               \nUNH    UnitedHealth Group    Health Care               \n\nPERMITTED INFORMATION\nRESEARCH PACKET\nticker | ret_7d% | ret_30d% | ret_90d% | vol_30d% | dd_90d% | ADV_$bn | P/E | P/S | P/B | ROA% | debt/A% | cash/A% | rev_g% | age_d | 8K_30d | 8K_90d | earn_90d | material | last_8K_d | periodic_d | latest_event | beta | down_beta | mkt_corr | idio_vol% | max_dd%\nAAPL | 1.92 | 3.62 | 15.94 | 14.21 | 0.00 | 9.91 | 30.96 | 7.84 | 49.71 | 30.05 | 32.39 | 7.43 | 7.79 | 276 | 0 | 2 | 1 | 1 | 82 | 87 | other material event; item 9.01 | 1.28 | 1.18 | 0.83 | 16.11 | -28.26\nMSFT | -2.66 | 0.26 | 9.57 | 28.45 | -6.56 | 11.32 | 34.49 | 11.78 | 12.10 | 17.56 | 11.47 | 8.42 | 6.88 | 4 | 2 | 2 | 1 | 0 | 6 | 4 | earnings release; item 9.01 | 1.30 | 1.02 | 0.77 | 20.27 | -26.84\nNVDA | 4.75 | 14.47 | 68.42 | 31.79 | -1.61 | 19.65 | 264.24 | 42.79 | 47.07 | 9.82 | 24.64 | 11.42 | 0.22 | 157 | 1 | 3 | 1 | 1 | 7 | 66 | director or officer change | 2.17 | 1.87 | 0.71 | 40.41 | -41.55\nGOOGL | 9.21 | 11.44 | 23.64 | 31.42 | 0.00 | 4.33 | 27.95 | 5.93 | 6.27 | 15.66 | 4.00 | 6.77 | 9.78 | 178 | 1 | 2 | 1 | 1 | 6 | 5 | earnings release; item 9.01 | 1.33 | 1.25 | 0.71 | 24.87 | -31.66\nMETA | 9.26 | 13.17 | 32.57 | 35.59 | -2.11 | 9.31 | 37.11 | 7.38 | 6.42 | 11.22 | 8.89 | 13.93 | -1.12 | 179 | 1 | 3 | 1 | 1 | 5 | 4 | earnings release; item 9.01 | 1.64 | 1.32 | 0.57 | 44.47 | -50.85\nAMZN | 3.79 | 4.52 | 26.77 | 26.30 | -1.24 | 6.93 | NA | 2.67 | 8.88 | -0.59 | 14.96 | 10.63 | 9.40 | 178 | 0 | 1 | 0 | 0 | 66 | 94 | item 5.07 | 1.54 | 1.33 | 0.71 | 28.40 | -43.49\nTSLA | -0.61 | 3.86 | 62.76 | 52.88 | -8.83 | 32.58 | 67.60 | 10.42 | 16.60 | 13.86 | 0.56 | 16.88 | 51.35 | 181 | 3 | 4 | 2 | 1 | 11 | 7 | other material event; item 9.01 | 1.68 | 1.51 | 0.52 | 51.08 | -65.05\nWMT | 0.35 | 3.62 | 6.29 | 13.77 | -0.03 | 0.73 | 36.86 | 0.71 | 5.95 | 4.77 | 15.56 | 4.32 | 6.71 | 136 | 0 | 2 | 1 | 0 | 59 | 59 | item 5.07 | 0.50 | 0.67 | 0.51 | 15.95 | -10.44\nPG | 1.88 | 5.29 | 0.58 | 16.09 | -0.07 | 1.02 | 24.99 | 4.59 | 8.11 | 12.30 | 19.09 | 6.34 | 5.35 | 360 | 3 | 4 | 1 | 1 | 3 | 101 | earnings release; item 9.01 | 0.50 | 0.57 | 0.52 | 15.16 | -17.45\nJPM | -0.03 | 10.89 | 15.05 | 14.96 | -0.03 | 1.77 | 12.25 | 3.59 | 1.52 | 1.01 | 7.21 | 14.58 | 5.79 | 160 | 4 | 10 | 1 | 5 | 7 | 89 | other material event; item 9.01 | 0.89 | 0.90 | 0.65 | 19.69 | -16.79\nBAC | -1.99 | 11.65 | 10.16 | 25.43 | -1.99 | 1.48 | 9.24 | 2.68 | 0.90 | 0.88 | 9.16 | 11.96 | 6.55 | 159 | 2 | 3 | 1 | 2 | 13 | 0 | earnings release; regulation FD disclosure; item 9.01 | 1.01 | 0.84 | 0.66 | 21.80 | -28.92\nXOM | 1.63 | 0.51 | -8.59 | 25.50 | -5.67 | 1.81 | 7.78 | 1.05 | 2.18 | 15.09 | 6.25 | 8.84 | 44.83 | 159 | 3 | 4 | 1 | 1 | 3 | 90 | earnings release; regulation FD disclosure | 0.69 | 0.79 | 0.44 | 26.24 | -16.12\nJNJ | -2.08 | 2.09 | 3.11 | 27.57 | -3.98 | 1.66 | 24.27 | 4.59 | 5.79 | 9.36 | 17.69 | 11.05 | 1.25 | 165 | 3 | 4 | 1 | 2 | 3 | 0 | item 5.04; item 9.01 | 0.35 | 0.59 | 0.38 | 15.69 | -15.60\nUNH | -0.45 | 6.28 | 3.32 | 30.44 | -0.89 | 2.15 | 23.43 | 1.45 | 5.49 | 7.09 | 21.38 | 14.77 | 12.71 | 157 | 1 | 4 | 1 | 0 | 17 | 89 | earnings release; item 9.01 | 0.44 | 0.57 | 0.36 | 21.56 | -18.48\nmarket context | 10y%=3.96 | 3m%=5.25 | 10y-3m_pp=-1.29 | VIX=13.63 | SPY_3m%=10.06 | HYG_3m%=0.19\n\nGive every listed ticker a signed conviction score from -1 to +1, with both positive and negative scores. Positive means long and negative means short. These are research scores, not final capital weights. The fixed evaluation pipeline subtracts their mean and rescales absolute exposure to 1, imposing the same dollar-neutral book construction on every response.\n\nReply with one JSON object and no markdown. The weights field must be an object containing every listed ticker exactly once. Use this schema: {\"weights\":{\"AAPL\":0.10,\"...\":0.00},\"thesis\":\"at most 35 words\",\"primary_signals\":[\"signal 1\",\"signal 2\"]}}."
+    },
+    "mixed_seat_1": {
+      "date": "2023-07-31",
+      "sample": "complement",
+      "architecture": "mixed_audited",
+      "condition": "mixed_audited_k7_p1",
+      "packet_index": 1,
+      "field_ids": [
+        "market.ret_90d",
+        "events.eight_k_90d",
+        "risk.high_yield_return_3m",
+        "fundamentals.price_to_book"
+      ],
+      "requested_model": "openai/gpt-4o",
+      "temperature": 0.7,
+      "prompt_spec_version": "information-capacity-neutral-packet-v3-unified-object",
+      "prompt_sha256": "ad6be1f6af91d9ebf5c956b45dd609b061ae7695aeb8b0b6feeb455f54a9c0f2",
+      "packet_sha256": "82fa458cad05858188bb100148fec17f25eeeaeaac5861726ab4938f5d2defa5",
+      "request_payload_sha256": "c346cc906422dc216177468e0b9f1cc896d930bfe3132b5e581a79fba810f490",
+      "rendered_prompt": "You are an institutional U.S. equity analyst. Construct a one-month active long/short book that seeks the best expected risk-adjusted return from the supplied evidence. Do not create different positions merely to appear diversified.\n\nYou receive one packet from a research workflow. Its field composition was fixed before model collection. Use only the supplied packet. Do not infer missing fields, import current facts, or use outside knowledge. The calendar date is intentionally hidden.\n\nCOMMON UNIVERSE\nticker company               sector                    \nAAPL   Apple                 Information Technology    \nMSFT   Microsoft             Information Technology    \nNVDA   NVIDIA                Information Technology    \nGOOGL  Alphabet              Communication Services    \nMETA   Meta Platforms        Communication Services    \nAMZN   Amazon                Consumer Discretionary    \nTSLA   Tesla                 Consumer Discretionary    \nWMT    Walmart               Consumer Staples          \nPG     Procter & Gamble      Consumer Staples          \nJPM    JPMorgan Chase        Financials                \nBAC    Bank of America       Financials                \nXOM    Exxon Mobil           Energy                    \nJNJ    Johnson & Johnson     Health Care               \nUNH    UnitedHealth Group    Health Care               \n\nPERMITTED INFORMATION\nRESEARCH PACKET\nticker | ret_90d% | 8K_90d | P/B\nAAPL | 15.94 | 2 | 49.71\nMSFT | 9.57 | 2 | 12.10\nNVDA | 68.42 | 3 | 47.07\nGOOGL | 23.64 | 2 | 6.27\nMETA | 32.57 | 3 | 6.42\nAMZN | 26.77 | 1 | 8.88\nTSLA | 62.76 | 4 | 16.60\nWMT | 6.29 | 2 | 5.95\nPG | 0.58 | 4 | 8.11\nJPM | 15.05 | 10 | 1.52\nBAC | 10.16 | 3 | 0.90\nXOM | -8.59 | 4 | 2.18\nJNJ | 3.11 | 4 | 5.79\nUNH | 3.32 | 4 | 5.49\nmarket context | HYG_3m%=0.19\n\nGive every listed ticker a signed conviction score from -1 to +1, with both positive and negative scores. Positive means long and negative means short. These are research scores, not final capital weights. The fixed evaluation pipeline subtracts their mean and rescales absolute exposure to 1, imposing the same dollar-neutral book construction on every response.\n\nReply with one JSON object and no markdown. The weights field must be an object containing every listed ticker exactly once. Use this schema: {\"weights\":{\"AAPL\":0.10,\"...\":0.00},\"thesis\":\"at most 35 words\",\"primary_signals\":[\"signal 1\",\"signal 2\"]}}."
+    },
+    "coherent_seat_1": {
+      "date": "2023-07-31",
+      "sample": "complement",
+      "architecture": "coherent_audited",
+      "condition": "coherent_audited_k7_p1",
+      "packet_index": 1,
+      "field_ids": [
+        "market.ret_7d",
+        "market.ret_30d",
+        "market.ret_90d",
+        "market.drawdown_90d"
+      ],
+      "requested_model": "openai/gpt-4o",
+      "temperature": 0.7,
+      "prompt_spec_version": "information-capacity-neutral-packet-v3-unified-object",
+      "prompt_sha256": "10276228dc71be736fb8bc2788234ec314661709d2dad515834447667dd0b70f",
+      "packet_sha256": "1615bcb6ef5525a8ea66d6a8ce193cc505b94c8562b9897c370caf80d813d94a",
+      "request_payload_sha256": "5fe321b9104deb080d0db4016c5eb4e913cffa998b61d454bc2b117797f7cc25",
+      "rendered_prompt": "You are an institutional U.S. equity analyst. Construct a one-month active long/short book that seeks the best expected risk-adjusted return from the supplied evidence. Do not create different positions merely to appear diversified.\n\nYou receive one packet from a research workflow. Its field composition was fixed before model collection. Use only the supplied packet. Do not infer missing fields, import current facts, or use outside knowledge. The calendar date is intentionally hidden.\n\nCOMMON UNIVERSE\nticker company               sector                    \nAAPL   Apple                 Information Technology    \nMSFT   Microsoft             Information Technology    \nNVDA   NVIDIA                Information Technology    \nGOOGL  Alphabet              Communication Services    \nMETA   Meta Platforms        Communication Services    \nAMZN   Amazon                Consumer Discretionary    \nTSLA   Tesla                 Consumer Discretionary    \nWMT    Walmart               Consumer Staples          \nPG     Procter & Gamble      Consumer Staples          \nJPM    JPMorgan Chase        Financials                \nBAC    Bank of America       Financials                \nXOM    Exxon Mobil           Energy                    \nJNJ    Johnson & Johnson     Health Care               \nUNH    UnitedHealth Group    Health Care               \n\nPERMITTED INFORMATION\nRESEARCH PACKET\nticker | ret_7d% | ret_30d% | ret_90d% | dd_90d%\nAAPL | 1.92 | 3.62 | 15.94 | 0.00\nMSFT | -2.66 | 0.26 | 9.57 | -6.56\nNVDA | 4.75 | 14.47 | 68.42 | -1.61\nGOOGL | 9.21 | 11.44 | 23.64 | 0.00\nMETA | 9.26 | 13.17 | 32.57 | -2.11\nAMZN | 3.79 | 4.52 | 26.77 | -1.24\nTSLA | -0.61 | 3.86 | 62.76 | -8.83\nWMT | 0.35 | 3.62 | 6.29 | -0.03\nPG | 1.88 | 5.29 | 0.58 | -0.07\nJPM | -0.03 | 10.89 | 15.05 | -0.03\nBAC | -1.99 | 11.65 | 10.16 | -1.99\nXOM | 1.63 | 0.51 | -8.59 | -5.67\nJNJ | -2.08 | 2.09 | 3.11 | -3.98\nUNH | -0.45 | 6.28 | 3.32 | -0.89\n\nGive every listed ticker a signed conviction score from -1 to +1, with both positive and negative scores. Positive means long and negative means short. These are research scores, not final capital weights. The fixed evaluation pipeline subtracts their mean and rescales absolute exposure to 1, imposing the same dollar-neutral book construction on every response.\n\nReply with one JSON object and no markdown. The weights field must be an object containing every listed ticker exactly once. Use this schema: {\"weights\":{\"AAPL\":0.10,\"...\":0.00},\"thesis\":\"at most 35 words\",\"primary_signals\":[\"signal 1\",\"signal 2\"]}}."
+    }
+  }
+}

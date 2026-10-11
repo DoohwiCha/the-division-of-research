@@ -1,0 +1,220 @@
+{
+  "schema_version": "information-diversity-data-validation-v1",
+  "packet_sha256": "e52d1d76e8012e691a913767d7e05f163e2729ee98f288b90bcdbe28337936d7",
+  "n_dates": 12,
+  "return_regime_counts": {
+    "strong": 4,
+    "weak": 4,
+    "middle": 4
+  },
+  "volatility_regime_counts": {
+    "high": 6,
+    "normal": 6
+  },
+  "rows": [
+    {
+      "date": "2023-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "missing_fundamental_values": {
+        "pe": 1,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2023-09-30",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "missing_fundamental_values": {
+        "pe": 1,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2023-10-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "missing_fundamental_values": {
+        "pe": 1,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2023-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "missing_fundamental_values": {
+        "pe": 1,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2024-02-29",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "missing_fundamental_values": {
+        "pe": 0,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2024-04-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "missing_fundamental_values": {
+        "pe": 0,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2024-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "missing_fundamental_values": {
+        "pe": 0,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2024-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "missing_fundamental_values": {
+        "pe": 0,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2025-04-30",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "missing_fundamental_values": {
+        "pe": 0,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2025-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "missing_fundamental_values": {
+        "pe": 0,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2025-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "missing_fundamental_values": {
+        "pe": 0,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    },
+    {
+      "date": "2026-01-31",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "missing_fundamental_values": {
+        "pe": 0,
+        "price_to_sales": 0,
+        "price_to_book": 0,
+        "roa": 0,
+        "debt_to_assets": 0,
+        "revenue_growth": 0
+      },
+      "symbols_without_recent_8k": 0,
+      "forward_return_count": 14,
+      "future_share_filings": 0,
+      "stale_share_filings_over_400d": 0
+    }
+  ]
+}

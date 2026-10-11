@@ -1,0 +1,9 @@
+{
+  "schema_version": "information-capacity-crossmarket-data-validation-v1",
+  "market": "europe",
+  "n_snapshots": 12,
+  "n_assets": 14,
+  "n_fields": 32,
+  "issues": [],
+  "passed": true
+}

@@ -1,0 +1,91 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "active_book",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "weights": {
+          "type": "object",
+          "properties": {
+            "AAPL": {
+              "type": "number"
+            },
+            "MSFT": {
+              "type": "number"
+            },
+            "NVDA": {
+              "type": "number"
+            },
+            "GOOGL": {
+              "type": "number"
+            },
+            "META": {
+              "type": "number"
+            },
+            "AMZN": {
+              "type": "number"
+            },
+            "TSLA": {
+              "type": "number"
+            },
+            "WMT": {
+              "type": "number"
+            },
+            "PG": {
+              "type": "number"
+            },
+            "JPM": {
+              "type": "number"
+            },
+            "BAC": {
+              "type": "number"
+            },
+            "XOM": {
+              "type": "number"
+            },
+            "JNJ": {
+              "type": "number"
+            },
+            "UNH": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "AAPL",
+            "MSFT",
+            "NVDA",
+            "GOOGL",
+            "META",
+            "AMZN",
+            "TSLA",
+            "WMT",
+            "PG",
+            "JPM",
+            "BAC",
+            "XOM",
+            "JNJ",
+            "UNH"
+          ],
+          "additionalProperties": false
+        },
+        "thesis": {
+          "type": "string"
+        },
+        "primary_signals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "weights",
+        "thesis",
+        "primary_signals"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "information-diversity-split-events-v1",
+  "basis_cutoff": "2026-07-20",
+  "splits": {
+    "AAPL": [],
+    "MSFT": [],
+    "NVDA": [
+      {
+        "date": "2024-06-10",
+        "factor": 10.0,
+        "split_ratio": "10:1"
+      }
+    ],
+    "GOOGL": [
+      {
+        "date": "2022-07-18",
+        "factor": 20.0,
+        "split_ratio": "20:1"
+      }
+    ],
+    "META": [],
+    "AMZN": [
+      {
+        "date": "2022-06-06",
+        "factor": 20.0,
+        "split_ratio": "20:1"
+      }
+    ],
+    "TSLA": [
+      {
+        "date": "2022-08-25",
+        "factor": 3.0,
+        "split_ratio": "3:1"
+      }
+    ],
+    "WMT": [
+      {
+        "date": "2024-02-26",
+        "factor": 3.0,
+        "split_ratio": "3:1"
+      }
+    ],
+    "PG": [],
+    "JPM": [],
+    "BAC": [],
+    "XOM": [],
+    "JNJ": [],
+    "UNH": []
+  }
+}

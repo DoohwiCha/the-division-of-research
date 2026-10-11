@@ -1,0 +1,94 @@
+{
+  "schema_version": "information-capacity-audited-curve-validation-v1",
+  "passed": true,
+  "failures": [],
+  "checks": {
+    "rows_checked": 9520,
+    "generation_ids_unique": 9520,
+    "frozen_manifest_rows": 9520,
+    "dates": 34,
+    "team_sizes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "retry_rows": 42,
+    "directional_results": {
+      "2": {
+        "mixed": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 33,
+          "order_concentration_negative_dates": 32
+        },
+        "coherent": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        }
+      },
+      "3": {
+        "mixed": {
+          "N_eff_positive_dates": 33,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 33
+        },
+        "coherent": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        }
+      },
+      "4": {
+        "mixed": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        },
+        "coherent": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        }
+      },
+      "5": {
+        "mixed": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        },
+        "coherent": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        }
+      },
+      "6": {
+        "mixed": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        },
+        "coherent": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        }
+      },
+      "7": {
+        "mixed": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        },
+        "coherent": {
+          "N_eff_positive_dates": 34,
+          "overlap_negative_dates": 34,
+          "order_concentration_negative_dates": 34
+        }
+      }
+    }
+  }
+}

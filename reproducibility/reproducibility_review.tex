@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{placeins}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\tabcolsep}{4pt}
+\emergencystretch=1.2em
+\input{tables/assignment_dispersion_numbers}
+\title{The Division of Research\\Executed-Protocol Review Companion}
+\author{}
+\date{6 October 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status.} This author-review companion supplies the detailed reproducibility material and cached-book assignment analysis accompanying the revised manuscript. It is separate from the manuscript PDF and is not an assertion that an additional conference submission or appendix is permitted. No new LLM generations were collected for these revisions.
+
+\input{reproducibility}
+\clearpage
+\section{Within-date assignment dispersion}
+For each of 34 dates and each split design, all $7!=5{,}040$ bijections between the seven requested routes and the seven frozen packets are enumerated using archived books. Shared access supplies one same-date seven-route reference. The assignment varies the route-to-packet mapping, not the partition of fields. No assignment is treated as an independent observation for inference.
+
+Within each date, we compute the empirical 5th, 50th, and 95th percentiles of effective-book breadth and of its paired gap against shared access. Table~\ref{tab:assignment-dispersion} averages each date-level percentile across dates; it does not report pooled percentiles or confidence intervals. Mean breadth was checked against both frozen audited result objects, with maximum absolute discrepancy below $10^{-15}$.
+
+\begin{table}[htbp]
+\caption{Descriptive dispersion over route-to-packet assignments.}
+\label{tab:assignment-dispersion}
+\centering
+\input{tables/assignment_dispersion}
+\end{table}
+
+The assignment-averaged mixed and coherent gaps are positive on every date, but individual assignments need not beat shared access. Mixed has \ADMixedBelowCount\ below-shared assignments over \ADMixedNegativeDates\ dates; coherent has \ADCoherentBelowCount\ over \ADCoherentNegativeDates\ dates, out of 171,360 assignments per design. There are no ties. The minimum paired gaps are $\ADMixedMinGap$ on \ADMixedWorstDate\ and $\ADCoherentMinGap$ on \ADCoherentWorstDate. The lowest date-level fractions above shared are \ADMixedMinAbovePercent\% and \ADCoherentMinAbovePercent\%, respectively. These descriptive tails qualify, rather than contradict, the positive assignment-averaged result.
+
+The full per-date distributions, minimizing assignments, counts, source hashes, and frozen-mean checks are supplied in \path{information_capacity_assignment_dispersion_results.json}. The repository command \texttt{python3 src/cohort\_information\_capacity\_assignment\_dispersion.py} reproduces the analysis from the existing caches without contacting a model service.
+\end{document}

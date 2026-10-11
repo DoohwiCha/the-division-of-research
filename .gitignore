@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+.DS_Store

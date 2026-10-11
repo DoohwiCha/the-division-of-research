@@ -1,0 +1,1320 @@
+{
+  "schema_version": "information-capacity-line-preliminary-v1",
+  "analysis_status": "cached-evidence preliminary; no new model calls",
+  "common_book_beta": "cross-asset correlation between a seat's active book and the mean active book of the other three seats",
+  "marginal_capacity": "exact Shapley contribution to team N_eff - 1",
+  "inference_unit": "date; overlapping team configurations are collapsed within date",
+  "n_team_book_observations": 233240,
+  "date_statistics": [
+    {
+      "date": "2023-07-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.6173536097451238,
+      "mean_common_book_beta_squared": 0.4862901089733234,
+      "mean_shapley_capacity": 0.22981289691355444,
+      "slope_capacity_on_beta_squared": -0.6620177317541648,
+      "spearman_beta_capacity": -0.9078611882530452,
+      "spearman_beta_squared_capacity": -0.9111937197961996
+    },
+    {
+      "date": "2023-07-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.2604360494172969,
+      "mean_common_book_beta_squared": 0.16537031250904008,
+      "mean_shapley_capacity": 0.4399715926536934,
+      "slope_capacity_on_beta_squared": -0.4661984460218066,
+      "spearman_beta_capacity": -0.3639888645671624,
+      "spearman_beta_squared_capacity": -0.4785716968335191
+    },
+    {
+      "date": "2023-07-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.17656342702708755,
+      "mean_common_book_beta_squared": 0.14802584724102125,
+      "mean_shapley_capacity": 0.4684150511190062,
+      "slope_capacity_on_beta_squared": -0.6659740315242242,
+      "spearman_beta_capacity": -0.68993326385767,
+      "spearman_beta_squared_capacity": -0.6454337695506913
+    },
+    {
+      "date": "2023-08-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.691569123035264,
+      "mean_common_book_beta_squared": 0.5002955187627338,
+      "mean_shapley_capacity": 0.20871163063732198,
+      "slope_capacity_on_beta_squared": -0.6346261964646556,
+      "spearman_beta_capacity": -0.989258927204741,
+      "spearman_beta_squared_capacity": -0.989258927204741
+    },
+    {
+      "date": "2023-08-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.2894029109289186,
+      "mean_common_book_beta_squared": 0.1879934441567479,
+      "mean_shapley_capacity": 0.4416838917691768,
+      "slope_capacity_on_beta_squared": -0.41336081801731833,
+      "spearman_beta_capacity": -0.40060114718992995,
+      "spearman_beta_squared_capacity": -0.5220811034627031
+    },
+    {
+      "date": "2023-08-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.26582228148750314,
+      "mean_common_book_beta_squared": 0.1690042116383407,
+      "mean_shapley_capacity": 0.44753318391506713,
+      "slope_capacity_on_beta_squared": -0.5097264448620548,
+      "spearman_beta_capacity": -0.5247682424327029,
+      "spearman_beta_squared_capacity": -0.5620520208151643
+    },
+    {
+      "date": "2023-09-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.48334298100734685,
+      "mean_common_book_beta_squared": 0.2960449093211456,
+      "mean_shapley_capacity": 0.37968557789428337,
+      "slope_capacity_on_beta_squared": -0.6888410233365004,
+      "spearman_beta_capacity": -0.8785681485206973,
+      "spearman_beta_squared_capacity": -0.8773698366534737
+    },
+    {
+      "date": "2023-09-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.16627251479453176,
+      "mean_common_book_beta_squared": 0.10778378234213024,
+      "mean_shapley_capacity": 0.47666264448222323,
+      "slope_capacity_on_beta_squared": -0.3183993094497918,
+      "spearman_beta_capacity": -0.07741930299865264,
+      "spearman_beta_squared_capacity": -0.19544576035998143
+    },
+    {
+      "date": "2023-09-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.23563923863772115,
+      "mean_common_book_beta_squared": 0.1365539549159906,
+      "mean_shapley_capacity": 0.5087714438059805,
+      "slope_capacity_on_beta_squared": -0.7824698879856812,
+      "spearman_beta_capacity": -0.5785777830296972,
+      "spearman_beta_squared_capacity": -0.7342432319467554
+    },
+    {
+      "date": "2023-10-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.8697645513391062,
+      "mean_common_book_beta_squared": 0.7592461892055078,
+      "mean_shapley_capacity": 0.08403432437659955,
+      "slope_capacity_on_beta_squared": -0.47575275581521614,
+      "spearman_beta_capacity": -0.9933043231068641,
+      "spearman_beta_squared_capacity": -0.9933043231068641
+    },
+    {
+      "date": "2023-10-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.3881752265678352,
+      "mean_common_book_beta_squared": 0.20093479601678968,
+      "mean_shapley_capacity": 0.4566586094242336,
+      "slope_capacity_on_beta_squared": -0.7678679249615364,
+      "spearman_beta_capacity": -0.8497202975436571,
+      "spearman_beta_squared_capacity": -0.8667146962312076
+    },
+    {
+      "date": "2023-10-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.2690812424303673,
+      "mean_common_book_beta_squared": 0.18564138926374824,
+      "mean_shapley_capacity": 0.44400277763858637,
+      "slope_capacity_on_beta_squared": -0.7041700449511871,
+      "spearman_beta_capacity": -0.5912139913662379,
+      "spearman_beta_squared_capacity": -0.7505980463585491
+    },
+    {
+      "date": "2023-11-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.580087363172237,
+      "mean_common_book_beta_squared": 0.3560170197139003,
+      "mean_shapley_capacity": 0.33064424003815857,
+      "slope_capacity_on_beta_squared": -0.8114727591395607,
+      "spearman_beta_capacity": -0.9793444271938074,
+      "spearman_beta_squared_capacity": -0.9793444271938074
+    },
+    {
+      "date": "2023-11-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.16829460097497326,
+      "mean_common_book_beta_squared": 0.11298838329410117,
+      "mean_shapley_capacity": 0.5075462554970125,
+      "slope_capacity_on_beta_squared": -0.6746577825692142,
+      "spearman_beta_capacity": -0.44854405748664267,
+      "spearman_beta_squared_capacity": -0.5784172942850191
+    },
+    {
+      "date": "2023-11-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.17829510595120845,
+      "mean_common_book_beta_squared": 0.11930126625226624,
+      "mean_shapley_capacity": 0.5219208098958648,
+      "slope_capacity_on_beta_squared": -0.6233712719398915,
+      "spearman_beta_capacity": -0.40852373245750995,
+      "spearman_beta_squared_capacity": -0.5901338144453645
+    },
+    {
+      "date": "2023-12-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.447984079268549,
+      "mean_common_book_beta_squared": 0.25430582426284354,
+      "mean_shapley_capacity": 0.39235959808439985,
+      "slope_capacity_on_beta_squared": -0.5931995870245735,
+      "spearman_beta_capacity": -0.8229691019221099,
+      "spearman_beta_squared_capacity": -0.8213684371651616
+    },
+    {
+      "date": "2023-12-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.27064485735611515,
+      "mean_common_book_beta_squared": 0.12310099863372352,
+      "mean_shapley_capacity": 0.5350645742313543,
+      "slope_capacity_on_beta_squared": -0.7990227647009358,
+      "spearman_beta_capacity": -0.7682386162950265,
+      "spearman_beta_squared_capacity": -0.7864342024649668
+    },
+    {
+      "date": "2023-12-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.12517168828838132,
+      "mean_common_book_beta_squared": 0.1067699456543091,
+      "mean_shapley_capacity": 0.506510678539382,
+      "slope_capacity_on_beta_squared": -0.5454124915924164,
+      "spearman_beta_capacity": -0.22564742050245923,
+      "spearman_beta_squared_capacity": -0.4506533241665309
+    },
+    {
+      "date": "2024-01-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.8124803437668789,
+      "mean_common_book_beta_squared": 0.6664283167074688,
+      "mean_shapley_capacity": 0.1293372171863157,
+      "slope_capacity_on_beta_squared": -0.5548644746992056,
+      "spearman_beta_capacity": -0.9947387986267523,
+      "spearman_beta_squared_capacity": -0.9947387986267523
+    },
+    {
+      "date": "2024-01-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.2985924189805899,
+      "mean_common_book_beta_squared": 0.1800573857906685,
+      "mean_shapley_capacity": 0.4647393842562896,
+      "slope_capacity_on_beta_squared": -0.7045595327187345,
+      "spearman_beta_capacity": -0.6786633472480795,
+      "spearman_beta_squared_capacity": -0.7644661414204603
+    },
+    {
+      "date": "2024-01-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": -0.012849210096782651,
+      "mean_common_book_beta_squared": 0.0641584184381193,
+      "mean_shapley_capacity": 0.5581261040320888,
+      "slope_capacity_on_beta_squared": -0.5223005038499619,
+      "spearman_beta_capacity": 0.16287102592648078,
+      "spearman_beta_squared_capacity": -0.3587680056534464
+    },
+    {
+      "date": "2024-02-29",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.777348679113638,
+      "mean_common_book_beta_squared": 0.636326738495756,
+      "mean_shapley_capacity": 0.1516109884225447,
+      "slope_capacity_on_beta_squared": -0.6194749868711444,
+      "spearman_beta_capacity": -0.9827206927467147,
+      "spearman_beta_squared_capacity": -0.9827206927467147
+    },
+    {
+      "date": "2024-02-29",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.2606275049339743,
+      "mean_common_book_beta_squared": 0.16252881222385332,
+      "mean_shapley_capacity": 0.4713696702953733,
+      "slope_capacity_on_beta_squared": -0.6159206095263605,
+      "spearman_beta_capacity": -0.6728378376035702,
+      "spearman_beta_squared_capacity": -0.7258452906836765
+    },
+    {
+      "date": "2024-02-29",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.12504097188866375,
+      "mean_common_book_beta_squared": 0.08445810033556034,
+      "mean_shapley_capacity": 0.5735162594020111,
+      "slope_capacity_on_beta_squared": -0.7167369957366518,
+      "spearman_beta_capacity": -0.2950420936120052,
+      "spearman_beta_squared_capacity": -0.5814726932032117
+    },
+    {
+      "date": "2024-03-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.7518526409274624,
+      "mean_common_book_beta_squared": 0.5807191378338684,
+      "mean_shapley_capacity": 0.17978249073502495,
+      "slope_capacity_on_beta_squared": -0.6719173512291965,
+      "spearman_beta_capacity": -0.9789027136953052,
+      "spearman_beta_squared_capacity": -0.9789027136953052
+    },
+    {
+      "date": "2024-03-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.29316810090487544,
+      "mean_common_book_beta_squared": 0.23540018737825166,
+      "mean_shapley_capacity": 0.368953110938882,
+      "slope_capacity_on_beta_squared": -0.4538666385323036,
+      "spearman_beta_capacity": -0.559206542993372,
+      "spearman_beta_squared_capacity": -0.5290375861508835
+    },
+    {
+      "date": "2024-03-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.16303256925065293,
+      "mean_common_book_beta_squared": 0.10739215451427167,
+      "mean_shapley_capacity": 0.5183026962947967,
+      "slope_capacity_on_beta_squared": -0.5821439717534929,
+      "spearman_beta_capacity": -0.3528074048511378,
+      "spearman_beta_squared_capacity": -0.5168088185797008
+    },
+    {
+      "date": "2024-04-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.6242165056436856,
+      "mean_common_book_beta_squared": 0.4277767946864687,
+      "mean_shapley_capacity": 0.26684584927079585,
+      "slope_capacity_on_beta_squared": -0.6101763644647188,
+      "spearman_beta_capacity": -0.9634821018565088,
+      "spearman_beta_squared_capacity": -0.9634821018565088
+    },
+    {
+      "date": "2024-04-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.14999270504216194,
+      "mean_common_book_beta_squared": 0.12009080393618143,
+      "mean_shapley_capacity": 0.46914186247277057,
+      "slope_capacity_on_beta_squared": -0.5897520583888738,
+      "spearman_beta_capacity": -0.25479978201933606,
+      "spearman_beta_squared_capacity": -0.467974314233836
+    },
+    {
+      "date": "2024-04-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": -0.0872613669710709,
+      "mean_common_book_beta_squared": 0.09992533444456213,
+      "mean_shapley_capacity": 0.5296470293170706,
+      "slope_capacity_on_beta_squared": -0.5812480135278572,
+      "spearman_beta_capacity": 0.296192348942471,
+      "spearman_beta_squared_capacity": -0.4434895561835279
+    },
+    {
+      "date": "2024-05-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.7460050021386865,
+      "mean_common_book_beta_squared": 0.5756376917454848,
+      "mean_shapley_capacity": 0.17687811386284608,
+      "slope_capacity_on_beta_squared": -0.6014925303888775,
+      "spearman_beta_capacity": -0.9939034790404758,
+      "spearman_beta_squared_capacity": -0.9939034790404758
+    },
+    {
+      "date": "2024-05-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.49502927386983886,
+      "mean_common_book_beta_squared": 0.27356643478068254,
+      "mean_shapley_capacity": 0.4026162953388325,
+      "slope_capacity_on_beta_squared": -0.7764757539655639,
+      "spearman_beta_capacity": -0.9579809999704787,
+      "spearman_beta_squared_capacity": -0.9579797228784275
+    },
+    {
+      "date": "2024-05-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.29166822457688324,
+      "mean_common_book_beta_squared": 0.1677881675720312,
+      "mean_shapley_capacity": 0.4781274834553169,
+      "slope_capacity_on_beta_squared": -0.7223592250365894,
+      "spearman_beta_capacity": -0.7130344623906862,
+      "spearman_beta_squared_capacity": -0.7534277144324234
+    },
+    {
+      "date": "2024-06-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.5083091804740419,
+      "mean_common_book_beta_squared": 0.2859755933640331,
+      "mean_shapley_capacity": 0.3865455413852154,
+      "slope_capacity_on_beta_squared": -0.821019020409223,
+      "spearman_beta_capacity": -0.9687782904375588,
+      "spearman_beta_squared_capacity": -0.9687782904375588
+    },
+    {
+      "date": "2024-06-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.06941621210801717,
+      "mean_common_book_beta_squared": 0.10851173059059227,
+      "mean_shapley_capacity": 0.4960210906068997,
+      "slope_capacity_on_beta_squared": -0.3879432252353941,
+      "spearman_beta_capacity": 0.025417346216510563,
+      "spearman_beta_squared_capacity": -0.30337657127718054
+    },
+    {
+      "date": "2024-06-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.029606541109031194,
+      "mean_common_book_beta_squared": 0.12672772178911895,
+      "mean_shapley_capacity": 0.4892731959302805,
+      "slope_capacity_on_beta_squared": -0.5054861776519336,
+      "spearman_beta_capacity": 0.030836458091077587,
+      "spearman_beta_squared_capacity": -0.4626677658284029
+    },
+    {
+      "date": "2024-07-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.5817125855932783,
+      "mean_common_book_beta_squared": 0.4006140967971322,
+      "mean_shapley_capacity": 0.30090372563138396,
+      "slope_capacity_on_beta_squared": -0.8252304692956747,
+      "spearman_beta_capacity": -0.9810194397673352,
+      "spearman_beta_squared_capacity": -0.9810194397673352
+    },
+    {
+      "date": "2024-07-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.052500285482524146,
+      "mean_common_book_beta_squared": 0.09793286082800419,
+      "mean_shapley_capacity": 0.5100009710098218,
+      "slope_capacity_on_beta_squared": -0.5870724864346388,
+      "spearman_beta_capacity": -0.06864968207842079,
+      "spearman_beta_squared_capacity": -0.4654859429209387
+    },
+    {
+      "date": "2024-07-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.01050486538838164,
+      "mean_common_book_beta_squared": 0.09737637031014201,
+      "mean_shapley_capacity": 0.5368382411929282,
+      "slope_capacity_on_beta_squared": -0.696107809515036,
+      "spearman_beta_capacity": -0.14132798155946144,
+      "spearman_beta_squared_capacity": -0.545561347471876
+    },
+    {
+      "date": "2024-08-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.5573860142701946,
+      "mean_common_book_beta_squared": 0.36154466295468474,
+      "mean_shapley_capacity": 0.3070886847147873,
+      "slope_capacity_on_beta_squared": -0.6034865317822842,
+      "spearman_beta_capacity": -0.883029017515471,
+      "spearman_beta_squared_capacity": -0.8829371760949905
+    },
+    {
+      "date": "2024-08-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.2037819189764037,
+      "mean_common_book_beta_squared": 0.13678760596578052,
+      "mean_shapley_capacity": 0.4872837511654397,
+      "slope_capacity_on_beta_squared": -0.5434092695903853,
+      "spearman_beta_capacity": -0.4105884211273961,
+      "spearman_beta_squared_capacity": -0.5527186328761545
+    },
+    {
+      "date": "2024-08-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.270802164550189,
+      "mean_common_book_beta_squared": 0.14382418680205905,
+      "mean_shapley_capacity": 0.5023026430108126,
+      "slope_capacity_on_beta_squared": -0.7057496002335927,
+      "spearman_beta_capacity": -0.6942589805764707,
+      "spearman_beta_squared_capacity": -0.7315397726450945
+    },
+    {
+      "date": "2024-09-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.44594397506788375,
+      "mean_common_book_beta_squared": 0.25704624033289714,
+      "mean_shapley_capacity": 0.3557766986413147,
+      "slope_capacity_on_beta_squared": -0.7111220438795929,
+      "spearman_beta_capacity": -0.8977717522031008,
+      "spearman_beta_squared_capacity": -0.8967396295729375
+    },
+    {
+      "date": "2024-09-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.16304584632773753,
+      "mean_common_book_beta_squared": 0.125667813809141,
+      "mean_shapley_capacity": 0.4884535243630369,
+      "slope_capacity_on_beta_squared": -0.7129493399557322,
+      "spearman_beta_capacity": -0.43616790868429306,
+      "spearman_beta_squared_capacity": -0.6305175998089672
+    },
+    {
+      "date": "2024-09-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.0072487419862607835,
+      "mean_common_book_beta_squared": 0.12098371247270347,
+      "mean_shapley_capacity": 0.5089553941962998,
+      "slope_capacity_on_beta_squared": -0.33173604219534725,
+      "spearman_beta_capacity": -0.07501582524891148,
+      "spearman_beta_squared_capacity": -0.3447053228247649
+    },
+    {
+      "date": "2024-10-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.7041559230963687,
+      "mean_common_book_beta_squared": 0.5453924920790381,
+      "mean_shapley_capacity": 0.2016297981197041,
+      "slope_capacity_on_beta_squared": -0.7122182765675628,
+      "spearman_beta_capacity": -0.9654020248846518,
+      "spearman_beta_squared_capacity": -0.9654020248846518
+    },
+    {
+      "date": "2024-10-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.22555817541601994,
+      "mean_common_book_beta_squared": 0.11994521658829406,
+      "mean_shapley_capacity": 0.5026237644331866,
+      "slope_capacity_on_beta_squared": -0.5004462117672889,
+      "spearman_beta_capacity": -0.45482540864130155,
+      "spearman_beta_squared_capacity": -0.4924473854841334
+    },
+    {
+      "date": "2024-10-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.14568381525750987,
+      "mean_common_book_beta_squared": 0.1435576056567603,
+      "mean_shapley_capacity": 0.46721072243242806,
+      "slope_capacity_on_beta_squared": -0.48569390480325114,
+      "spearman_beta_capacity": -0.039569973085087314,
+      "spearman_beta_squared_capacity": -0.4296037232399233
+    },
+    {
+      "date": "2024-11-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.5306853115983997,
+      "mean_common_book_beta_squared": 0.33752928912370506,
+      "mean_shapley_capacity": 0.32146983504656457,
+      "slope_capacity_on_beta_squared": -0.5950298332190859,
+      "spearman_beta_capacity": -0.9281843825851175,
+      "spearman_beta_squared_capacity": -0.9280837943626863
+    },
+    {
+      "date": "2024-11-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.14205835202691258,
+      "mean_common_book_beta_squared": 0.11902967101718469,
+      "mean_shapley_capacity": 0.5015964358151549,
+      "slope_capacity_on_beta_squared": -0.6688063913722301,
+      "spearman_beta_capacity": -0.40644106643139916,
+      "spearman_beta_squared_capacity": -0.5858114187353207
+    },
+    {
+      "date": "2024-11-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.036480967767688055,
+      "mean_common_book_beta_squared": 0.10233093681440943,
+      "mean_shapley_capacity": 0.49750519790167336,
+      "slope_capacity_on_beta_squared": -0.580652209879314,
+      "spearman_beta_capacity": -0.08348226382025237,
+      "spearman_beta_squared_capacity": -0.4878499727302728
+    },
+    {
+      "date": "2024-12-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.5684023809435705,
+      "mean_common_book_beta_squared": 0.4110207839395271,
+      "mean_shapley_capacity": 0.3001944202318742,
+      "slope_capacity_on_beta_squared": -0.7909709198013076,
+      "spearman_beta_capacity": -0.9685158863790428,
+      "spearman_beta_squared_capacity": -0.9683715641468589
+    },
+    {
+      "date": "2024-12-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.049093930753016865,
+      "mean_common_book_beta_squared": 0.10934146717182291,
+      "mean_shapley_capacity": 0.45341607483839463,
+      "slope_capacity_on_beta_squared": -0.3459357354684368,
+      "spearman_beta_capacity": 0.05316000088728952,
+      "spearman_beta_squared_capacity": -0.2593476988357666
+    },
+    {
+      "date": "2024-12-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.09693643324439896,
+      "mean_common_book_beta_squared": 0.11409239591018829,
+      "mean_shapley_capacity": 0.5121683947948534,
+      "slope_capacity_on_beta_squared": -0.7113257060837902,
+      "spearman_beta_capacity": -0.14899164709038826,
+      "spearman_beta_squared_capacity": -0.6087667149584828
+    },
+    {
+      "date": "2025-01-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.6709219386350411,
+      "mean_common_book_beta_squared": 0.5015367637072303,
+      "mean_shapley_capacity": 0.21728928902630526,
+      "slope_capacity_on_beta_squared": -0.5807239607756257,
+      "spearman_beta_capacity": -0.9786096958299624,
+      "spearman_beta_squared_capacity": -0.9786096958299624
+    },
+    {
+      "date": "2025-01-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.1158949420671828,
+      "mean_common_book_beta_squared": 0.11145278406994372,
+      "mean_shapley_capacity": 0.49846737615323705,
+      "slope_capacity_on_beta_squared": -0.586395713152256,
+      "spearman_beta_capacity": -0.2580379490386303,
+      "spearman_beta_squared_capacity": -0.4969154538362511
+    },
+    {
+      "date": "2025-01-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.11539180947169185,
+      "mean_common_book_beta_squared": 0.09290481474177414,
+      "mean_shapley_capacity": 0.5298907636461971,
+      "slope_capacity_on_beta_squared": -0.5681954322861453,
+      "spearman_beta_capacity": -0.27862716002072857,
+      "spearman_beta_squared_capacity": -0.49691722189854326
+    },
+    {
+      "date": "2025-02-28",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.6706661809714533,
+      "mean_common_book_beta_squared": 0.48122649128414574,
+      "mean_shapley_capacity": 0.23391840452943533,
+      "slope_capacity_on_beta_squared": -0.5860538767156781,
+      "spearman_beta_capacity": -0.9650740198115065,
+      "spearman_beta_squared_capacity": -0.9650740198115065
+    },
+    {
+      "date": "2025-02-28",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.49190683170305405,
+      "mean_common_book_beta_squared": 0.26861746346824333,
+      "mean_shapley_capacity": 0.40275388621009245,
+      "slope_capacity_on_beta_squared": -0.8325276825004082,
+      "spearman_beta_capacity": -0.9581911111913086,
+      "spearman_beta_squared_capacity": -0.9581911111913086
+    },
+    {
+      "date": "2025-02-28",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.2151891196426824,
+      "mean_common_book_beta_squared": 0.1190613412313178,
+      "mean_shapley_capacity": 0.4640713095042015,
+      "slope_capacity_on_beta_squared": -0.6829408630948959,
+      "spearman_beta_capacity": -0.4879117033803795,
+      "spearman_beta_squared_capacity": -0.5981114718955032
+    },
+    {
+      "date": "2025-03-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.6169450978452273,
+      "mean_common_book_beta_squared": 0.4315677956249328,
+      "mean_shapley_capacity": 0.2635134984986931,
+      "slope_capacity_on_beta_squared": -0.7885683032159015,
+      "spearman_beta_capacity": -0.95869322778859,
+      "spearman_beta_squared_capacity": -0.95869322778859
+    },
+    {
+      "date": "2025-03-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.41764963974751385,
+      "mean_common_book_beta_squared": 0.2578843768237748,
+      "mean_shapley_capacity": 0.3855332492490266,
+      "slope_capacity_on_beta_squared": -0.7031552240894998,
+      "spearman_beta_capacity": -0.8924552685301628,
+      "spearman_beta_squared_capacity": -0.8826542118230114
+    },
+    {
+      "date": "2025-03-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.19445592729552702,
+      "mean_common_book_beta_squared": 0.10809209892564645,
+      "mean_shapley_capacity": 0.43439688241696994,
+      "slope_capacity_on_beta_squared": -0.4976578859832388,
+      "spearman_beta_capacity": -0.45144794400074423,
+      "spearman_beta_squared_capacity": -0.3675906640135884
+    },
+    {
+      "date": "2025-04-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.46368581811534487,
+      "mean_common_book_beta_squared": 0.25895770850584127,
+      "mean_shapley_capacity": 0.41042102919131357,
+      "slope_capacity_on_beta_squared": -0.9699984772623935,
+      "spearman_beta_capacity": -0.9521156327217862,
+      "spearman_beta_squared_capacity": -0.9521156327217862
+    },
+    {
+      "date": "2025-04-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.20665694444951374,
+      "mean_common_book_beta_squared": 0.1200127258119088,
+      "mean_shapley_capacity": 0.5014385472274118,
+      "slope_capacity_on_beta_squared": -0.5650527624460003,
+      "spearman_beta_capacity": -0.4528601379654217,
+      "spearman_beta_squared_capacity": -0.565278073017221
+    },
+    {
+      "date": "2025-04-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.1178827047948805,
+      "mean_common_book_beta_squared": 0.11555103048948089,
+      "mean_shapley_capacity": 0.5146097355199314,
+      "slope_capacity_on_beta_squared": -0.6455246737889924,
+      "spearman_beta_capacity": -0.40705142121143045,
+      "spearman_beta_squared_capacity": -0.558534992505681
+    },
+    {
+      "date": "2025-05-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.8285238538038623,
+      "mean_common_book_beta_squared": 0.6995901972408433,
+      "mean_shapley_capacity": 0.111867215282122,
+      "slope_capacity_on_beta_squared": -0.5033213219622951,
+      "spearman_beta_capacity": -0.9909076993724172,
+      "spearman_beta_squared_capacity": -0.9909076993724172
+    },
+    {
+      "date": "2025-05-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.5295364562362584,
+      "mean_common_book_beta_squared": 0.3466668467038542,
+      "mean_shapley_capacity": 0.32810875186632815,
+      "slope_capacity_on_beta_squared": -0.6533516586239494,
+      "spearman_beta_capacity": -0.914874918118375,
+      "spearman_beta_squared_capacity": -0.9151826273900429
+    },
+    {
+      "date": "2025-05-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.29275551705094754,
+      "mean_common_book_beta_squared": 0.1758416123668536,
+      "mean_shapley_capacity": 0.48061804698917815,
+      "slope_capacity_on_beta_squared": -0.7504803818016139,
+      "spearman_beta_capacity": -0.8107873197520759,
+      "spearman_beta_squared_capacity": -0.8254329462264972
+    },
+    {
+      "date": "2025-06-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.92571322773078,
+      "mean_common_book_beta_squared": 0.8602156370288648,
+      "mean_shapley_capacity": 0.04535334395495833,
+      "slope_capacity_on_beta_squared": -0.43003924549409595,
+      "spearman_beta_capacity": -0.9745730467297895,
+      "spearman_beta_squared_capacity": -0.9745730467297895
+    },
+    {
+      "date": "2025-06-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.7294157089730685,
+      "mean_common_book_beta_squared": 0.5516398313905251,
+      "mean_shapley_capacity": 0.19425523684694357,
+      "slope_capacity_on_beta_squared": -0.6695452621636767,
+      "spearman_beta_capacity": -0.9915834901285183,
+      "spearman_beta_squared_capacity": -0.9915834901285183
+    },
+    {
+      "date": "2025-06-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.39392630983375976,
+      "mean_common_book_beta_squared": 0.26010407996075646,
+      "mean_shapley_capacity": 0.39569012178097973,
+      "slope_capacity_on_beta_squared": -0.7378613884122321,
+      "spearman_beta_capacity": -0.8885322704679641,
+      "spearman_beta_squared_capacity": -0.9042343418423074
+    },
+    {
+      "date": "2025-07-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.9189895625760318,
+      "mean_common_book_beta_squared": 0.8469929148830803,
+      "mean_shapley_capacity": 0.050281774772187204,
+      "slope_capacity_on_beta_squared": -0.4299943711573658,
+      "spearman_beta_capacity": -0.9899061905490807,
+      "spearman_beta_squared_capacity": -0.9899061905490807
+    },
+    {
+      "date": "2025-07-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.7252882045792898,
+      "mean_common_book_beta_squared": 0.5434929076621473,
+      "mean_shapley_capacity": 0.19726700982243786,
+      "slope_capacity_on_beta_squared": -0.6686143872010699,
+      "spearman_beta_capacity": -0.9903593640229637,
+      "spearman_beta_squared_capacity": -0.9903593640229637
+    },
+    {
+      "date": "2025-07-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.46801367181238873,
+      "mean_common_book_beta_squared": 0.28405911453903593,
+      "mean_shapley_capacity": 0.378851243282932,
+      "slope_capacity_on_beta_squared": -0.7136621716085592,
+      "spearman_beta_capacity": -0.900266510794582,
+      "spearman_beta_squared_capacity": -0.9040657229847454
+    },
+    {
+      "date": "2025-08-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.695793705941168,
+      "mean_common_book_beta_squared": 0.5286849879413846,
+      "mean_shapley_capacity": 0.21076305601120784,
+      "slope_capacity_on_beta_squared": -0.6729365407101966,
+      "spearman_beta_capacity": -0.9751109750497476,
+      "spearman_beta_squared_capacity": -0.9751109750497476
+    },
+    {
+      "date": "2025-08-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.3324650977554077,
+      "mean_common_book_beta_squared": 0.18246213575040895,
+      "mean_shapley_capacity": 0.4572156165363601,
+      "slope_capacity_on_beta_squared": -0.6253197046784749,
+      "spearman_beta_capacity": -0.7153198545214685,
+      "spearman_beta_squared_capacity": -0.7457071687969482
+    },
+    {
+      "date": "2025-08-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.2845878938227234,
+      "mean_common_book_beta_squared": 0.1659085150024151,
+      "mean_shapley_capacity": 0.48634957231990783,
+      "slope_capacity_on_beta_squared": -0.7175408252849389,
+      "spearman_beta_capacity": -0.7743892532662777,
+      "spearman_beta_squared_capacity": -0.8002126559145281
+    },
+    {
+      "date": "2025-09-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.34709539537086165,
+      "mean_common_book_beta_squared": 0.23196706755789895,
+      "mean_shapley_capacity": 0.3718256400329201,
+      "slope_capacity_on_beta_squared": -0.4908109714036283,
+      "spearman_beta_capacity": -0.6366228597668978,
+      "spearman_beta_squared_capacity": -0.6724760009621483
+    },
+    {
+      "date": "2025-09-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.18278328850625078,
+      "mean_common_book_beta_squared": 0.14088991066751097,
+      "mean_shapley_capacity": 0.40907660574613686,
+      "slope_capacity_on_beta_squared": -0.41313659827729665,
+      "spearman_beta_capacity": -0.38296139627533027,
+      "spearman_beta_squared_capacity": -0.3303684467193464
+    },
+    {
+      "date": "2025-09-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.08159595297769036,
+      "mean_common_book_beta_squared": 0.09925412152890882,
+      "mean_shapley_capacity": 0.5190156377262066,
+      "slope_capacity_on_beta_squared": -0.7415897326403474,
+      "spearman_beta_capacity": -0.44689088412896055,
+      "spearman_beta_squared_capacity": -0.5490378735835906
+    },
+    {
+      "date": "2025-10-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.709593669875419,
+      "mean_common_book_beta_squared": 0.5278109809680683,
+      "mean_shapley_capacity": 0.21056892270744496,
+      "slope_capacity_on_beta_squared": -0.6417383665149412,
+      "spearman_beta_capacity": -0.9950405632940457,
+      "spearman_beta_squared_capacity": -0.9950405632940457
+    },
+    {
+      "date": "2025-10-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.38998989183698235,
+      "mean_common_book_beta_squared": 0.2550313512935699,
+      "mean_shapley_capacity": 0.3810075591360574,
+      "slope_capacity_on_beta_squared": -0.5469848414570011,
+      "spearman_beta_capacity": -0.763594879613148,
+      "spearman_beta_squared_capacity": -0.777754466111431
+    },
+    {
+      "date": "2025-10-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.18184244185805828,
+      "mean_common_book_beta_squared": 0.09342829455527017,
+      "mean_shapley_capacity": 0.5665227056881572,
+      "slope_capacity_on_beta_squared": -0.8492392668498236,
+      "spearman_beta_capacity": -0.7417108937426135,
+      "spearman_beta_squared_capacity": -0.790448690553896
+    },
+    {
+      "date": "2025-11-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.8237390226864217,
+      "mean_common_book_beta_squared": 0.694966820943315,
+      "mean_shapley_capacity": 0.11834541183858516,
+      "slope_capacity_on_beta_squared": -0.5808850381882404,
+      "spearman_beta_capacity": -0.9825719971135554,
+      "spearman_beta_squared_capacity": -0.9825719971135554
+    },
+    {
+      "date": "2025-11-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.3007371534860252,
+      "mean_common_book_beta_squared": 0.17596779090191425,
+      "mean_shapley_capacity": 0.44814251125062204,
+      "slope_capacity_on_beta_squared": -0.6565057984650486,
+      "spearman_beta_capacity": -0.7358187978408901,
+      "spearman_beta_squared_capacity": -0.7169087933440836
+    },
+    {
+      "date": "2025-11-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.12840501692054826,
+      "mean_common_book_beta_squared": 0.1250417066783944,
+      "mean_shapley_capacity": 0.48784123015254854,
+      "slope_capacity_on_beta_squared": -0.7193325983698072,
+      "spearman_beta_capacity": -0.45947207469459284,
+      "spearman_beta_squared_capacity": -0.586278595267834
+    },
+    {
+      "date": "2025-12-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.7440459055724621,
+      "mean_common_book_beta_squared": 0.5617257298945457,
+      "mean_shapley_capacity": 0.18694040661337097,
+      "slope_capacity_on_beta_squared": -0.6376032288193545,
+      "spearman_beta_capacity": -0.9951498983184275,
+      "spearman_beta_squared_capacity": -0.9951498983184275
+    },
+    {
+      "date": "2025-12-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.18061642460721575,
+      "mean_common_book_beta_squared": 0.12949504746391804,
+      "mean_shapley_capacity": 0.4948186913876321,
+      "slope_capacity_on_beta_squared": -0.5512011185678594,
+      "spearman_beta_capacity": -0.10278665250074112,
+      "spearman_beta_squared_capacity": -0.47151134293736086
+    },
+    {
+      "date": "2025-12-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.21575138825504003,
+      "mean_common_book_beta_squared": 0.10409715218390003,
+      "mean_shapley_capacity": 0.5450637481980786,
+      "slope_capacity_on_beta_squared": -0.7389525572844117,
+      "spearman_beta_capacity": -0.5140432230713294,
+      "spearman_beta_squared_capacity": -0.6219609938568869
+    },
+    {
+      "date": "2026-01-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.7411877282879042,
+      "mean_common_book_beta_squared": 0.5686213451613428,
+      "mean_shapley_capacity": 0.18862856779749163,
+      "slope_capacity_on_beta_squared": -0.5966847845766264,
+      "spearman_beta_capacity": -0.9960158317115306,
+      "spearman_beta_squared_capacity": -0.9960158317115306
+    },
+    {
+      "date": "2026-01-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.5597465340905786,
+      "mean_common_book_beta_squared": 0.3558257884738577,
+      "mean_shapley_capacity": 0.3163450141323282,
+      "slope_capacity_on_beta_squared": -0.7384017122094284,
+      "spearman_beta_capacity": -0.941423228520846,
+      "spearman_beta_squared_capacity": -0.9414982283376814
+    },
+    {
+      "date": "2026-01-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.027248571674303657,
+      "mean_common_book_beta_squared": 0.0907371192950332,
+      "mean_shapley_capacity": 0.5270824100891707,
+      "slope_capacity_on_beta_squared": -0.47588733627314533,
+      "spearman_beta_capacity": 0.015372401940177732,
+      "spearman_beta_squared_capacity": -0.36332680733073747
+    },
+    {
+      "date": "2026-02-28",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.7481703334211025,
+      "mean_common_book_beta_squared": 0.5745472367630471,
+      "mean_shapley_capacity": 0.17588797362972755,
+      "slope_capacity_on_beta_squared": -0.5824311584736644,
+      "spearman_beta_capacity": -0.9922197196649977,
+      "spearman_beta_squared_capacity": -0.9922197196649977
+    },
+    {
+      "date": "2026-02-28",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.37623101440264,
+      "mean_common_book_beta_squared": 0.22706288561531296,
+      "mean_shapley_capacity": 0.4105350140925218,
+      "slope_capacity_on_beta_squared": -0.6088320322272439,
+      "spearman_beta_capacity": -0.7939213341412746,
+      "spearman_beta_squared_capacity": -0.7945298658146698
+    },
+    {
+      "date": "2026-02-28",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.0787620759652892,
+      "mean_common_book_beta_squared": 0.10080788340058872,
+      "mean_shapley_capacity": 0.44108726949171523,
+      "slope_capacity_on_beta_squared": -0.4044602903472863,
+      "spearman_beta_capacity": -0.346644048523905,
+      "spearman_beta_squared_capacity": -0.201071846244115
+    },
+    {
+      "date": "2026-03-31",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.7468628583021809,
+      "mean_common_book_beta_squared": 0.5798957006322004,
+      "mean_shapley_capacity": 0.17910230745481726,
+      "slope_capacity_on_beta_squared": -0.6218273470836897,
+      "spearman_beta_capacity": -0.9920185432201354,
+      "spearman_beta_squared_capacity": -0.9920185432201354
+    },
+    {
+      "date": "2026-03-31",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.3192747017670655,
+      "mean_common_book_beta_squared": 0.20849012992954014,
+      "mean_shapley_capacity": 0.4382554395105001,
+      "slope_capacity_on_beta_squared": -0.6525702805573775,
+      "spearman_beta_capacity": -0.7736893084384259,
+      "spearman_beta_squared_capacity": -0.792502270073037
+    },
+    {
+      "date": "2026-03-31",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.16433776920748225,
+      "mean_common_book_beta_squared": 0.11350799901633557,
+      "mean_shapley_capacity": 0.4740187840821261,
+      "slope_capacity_on_beta_squared": -0.5917803082628561,
+      "spearman_beta_capacity": -0.47290000196514637,
+      "spearman_beta_squared_capacity": -0.47591322616001314
+    },
+    {
+      "date": "2026-04-30",
+      "design": "shared",
+      "n_book_team_observations": 140,
+      "mean_common_book_beta": 0.7689053473739526,
+      "mean_common_book_beta_squared": 0.6012491820468338,
+      "mean_shapley_capacity": 0.1616899645162881,
+      "slope_capacity_on_beta_squared": -0.5790678462045997,
+      "spearman_beta_capacity": -0.9956922000393609,
+      "spearman_beta_squared_capacity": -0.9956922000393609
+    },
+    {
+      "date": "2026-04-30",
+      "design": "random",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.35822358464485776,
+      "mean_common_book_beta_squared": 0.17888594528998208,
+      "mean_shapley_capacity": 0.463375683498104,
+      "slope_capacity_on_beta_squared": -0.6104468924314308,
+      "spearman_beta_capacity": -0.7231197130461157,
+      "spearman_beta_squared_capacity": -0.7216201105611838
+    },
+    {
+      "date": "2026-04-30",
+      "design": "domain",
+      "n_book_team_observations": 3360,
+      "mean_common_book_beta": 0.19475347893541403,
+      "mean_common_book_beta_squared": 0.1172553654528608,
+      "mean_shapley_capacity": 0.5324113609215374,
+      "slope_capacity_on_beta_squared": -0.7220110718965659,
+      "spearman_beta_capacity": -0.5972200009052581,
+      "spearman_beta_squared_capacity": -0.7087812754528685
+    }
+  ],
+  "summaries": {
+    "shared": {
+      "mean_common_book_beta": {
+        "mean": 0.668218820491498,
+        "date_bootstrap_95": [
+          0.620841161809234,
+          0.715146251510693
+        ],
+        "dates_negative": 0,
+        "dates_positive": 34,
+        "n_dates": 34
+      },
+      "mean_common_book_beta_squared": {
+        "mean": 0.502581410837738,
+        "date_bootstrap_95": [
+          0.44772781410869733,
+          0.5580250100336452
+        ],
+        "dates_negative": 0,
+        "dates_positive": 34,
+        "n_dates": 34
+      },
+      "mean_shapley_capacity": {
+        "mean": 0.2305796599132223,
+        "date_bootstrap_95": [
+          0.19768021782408765,
+          0.26404713217481585
+        ],
+        "dates_negative": 0,
+        "dates_positive": 34,
+        "n_dates": 34
+      },
+      "slope_capacity_on_beta_squared": {
+        "mean": -0.6375175792559071,
+        "date_bootstrap_95": [
+          -0.6775584705502548,
+          -0.5995042263737265
+        ],
+        "dates_negative": 34,
+        "dates_positive": 0,
+        "n_dates": 34
+      },
+      "spearman_beta_capacity": {
+        "mean": -0.954355199909445,
+        "date_bootstrap_95": [
+          -0.9739116727358326,
+          -0.9281911677881013
+        ],
+        "dates_negative": 34,
+        "dates_positive": 0,
+        "n_dates": 34
+      },
+      "spearman_beta_squared_capacity": {
+        "mean": -0.9553851358391207,
+        "date_bootstrap_95": [
+          -0.973872524365632,
+          -0.9313670801245648
+        ],
+        "dates_negative": 34,
+        "dates_positive": 0,
+        "n_dates": 34
+      }
+    },
+    "random": {
+      "mean_common_book_beta": {
+        "mean": 0.29889727363866614,
+        "date_bootstrap_95": [
+          0.24381714294267326,
+          0.3574916356811049
+        ],
+        "dates_negative": 0,
+        "dates_positive": 34,
+        "n_dates": 34
+      },
+      "mean_common_book_beta_squared": {
+        "mean": 0.1982620478926295,
+        "date_bootstrap_95": [
+          0.16436025736422114,
+          0.23786224455772964
+        ],
+        "dates_negative": 0,
+        "dates_positive": 34,
+        "n_dates": 34
+      },
+      "mean_shapley_capacity": {
+        "mean": 0.4353058734193387,
+        "date_bootstrap_95": [
+          0.4071925484489647,
+          0.4599136506852961
+        ],
+        "dates_negative": 0,
+        "dates_positive": 34,
+        "n_dates": 34
+      },
+      "slope_capacity_on_beta_squared": {
+        "mean": -0.6002554696389578,
+        "date_bootstrap_95": [
+          -0.6419846833810902,
+          -0.5566819134759885
+        ],
+        "dates_negative": 34,
+        "dates_positive": 0,
+        "n_dates": 34
+      },
+      "spearman_beta_capacity": {
+        "mean": -0.5623850982255452,
+        "date_bootstrap_95": [
+          -0.6650298379369333,
+          -0.45831794015631544
+        ],
+        "dates_negative": 32,
+        "dates_positive": 2,
+        "n_dates": 34
+      },
+      "spearman_beta_squared_capacity": {
+        "mean": -0.6545658259720059,
+        "date_bootstrap_95": [
+          -0.727408046151167,
+          -0.5810774655631177
+        ],
+        "dates_negative": 34,
+        "dates_positive": 0,
+        "n_dates": 34
+      }
+    },
+    "domain": {
+      "mean_common_book_beta": {
+        "mean": 0.16124609856742655,
+        "date_bootstrap_95": [
+          0.12253482543545986,
+          0.20118880567442837
+        ],
+        "dates_negative": 2,
+        "dates_positive": 32,
+        "n_dates": 34
+      },
+      "mean_common_book_beta_squared": {
+        "mean": 0.12951658733512278,
+        "date_bootstrap_95": [
+          0.11543067590418228,
+          0.14582931270377755
+        ],
+        "dates_negative": 0,
+        "dates_positive": 34,
+        "n_dates": 34
+      },
+      "mean_shapley_capacity": {
+        "mean": 0.49548965084365537,
+        "date_bootstrap_95": [
+          0.4802394615472823,
+          0.509833116486632
+        ],
+        "dates_negative": 0,
+        "dates_positive": 34,
+        "n_dates": 34
+      },
+      "slope_capacity_on_beta_squared": {
+        "mean": -0.6332288563913862,
+        "date_bootstrap_95": [
+          -0.6714342189983491,
+          -0.5931891265795987
+        ],
+        "dates_negative": 34,
+        "dates_positive": 0,
+        "n_dates": 34
+      },
+      "spearman_beta_capacity": {
+        "mean": -0.40102404532077823,
+        "date_bootstrap_95": [
+          -0.49998769914455643,
+          -0.2995466975469928
+        ],
+        "dates_negative": 30,
+        "dates_positive": 4,
+        "n_dates": 34
+      },
+      "spearman_beta_squared_capacity": {
+        "mean": -0.5808733806107506,
+        "date_bootstrap_95": [
+          -0.6368248527433444,
+          -0.525633327994091
+        ],
+        "dates_negative": 34,
+        "dates_positive": 0,
+        "n_dates": 34
+      }
+    }
+  }
+}

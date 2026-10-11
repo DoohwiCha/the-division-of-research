@@ -1,0 +1,3936 @@
+{
+  "schema_version": "information-capacity-risk-space-results-v1",
+  "provenance": {
+    "price_path": "data/jfs_global_prices_united_states.csv",
+    "price_sha256": "5a3595291764afcf80e020d22b9ab9407cb2c13bb3d5d9360aaa2b83b862f1d2",
+    "shared_cache_path": "data/cohort_agents_information_capacity_integrity.json",
+    "shared_cache_sha256": "7539fcabc311930da6479f3ae323b7a461f9b598b54b01f85953b039aa71d447",
+    "split_cache_path": "data/cohort_agents_information_capacity_audited_architecture.json",
+    "split_cache_sha256": "8ad2424657d3b07a834e105eee2dacd6c80dadc5f80671e5af3a5ab1454f9758",
+    "position_result_path": "data/results/information_capacity_audited_architecture_results.json",
+    "position_result_sha256": "f645982416377aafc37f83f382fd164d73c2c2b158febad1293b90db0fd12477"
+  },
+  "estimand": "effective directions of unit-gross active books under a PIT covariance inner product",
+  "covariance_specification": {
+    "price_path": "data/jfs_global_prices_united_states.csv",
+    "trailing_days": 252,
+    "return_type": "daily log return",
+    "primary_diagonal_shrinkage": 0.0,
+    "sensitivity_diagonal_shrinkage": [
+      0.0,
+      0.25,
+      0.5
+    ],
+    "future_returns_used": false
+  },
+  "n_dates": 34,
+  "team_size": 7,
+  "assignment_count_per_split_date": 5040,
+  "summary": {
+    "shrinkage_0.00": {
+      "trailing_days": 252,
+      "levels": {
+        "shared": {
+          "mean": 1.793587284065067,
+          "date_bootstrap_95": [
+            1.6347711064439363,
+            1.9616022240349948
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        },
+        "mixed": {
+          "mean": 2.733270307741015,
+          "date_bootstrap_95": [
+            2.6192176361200326,
+            2.8447966573056265
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        },
+        "coherent": {
+          "mean": 2.593372867642972,
+          "date_bootstrap_95": [
+            2.468219229472475,
+            2.7285368270715185
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        },
+        "random_book_null": {
+          "mean": 3.809980799237001,
+          "date_bootstrap_95": [
+            3.776684256561855,
+            3.8465246841365315
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        }
+      },
+      "paired_comparisons": {
+        "mixed_minus_shared": {
+          "mean": 0.9396830236759479,
+          "date_bootstrap_95": [
+            0.7438810348820499,
+            1.1190789183867993
+          ],
+          "dates_positive": 32,
+          "dates_negative": 2,
+          "n_dates": 34
+        },
+        "coherent_minus_shared": {
+          "mean": 0.7997855835779049,
+          "date_bootstrap_95": [
+            0.5731448101873465,
+            1.021157802808248
+          ],
+          "dates_positive": 30,
+          "dates_negative": 4,
+          "n_dates": 34
+        },
+        "coherent_minus_mixed": {
+          "mean": -0.1398974400980429,
+          "date_bootstrap_95": [
+            -0.24081457722791136,
+            -0.03445318073983759
+          ],
+          "dates_positive": 11,
+          "dates_negative": 23,
+          "n_dates": 34
+        }
+      }
+    },
+    "shrinkage_0.25": {
+      "trailing_days": 252,
+      "levels": {
+        "shared": {
+          "mean": 1.8073089743198394,
+          "date_bootstrap_95": [
+            1.648966313820721,
+            1.9740253721643906
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        },
+        "mixed": {
+          "mean": 2.8531785618730687,
+          "date_bootstrap_95": [
+            2.737919586489441,
+            2.9670967828694894
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        },
+        "coherent": {
+          "mean": 2.7009363994951903,
+          "date_bootstrap_95": [
+            2.573417996873894,
+            2.8371771880609096
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        },
+        "random_book_null": {
+          "mean": 3.995738385323666,
+          "date_bootstrap_95": [
+            3.962323875647767,
+            4.0305815737400374
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        }
+      },
+      "paired_comparisons": {
+        "mixed_minus_shared": {
+          "mean": 1.0458695875532296,
+          "date_bootstrap_95": [
+            0.8538609021222067,
+            1.2210642504976996
+          ],
+          "dates_positive": 32,
+          "dates_negative": 2,
+          "n_dates": 34
+        },
+        "coherent_minus_shared": {
+          "mean": 0.8936274251753509,
+          "date_bootstrap_95": [
+            0.665406822546977,
+            1.1159727286855792
+          ],
+          "dates_positive": 31,
+          "dates_negative": 3,
+          "n_dates": 34
+        },
+        "coherent_minus_mixed": {
+          "mean": -0.15224216237787871,
+          "date_bootstrap_95": [
+            -0.25890431301597416,
+            -0.03830401189994364
+          ],
+          "dates_positive": 9,
+          "dates_negative": 25,
+          "n_dates": 34
+        }
+      }
+    },
+    "shrinkage_0.50": {
+      "trailing_days": 252,
+      "levels": {
+        "shared": {
+          "mean": 1.81669239608406,
+          "date_bootstrap_95": [
+            1.6605710031766856,
+            1.9823300270093778
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        },
+        "mixed": {
+          "mean": 2.952666824108544,
+          "date_bootstrap_95": [
+            2.8355106035578532,
+            3.0653652692805187
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        },
+        "coherent": {
+          "mean": 2.7912198128536962,
+          "date_bootstrap_95": [
+            2.6643802410085677,
+            2.92412703496557
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        },
+        "random_book_null": {
+          "mean": 4.114853230088304,
+          "date_bootstrap_95": [
+            4.0801416799587695,
+            4.150062966989858
+          ],
+          "dates_positive": 34,
+          "dates_negative": 0,
+          "n_dates": 34
+        }
+      },
+      "paired_comparisons": {
+        "mixed_minus_shared": {
+          "mean": 1.1359744280244835,
+          "date_bootstrap_95": [
+            0.9491949006265415,
+            1.3108736901178022
+          ],
+          "dates_positive": 33,
+          "dates_negative": 1,
+          "n_dates": 34
+        },
+        "coherent_minus_shared": {
+          "mean": 0.9745274167696358,
+          "date_bootstrap_95": [
+            0.7462717039403175,
+            1.196705622493502
+          ],
+          "dates_positive": 32,
+          "dates_negative": 2,
+          "n_dates": 34
+        },
+        "coherent_minus_mixed": {
+          "mean": -0.16144701125484753,
+          "date_bootstrap_95": [
+            -0.27443476309089043,
+            -0.04144456199522564
+          ],
+          "dates_positive": 8,
+          "dates_negative": 26,
+          "n_dates": 34
+        }
+      }
+    }
+  },
+  "per_date": [
+    {
+      "date": "2023-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-07-28",
+        "history_end": "2023-07-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.8789927002325735e-05,
+        "max_eigenvalue": 0.0035212563003926218,
+        "condition_number": 72.17178866090063
+      },
+      "position_space": {
+        "shared": 1.9937764728634355,
+        "mixed": 4.073334891125683,
+        "coherent": 3.902770693662719
+      },
+      "risk_space": {
+        "shared": 1.5441213271481,
+        "mixed": 2.757931630066782,
+        "coherent": 2.5752580895291577,
+        "random_book_null": {
+          "mean": 3.7813445679407973,
+          "p025": 2.7689987908807026,
+          "p975": 4.768187681319734,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-07-28",
+        "history_end": "2023-07-31",
+        "n_returns": 252,
+        "min_eigenvalue": 7.838121585161553e-05,
+        "max_eigenvalue": 0.002887850922295725,
+        "condition_number": 36.84366070261977
+      },
+      "position_space": {
+        "shared": 1.9937764728634355,
+        "mixed": 4.073334891125683,
+        "coherent": 3.902770693662719
+      },
+      "risk_space": {
+        "shared": 1.6045381048270404,
+        "mixed": 2.934209385486958,
+        "coherent": 2.740784638848396,
+        "random_book_null": {
+          "mean": 4.020950777621409,
+          "p025": 3.0099019483257625,
+          "p975": 5.000741927182499,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-07-28",
+        "history_end": "2023-07-31",
+        "n_returns": 252,
+        "min_eigenvalue": 9.213437175412565e-05,
+        "max_eigenvalue": 0.0022737073765941927,
+        "condition_number": 24.678166609329264
+      },
+      "position_space": {
+        "shared": 1.9937764728634355,
+        "mixed": 4.073334891125683,
+        "coherent": 3.902770693662719
+      },
+      "risk_space": {
+        "shared": 1.655869576017091,
+        "mixed": 3.0939394851592863,
+        "coherent": 2.8867471508741427,
+        "random_book_null": {
+          "mean": 4.164078983467911,
+          "p025": 3.1954540340308193,
+          "p975": 5.098085667581593,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-08-30",
+        "history_end": "2023-08-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.5834121708204104e-05,
+        "max_eigenvalue": 0.003376697747232372,
+        "condition_number": 73.67213816661743
+      },
+      "position_space": {
+        "shared": 2.064758206277629,
+        "mixed": 4.203779573427995,
+        "coherent": 3.8336383369315157
+      },
+      "risk_space": {
+        "shared": 2.2795629692858164,
+        "mixed": 2.8608696252395145,
+        "coherent": 2.4975452149236204,
+        "random_book_null": {
+          "mean": 3.765028283693278,
+          "p025": 2.7524749932607233,
+          "p975": 4.750232329491621,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-08-30",
+        "history_end": "2023-08-31",
+        "n_returns": 252,
+        "min_eigenvalue": 6.260758861346807e-05,
+        "max_eigenvalue": 0.0027794574868053026,
+        "condition_number": 44.39489762120289
+      },
+      "position_space": {
+        "shared": 2.064758206277629,
+        "mixed": 4.203779573427995,
+        "coherent": 3.8336383369315157
+      },
+      "risk_space": {
+        "shared": 2.260238838839673,
+        "mixed": 3.110506870254693,
+        "coherent": 2.6507362918568447,
+        "random_book_null": {
+          "mean": 3.993023775262227,
+          "p025": 3.008089498703292,
+          "p975": 4.953601516022331,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-08-30",
+        "history_end": "2023-08-31",
+        "n_returns": 252,
+        "min_eigenvalue": 7.717807114698801e-05,
+        "max_eigenvalue": 0.0022026888375813146,
+        "condition_number": 28.54034578534913
+      },
+      "position_space": {
+        "shared": 2.064758206277629,
+        "mixed": 4.203779573427995,
+        "coherent": 3.8336383369315157
+      },
+      "risk_space": {
+        "shared": 2.2360340996601367,
+        "mixed": 3.3245621771148235,
+        "coherent": 2.788191030147768,
+        "random_book_null": {
+          "mean": 4.125776118214759,
+          "p025": 3.1517461022160163,
+          "p975": 5.065706105171691,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-09-30",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-09-28",
+        "history_end": "2023-09-29",
+        "n_returns": 252,
+        "min_eigenvalue": 4.465726972314021e-05,
+        "max_eigenvalue": 0.0031931001219801776,
+        "condition_number": 71.50235878226111
+      },
+      "position_space": {
+        "shared": 2.329286698570712,
+        "mixed": 4.14581478197541,
+        "coherent": 4.1550383152538615
+      },
+      "risk_space": {
+        "shared": 2.212729842852634,
+        "mixed": 3.150962282345098,
+        "coherent": 2.853423062417513,
+        "random_book_null": {
+          "mean": 3.758673297016855,
+          "p025": 2.760450014920782,
+          "p975": 4.721414911522008,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-09-30",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-09-28",
+        "history_end": "2023-09-29",
+        "n_returns": 252,
+        "min_eigenvalue": 6.007926294364018e-05,
+        "max_eigenvalue": 0.002641675565347194,
+        "condition_number": 43.9698397735892
+      },
+      "position_space": {
+        "shared": 2.329286698570712,
+        "mixed": 4.14581478197541,
+        "coherent": 4.1550383152538615
+      },
+      "risk_space": {
+        "shared": 2.31012963948326,
+        "mixed": 3.3180991325127858,
+        "coherent": 2.9776061244780285,
+        "random_book_null": {
+          "mean": 3.980819542301014,
+          "p025": 2.9979057687041335,
+          "p975": 4.943744092703564,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-09-30",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-09-28",
+        "history_end": "2023-09-29",
+        "n_returns": 252,
+        "min_eigenvalue": 7.337366503745622e-05,
+        "max_eigenvalue": 0.002113706712235763,
+        "condition_number": 28.807429902223713
+      },
+      "position_space": {
+        "shared": 2.329286698570712,
+        "mixed": 4.14581478197541,
+        "coherent": 4.1550383152538615
+      },
+      "risk_space": {
+        "shared": 2.369537117609767,
+        "mixed": 3.4407830237688883,
+        "coherent": 3.068482366356611,
+        "random_book_null": {
+          "mean": 4.106082930175784,
+          "p025": 3.151675454149429,
+          "p975": 5.030624763947905,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-10-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-10-28",
+        "history_end": "2023-10-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.557110342001571e-05,
+        "max_eigenvalue": 0.002839827453830544,
+        "condition_number": 62.316407563290134
+      },
+      "position_space": {
+        "shared": 1.897285795256808,
+        "mixed": 3.593827623016281,
+        "coherent": 4.037510259868824
+      },
+      "risk_space": {
+        "shared": 1.3959438591261206,
+        "mixed": 2.354337558272367,
+        "coherent": 2.4245942657793123,
+        "random_book_null": {
+          "mean": 3.750495472201194,
+          "p025": 2.6864235401060763,
+          "p975": 4.7617926168591715,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2023-10-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-10-28",
+        "history_end": "2023-10-31",
+        "n_returns": 252,
+        "min_eigenvalue": 5.840470695015112e-05,
+        "max_eigenvalue": 0.0023634052105899086,
+        "condition_number": 40.466005806810976
+      },
+      "position_space": {
+        "shared": 1.897285795256808,
+        "mixed": 3.593827623016281,
+        "coherent": 4.037510259868824
+      },
+      "risk_space": {
+        "shared": 1.441297523659491,
+        "mixed": 2.488783884879304,
+        "coherent": 2.588075808837615,
+        "random_book_null": {
+          "mean": 3.9820395578674406,
+          "p025": 2.9651865633259713,
+          "p975": 4.941698960999618,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2023-10-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-10-28",
+        "history_end": "2023-10-31",
+        "n_returns": 252,
+        "min_eigenvalue": 6.929575948502826e-05,
+        "max_eigenvalue": 0.001913503244458293,
+        "condition_number": 27.613569122822245
+      },
+      "position_space": {
+        "shared": 1.897285795256808,
+        "mixed": 3.593827623016281,
+        "coherent": 4.037510259868824
+      },
+      "risk_space": {
+        "shared": 1.4837681946094996,
+        "mixed": 2.611636321004813,
+        "coherent": 2.7407029807249517,
+        "random_book_null": {
+          "mean": 4.110745278385698,
+          "p025": 3.1197295343963463,
+          "p975": 5.0436766546230105,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2023-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-11-29",
+        "history_end": "2023-11-30",
+        "n_returns": 252,
+        "min_eigenvalue": 4.7921929566842795e-05,
+        "max_eigenvalue": 0.002469744985261149,
+        "condition_number": 51.53684351996474
+      },
+      "position_space": {
+        "shared": 2.297932496348028,
+        "mixed": 4.089817738960817,
+        "coherent": 4.099493497432521
+      },
+      "risk_space": {
+        "shared": 1.7527385042706654,
+        "mixed": 2.5911140427790755,
+        "coherent": 2.4011031850177313,
+        "random_book_null": {
+          "mean": 3.7729210867308707,
+          "p025": 2.716150146468831,
+          "p975": 4.820577372530652,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-11-29",
+        "history_end": "2023-11-30",
+        "n_returns": 252,
+        "min_eigenvalue": 5.9318321664012724e-05,
+        "max_eigenvalue": 0.002080277942923591,
+        "condition_number": 35.06973704864032
+      },
+      "position_space": {
+        "shared": 2.297932496348028,
+        "mixed": 4.089817738960817,
+        "coherent": 4.099493497432521
+      },
+      "risk_space": {
+        "shared": 1.810643350174348,
+        "mixed": 2.7242340718374427,
+        "coherent": 2.511284363847872,
+        "random_book_null": {
+          "mean": 3.9794246958954753,
+          "p025": 2.9438599991598307,
+          "p975": 4.96806660706275,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-11-29",
+        "history_end": "2023-11-30",
+        "n_returns": 252,
+        "min_eigenvalue": 6.863020044333009e-05,
+        "max_eigenvalue": 0.0017209875474991751,
+        "condition_number": 25.07624247608374
+      },
+      "position_space": {
+        "shared": 2.297932496348028,
+        "mixed": 4.089817738960817,
+        "coherent": 4.099493497432521
+      },
+      "risk_space": {
+        "shared": 1.8591834100387579,
+        "mixed": 2.8457473866711793,
+        "coherent": 2.603013198324767,
+        "random_book_null": {
+          "mean": 4.106544062711696,
+          "p025": 3.087578473151071,
+          "p975": 5.063689955374179,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-12-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-12-28",
+        "history_end": "2023-12-29",
+        "n_returns": 252,
+        "min_eigenvalue": 5.126391329250004e-05,
+        "max_eigenvalue": 0.002142339762672172,
+        "condition_number": 41.790406254170975
+      },
+      "position_space": {
+        "shared": 3.0003146774447007,
+        "mixed": 4.067198389789099,
+        "coherent": 3.80141554520774
+      },
+      "risk_space": {
+        "shared": 2.5203252808187733,
+        "mixed": 2.791191638259417,
+        "coherent": 2.408458988391501,
+        "random_book_null": {
+          "mean": 3.848764521279309,
+          "p025": 2.8149178946533824,
+          "p975": 4.846692920696611,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-12-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-12-28",
+        "history_end": "2023-12-29",
+        "n_returns": 252,
+        "min_eigenvalue": 6.36146750051495e-05,
+        "max_eigenvalue": 0.001807414826200243,
+        "condition_number": 28.4119163707735
+      },
+      "position_space": {
+        "shared": 3.0003146774447007,
+        "mixed": 4.067198389789099,
+        "coherent": 3.80141554520774
+      },
+      "risk_space": {
+        "shared": 2.4830651453436214,
+        "mixed": 2.990005063793577,
+        "coherent": 2.5344237393394806,
+        "random_book_null": {
+          "mean": 4.047445960180762,
+          "p025": 3.0221594755902523,
+          "p975": 5.018442124734454,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2023-12-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2022-12-28",
+        "history_end": "2023-12-29",
+        "n_returns": 252,
+        "min_eigenvalue": 7.324688734820015e-05,
+        "max_eigenvalue": 0.0014964592858499584,
+        "condition_number": 20.430346462862083
+      },
+      "position_space": {
+        "shared": 3.0003146774447007,
+        "mixed": 4.067198389789099,
+        "coherent": 3.80141554520774
+      },
+      "risk_space": {
+        "shared": 2.4077752363666027,
+        "mixed": 3.1674880531818026,
+        "coherent": 2.6506438575349267,
+        "random_book_null": {
+          "mean": 4.16443652927928,
+          "p025": 3.1648804534650754,
+          "p975": 5.0818075840404315,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-01-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-01-30",
+        "history_end": "2024-01-31",
+        "n_returns": 252,
+        "min_eigenvalue": 5.189589699828566e-05,
+        "max_eigenvalue": 0.0018922638463456753,
+        "condition_number": 36.46268695207609
+      },
+      "position_space": {
+        "shared": 2.024282967973223,
+        "mixed": 4.328958134262012,
+        "coherent": 4.215948674213768
+      },
+      "risk_space": {
+        "shared": 1.8122874268551223,
+        "mixed": 3.2054600139101357,
+        "coherent": 3.10299870573882,
+        "random_book_null": {
+          "mean": 3.874901516627447,
+          "p025": 2.848802376519684,
+          "p975": 4.858323823169429,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-01-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-01-30",
+        "history_end": "2024-01-31",
+        "n_returns": 252,
+        "min_eigenvalue": 6.576343242475325e-05,
+        "max_eigenvalue": 0.001589026474134182,
+        "condition_number": 24.162766685761905
+      },
+      "position_space": {
+        "shared": 2.024282967973223,
+        "mixed": 4.328958134262012,
+        "coherent": 4.215948674213768
+      },
+      "risk_space": {
+        "shared": 1.784798524151113,
+        "mixed": 3.3487334513019613,
+        "coherent": 3.2235707960211073,
+        "random_book_null": {
+          "mean": 4.091859294775138,
+          "p025": 3.0947024788445305,
+          "p975": 5.054300569269554,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-01-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-01-30",
+        "history_end": "2024-01-31",
+        "n_returns": 252,
+        "min_eigenvalue": 7.457944358668029e-05,
+        "max_eigenvalue": 0.001303535748944065,
+        "condition_number": 17.47848584347542
+      },
+      "position_space": {
+        "shared": 2.024282967973223,
+        "mixed": 4.328958134262012,
+        "coherent": 4.215948674213768
+      },
+      "risk_space": {
+        "shared": 1.7573124603580972,
+        "mixed": 3.4480318814536886,
+        "coherent": 3.316195297417573,
+        "random_book_null": {
+          "mean": 4.214312316886821,
+          "p025": 3.2345001425061075,
+          "p975": 5.128914007416764,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-02-29",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-02-28",
+        "history_end": "2024-02-29",
+        "n_returns": 252,
+        "min_eigenvalue": 4.968636756584076e-05,
+        "max_eigenvalue": 0.0017245723567663792,
+        "condition_number": 34.7091655368266
+      },
+      "position_space": {
+        "shared": 1.3420982830408872,
+        "mixed": 4.134665636142838,
+        "coherent": 4.082310059148655
+      },
+      "risk_space": {
+        "shared": 1.153416102220613,
+        "mixed": 2.897676478354969,
+        "coherent": 2.60681884634026,
+        "random_book_null": {
+          "mean": 3.9258171843002607,
+          "p025": 2.866245803995308,
+          "p975": 4.915530799751484,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2024-02-29",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-02-28",
+        "history_end": "2024-02-29",
+        "n_returns": 252,
+        "min_eigenvalue": 6.474528020415147e-05,
+        "max_eigenvalue": 0.0014569416347504102,
+        "condition_number": 22.502669386192434
+      },
+      "position_space": {
+        "shared": 1.3420982830408872,
+        "mixed": 4.134665636142838,
+        "coherent": 4.082310059148655
+      },
+      "risk_space": {
+        "shared": 1.1706819047249986,
+        "mixed": 3.0640374757667295,
+        "coherent": 2.757986307863715,
+        "random_book_null": {
+          "mean": 4.10963104514548,
+          "p025": 3.0852543082490342,
+          "p975": 5.057726949830786,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2024-02-29",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-02-28",
+        "history_end": "2024-02-29",
+        "n_returns": 252,
+        "min_eigenvalue": 7.309733465124519e-05,
+        "max_eigenvalue": 0.0012061719050805646,
+        "condition_number": 16.50090130967611
+      },
+      "position_space": {
+        "shared": 1.3420982830408872,
+        "mixed": 4.134665636142838,
+        "coherent": 4.082310059148655
+      },
+      "risk_space": {
+        "shared": 1.1862338763312494,
+        "mixed": 3.21486027377705,
+        "coherent": 2.9113337811363564,
+        "random_book_null": {
+          "mean": 4.2233654125272375,
+          "p025": 3.2307423570536575,
+          "p975": 5.1709452492781995,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2024-03-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-03-28",
+        "history_end": "2024-03-28",
+        "n_returns": 252,
+        "min_eigenvalue": 4.0304266809853574e-05,
+        "max_eigenvalue": 0.00162393611795475,
+        "condition_number": 40.29191563305478
+      },
+      "position_space": {
+        "shared": 2.210227580831312,
+        "mixed": 4.36198713888738,
+        "coherent": 4.083063053579858
+      },
+      "risk_space": {
+        "shared": 1.750849860696608,
+        "mixed": 3.227171878939613,
+        "coherent": 2.723356591915564,
+        "random_book_null": {
+          "mean": 3.9062290706027807,
+          "p025": 2.8731800444964843,
+          "p975": 4.879276682494229,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-03-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-03-28",
+        "history_end": "2024-03-28",
+        "n_returns": 252,
+        "min_eigenvalue": 6.131859113610716e-05,
+        "max_eigenvalue": 0.0013848530963779093,
+        "condition_number": 22.584555038193713
+      },
+      "position_space": {
+        "shared": 2.210227580831312,
+        "mixed": 4.36198713888738,
+        "coherent": 4.083063053579858
+      },
+      "risk_space": {
+        "shared": 1.7415107484603176,
+        "mixed": 3.2851156858753825,
+        "coherent": 2.8300588308332704,
+        "random_book_null": {
+          "mean": 4.068090080705284,
+          "p025": 3.04751264841396,
+          "p975": 5.027319942199489,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-03-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-03-28",
+        "history_end": "2024-03-28",
+        "n_returns": 252,
+        "min_eigenvalue": 6.904424027965823e-05,
+        "max_eigenvalue": 0.0011634044997957992,
+        "condition_number": 16.850131091073223
+      },
+      "position_space": {
+        "shared": 2.210227580831312,
+        "mixed": 4.36198713888738,
+        "coherent": 4.083063053579858
+      },
+      "risk_space": {
+        "shared": 1.7294779555073154,
+        "mixed": 3.3232173486076224,
+        "coherent": 2.932522445969101,
+        "random_book_null": {
+          "mean": 4.179143519790846,
+          "p025": 3.1849597869218367,
+          "p975": 5.111824864712238,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-04-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-04-28",
+        "history_end": "2024-04-30",
+        "n_returns": 252,
+        "min_eigenvalue": 4.249870372270463e-05,
+        "max_eigenvalue": 0.0016340308471996215,
+        "condition_number": 38.44895735788412
+      },
+      "position_space": {
+        "shared": 1.9179565922743833,
+        "mixed": 4.586727759329574,
+        "coherent": 3.818322471575686
+      },
+      "risk_space": {
+        "shared": 1.5990511978568,
+        "mixed": 3.0232632457018775,
+        "coherent": 2.402891155299499,
+        "random_book_null": {
+          "mean": 3.83693058943724,
+          "p025": 2.824657573809609,
+          "p975": 4.815802653713962,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-04-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-04-28",
+        "history_end": "2024-04-30",
+        "n_returns": 252,
+        "min_eigenvalue": 6.119785227448973e-05,
+        "max_eigenvalue": 0.001412308227241918,
+        "condition_number": 23.077741697654925
+      },
+      "position_space": {
+        "shared": 1.9179565922743833,
+        "mixed": 4.586727759329574,
+        "coherent": 3.818322471575686
+      },
+      "risk_space": {
+        "shared": 1.5905813137662856,
+        "mixed": 3.1665027206588037,
+        "coherent": 2.5072988590983454,
+        "random_book_null": {
+          "mean": 4.000361499119427,
+          "p025": 2.9768602655612173,
+          "p975": 4.9727096545752305,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-04-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-04-28",
+        "history_end": "2024-04-30",
+        "n_returns": 252,
+        "min_eigenvalue": 6.865892964154959e-05,
+        "max_eigenvalue": 0.0012147171635635795,
+        "condition_number": 17.692049233876812
+      },
+      "position_space": {
+        "shared": 1.9179565922743833,
+        "mixed": 4.586727759329574,
+        "coherent": 3.818322471575686
+      },
+      "risk_space": {
+        "shared": 1.5795290340376387,
+        "mixed": 3.291957850765588,
+        "coherent": 2.6054546107269707,
+        "random_book_null": {
+          "mean": 4.096877243569571,
+          "p025": 3.1127765737909097,
+          "p975": 5.055103940568704,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-05-31",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-05-31",
+        "history_end": "2024-05-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.676783227282526e-05,
+        "max_eigenvalue": 0.0015167308351830943,
+        "condition_number": 32.43106985021412
+      },
+      "position_space": {
+        "shared": 1.8815379230022413,
+        "mixed": 4.369660470978959,
+        "coherent": 4.119284715632905
+      },
+      "risk_space": {
+        "shared": 1.618568839420007,
+        "mixed": 3.085110754355823,
+        "coherent": 2.7783924481458415,
+        "random_book_null": {
+          "mean": 3.876857604864199,
+          "p025": 2.846665444699943,
+          "p975": 4.8673982850288064,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-05-31",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-05-31",
+        "history_end": "2024-05-31",
+        "n_returns": 252,
+        "min_eigenvalue": 5.933984615056778e-05,
+        "max_eigenvalue": 0.0013135282126540448,
+        "condition_number": 22.1356861849814
+      },
+      "position_space": {
+        "shared": 1.8815379230022413,
+        "mixed": 4.369660470978959,
+        "coherent": 4.119284715632905
+      },
+      "risk_space": {
+        "shared": 1.6053348803915664,
+        "mixed": 3.1579765311421752,
+        "coherent": 2.8582329611437247,
+        "random_book_null": {
+          "mean": 4.037981828273458,
+          "p025": 2.9925139814599175,
+          "p975": 5.003596944335103,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-05-31",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-05-31",
+        "history_end": "2024-05-31",
+        "n_returns": 252,
+        "min_eigenvalue": 6.664388552516943e-05,
+        "max_eigenvalue": 0.0011447727487196365,
+        "condition_number": 17.177461063360262
+      },
+      "position_space": {
+        "shared": 1.8815379230022413,
+        "mixed": 4.369660470978959,
+        "coherent": 4.119284715632905
+      },
+      "risk_space": {
+        "shared": 1.5929415553894075,
+        "mixed": 3.208772291510596,
+        "coherent": 2.9297734405045843,
+        "random_book_null": {
+          "mean": 4.140832960913649,
+          "p025": 3.1261053109853854,
+          "p975": 5.096762634209049,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-06-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-06-28",
+        "history_end": "2024-06-28",
+        "n_returns": 252,
+        "min_eigenvalue": 4.951843747518283e-05,
+        "max_eigenvalue": 0.0014543187823562117,
+        "condition_number": 29.36923813650366
+      },
+      "position_space": {
+        "shared": 3.1293855155783747,
+        "mixed": 3.8106254700128535,
+        "coherent": 3.405100361028538
+      },
+      "risk_space": {
+        "shared": 2.1710622759382283,
+        "mixed": 2.2149599591561877,
+        "coherent": 2.190977250424786,
+        "random_book_null": {
+          "mean": 3.901763531015401,
+          "p025": 2.867349558175096,
+          "p975": 4.911656909850885,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-06-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-06-28",
+        "history_end": "2024-06-28",
+        "n_returns": 252,
+        "min_eigenvalue": 5.923501559842722e-05,
+        "max_eigenvalue": 0.0012627786489647181,
+        "condition_number": 21.318111191621714
+      },
+      "position_space": {
+        "shared": 3.1293855155783747,
+        "mixed": 3.8106254700128535,
+        "coherent": 3.405100361028538
+      },
+      "risk_space": {
+        "shared": 2.2613338338432665,
+        "mixed": 2.3450511907388605,
+        "coherent": 2.2734213427835965,
+        "random_book_null": {
+          "mean": 4.050158890308605,
+          "p025": 3.0225265120776452,
+          "p975": 4.9956197737437975,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-06-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-06-28",
+        "history_end": "2024-06-28",
+        "n_returns": 252,
+        "min_eigenvalue": 6.618687922166052e-05,
+        "max_eigenvalue": 0.0011011828764406293,
+        "condition_number": 16.63747995660525
+      },
+      "position_space": {
+        "shared": 3.1293855155783747,
+        "mixed": 3.8106254700128535,
+        "coherent": 3.405100361028538
+      },
+      "risk_space": {
+        "shared": 2.35009256597096,
+        "mixed": 2.4881661865258753,
+        "coherent": 2.3606377394630704,
+        "random_book_null": {
+          "mean": 4.159674863219539,
+          "p025": 3.1601349679661497,
+          "p975": 5.100220208215253,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-07-31",
+        "history_end": "2024-07-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.8725009671381045e-05,
+        "max_eigenvalue": 0.0016892744435637011,
+        "condition_number": 34.66955583912193
+      },
+      "position_space": {
+        "shared": 1.433290170863509,
+        "mixed": 4.265273656364307,
+        "coherent": 3.730774560175406
+      },
+      "risk_space": {
+        "shared": 1.4924016092725734,
+        "mixed": 2.4635304587395224,
+        "coherent": 2.219928308828005,
+        "random_book_null": {
+          "mean": 3.7934833617230272,
+          "p025": 2.7764190446999257,
+          "p975": 4.832486454075838,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-07-31",
+        "history_end": "2024-07-31",
+        "n_returns": 252,
+        "min_eigenvalue": 6.509869399232271e-05,
+        "max_eigenvalue": 0.001472463232551876,
+        "condition_number": 22.618936606094252
+      },
+      "position_space": {
+        "shared": 1.433290170863509,
+        "mixed": 4.265273656364307,
+        "coherent": 3.730774560175406
+      },
+      "risk_space": {
+        "shared": 1.4447039889443063,
+        "mixed": 2.6435410150567256,
+        "coherent": 2.323952663893725,
+        "random_book_null": {
+          "mean": 3.952776370370998,
+          "p025": 2.9326104167684246,
+          "p975": 4.950644750440579,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-07-31",
+        "history_end": "2024-07-31",
+        "n_returns": 252,
+        "min_eigenvalue": 7.338855987853136e-05,
+        "max_eigenvalue": 0.0012857180733670307,
+        "condition_number": 17.519325566479015
+      },
+      "position_space": {
+        "shared": 1.433290170863509,
+        "mixed": 4.265273656364307,
+        "coherent": 3.730774560175406
+      },
+      "risk_space": {
+        "shared": 1.4016041228546805,
+        "mixed": 2.829627963797951,
+        "coherent": 2.4237322505660464,
+        "random_book_null": {
+          "mean": 4.060729926753303,
+          "p025": 3.03744955450962,
+          "p975": 5.047086016986339,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-08-30",
+        "history_end": "2024-08-30",
+        "n_returns": 252,
+        "min_eigenvalue": 4.92310930374517e-05,
+        "max_eigenvalue": 0.0017877379649197458,
+        "condition_number": 36.31318856885333
+      },
+      "position_space": {
+        "shared": 3.3129740603561593,
+        "mixed": 4.290113708158298,
+        "coherent": 3.5863935533723326
+      },
+      "risk_space": {
+        "shared": 3.2399451890431106,
+        "mixed": 2.654816712932082,
+        "coherent": 2.302386969821363,
+        "random_book_null": {
+          "mean": 3.796747261192874,
+          "p025": 2.7658617764001954,
+          "p975": 4.831594833799599,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-08-30",
+        "history_end": "2024-08-30",
+        "n_returns": 252,
+        "min_eigenvalue": 6.730066661325315e-05,
+        "max_eigenvalue": 0.0015577151727158825,
+        "condition_number": 23.14561283125731
+      },
+      "position_space": {
+        "shared": 3.3129740603561593,
+        "mixed": 4.290113708158298,
+        "coherent": 3.5863935533723326
+      },
+      "risk_space": {
+        "shared": 3.2049530821603547,
+        "mixed": 2.768925507470129,
+        "coherent": 2.405402789709345,
+        "random_book_null": {
+          "mean": 3.9598867682485936,
+          "p025": 2.9407268341853765,
+          "p975": 4.975161384757197,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-08-30",
+        "history_end": "2024-08-30",
+        "n_returns": 252,
+        "min_eigenvalue": 7.727189230768155e-05,
+        "max_eigenvalue": 0.0013557934459410038,
+        "condition_number": 17.54575183098273
+      },
+      "position_space": {
+        "shared": 3.3129740603561593,
+        "mixed": 4.290113708158298,
+        "coherent": 3.5863935533723326
+      },
+      "risk_space": {
+        "shared": 3.164897049664455,
+        "mixed": 2.8655896320706145,
+        "coherent": 2.508227511941068,
+        "random_book_null": {
+          "mean": 4.059482820636496,
+          "p025": 3.043849888817674,
+          "p975": 5.047371074860267,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-09-30",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-09-28",
+        "history_end": "2024-09-30",
+        "n_returns": 252,
+        "min_eigenvalue": 5.3370858126518356e-05,
+        "max_eigenvalue": 0.0018656153691144883,
+        "condition_number": 34.95569369883376
+      },
+      "position_space": {
+        "shared": 2.2444964385508697,
+        "mixed": 4.214942897474038,
+        "coherent": 3.4598576772339302
+      },
+      "risk_space": {
+        "shared": 1.3655313198032442,
+        "mixed": 2.5197814610741016,
+        "coherent": 1.938963729616827,
+        "random_book_null": {
+          "mean": 3.780021436909156,
+          "p025": 2.7564801561172283,
+          "p975": 4.823131844723886,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-09-30",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-09-28",
+        "history_end": "2024-09-30",
+        "n_returns": 252,
+        "min_eigenvalue": 6.786312269540326e-05,
+        "max_eigenvalue": 0.0016246586512738846,
+        "condition_number": 23.94022831171504
+      },
+      "position_space": {
+        "shared": 2.2444964385508697,
+        "mixed": 4.214942897474038,
+        "coherent": 3.4598576772339302
+      },
+      "risk_space": {
+        "shared": 1.42761040892397,
+        "mixed": 2.673642914034475,
+        "coherent": 2.0305502471502384,
+        "random_book_null": {
+          "mean": 3.9282285126016445,
+          "p025": 2.891764971922407,
+          "p975": 4.938187438804963,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-09-30",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-09-28",
+        "history_end": "2024-09-30",
+        "n_returns": 252,
+        "min_eigenvalue": 7.717912098167021e-05,
+        "max_eigenvalue": 0.001409306462183854,
+        "condition_number": 18.260203592090143
+      },
+      "position_space": {
+        "shared": 2.2444964385508697,
+        "mixed": 4.214942897474038,
+        "coherent": 3.4598576772339302
+      },
+      "risk_space": {
+        "shared": 1.5010147904189797,
+        "mixed": 2.8245165829173873,
+        "coherent": 2.127360865246624,
+        "random_book_null": {
+          "mean": 4.046693171187782,
+          "p025": 3.0288332136307714,
+          "p975": 5.03175501326233,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-10-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-10-31",
+        "history_end": "2024-10-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.75295430341705e-05,
+        "max_eigenvalue": 0.0018443974736054515,
+        "condition_number": 38.80528521554385
+      },
+      "position_space": {
+        "shared": 2.2666270598581804,
+        "mixed": 4.077215326366716,
+        "coherent": 3.6741907950539106
+      },
+      "risk_space": {
+        "shared": 2.0530872127319553,
+        "mixed": 2.188459019404131,
+        "coherent": 2.193929326535054,
+        "random_book_null": {
+          "mean": 3.735699010149275,
+          "p025": 2.689050594406881,
+          "p975": 4.755939182410171,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-10-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-10-31",
+        "history_end": "2024-10-31",
+        "n_returns": 252,
+        "min_eigenvalue": 6.422970043854345e-05,
+        "max_eigenvalue": 0.0016369205889036613,
+        "condition_number": 25.48541527871373
+      },
+      "position_space": {
+        "shared": 2.2666270598581804,
+        "mixed": 4.077215326366716,
+        "coherent": 3.6741907950539106
+      },
+      "risk_space": {
+        "shared": 2.133896350506619,
+        "mixed": 2.3066232392926342,
+        "coherent": 2.279859662117597,
+        "random_book_null": {
+          "mean": 3.8910783051076527,
+          "p025": 2.8772585140247697,
+          "p975": 4.906516153412812,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-10-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-10-31",
+        "history_end": "2024-10-31",
+        "n_returns": 252,
+        "min_eigenvalue": 7.324563020577486e-05,
+        "max_eigenvalue": 0.0014631925876228216,
+        "condition_number": 19.976517145284387
+      },
+      "position_space": {
+        "shared": 2.2666270598581804,
+        "mixed": 4.077215326366716,
+        "coherent": 3.6741907950539106
+      },
+      "risk_space": {
+        "shared": 2.216078498534976,
+        "mixed": 2.4355432213348354,
+        "coherent": 2.362315880079195,
+        "random_book_null": {
+          "mean": 3.9680728042378717,
+          "p025": 2.936824470928108,
+          "p975": 4.98890413065174,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-11-29",
+        "history_end": "2024-11-29",
+        "n_returns": 252,
+        "min_eigenvalue": 4.839034248765053e-05,
+        "max_eigenvalue": 0.0019248054670542017,
+        "condition_number": 39.77664484489694
+      },
+      "position_space": {
+        "shared": 2.853254202434865,
+        "mixed": 4.0119254001985505,
+        "coherent": 3.650590506756605
+      },
+      "risk_space": {
+        "shared": 2.250574073152837,
+        "mixed": 2.635526803384638,
+        "coherent": 2.2513321973227383,
+        "random_book_null": {
+          "mean": 3.7270463941653915,
+          "p025": 2.69704829617522,
+          "p975": 4.7463025887059445,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "date": "2024-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-11-29",
+        "history_end": "2024-11-29",
+        "n_returns": 252,
+        "min_eigenvalue": 6.581685976221877e-05,
+        "max_eigenvalue": 0.0017255179707697994,
+        "condition_number": 26.216959864139678
+      },
+      "position_space": {
+        "shared": 2.853254202434865,
+        "mixed": 4.0119254001985505,
+        "coherent": 3.650590506756605
+      },
+      "risk_space": {
+        "shared": 2.2804971474424627,
+        "mixed": 2.6925231002417624,
+        "coherent": 2.336339621059769,
+        "random_book_null": {
+          "mean": 3.8676292369151133,
+          "p025": 2.8320719372827337,
+          "p975": 4.867988394313504,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "date": "2024-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-11-29",
+        "history_end": "2024-11-29",
+        "n_returns": 252,
+        "min_eigenvalue": 7.561544732020066e-05,
+        "max_eigenvalue": 0.0015669731180996283,
+        "condition_number": 20.722923339514672
+      },
+      "position_space": {
+        "shared": 2.853254202434865,
+        "mixed": 4.0119254001985505,
+        "coherent": 3.650590506756605
+      },
+      "risk_space": {
+        "shared": 2.3039980018265664,
+        "mixed": 2.734516374130836,
+        "coherent": 2.422911419404075,
+        "random_book_null": {
+          "mean": 3.9741753063254275,
+          "p025": 2.9171884320150743,
+          "p975": 4.985571163925905,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "date": "2024-12-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-12-29",
+        "history_end": "2024-12-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.494316548281599e-05,
+        "max_eigenvalue": 0.002031195899776881,
+        "condition_number": 45.19476716773563
+      },
+      "position_space": {
+        "shared": 2.1067374210175696,
+        "mixed": 4.096153597364081,
+        "coherent": 3.3375786709398705
+      },
+      "risk_space": {
+        "shared": 2.0829530007223584,
+        "mixed": 2.5398353417750377,
+        "coherent": 1.8738874382669388,
+        "random_book_null": {
+          "mean": 3.718085996119822,
+          "p025": 2.6851503565824215,
+          "p975": 4.717404630908494,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-12-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-12-29",
+        "history_end": "2024-12-31",
+        "n_returns": 252,
+        "min_eigenvalue": 6.384070540060776e-05,
+        "max_eigenvalue": 0.0018258741850088467,
+        "condition_number": 28.600470084897662
+      },
+      "position_space": {
+        "shared": 2.1067374210175696,
+        "mixed": 4.096153597364081,
+        "coherent": 3.3375786709398705
+      },
+      "risk_space": {
+        "shared": 2.1453003400619153,
+        "mixed": 2.6418666556232377,
+        "coherent": 1.9498961504008356,
+        "random_book_null": {
+          "mean": 3.850338760269192,
+          "p025": 2.825923343097466,
+          "p975": 4.856666404585376,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2024-12-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2023-12-29",
+        "history_end": "2024-12-31",
+        "n_returns": 252,
+        "min_eigenvalue": 7.348636624823169e-05,
+        "max_eigenvalue": 0.0016671273374249292,
+        "condition_number": 22.686212729494507
+      },
+      "position_space": {
+        "shared": 2.1067374210175696,
+        "mixed": 4.096153597364081,
+        "coherent": 3.3375786709398705
+      },
+      "risk_space": {
+        "shared": 2.1979359324893553,
+        "mixed": 2.738333262354845,
+        "coherent": 2.0292223019437508,
+        "random_book_null": {
+          "mean": 3.9573658601368153,
+          "p025": 2.9423214864298317,
+          "p975": 4.945771378798321,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-01-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-01-30",
+        "history_end": "2025-01-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.961590673133895e-05,
+        "max_eigenvalue": 0.0021719744238640733,
+        "condition_number": 43.77576803392745
+      },
+      "position_space": {
+        "shared": 1.7826146587188658,
+        "mixed": 3.9120228929005716,
+        "coherent": 4.092706421746255
+      },
+      "risk_space": {
+        "shared": 1.3752142585343288,
+        "mixed": 2.6333286335747967,
+        "coherent": 2.7291026661676465,
+        "random_book_null": {
+          "mean": 3.707831641930675,
+          "p025": 2.686597445318939,
+          "p975": 4.725957115251119,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-01-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-01-30",
+        "history_end": "2025-01-31",
+        "n_returns": 252,
+        "min_eigenvalue": 6.512931636650089e-05,
+        "max_eigenvalue": 0.0019327129261369038,
+        "condition_number": 29.67500710833486
+      },
+      "position_space": {
+        "shared": 1.7826146587188658,
+        "mixed": 3.9120228929005716,
+        "coherent": 4.092706421746255
+      },
+      "risk_space": {
+        "shared": 1.373956050666278,
+        "mixed": 2.6808632049685097,
+        "coherent": 2.776018460082809,
+        "random_book_null": {
+          "mean": 3.8443612640908875,
+          "p025": 2.809837766345607,
+          "p975": 4.867150671989248,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-01-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-01-30",
+        "history_end": "2025-01-31",
+        "n_returns": 252,
+        "min_eigenvalue": 7.650256997284329e-05,
+        "max_eigenvalue": 0.0017293919121791988,
+        "condition_number": 22.605670800250167
+      },
+      "position_space": {
+        "shared": 1.7826146587188658,
+        "mixed": 3.9120228929005716,
+        "coherent": 4.092706421746255
+      },
+      "risk_space": {
+        "shared": 1.371222037726504,
+        "mixed": 2.7082401700597094,
+        "coherent": 2.810809327573258,
+        "random_book_null": {
+          "mean": 3.935775910242118,
+          "p025": 2.8762993920148503,
+          "p975": 4.943507123142167,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-02-28",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-02-27",
+        "history_end": "2025-02-28",
+        "n_returns": 252,
+        "min_eigenvalue": 5.230633080826358e-05,
+        "max_eigenvalue": 0.0022107605425370548,
+        "condition_number": 42.26563990200187
+      },
+      "position_space": {
+        "shared": 1.4319592957174385,
+        "mixed": 3.673606050585129,
+        "coherent": 4.002080403213017
+      },
+      "risk_space": {
+        "shared": 1.3235448910007144,
+        "mixed": 2.5583221062110493,
+        "coherent": 2.3686332625237863,
+        "random_book_null": {
+          "mean": 3.7028070413267153,
+          "p025": 2.6469103018014866,
+          "p975": 4.765587332478057,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 4.440892098500626e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-02-28",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-02-27",
+        "history_end": "2025-02-28",
+        "n_returns": 252,
+        "min_eigenvalue": 6.985565951936108e-05,
+        "max_eigenvalue": 0.001980038501590507,
+        "condition_number": 28.34471129775423
+      },
+      "position_space": {
+        "shared": 1.4319592957174385,
+        "mixed": 3.673606050585129,
+        "coherent": 4.002080403213017
+      },
+      "risk_space": {
+        "shared": 1.3607159360676493,
+        "mixed": 2.607294810517895,
+        "coherent": 2.4449997523869405,
+        "random_book_null": {
+          "mean": 3.837285707278276,
+          "p025": 2.7649212640888727,
+          "p975": 4.875720587928249,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 4.440892098500626e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-02-28",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-02-27",
+        "history_end": "2025-02-28",
+        "n_returns": 252,
+        "min_eigenvalue": 8.299059333503401e-05,
+        "max_eigenvalue": 0.0017880014123573672,
+        "condition_number": 21.54462741505154
+      },
+      "position_space": {
+        "shared": 1.4319592957174385,
+        "mixed": 3.673606050585129,
+        "coherent": 4.002080403213017
+      },
+      "risk_space": {
+        "shared": 1.3979801272601968,
+        "mixed": 2.6349913032829346,
+        "coherent": 2.513395784544322,
+        "random_book_null": {
+          "mean": 3.957467888722752,
+          "p025": 2.8993116174685722,
+          "p975": 4.991753948424836,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 4.440892098500626e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-03-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-03-27",
+        "history_end": "2025-03-31",
+        "n_returns": 252,
+        "min_eigenvalue": 5.450894308434525e-05,
+        "max_eigenvalue": 0.002633895410269471,
+        "condition_number": 48.320427093841694
+      },
+      "position_space": {
+        "shared": 1.3508404038992947,
+        "mixed": 3.238838379802504,
+        "coherent": 3.438610054330595
+      },
+      "risk_space": {
+        "shared": 1.057968464105418,
+        "mixed": 2.095047661529681,
+        "coherent": 2.2328926169279195,
+        "random_book_null": {
+          "mean": 3.6637358814706067,
+          "p025": 2.600791104758877,
+          "p975": 4.733297547812741,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 4.440892098500626e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-03-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-03-27",
+        "history_end": "2025-03-31",
+        "n_returns": 252,
+        "min_eigenvalue": 7.137262343043276e-05,
+        "max_eigenvalue": 0.002328251247882631,
+        "condition_number": 32.62106863918192
+      },
+      "position_space": {
+        "shared": 1.3508404038992947,
+        "mixed": 3.238838379802504,
+        "coherent": 3.438610054330595
+      },
+      "risk_space": {
+        "shared": 1.0699253816468406,
+        "mixed": 2.1751334215088405,
+        "coherent": 2.298147663976817,
+        "random_book_null": {
+          "mean": 3.8158987409102396,
+          "p025": 2.731750646014969,
+          "p975": 4.857173025372484,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 4.440892098500626e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-03-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-03-27",
+        "history_end": "2025-03-31",
+        "n_returns": 252,
+        "min_eigenvalue": 8.57978369623198e-05,
+        "max_eigenvalue": 0.002069134791699057,
+        "condition_number": 24.116398092970194
+      },
+      "position_space": {
+        "shared": 1.3508404038992947,
+        "mixed": 3.238838379802504,
+        "coherent": 3.438610054330595
+      },
+      "risk_space": {
+        "shared": 1.0851679867214594,
+        "mixed": 2.252247990775295,
+        "coherent": 2.3507053915164478,
+        "random_book_null": {
+          "mean": 3.938616335961593,
+          "p025": 2.8629302084838772,
+          "p975": 4.979470133846273,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 4.440892098500626e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-04-30",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-04-26",
+        "history_end": "2025-04-30",
+        "n_returns": 252,
+        "min_eigenvalue": 5.8263055501825786e-05,
+        "max_eigenvalue": 0.0037023756140084525,
+        "condition_number": 63.54585392268745
+      },
+      "position_space": {
+        "shared": 2.8196450114477196,
+        "mixed": 3.927239885435266,
+        "coherent": 3.8302053605002064
+      },
+      "risk_space": {
+        "shared": 2.578953978360063,
+        "mixed": 2.388090979238752,
+        "coherent": 2.4282621691400625,
+        "random_book_null": {
+          "mean": 3.6806013881078763,
+          "p025": 2.6003965558673,
+          "p975": 4.716473400337241,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-04-30",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-04-26",
+        "history_end": "2025-04-30",
+        "n_returns": 252,
+        "min_eigenvalue": 9.080055749461586e-05,
+        "max_eigenvalue": 0.0031255643667783507,
+        "condition_number": 34.42230370627058
+      },
+      "position_space": {
+        "shared": 2.8196450114477196,
+        "mixed": 3.927239885435266,
+        "coherent": 3.8302053605002064
+      },
+      "risk_space": {
+        "shared": 2.604738976149129,
+        "mixed": 2.56605441381036,
+        "coherent": 2.547689715874921,
+        "random_book_null": {
+          "mean": 3.9041134918340705,
+          "p025": 2.8257159023054985,
+          "p975": 4.921761234035153,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-04-30",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-04-26",
+        "history_end": "2025-04-30",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00010983401791682645,
+        "max_eigenvalue": 0.0026023178700229875,
+        "condition_number": 23.69318649522258
+      },
+      "position_space": {
+        "shared": 2.8196450114477196,
+        "mixed": 3.927239885435266,
+        "coherent": 3.8302053605002064
+      },
+      "risk_space": {
+        "shared": 2.615932491692866,
+        "mixed": 2.7354469231196594,
+        "coherent": 2.6467169682608573,
+        "random_book_null": {
+          "mean": 4.052153334485181,
+          "p025": 2.9717820798416272,
+          "p975": 5.07068645032616,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-05-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-05-28",
+        "history_end": "2025-05-30",
+        "n_returns": 252,
+        "min_eigenvalue": 5.50728305793738e-05,
+        "max_eigenvalue": 0.003804370108192726,
+        "condition_number": 69.0788918631969
+      },
+      "position_space": {
+        "shared": 1.871577401472356,
+        "mixed": 4.022772551830244,
+        "coherent": 3.913461483341722
+      },
+      "risk_space": {
+        "shared": 1.6057319822873088,
+        "mixed": 2.730140785061716,
+        "coherent": 2.4525464426006818,
+        "random_book_null": {
+          "mean": 3.7007552557192196,
+          "p025": 2.6112845920441887,
+          "p975": 4.735954898718016,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-05-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-05-28",
+        "history_end": "2025-05-30",
+        "n_returns": 252,
+        "min_eigenvalue": 8.804057497413631e-05,
+        "max_eigenvalue": 0.0031847653679777906,
+        "condition_number": 36.173836539724775
+      },
+      "position_space": {
+        "shared": 1.871577401472356,
+        "mixed": 4.022772551830244,
+        "coherent": 3.913461483341722
+      },
+      "risk_space": {
+        "shared": 1.6686495387623441,
+        "mixed": 2.877128595002173,
+        "coherent": 2.602413710717655,
+        "random_book_null": {
+          "mean": 3.9364050498143515,
+          "p025": 2.862218286673134,
+          "p975": 4.967165756107614,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-05-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-05-28",
+        "history_end": "2025-05-30",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00010790018370318447,
+        "max_eigenvalue": 0.0026131226783847683,
+        "condition_number": 24.217963201740563
+      },
+      "position_space": {
+        "shared": 1.871577401472356,
+        "mixed": 4.022772551830244,
+        "coherent": 3.913461483341722
+      },
+      "risk_space": {
+        "shared": 1.7334736422894264,
+        "mixed": 2.992902065735036,
+        "coherent": 2.736246628072136,
+        "random_book_null": {
+          "mean": 4.071746522050861,
+          "p025": 3.01793603775162,
+          "p975": 5.058194511066337,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-06-30",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-06-26",
+        "history_end": "2025-06-30",
+        "n_returns": 252,
+        "min_eigenvalue": 5.1858586316471574e-05,
+        "max_eigenvalue": 0.0038612399328404367,
+        "condition_number": 74.45709972263573
+      },
+      "position_space": {
+        "shared": 1.3838827983399278,
+        "mixed": 3.211821951488363,
+        "coherent": 3.6479428320792975
+      },
+      "risk_space": {
+        "shared": 1.174153424055731,
+        "mixed": 2.487310902989982,
+        "coherent": 2.618502297273341,
+        "random_book_null": {
+          "mean": 3.686538896189272,
+          "p025": 2.5859654704702275,
+          "p975": 4.731472295841288,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "date": "2025-06-30",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-06-26",
+        "history_end": "2025-06-30",
+        "n_returns": 252,
+        "min_eigenvalue": 8.961742717145639e-05,
+        "max_eigenvalue": 0.0032463202404827756,
+        "condition_number": 36.224207087220925
+      },
+      "position_space": {
+        "shared": 1.3838827983399278,
+        "mixed": 3.211821951488363,
+        "coherent": 3.6479428320792975
+      },
+      "risk_space": {
+        "shared": 1.1742519989477744,
+        "mixed": 2.5241146799196494,
+        "coherent": 2.6918528063612333,
+        "random_book_null": {
+          "mean": 3.918816767684016,
+          "p025": 2.8553237244820933,
+          "p975": 4.924975089229987,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "date": "2025-06-30",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-06-26",
+        "history_end": "2025-06-30",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00010946831697330195,
+        "max_eigenvalue": 0.0026892467380590047,
+        "condition_number": 24.566439061220613
+      },
+      "position_space": {
+        "shared": 1.3838827983399278,
+        "mixed": 3.211821951488363,
+        "coherent": 3.6479428320792975
+      },
+      "risk_space": {
+        "shared": 1.1717334670329922,
+        "mixed": 2.5465499630020005,
+        "coherent": 2.7134487963770075,
+        "random_book_null": {
+          "mean": 4.051323997053362,
+          "p025": 2.9973767529476563,
+          "p975": 5.06295184415615,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "date": "2025-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-07-29",
+        "history_end": "2025-07-31",
+        "n_returns": 252,
+        "min_eigenvalue": 5.0215794922703935e-05,
+        "max_eigenvalue": 0.003621841165870455,
+        "condition_number": 72.12553682452852
+      },
+      "position_space": {
+        "shared": 1.3570027128315036,
+        "mixed": 2.580630616615492,
+        "coherent": 3.6122942787567953
+      },
+      "risk_space": {
+        "shared": 1.1754861598474728,
+        "mixed": 2.061275073448132,
+        "coherent": 2.6480012223929266,
+        "random_book_null": {
+          "mean": 3.7316248063175137,
+          "p025": 2.67606096965051,
+          "p975": 4.746352982609364,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-07-29",
+        "history_end": "2025-07-31",
+        "n_returns": 252,
+        "min_eigenvalue": 9.513326186372196e-05,
+        "max_eigenvalue": 0.003047858606867138,
+        "condition_number": 32.03778097331703
+      },
+      "position_space": {
+        "shared": 1.3570027128315036,
+        "mixed": 2.580630616615492,
+        "coherent": 3.6122942787567953
+      },
+      "risk_space": {
+        "shared": 1.1806908528205458,
+        "mixed": 2.1170372960035913,
+        "coherent": 2.7407370574930696,
+        "random_book_null": {
+          "mean": 3.9556159900274084,
+          "p025": 2.8986972853527115,
+          "p975": 4.94181241572651,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-07-29",
+        "history_end": "2025-07-31",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00011510602938442221,
+        "max_eigenvalue": 0.0025306268930022488,
+        "condition_number": 21.985181024276816
+      },
+      "position_space": {
+        "shared": 1.3570027128315036,
+        "mixed": 2.580630616615492,
+        "coherent": 3.6122942787567953
+      },
+      "risk_space": {
+        "shared": 1.183821717638238,
+        "mixed": 2.1612853303676816,
+        "coherent": 2.8073368528724205,
+        "random_book_null": {
+          "mean": 4.086071761893156,
+          "p025": 3.0644124871683354,
+          "p975": 5.069862852362147,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-08-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-08-27",
+        "history_end": "2025-08-29",
+        "n_returns": 252,
+        "min_eigenvalue": 4.855535849442951e-05,
+        "max_eigenvalue": 0.003412885586761065,
+        "condition_number": 70.2885467759981
+      },
+      "position_space": {
+        "shared": 2.737517487021583,
+        "mixed": 4.008133733039541,
+        "coherent": 3.8631478056821775
+      },
+      "risk_space": {
+        "shared": 2.6020745431231687,
+        "mixed": 2.776045558521674,
+        "coherent": 2.873722533410819,
+        "random_book_null": {
+          "mean": 3.749999781895912,
+          "p025": 2.6876815978590165,
+          "p975": 4.764519745721361,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-08-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-08-27",
+        "history_end": "2025-08-29",
+        "n_returns": 252,
+        "min_eigenvalue": 8.485857354361406e-05,
+        "max_eigenvalue": 0.0028709369856504937,
+        "condition_number": 33.83202033410262
+      },
+      "position_space": {
+        "shared": 2.737517487021583,
+        "mixed": 4.008133733039541,
+        "coherent": 3.8631478056821775
+      },
+      "risk_space": {
+        "shared": 2.5981582091491675,
+        "mixed": 2.9178244995057976,
+        "coherent": 2.955475076187768,
+        "random_book_null": {
+          "mean": 3.9629190371533727,
+          "p025": 2.8960961717676046,
+          "p975": 4.945098230682048,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-08-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-08-27",
+        "history_end": "2025-08-29",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00010484815579654114,
+        "max_eigenvalue": 0.0023886604129204816,
+        "condition_number": 22.782092777632638
+      },
+      "position_space": {
+        "shared": 2.737517487021583,
+        "mixed": 4.008133733039541,
+        "coherent": 3.8631478056821775
+      },
+      "risk_space": {
+        "shared": 2.58138140946797,
+        "mixed": 3.0268507027700586,
+        "coherent": 3.00515564134413,
+        "random_book_null": {
+          "mean": 4.092541275157117,
+          "p025": 3.0752662901057266,
+          "p975": 5.067561669336863,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-09-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-09-26",
+        "history_end": "2025-09-30",
+        "n_returns": 252,
+        "min_eigenvalue": 4.0486585204521674e-05,
+        "max_eigenvalue": 0.003290624611077153,
+        "condition_number": 81.27691170925537
+      },
+      "position_space": {
+        "shared": 1.9709695100318307,
+        "mixed": 4.355759915420809,
+        "coherent": 4.106744718501869
+      },
+      "risk_space": {
+        "shared": 2.0830097770638956,
+        "mixed": 3.1001755829108673,
+        "coherent": 2.577240101115566,
+        "random_book_null": {
+          "mean": 3.7895527811633336,
+          "p025": 2.731080406298751,
+          "p975": 4.782233727676893,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-09-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-09-26",
+        "history_end": "2025-09-30",
+        "n_returns": 252,
+        "min_eigenvalue": 8.50542971568071e-05,
+        "max_eigenvalue": 0.002775724977008458,
+        "condition_number": 32.63474121585061
+      },
+      "position_space": {
+        "shared": 1.9709695100318307,
+        "mixed": 4.355759915420809,
+        "coherent": 4.106744718501869
+      },
+      "risk_space": {
+        "shared": 2.0367896745062177,
+        "mixed": 3.1932338328181835,
+        "coherent": 2.6478219752177368,
+        "random_book_null": {
+          "mean": 3.9763677653815,
+          "p025": 2.953907050064758,
+          "p975": 4.961155522153077,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-09-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-09-26",
+        "history_end": "2025-09-30",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00010474533045000623,
+        "max_eigenvalue": 0.0023231499620177377,
+        "condition_number": 22.179031294636577
+      },
+      "position_space": {
+        "shared": 1.9709695100318307,
+        "mixed": 4.355759915420809,
+        "coherent": 4.106744718501869
+      },
+      "risk_space": {
+        "shared": 1.9867599637726925,
+        "mixed": 3.251985683415533,
+        "coherent": 2.6888389534384656,
+        "random_book_null": {
+          "mean": 4.115778930717365,
+          "p025": 3.092274355940398,
+          "p975": 5.071661548518043,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 4.440892098500626e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-10-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-10-29",
+        "history_end": "2025-10-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.5646493370932e-05,
+        "max_eigenvalue": 0.003319958876945555,
+        "condition_number": 72.7319588378223
+      },
+      "position_space": {
+        "shared": 1.6534348341461083,
+        "mixed": 3.726269432970286,
+        "coherent": 3.944009646472211
+      },
+      "risk_space": {
+        "shared": 1.9584516199040303,
+        "mixed": 2.87764153324891,
+        "coherent": 2.6637011484208153,
+        "random_book_null": {
+          "mean": 3.839891655572909,
+          "p025": 2.7767879162560676,
+          "p975": 4.845794023357878,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 4.440892098500626e-16,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-10-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-10-29",
+        "history_end": "2025-10-31",
+        "n_returns": 252,
+        "min_eigenvalue": 8.791255496589483e-05,
+        "max_eigenvalue": 0.0027712320329022133,
+        "condition_number": 31.522596902994078
+      },
+      "position_space": {
+        "shared": 1.6534348341461083,
+        "mixed": 3.726269432970286,
+        "coherent": 3.944009646472211
+      },
+      "risk_space": {
+        "shared": 1.9253018794076198,
+        "mixed": 3.0094282838073663,
+        "coherent": 2.7984522729558803,
+        "random_book_null": {
+          "mean": 4.0464785681019215,
+          "p025": 3.0111740191525325,
+          "p975": 5.0318135839154,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 4.440892098500626e-16,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-10-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-10-29",
+        "history_end": "2025-10-31",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00010741347633867496,
+        "max_eigenvalue": 0.00227193971551321,
+        "condition_number": 21.15134704652681
+      },
+      "position_space": {
+        "shared": 1.6534348341461083,
+        "mixed": 3.726269432970286,
+        "coherent": 3.944009646472211
+      },
+      "risk_space": {
+        "shared": 1.8937247699946547,
+        "mixed": 3.114154875526573,
+        "coherent": 2.9038136704168886,
+        "random_book_null": {
+          "mean": 4.177295704788288,
+          "p025": 3.157863323968329,
+          "p975": 5.1282534008145495,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 4.440892098500626e-16,
+        "coherent_abs_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "date": "2025-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-11-25",
+        "history_end": "2025-11-28",
+        "n_returns": 252,
+        "min_eigenvalue": 4.4672738802384954e-05,
+        "max_eigenvalue": 0.003260632709389826,
+        "condition_number": 72.98931735109444
+      },
+      "position_space": {
+        "shared": 1.8048423333661054,
+        "mixed": 4.248369037280058,
+        "coherent": 4.128354635977365
+      },
+      "risk_space": {
+        "shared": 1.7442823631636721,
+        "mixed": 3.2114566199165924,
+        "coherent": 3.021288623683459,
+        "random_book_null": {
+          "mean": 3.8326066910420966,
+          "p025": 2.743184720575779,
+          "p975": 4.851509011633974,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-11-25",
+        "history_end": "2025-11-28",
+        "n_returns": 252,
+        "min_eigenvalue": 8.845348942082032e-05,
+        "max_eigenvalue": 0.0027084611778590484,
+        "condition_number": 30.62017333169817
+      },
+      "position_space": {
+        "shared": 1.8048423333661054,
+        "mixed": 4.248369037280058,
+        "coherent": 4.128354635977365
+      },
+      "risk_space": {
+        "shared": 1.7908275486928986,
+        "mixed": 3.3487550474318204,
+        "coherent": 3.1118079851206177,
+        "random_book_null": {
+          "mean": 4.050275057888613,
+          "p025": 3.0247557440205797,
+          "p975": 5.026604446816611,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-11-25",
+        "history_end": "2025-11-28",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00010700463752304265,
+        "max_eigenvalue": 0.0021969585798884378,
+        "condition_number": 20.53143331676012
+      },
+      "position_space": {
+        "shared": 1.8048423333661054,
+        "mixed": 4.248369037280058,
+        "coherent": 4.128354635977365
+      },
+      "risk_space": {
+        "shared": 1.8286549798678904,
+        "mixed": 3.4311415079054277,
+        "coherent": 3.1663790993172727,
+        "random_book_null": {
+          "mean": 4.180788578146407,
+          "p025": 3.1687412193824795,
+          "p975": 5.137254674140913,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 8.881784197001252e-16,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-12-27",
+        "history_end": "2025-12-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.923011366061859e-05,
+        "max_eigenvalue": 0.003140894307557254,
+        "condition_number": 63.80026520373034
+      },
+      "position_space": {
+        "shared": 2.202887805903487,
+        "mixed": 4.208134241760564,
+        "coherent": 4.130605774284686
+      },
+      "risk_space": {
+        "shared": 1.9969073418051366,
+        "mixed": 2.859922193968711,
+        "coherent": 2.665035338595605,
+        "random_book_null": {
+          "mean": 3.873771590497851,
+          "p025": 2.8107441069612493,
+          "p975": 4.881482279137318,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-12-27",
+        "history_end": "2025-12-31",
+        "n_returns": 252,
+        "min_eigenvalue": 9.160209091909594e-05,
+        "max_eigenvalue": 0.002605612747885123,
+        "condition_number": 28.444904714963673
+      },
+      "position_space": {
+        "shared": 2.202887805903487,
+        "mixed": 4.208134241760564,
+        "coherent": 4.130605774284686
+      },
+      "risk_space": {
+        "shared": 1.9431403739894877,
+        "mixed": 3.0432902165619655,
+        "coherent": 2.8470818865031986,
+        "random_book_null": {
+          "mean": 4.084829202401919,
+          "p025": 3.0382498491813967,
+          "p975": 5.040784500842229,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2024-12-27",
+        "history_end": "2025-12-31",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00011123606662182759,
+        "max_eigenvalue": 0.002106481856552934,
+        "condition_number": 18.937040121298068
+      },
+      "position_space": {
+        "shared": 2.202887805903487,
+        "mixed": 4.208134241760564,
+        "coherent": 4.130605774284686
+      },
+      "risk_space": {
+        "shared": 1.8916646757939213,
+        "mixed": 3.1922748231070717,
+        "coherent": 2.9949618794675383,
+        "random_book_null": {
+          "mean": 4.215879298403622,
+          "p025": 3.2108909211776284,
+          "p975": 5.148653629747348,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-01-31",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-01-29",
+        "history_end": "2026-01-30",
+        "n_returns": 252,
+        "min_eigenvalue": 5.263614216382434e-05,
+        "max_eigenvalue": 0.003014360364989705,
+        "condition_number": 57.26788174573721
+      },
+      "position_space": {
+        "shared": 1.7674833381721722,
+        "mixed": 3.872304997803327,
+        "coherent": 4.332011818910893
+      },
+      "risk_space": {
+        "shared": 1.3246593171021794,
+        "mixed": 2.700937362783652,
+        "coherent": 3.2013553161726462,
+        "random_book_null": {
+          "mean": 3.9173741234920794,
+          "p025": 2.826895437933106,
+          "p975": 4.938292939467353,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-01-31",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-01-29",
+        "history_end": "2026-01-30",
+        "n_returns": 252,
+        "min_eigenvalue": 9.127085217076628e-05,
+        "max_eigenvalue": 0.002496342082629887,
+        "condition_number": 27.35092335896318
+      },
+      "position_space": {
+        "shared": 1.7674833381721722,
+        "mixed": 3.872304997803327,
+        "coherent": 4.332011818910893
+      },
+      "risk_space": {
+        "shared": 1.3051011395725252,
+        "mixed": 2.7723813711404013,
+        "coherent": 3.286576382510438,
+        "random_book_null": {
+          "mean": 4.103179707814969,
+          "p025": 3.0618407193995516,
+          "p975": 5.065756273938374,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-01-31",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-01-29",
+        "history_end": "2026-01-30",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00010981880129256386,
+        "max_eigenvalue": 0.0020158062812620997,
+        "condition_number": 18.355748355801765
+      },
+      "position_space": {
+        "shared": 1.7674833381721722,
+        "mixed": 3.872304997803327,
+        "coherent": 4.332011818910893
+      },
+      "risk_space": {
+        "shared": 1.2882959661065918,
+        "mixed": 2.822910443247988,
+        "coherent": 3.3312894046076105,
+        "random_book_null": {
+          "mean": 4.233734180867995,
+          "p025": 3.235896139814435,
+          "p975": 5.18222483826258,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-02-28",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-02-26",
+        "history_end": "2026-02-27",
+        "n_returns": 252,
+        "min_eigenvalue": 5.0801074614080665e-05,
+        "max_eigenvalue": 0.002985102499160376,
+        "condition_number": 58.7606172081444
+      },
+      "position_space": {
+        "shared": 1.545144844518088,
+        "mixed": 3.861475041991887,
+        "coherent": 3.7219453745644135
+      },
+      "risk_space": {
+        "shared": 1.458419759808533,
+        "mixed": 2.923404561603531,
+        "coherent": 2.7910092510941538,
+        "random_book_null": {
+          "mean": 3.9449274381476034,
+          "p025": 2.863757984304289,
+          "p975": 4.941366266713932,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-02-28",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-02-26",
+        "history_end": "2026-02-27",
+        "n_returns": 252,
+        "min_eigenvalue": 8.905563288651595e-05,
+        "max_eigenvalue": 0.0024612466498325518,
+        "condition_number": 27.637181052532984
+      },
+      "position_space": {
+        "shared": 1.545144844518088,
+        "mixed": 3.861475041991887,
+        "coherent": 3.7219453745644135
+      },
+      "risk_space": {
+        "shared": 1.503398112435624,
+        "mixed": 3.10094204213899,
+        "coherent": 2.9476010920878815,
+        "random_book_null": {
+          "mean": 4.145342890843525,
+          "p025": 3.1358286449256765,
+          "p975": 5.111648259993138,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-02-28",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-02-26",
+        "history_end": "2026-02-27",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00010761001812298367,
+        "max_eigenvalue": 0.001968600105803918,
+        "condition_number": 18.2938367648454
+      },
+      "position_space": {
+        "shared": 1.545144844518088,
+        "mixed": 3.861475041991887,
+        "coherent": 3.7219453745644135
+      },
+      "risk_space": {
+        "shared": 1.550429227258714,
+        "mixed": 3.242523678638605,
+        "coherent": 3.0876912145366715,
+        "random_book_null": {
+          "mean": 4.266024898127029,
+          "p025": 3.2746742375699207,
+          "p975": 5.190358617554577,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-03-28",
+        "history_end": "2026-03-31",
+        "n_returns": 252,
+        "min_eigenvalue": 4.8153828073280056e-05,
+        "max_eigenvalue": 0.0026470868206475203,
+        "condition_number": 54.97147218740757
+      },
+      "position_space": {
+        "shared": 1.7711462604562629,
+        "mixed": 3.735261964696852,
+        "coherent": 4.150259411660739
+      },
+      "risk_space": {
+        "shared": 1.506365635767308,
+        "mixed": 2.9447382940987206,
+        "coherent": 3.352929295886734,
+        "random_book_null": {
+          "mean": 4.007878946202097,
+          "p025": 2.9534572449696195,
+          "p975": 4.9973859232549565,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-03-28",
+        "history_end": "2026-03-31",
+        "n_returns": 252,
+        "min_eigenvalue": 9.145393032515283e-05,
+        "max_eigenvalue": 0.00216899409077833,
+        "condition_number": 23.716794708185283
+      },
+      "position_space": {
+        "shared": 1.7711462604562629,
+        "mixed": 3.735261964696852,
+        "coherent": 4.150259411660739
+      },
+      "risk_space": {
+        "shared": 1.545243395692196,
+        "mixed": 3.0147219244912105,
+        "coherent": 3.461915984956313,
+        "random_book_null": {
+          "mean": 4.1944867265080905,
+          "p025": 3.1806225741773315,
+          "p975": 5.138203590809078,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-03-28",
+        "history_end": "2026-03-31",
+        "n_returns": 252,
+        "min_eigenvalue": 0.00011075068447088319,
+        "max_eigenvalue": 0.0017119309246206268,
+        "condition_number": 15.457520039713167
+      },
+      "position_space": {
+        "shared": 1.7711462604562629,
+        "mixed": 3.735261964696852,
+        "coherent": 4.150259411660739
+      },
+      "risk_space": {
+        "shared": 1.5807499813083106,
+        "mixed": 3.0437058254217124,
+        "coherent": 3.5265538991647105,
+        "random_book_null": {
+          "mean": 4.317379158351226,
+          "p025": 3.342327028711638,
+          "p975": 5.235677155794739,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 2.220446049250313e-16,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.0,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-04-29",
+        "history_end": "2026-04-30",
+        "n_returns": 252,
+        "min_eigenvalue": 4.0927572278579644e-05,
+        "max_eigenvalue": 0.001466380687357449,
+        "condition_number": 35.828675040295806
+      },
+      "position_space": {
+        "shared": 1.9975339574680278,
+        "mixed": 3.94914896184437,
+        "coherent": 4.379587465497578
+      },
+      "risk_space": {
+        "shared": 1.7215942510677567,
+        "mixed": 3.421353709397368,
+        "coherent": 3.8042094401403554,
+        "random_book_null": {
+          "mean": 4.158639069013079,
+          "p025": 3.1658525005159013,
+          "p975": 5.079641469850502,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.25,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-04-29",
+        "history_end": "2026-04-30",
+        "n_returns": 252,
+        "min_eigenvalue": 7.231422962290359e-05,
+        "max_eigenvalue": 0.0012534673887697211,
+        "condition_number": 17.33362016447063
+      },
+      "position_space": {
+        "shared": 1.9975339574680278,
+        "mixed": 3.94914896184437,
+        "coherent": 4.379587465497578
+      },
+      "risk_space": {
+        "shared": 1.6665009326636346,
+        "mixed": 3.39948956808996,
+        "coherent": 3.8937645611196885,
+        "random_book_null": {
+          "mean": 4.267004232302582,
+          "p025": 3.2742579081671663,
+          "p975": 5.162828545612312,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "shrinkage": 0.5,
+      "trailing_days": 252,
+      "covariance": {
+        "history_start": "2025-04-29",
+        "history_end": "2026-04-30",
+        "n_returns": 252,
+        "min_eigenvalue": 9.127667939463958e-05,
+        "max_eigenvalue": 0.0010638905261010265,
+        "condition_number": 11.655666410707594
+      },
+      "position_space": {
+        "shared": 1.9975339574680278,
+        "mixed": 3.94914896184437,
+        "coherent": 4.379587465497578
+      },
+      "risk_space": {
+        "shared": 1.6132655452400835,
+        "mixed": 3.3461714171675188,
+        "coherent": 3.950661997154351,
+        "random_book_null": {
+          "mean": 4.354041939613791,
+          "p025": 3.371242782367911,
+          "p975": 5.271796927955308,
+          "draws": 10000
+        }
+      },
+      "position_crosscheck": {
+        "shared_abs_error": 0.0,
+        "mixed_abs_error": 0.0,
+        "coherent_abs_error": 0.0
+      }
+    }
+  ]
+}

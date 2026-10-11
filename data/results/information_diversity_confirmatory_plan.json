@@ -1,0 +1,96 @@
+{
+  "schema_version": "information-diversity-confirmatory-plan-v1",
+  "frozen_before_collection": true,
+  "sample_role": "held-out confirmation; no date overlaps the 12-date pilot",
+  "date_selection": "all pre-existing U.S. month-ends not used in the 12-date pilot, excluding 2026-05-31 because 21 forward sessions were unavailable; frozen before confirmatory LLM collection",
+  "packet_path": "data/information_diversity_confirmatory_packets.json",
+  "packet_sha256": "4abf2bf44d90affa32976ed95709412601cd4f94fc1bec722504468ab2d8f4c9",
+  "prompt_spec_version": "information-diversity-neutral-mandate-v1",
+  "temperature": 0.7,
+  "n_dates": 22,
+  "dates": [
+    "2023-07-31",
+    "2023-12-31",
+    "2024-01-31",
+    "2024-03-31",
+    "2024-05-31",
+    "2024-06-30",
+    "2024-07-31",
+    "2024-09-30",
+    "2024-10-31",
+    "2024-12-31",
+    "2025-01-31",
+    "2025-02-28",
+    "2025-03-31",
+    "2025-05-31",
+    "2025-06-30",
+    "2025-08-31",
+    "2025-09-30",
+    "2025-10-31",
+    "2025-12-31",
+    "2026-02-28",
+    "2026-03-31",
+    "2026-04-30"
+  ],
+  "n_models": 7,
+  "models": [
+    {
+      "vendor": "openai",
+      "model": "openai/gpt-4o"
+    },
+    {
+      "vendor": "google",
+      "model": "google/gemini-2.5-flash"
+    },
+    {
+      "vendor": "meta",
+      "model": "meta-llama/llama-3.1-70b-instruct"
+    },
+    {
+      "vendor": "alibaba",
+      "model": "qwen/qwen3-235b-a22b-2507"
+    },
+    {
+      "vendor": "mistral",
+      "model": "mistralai/mistral-large"
+    },
+    {
+      "vendor": "deepseek",
+      "model": "deepseek/deepseek-chat"
+    },
+    {
+      "vendor": "anthropic",
+      "model": "anthropic/claude-sonnet-4.5"
+    }
+  ],
+  "conditions": [
+    "rich",
+    "market",
+    "fundamentals",
+    "events",
+    "risk"
+  ],
+  "n_calls": 770,
+  "calls_by_condition": {
+    "rich": 154,
+    "market": 154,
+    "fundamentals": 154,
+    "events": 154,
+    "risk": 154
+  },
+  "analysis_unit": "date; all model subsets and channel assignments are averaged within date",
+  "matched_roster_size": 4,
+  "complete_symbol_rows_required": true,
+  "directional_hypotheses": {
+    "information_vs_models_N_eff": "higher",
+    "information_vs_models_same_side_overlap": "lower",
+    "specialized_models_vs_shared_models_N_eff": "higher",
+    "specialized_models_vs_shared_models_same_side_overlap": "lower",
+    "forward_return_mean": "no directional hypothesis; reported as an ex-post quality check"
+  },
+  "pit_correction": {
+    "id": "2026-07-20-price-share-basis-v2",
+    "reason": "align dividend-unadjusted split-adjusted closes with split-adjusted as-filed SEC shares and select the newest eligible US-GAAP/DEI share fact",
+    "scope": "input correction only; dates, fields, models, prompts, and assignments unchanged"
+  }
+}

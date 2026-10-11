@@ -1,0 +1,462 @@
+% Executed-protocol record for the audited primary experiment.
+% Included by reproducibility_review.tex, separate from the manuscript PDF.
+\section{Audited reproducibility specification}
+\label{app:reproducibility}
+This specification applies to the final audit-corrected primary experiment,
+not the superseded pre-audit collections. The input panel comprises 34
+month-end labels from July 2023 through April 2026. The 12 development
+and 22 complementary dates share the corrected SEC-history packet schema.
+No model calls were made to produce this record.
+
+\subsection{Universe, routes, and access matrices}
+The fixed investable universe, in request order, is
+AAPL, MSFT, NVDA, GOOGL, META, AMZN, TSLA, WMT, PG, JPM, BAC, XOM, JNJ, UNH.
+Ticker, company, and sector are supplied to every seat, outside the 32
+partitioned research fields. The common-core content is:
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Ticker & Company & Sector \\
+\midrule
+AAPL & Apple & Information Technology \\
+MSFT & Microsoft & Information Technology \\
+NVDA & NVIDIA & Information Technology \\
+GOOGL & Alphabet & Communication Services \\
+META & Meta Platforms & Communication Services \\
+AMZN & Amazon & Consumer Discretionary \\
+TSLA & Tesla & Consumer Discretionary \\
+WMT & Walmart & Consumer Staples \\
+PG & Procter \& Gamble & Consumer Staples \\
+JPM & JPMorgan Chase & Financials \\
+BAC & Bank of America & Financials \\
+XOM & Exxon Mobil & Energy \\
+JNJ & Johnson \& Johnson & Health Care \\
+UNH & UnitedHealth Group & Health Care \\
+\bottomrule
+\end{tabular}
+\end{center}
+The executed common-core text uses left-aligned character widths 7, 22,
+and 26, respectively, with a header row and one newline between rows.
+
+Table~\ref{tab:repro-routes} separates the requested endpoint from its
+stored catalog canonical slug and the observed serving provider. These
+are route identities, not a guarantee of immutable closed weights or
+bitwise-reproducible future service responses. The catalog was retrieved
+on 21 July 2026 at 01:07:39 UTC. Provider sets below cover the 238 shared,
+3,332 audited $K=7$, and 9,520 audited $K=2,\ldots,6$ primary cached rows;
+they do not pool legacy or robustness-only collections.
+\begin{table*}[t]
+\caption{Frozen requested model routes, catalog identities, and observed serving providers. Response-model strings equal the requested strings in these primary caches.}
+\label{tab:repro-routes}
+\small
+\begin{tabular}{@{}p{.10\textwidth}p{.27\textwidth}p{.28\textwidth}p{.28\textwidth}@{}}
+\toprule
+Route label & Requested endpoint & Catalog canonical slug & Observed providers \\
+\midrule
+openai & \texttt{openai/\allowbreak{}gpt-\allowbreak{}4o} & \texttt{openai/\allowbreak{}gpt-\allowbreak{}4o} & OpenAI \\
+google & \texttt{google/\allowbreak{}gemini-\allowbreak{}2.\allowbreak{}5-\allowbreak{}flash} & \texttt{google/\allowbreak{}gemini-\allowbreak{}2.\allowbreak{}5-\allowbreak{}flash} & Google \\
+meta & \texttt{meta-\allowbreak{}llama/\allowbreak{}llama-\allowbreak{}3.\allowbreak{}1-\allowbreak{}70b-\allowbreak{}instruct} & \texttt{meta-\allowbreak{}llama/\allowbreak{}llama-\allowbreak{}3.\allowbreak{}1-\allowbreak{}70b-\allowbreak{}instruct} & DeepInfra, WandB \\
+alibaba & \texttt{qwen/\allowbreak{}qwen3-\allowbreak{}235b-\allowbreak{}a22b-\allowbreak{}2507} & \texttt{qwen/\allowbreak{}qwen3-\allowbreak{}235b-\allowbreak{}a22b-\allowbreak{}07-\allowbreak{}25} & AtlasCloud, DeepInfra, Friendli, Google, Nebius, Novita, Parasail \\
+mistral & \texttt{mistralai/\allowbreak{}mistral-\allowbreak{}large} & \texttt{mistralai/\allowbreak{}mistral-\allowbreak{}large} & Mistral \\
+deepseek & \texttt{deepseek/\allowbreak{}deepseek-\allowbreak{}chat} & \texttt{deepseek/\allowbreak{}deepseek-\allowbreak{}chat-\allowbreak{}v3} & DeepInfra \\
+anthropic & \texttt{anthropic/\allowbreak{}claude-\allowbreak{}sonnet-\allowbreak{}4.\allowbreak{}5} & \texttt{anthropic/\allowbreak{}claude-\allowbreak{}4.\allowbreak{}5-\allowbreak{}sonnet-\allowbreak{}20250929} & Amazon Bedrock, Anthropic \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Tables~\ref{tab:repro-market}--\ref{tab:repro-risk} enumerate each field once
+in the frozen full-packet order. Their C and M columns give the coherent
+and mixed seat numbers, respectively, and thus specify both complete
+$7\times32$ binary access matrices without omitting zero entries:
+\[
+ A^{L}_{si}=\mathbf{1}\{s=L_i\},\qquad
+ L\in\{\mathrm{C},\mathrm{M}\},\quad s=1,\ldots,7,\quad i=1,\ldots,32.
+\]
+Both layouts have row sums $(4,2,3,5,7,7,4)$ and column sums one. The
+shared layout has every entry one. Seat labels denote information
+positions, not permanently attached model routes: the $K=7$ analysis
+averages all $7!$ bijections between routes and seats.
+
+For exact within-packet column order, the frozen coherent seat lists,
+expressed using these field indices, are
+\begin{quote}\small
+1: 1, 2, 3, 5\par
+2: 4, 6\par
+3: 7, 8, 9\par
+4: 10, 11, 12, 13, 14\par
+5: 15, 16, 17, 18, 19, 20, 21\par
+6: 22, 23, 24, 27, 28, 29, 31\par
+7: 25, 26, 30, 32\par
+\end{quote}
+
+The mixed seat lists are
+\begin{quote}\small
+1: 3, 16, 32, 9\par
+2: 19, 10\par
+3: 11, 30, 18\par
+4: 22, 14, 28, 2, 17\par
+5: 1, 24, 13, 15, 7, 4, 27\par
+6: 25, 20, 8, 6, 12, 31, 26\par
+7: 29, 23, 5, 21\par
+\end{quote}
+The frozen assignment SHA-256 is \path{62dac5bf0f016fef5c40159f02ad5b097228c80f801b140f938584d6fea35cf3}.
+
+\subsection{Field definitions and availability}
+Definitions below distinguish stored numerical transformations from
+prompt rendering. In the tables, P means multiply the raw fraction by
+100 and print two decimal places; N means print two decimal places with
+no scaling; I means \texttt{int(round(float(value)))}; T means trim the
+text, substituting \texttt{none} for an empty string. All formats first
+render \texttt{None} or a non-finite floating value as \texttt{NA}.
+No cross-sectional standardization, ranking, winsorization, or numeric
+imputation is applied by the packet renderer.
+
+\paragraph{Prices and windows.}
+$P_t$ denotes the last available repository adjusted close at or before
+the snapshot label. Market features first select the 14 investable
+columns, forward-fill prices, and discard remaining incomplete rows;
+at least 253 complete rows are required. Session counts are observation
+counts, not calendar days. The labels \texttt{ret\_7d}, \texttt{ret\_30d},
+and \texttt{ret\_90d} correspond to 5, 21, and 63 sessions. The valuation
+and dollar-volume series instead uses Yahoo quote close, dividend-unadjusted
+and split-adjusted to the recorded corporate-action basis. Volume missing
+on a selected date is zero-filled before computing dollar volume.
+
+\paragraph{Fundamentals.}
+All eligible SEC facts have both filing date and period end no later than
+the snapshot label, finite values, and form 10-Q, 10-K, 10-Q/A, or 10-K/A.
+For an instant fact, select the maximum tuple (filing date, period end,
+negative tag-priority index, accession number). For annual facts, retain
+10-K/10-K/A observations with a start date and a 300--390-calendar-day
+period; select the maximum (filing date, negative tag-priority index,
+accession number) within each period end, then sort by period end.
+``Latest annual'' and ``previous annual'' mean the final two such distinct
+period ends, not trailing-twelve-month reconstructions. The exact ordered
+tag candidates are given in Table~\ref{tab:repro-tags}.
+
+Write $A,E,C,D,R,N$ for the selected assets, equity, cash, debt, annual
+revenue, and annual net income. Shares use the selected instant shares
+fact, falling back only when absent to the latest eligible annual
+weighted-average shares fact. Multiply as-filed shares by the product
+of split factors strictly after the shares' measurement date, through
+the recorded corporate-action cutoff (20 July 2026). Market capitalization
+$M$ is this share count times the quote close on the same split basis.
+Thus the availability filter concerns historical filings; the price/share
+basis is harmonized using a later recorded corporate-action cutoff,
+not claimed to be a historical download-vintage archive.
+Ratios return NA if either operand is missing, the absolute denominator
+is at most $10^{-12}$, or the result is non-finite. Except for P/E's
+positive-income requirement, negative denominators are not suppressed.
+No maximum staleness filter is applied to eligible facts.
+
+\paragraph{Events.}
+The corrected SEC event history joins the recent table with all named
+historical submission tables and deduplicates on accession number,
+filing date, form, and primary document. Only filing dates at or before
+the snapshot label enter. All event-window ages are inclusive calendar-day
+ages. Counts can legitimately be zero; absent recency values are NA.
+For a same-day latest-event tie, the sorted history's first matching row
+is retained. Known item labels are: 1.01, material agreement; 1.02,
+agreement termination; 2.01, acquisition or disposal; 2.02, earnings
+release; 2.05, restructuring costs; 2.06, material impairment; 5.02,
+director or officer change; 7.01, regulation FD disclosure; and 8.01,
+other material event. Unknown codes retain the literal prefix
+\texttt{item } followed by the code.
+
+\paragraph{Risk and macro series.}
+Risk estimation uses the last 253 rows of the forward-filled adjusted-close
+file and daily simple returns, dropping incomplete return rows.
+Its equal-weight reference averages \emph{all 50 columns in that file},
+not only the 14 investable stocks and not SPY. Those columns are
+AAPL, MSFT, NVDA, AMZN, GOOGL, META, BRK-B, LLY, AVGO, JPM, TSLA, V, XOM, UNH, MA, COST, HD, PG, NFLX, JNJ, ABBV, BAC, KO, CRM, WMT, ORCL, CSCO, CVX, MRK, AMD, PEP, TMO, LIN, MCD, DIS, ABT, QCOM, IBM, ADBE, GE, CAT, NOW, AXP, TXN, VZ, PM, INTU, AMGN, ISRG, SPGI.
+Variance, covariance, and standard deviation use sample normalization
+($n-1$). A beta denominator at most $10^{-12}$ (or a non-finite denominator
+failing that comparison) yields zero; other non-finite results render as
+NA. Macro observations are finite Yahoo quote closes, restricted to dates
+no later than the snapshot label; levels take the last such observation
+and returns require at least 64 observations. There is no staleness cap.
+The SPY and HYG macro returns use quote closes, not adjusted-close total
+returns. Yield levels are used as supplied, with no extra factor of ten
+or 100. The curve spread is formed from unrounded levels and only then
+rounded for display.
+
+\begin{table*}[t]
+\caption{Market fields, transformations, and access-matrix columns. C/M are coherent/mixed seats; format codes are defined in the text.}
+\label{tab:repro-market}
+\small
+\begin{tabular}{@{}rp{.23\textwidth}cccp{.55\textwidth}@{}}
+\toprule
+$i$ & Field ID / displayed header & C & M & Fmt & Definition (raw units) \\
+\midrule
+1 & \texttt{market.\allowbreak{}ret\_\allowbreak{}7d}\newline \texttt{ret\_\allowbreak{}7d\%} & 1 & 5 & P & Adjusted-close simple return over 5 sessions: P[t]/P[t-5]-1; the historical label is ret\_7d. (fraction). \\[2pt]
+2 & \texttt{market.\allowbreak{}ret\_\allowbreak{}30d}\newline \texttt{ret\_\allowbreak{}30d\%} & 1 & 4 & P & Adjusted-close simple return over 21 sessions: P[t]/P[t-21]-1. (fraction). \\[2pt]
+3 & \texttt{market.\allowbreak{}ret\_\allowbreak{}90d}\newline \texttt{ret\_\allowbreak{}90d\%} & 1 & 1 & P & Adjusted-close simple return over 63 sessions: P[t]/P[t-63]-1. (fraction). \\[2pt]
+4 & \texttt{market.\allowbreak{}vol\_\allowbreak{}30d}\newline \texttt{vol\_\allowbreak{}30d\%} & 2 & 5 & P & Sample standard deviation of the last 21 daily log returns, multiplied by sqrt(252). (annualized fraction). \\[2pt]
+5 & \texttt{market.\allowbreak{}drawdown\_\allowbreak{}90d}\newline \texttt{dd\_\allowbreak{}90d\%} & 1 & 7 & P & Current adjusted close divided by the maximum of the last 63 closes, minus one; not the worst peak-to-trough loss within that window. (fraction). \\[2pt]
+6 & \texttt{market.\allowbreak{}adv\_\allowbreak{}bn}\newline \texttt{ADV\_\allowbreak{}\$bn} & 2 & 6 & N & Mean of the last 21 products of split-adjusted, dividend-unadjusted quote close and volume, divided by 1e9; missing volume is zero. (USD billions/day). \\[2pt]
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Fundamentals fields, transformations, and access-matrix columns. C/M are coherent/mixed seats; format codes are defined in the text.}
+\label{tab:repro-fundamentals}
+\small
+\begin{tabular}{@{}rp{.23\textwidth}cccp{.55\textwidth}@{}}
+\toprule
+$i$ & Field ID / displayed header & C & M & Fmt & Definition (raw units) \\
+\midrule
+7 & \texttt{fundamentals.\allowbreak{}pe}\newline \texttt{P/\allowbreak{}E} & 3 & 5 & N & Split-consistent market capitalization M divided by latest eligible annual net income N; NA if N is missing or nonpositive. (multiple). \\[2pt]
+8 & \texttt{fundamentals.\allowbreak{}price\_\allowbreak{}to\_\allowbreak{}sales}\newline \texttt{P/\allowbreak{}S} & 3 & 6 & N & M divided by latest eligible annual revenue R. (multiple). \\[2pt]
+9 & \texttt{fundamentals.\allowbreak{}price\_\allowbreak{}to\_\allowbreak{}book}\newline \texttt{P/\allowbreak{}B} & 3 & 1 & N & M divided by selected stockholders equity E. (multiple). \\[2pt]
+10 & \texttt{fundamentals.\allowbreak{}roa}\newline \texttt{ROA\%} & 4 & 2 & P & Latest eligible annual net income N divided by selected assets A; not trailing-quarter or TTM income. (fraction). \\[2pt]
+11 & \texttt{fundamentals.\allowbreak{}debt\_\allowbreak{}to\_\allowbreak{}assets}\newline \texttt{debt/\allowbreak{}A\%} & 4 & 3 & P & Selected long-term debt/finance-lease fact D divided by A; not a constructed total-debt measure. (fraction). \\[2pt]
+12 & \texttt{fundamentals.\allowbreak{}cash\_\allowbreak{}to\_\allowbreak{}assets}\newline \texttt{cash/\allowbreak{}A\%} & 4 & 6 & P & Selected cash fact C divided by A. (fraction). \\[2pt]
+13 & \texttt{fundamentals.\allowbreak{}revenue\_\allowbreak{}growth}\newline \texttt{rev\_\allowbreak{}g\%} & 4 & 5 & P & (Latest eligible annual revenue R minus previous annual revenue R\_prev) divided by abs(R\_prev). (fraction). \\[2pt]
+14 & \texttt{fundamentals.\allowbreak{}accounting\_\allowbreak{}age}\newline \texttt{age\_\allowbreak{}d} & 4 & 4 & I & Calendar days from the filing date of the selected latest annual revenue fact to the snapshot label; not days since the accounting period ended. (calendar days). \\[2pt]
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Events fields, transformations, and access-matrix columns. C/M are coherent/mixed seats; format codes are defined in the text.}
+\label{tab:repro-events}
+\small
+\begin{tabular}{@{}rp{.23\textwidth}cccp{.55\textwidth}@{}}
+\toprule
+$i$ & Field ID / displayed header & C & M & Fmt & Definition (raw units) \\
+\midrule
+15 & \texttt{events.\allowbreak{}eight\_\allowbreak{}k\_\allowbreak{}30d}\newline \texttt{8K\_\allowbreak{}30d} & 5 & 5 & I & Count of 8-K and 8-K/A filings with filing age between 0 and 30 calendar days, inclusive. (count). \\[2pt]
+16 & \texttt{events.\allowbreak{}eight\_\allowbreak{}k\_\allowbreak{}90d}\newline \texttt{8K\_\allowbreak{}90d} & 5 & 1 & I & Count of 8-K and 8-K/A filings with filing age between 0 and 90 calendar days, inclusive. (count). \\[2pt]
+17 & \texttt{events.\allowbreak{}earnings\_\allowbreak{}release\_\allowbreak{}90d}\newline \texttt{earn\_\allowbreak{}90d} & 5 & 4 & I & Count of item-code 2.02 occurrences across the eligible 90-day filings; counts item occurrences, not distinct event days. (count). \\[2pt]
+18 & \texttt{events.\allowbreak{}material\_\allowbreak{}event\_\allowbreak{}90d}\newline \texttt{material} & 5 & 3 & I & Count of item-code occurrences in \{1.01,1.02,2.01,2.05,2.06,5.02,8.01\} across eligible 90-day filings. (count). \\[2pt]
+19 & \texttt{events.\allowbreak{}days\_\allowbreak{}since\_\allowbreak{}latest\_\allowbreak{}8k}\newline \texttt{last\_\allowbreak{}8K\_\allowbreak{}d} & 5 & 2 & I & Calendar days since latest 8-K/8-K/A within the prior 90 days; NA if none exists in that window. (calendar days). \\[2pt]
+20 & \texttt{events.\allowbreak{}days\_\allowbreak{}since\_\allowbreak{}periodic\_\allowbreak{}filing}\newline \texttt{periodic\_\allowbreak{}d} & 5 & 6 & I & Calendar days since latest 10-Q or 10-K filed by the snapshot label; no lookback cap and no amended forms in this field. (calendar days). \\[2pt]
+21 & \texttt{events.\allowbreak{}latest\_\allowbreak{}8k\_\allowbreak{}items}\newline \texttt{latest\_\allowbreak{}event} & 5 & 7 & T & First three mapped item labels, in source order, of latest eligible 90-day 8-K/8-K/A, joined by semicolon-space; unknown code becomes item <code>; none in prior 90d if no labels. (text). \\[2pt]
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Risk fields, transformations, and access-matrix columns. C/M are coherent/mixed seats; format codes are defined in the text.}
+\label{tab:repro-risk}
+\small
+\begin{tabular}{@{}rp{.23\textwidth}cccp{.55\textwidth}@{}}
+\toprule
+$i$ & Field ID / displayed header & C & M & Fmt & Definition (raw units) \\
+\midrule
+22 & \texttt{risk.\allowbreak{}market\_\allowbreak{}beta}\newline \texttt{beta} & 6 & 4 & N & Sample covariance of stock and equal-weight 50-stock reference daily simple returns divided by reference sample variance, over at most 252 returns. Zero if variance <= 1e-12. (dimensionless). \\[2pt]
+23 & \texttt{risk.\allowbreak{}downside\_\allowbreak{}beta}\newline \texttt{down\_\allowbreak{}beta} & 6 & 7 & N & Same beta calculation restricted to days with negative reference return; denominator is the sample variance on that subset. Zero if variance <= 1e-12. (dimensionless). \\[2pt]
+24 & \texttt{risk.\allowbreak{}market\_\allowbreak{}corr}\newline \texttt{mkt\_\allowbreak{}corr} & 6 & 5 & N & Pearson correlation between stock and reference daily simple returns over the risk window. (dimensionless). \\[2pt]
+25 & \texttt{risk.\allowbreak{}idio\_\allowbreak{}vol}\newline \texttt{idio\_\allowbreak{}vol\%} & 7 & 6 & P & Sample standard deviation of stock return minus estimated beta times reference return, multiplied by sqrt(252); no intercept fitted. (annualized fraction). \\[2pt]
+26 & \texttt{risk.\allowbreak{}max\_\allowbreak{}drawdown\_\allowbreak{}1y}\newline \texttt{max\_\allowbreak{}dd\%} & 7 & 6 & P & Minimum of P[u]/max\_\{v<=u\} P[v]-1 over the last 253 available closes; running peak starts at the window beginning. (fraction). \\[2pt]
+27 & \texttt{risk.\allowbreak{}ten\_\allowbreak{}year\_\allowbreak{}yield}\newline \texttt{10y\%} & 6 & 5 & N & Last finite Yahoo \textasciicircum{}TNX quote close at or before the snapshot label, used directly without an extra scale factor. (percent yield level). \\[2pt]
+28 & \texttt{risk.\allowbreak{}three\_\allowbreak{}month\_\allowbreak{}yield}\newline \texttt{3m\%} & 6 & 4 & N & Last finite Yahoo \textasciicircum{}IRX quote close at or before the snapshot label, used directly without an extra scale factor. (percent yield level). \\[2pt]
+29 & \texttt{risk.\allowbreak{}yield\_\allowbreak{}curve\_\allowbreak{}spread}\newline \texttt{10y-\allowbreak{}3m\_\allowbreak{}pp} & 6 & 7 & N & Ten-year yield minus three-month yield, derived before display rounding; NA if either source value is missing. (percentage points). \\[2pt]
+30 & \texttt{risk.\allowbreak{}vix}\newline \texttt{VIX} & 7 & 3 & N & Last finite Yahoo \textasciicircum{}VIX quote close at or before the snapshot label. (index points). \\[2pt]
+31 & \texttt{risk.\allowbreak{}equity\_\allowbreak{}market\_\allowbreak{}return\_\allowbreak{}3m}\newline \texttt{SPY\_\allowbreak{}3m\%} & 6 & 6 & P & Simple return over 63 available SPY quote-close observations: Q[t]/Q[t-63]-1; not adjusted-close total return. NA with fewer than 64 observations. (fraction). \\[2pt]
+32 & \texttt{risk.\allowbreak{}high\_\allowbreak{}yield\_\allowbreak{}return\_\allowbreak{}3m}\newline \texttt{HYG\_\allowbreak{}3m\%} & 7 & 1 & P & Simple return over 63 available HYG quote-close observations: Q[t]/Q[t-63]-1; not adjusted-close total return. NA with fewer than 64 observations. (fraction). \\[2pt]
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Ordered SEC tag candidates. Instant shares consider both \texttt{us-gaap} and \texttt{dei}; all other lookups use \texttt{us-gaap}. Source selection follows the date/priority ordering in the text, rather than treating a lower-priority tag as usable only when a higher-priority tag is wholly absent.}
+\label{tab:repro-tags}
+\small
+\begin{tabular}{@{}p{.16\textwidth}p{.08\textwidth}p{.70\textwidth}@{}}
+\toprule
+Quantity & Unit & Ordered tags \\
+\midrule
+A & USD & \texttt{Assets} \\[2pt]
+E & USD & \texttt{Stockholders\allowbreak{}Equity}; \texttt{Stockholders\allowbreak{}Equity\allowbreak{}Including\allowbreak{}Portion\allowbreak{}Attributable\allowbreak{}To\allowbreak{}Noncontrolling\allowbreak{}Interest} \\[2pt]
+C & USD & \texttt{Cash\allowbreak{}And\allowbreak{}Cash\allowbreak{}Equivalents\allowbreak{}At\allowbreak{}Carrying\allowbreak{}Value}; \texttt{Cash\allowbreak{}Cash\allowbreak{}Equivalents\allowbreak{}Restricted\allowbreak{}Cash\allowbreak{}And\allowbreak{}Restricted\allowbreak{}Cash\allowbreak{}Equivalents} \\[2pt]
+D & USD & \texttt{Long\allowbreak{}Term\allowbreak{}Debt\allowbreak{}And\allowbreak{}Finance\allowbreak{}Lease\allowbreak{}Obligations}; \texttt{Long\allowbreak{}Term\allowbreak{}Debt}; \texttt{Long\allowbreak{}Term\allowbreak{}Debt\allowbreak{}Noncurrent} \\[2pt]
+Instant shares & shares & \texttt{Common\allowbreak{}Stock\allowbreak{}Shares\allowbreak{}Outstanding}; \texttt{Entity\allowbreak{}Common\allowbreak{}Stock\allowbreak{}Shares\allowbreak{}Outstanding} \\[2pt]
+Annual shares fallback & shares & \texttt{Weighted\allowbreak{}Average\allowbreak{}Number\allowbreak{}Of\allowbreak{}Diluted\allowbreak{}Shares\allowbreak{}Outstanding}; \texttt{Weighted\allowbreak{}Average\allowbreak{}Number\allowbreak{}Of\allowbreak{}Shares\allowbreak{}Outstanding\allowbreak{}Basic} \\[2pt]
+R & USD & \texttt{Revenue\allowbreak{}From\allowbreak{}Contract\allowbreak{}With\allowbreak{}Customer\allowbreak{}Excluding\allowbreak{}Assessed\allowbreak{}Tax}; \texttt{Revenues}; \texttt{Sales\allowbreak{}Revenue\allowbreak{}Net} \\[2pt]
+N & USD & \texttt{Net\allowbreak{}Income\allowbreak{}Loss}; \texttt{Profit\allowbreak{}Loss} \\[2pt]
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\FloatBarrier
+\subsection{Executed prompt and output contract}
+\label{app:repro-prompt}
+The following is the entire executed user-message template, with the
+three source substitutions shown in braces. Line wrapping here is
+purely typographic. \texttt{snapshot['common\_core']} expands to the
+fixed-width universe table above; \texttt{packet\_text} expands as
+specified below; \texttt{example} is the first ticker, AAPL. Blank lines
+separate the source paragraphs. The historical final example has an
+extra closing brace (\texttt{]\}\}.}); it is reproduced rather than repaired.
+\begin{quote}
+\small\ttfamily\raggedright
+You are an institutional U.S. equity analyst. Construct a one-month active long/short book that seeks the best expected risk-adjusted return from the supplied evidence. Do not create different positions merely to appear diversified.
+\par\medskip
+You receive one packet from a research workflow. Its field composition was fixed before model collection. Use only the supplied packet. Do not infer missing fields, import current facts, or use outside knowledge. The calendar date is intentionally hidden.
+\par\medskip
+COMMON UNIVERSE\par
+\{snapshot['common\_core']\}
+\par\medskip
+PERMITTED INFORMATION\par
+\{packet\_text\}
+\par\medskip
+Give every listed ticker a signed conviction score from -1 to +1, with both positive and negative scores. Positive means long and negative means short. These are research scores, not final capital weights. The fixed evaluation pipeline subtracts their mean and rescales absolute exposure to 1, imposing the same dollar-neutral book construction on every response.
+\par\medskip
+Reply with one JSON object and no markdown. The weights field must be an object containing every listed ticker exactly once. Use this schema: \{"weights":\{"\{example\}":0.10,"...":0.00\},"thesis":"at most 35 words","primary\_signals":["signal 1","signal 2"]\}\}.
+\par\medskip
+\end{quote}
+
+The packet starts with the literal line \texttt{RESEARCH PACKET}.
+If it has asset-specific fields, the next line is \texttt{ticker | }
+followed by their displayed headers joined with \texttt{ | }.
+Each of the 14 ticker rows follows in universe order, with formatted
+values joined identically. Macro fields are removed from those columns
+and appended once as a final line beginning \texttt{market context | },
+followed by \texttt{header=value} pairs joined with \texttt{ | }.
+Both the asset and macro subsequences preserve their order within the
+frozen seat list. The full shared packet uses field-index order. Lines
+are joined by a single newline. There is no seat label, date, persona,
+architecture name, or omitted-field placeholder in this renderer.
+
+The actual API \texttt{response\_format} object is given below; this,
+not the prompt's illustrative ellipsis, defines all required output keys.
+The schema contains no numerical score bounds, thesis word-count limit,
+or fixed number of signals. Those are distinct from the prompt request.
+The collector separately rejects missing/unknown/duplicate symbols,
+non-finite values, absolute scores above $1+10^{-12}$, and a centered
+book with absolute sum at most $10^{-12}$. It does not separately enforce
+a positive/negative-sign mix or the 35-word thesis request.
+{\scriptsize
+\begin{verbatim}
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "active_book",
+    "strict": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "weights": {
+          "type": "object",
+          "properties": {
+            "AAPL": {
+              "type": "number"
+            },
+            "MSFT": {
+              "type": "number"
+            },
+            "NVDA": {
+              "type": "number"
+            },
+            "GOOGL": {
+              "type": "number"
+            },
+            "META": {
+              "type": "number"
+            },
+            "AMZN": {
+              "type": "number"
+            },
+            "TSLA": {
+              "type": "number"
+            },
+            "WMT": {
+              "type": "number"
+            },
+            "PG": {
+              "type": "number"
+            },
+            "JPM": {
+              "type": "number"
+            },
+            "BAC": {
+              "type": "number"
+            },
+            "XOM": {
+              "type": "number"
+            },
+            "JNJ": {
+              "type": "number"
+            },
+            "UNH": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "AAPL",
+            "MSFT",
+            "NVDA",
+            "GOOGL",
+            "META",
+            "AMZN",
+            "TSLA",
+            "WMT",
+            "PG",
+            "JPM",
+            "BAC",
+            "XOM",
+            "JNJ",
+            "UNH"
+          ],
+          "additionalProperties": false
+        },
+        "thesis": {
+          "type": "string"
+        },
+        "primary_signals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "weights",
+        "thesis",
+        "primary_signals"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
+\end{verbatim}
+}
+
+The request is sent to
+\url{https://openrouter.ai/api/v1/chat/completions}, with the requested
+model string, temperature 0.7, \texttt{max\_tokens=1400}, one
+\texttt{user} message and no separate system message,
+\texttt{provider=\{"require\_parameters":true\}}, and the schema above.
+A seed is supplied only when the catalog advertises it (all routes here
+except Anthropic). For the pipe-joined identity
+\texttt{date|architecture|team\_size|packet\_index|vendor}, the base seed is
+2026072100 plus the integer represented by the first seven hexadecimal
+SHA-256 characters, modulo $100{,}000{,}000$.
+Shared uses architecture \texttt{shared} and packet index zero;
+the audited partitions use \texttt{mixed\_audited} or
+\texttt{coherent\_audited}, with one-based packet indices.
+For five Google curve requests an additional recovery offset of one is
+recorded: (2023-10-31, mixed, $K=5$, seat 2), (2024-03-31, mixed, $K=5$,
+seat 2), (2024-08-31, mixed, $K=5$, seat 3), (2024-09-30, coherent, $K=3$,
+seat 2), and (2024-11-30, coherent, $K=3$, seat 2).
+The collector permits at most five attempts per job; ordinarily the
+same payload is retried, and parse/format diagnostics and response
+metadata are retained. These controls do not guarantee provider-side
+seed determinism. System fingerprints are absent in 10,047 of the
+13,090 primary rows, although provider and response-model strings are
+present in all those rows.
+
+\paragraph{Supplied machine-readable objects.}
+The accompanying \path{repro_protocol.json} supplies both literal
+$7\times32$ matrices, the ordered seat lists, complete route/provider
+metadata, field definitions, rendering rules, universe, and seed offsets.
+\path{repro_response_format.json} contains the API schema;
+\path{repro_prompt_template.txt} preserves the template without
+PDF line wrapping. \path{repro_prompt_examples.json} supplies the
+complete, unabridged shared, mixed-seat-1, and coherent-seat-1 rendered
+prompts for 31 July 2023, together with the recorded source, packet,
+prompt, and request-payload hashes. These are supplied objects, not
+promises of a future supplement.

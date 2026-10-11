@@ -1,0 +1,4102 @@
+{
+  "schema_version": "information-diversity-role-placebo-results-v1",
+  "design": {
+    "schema_version": "information-diversity-role-placebo-plan-v1",
+    "analysis_status": "post-hoc mechanism validation",
+    "frozen_before_collection": true,
+    "frozen_before_role_placebo_collection": true,
+    "prompt_spec_version": "information-diversity-role-placebo-v1",
+    "n_dates": 12,
+    "dates": [
+      "2023-08-31",
+      "2023-09-30",
+      "2023-10-31",
+      "2023-11-30",
+      "2024-02-29",
+      "2024-04-30",
+      "2024-08-31",
+      "2024-11-30",
+      "2025-04-30",
+      "2025-07-31",
+      "2025-11-30",
+      "2026-01-31"
+    ],
+    "n_models": 7,
+    "models": [
+      {
+        "vendor": "openai",
+        "model": "openai/gpt-4o"
+      },
+      {
+        "vendor": "google",
+        "model": "google/gemini-2.5-flash"
+      },
+      {
+        "vendor": "meta",
+        "model": "meta-llama/llama-3.1-70b-instruct"
+      },
+      {
+        "vendor": "alibaba",
+        "model": "qwen/qwen3-235b-a22b-2507"
+      },
+      {
+        "vendor": "mistral",
+        "model": "mistralai/mistral-large"
+      },
+      {
+        "vendor": "deepseek",
+        "model": "deepseek/deepseek-chat"
+      },
+      {
+        "vendor": "anthropic",
+        "model": "anthropic/claude-sonnet-4.5"
+      }
+    ],
+    "roles": [
+      "market",
+      "fundamentals",
+      "events",
+      "risk"
+    ],
+    "n_calls": 336,
+    "temperature": 0.7,
+    "matched_roster_size": 4,
+    "complete_symbol_rows_required": true,
+    "placebo_definition": "four role-labeled calls from one model; every call receives the identical full packet",
+    "primary_comparison": "four restricted-information specialists versus four role-labeled full-packet agents",
+    "analysis_unit": "date; model families are averaged within date before paired inference",
+    "pit_correction": {
+      "id": "2026-07-20-price-share-basis-v2",
+      "reason": "align dividend-unadjusted split-adjusted closes with split-adjusted as-filed SEC shares and select the newest eligible US-GAAP/DEI share fact",
+      "scope": "input correction only; dates, fields, models, prompts, and assignments unchanged"
+    }
+  },
+  "collection": {
+    "n_records": 336,
+    "n_parse_ok": 336,
+    "n_parse_failures": 0,
+    "prompt_tokens": 851136,
+    "completion_tokens": 89896,
+    "reported_cost": 1.4506100902999999
+  },
+  "per_date": [
+    {
+      "snapshot_id": "S01",
+      "date": "2023-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.8285112434191095,
+        "N_eff_over_null": 0.5581320685471872,
+        "mean_abs_corr": 0.5813477711173649,
+        "mean_signed_corr": 0.5004968564418177,
+        "same_side_overlap": 0.6076974910029694,
+        "surviving_gross": 0.8073398188280108,
+        "forward_return_mean": -0.013199097153575447,
+        "forward_return_sd_across_books": 0.008608533126755035
+      },
+      "information_same_model_m4": {
+        "N_eff": 2.628412049870691,
+        "N_eff_over_null": 0.802292608081291,
+        "mean_abs_corr": 0.36874352871495075,
+        "mean_signed_corr": 0.035108771183014316,
+        "same_side_overlap": 0.3644796024087752,
+        "surviving_gross": 0.5212309760661324,
+        "forward_return_mean": -0.004595974053524456,
+        "forward_return_sd_across_books": 0.017992474413463574
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.485596749709609,
+        "N_eff_over_null": 0.4534613554751613,
+        "mean_abs_corr": 0.7269842192054442,
+        "mean_signed_corr": 0.6585689199595441,
+        "same_side_overlap": 0.7158895056055038,
+        "surviving_gross": 0.8540414466094539,
+        "forward_return_mean": -0.011756849569654155,
+        "forward_return_sd_across_books": 0.007045035345755453
+      }
+    },
+    {
+      "snapshot_id": "S02",
+      "date": "2023-09-30",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.8636708256502408,
+        "N_eff_over_null": 0.5688641274451256,
+        "mean_abs_corr": 0.5767496743517412,
+        "mean_signed_corr": 0.5496412796039735,
+        "same_side_overlap": 0.6193190253295311,
+        "surviving_gross": 0.7856129559431676,
+        "forward_return_mean": 0.022530980220041415,
+        "forward_return_sd_across_books": 0.01396122334159231
+      },
+      "information_same_model_m4": {
+        "N_eff": 2.9402020541218348,
+        "N_eff_over_null": 0.8974629280075875,
+        "mean_abs_corr": 0.2991866321876691,
+        "mean_signed_corr": 0.10728420463550466,
+        "same_side_overlap": 0.40580327446327563,
+        "surviving_gross": 0.5233265813615259,
+        "forward_return_mean": 0.016543934048245335,
+        "forward_return_sd_across_books": 0.01919918908967371
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.3705744664068067,
+        "N_eff_over_null": 0.4183521237764975,
+        "mean_abs_corr": 0.8022588482164764,
+        "mean_signed_corr": 0.8022588482164764,
+        "same_side_overlap": 0.7604967136966805,
+        "surviving_gross": 0.8983049585788532,
+        "forward_return_mean": 0.02175236996939439,
+        "forward_return_sd_across_books": 0.00735997851541495
+      }
+    },
+    {
+      "snapshot_id": "S03",
+      "date": "2023-10-31",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.2102700616709043,
+        "N_eff_over_null": 0.36942104427972927,
+        "mean_abs_corr": 0.8765234846231513,
+        "mean_signed_corr": 0.8765234846231513,
+        "same_side_overlap": 0.7850792149554177,
+        "surviving_gross": 0.9396648082482407,
+        "forward_return_mean": -0.040919724583504825,
+        "forward_return_sd_across_books": 0.005903763412226699
+      },
+      "information_same_model_m4": {
+        "N_eff": 3.0071554852979117,
+        "N_eff_over_null": 0.9178996943513156,
+        "mean_abs_corr": 0.26385844870338543,
+        "mean_signed_corr": 0.13637548841777594,
+        "same_side_overlap": 0.3870498187730868,
+        "surviving_gross": 0.563971267500957,
+        "forward_return_mean": -0.019187313336025393,
+        "forward_return_sd_across_books": 0.022522893272638567
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.185637079240484,
+        "N_eff_over_null": 0.3619021091417266,
+        "mean_abs_corr": 0.8911477555579699,
+        "mean_signed_corr": 0.8911477555579699,
+        "same_side_overlap": 0.792920616474112,
+        "surviving_gross": 0.949843131779018,
+        "forward_return_mean": -0.03859299390659744,
+        "forward_return_sd_across_books": 0.005718667562288992
+      }
+    },
+    {
+      "snapshot_id": "S04",
+      "date": "2023-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.6709809167237226,
+        "N_eff_over_null": 0.5100477445301225,
+        "mean_abs_corr": 0.6690829550098678,
+        "mean_signed_corr": 0.6690829550098678,
+        "same_side_overlap": 0.666109365852766,
+        "surviving_gross": 0.8086077396211981,
+        "forward_return_mean": -0.005194985788248262,
+        "forward_return_sd_across_books": 0.009931255621648514
+      },
+      "information_same_model_m4": {
+        "N_eff": 3.1505802475380444,
+        "N_eff_over_null": 0.9616784567286741,
+        "mean_abs_corr": 0.2529364499034596,
+        "mean_signed_corr": 0.10070334958902606,
+        "same_side_overlap": 0.38207314563155553,
+        "surviving_gross": 0.527576396102892,
+        "forward_return_mean": -0.009436686768966909,
+        "forward_return_sd_across_books": 0.016010205682459568
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.289964539136946,
+        "N_eff_over_null": 0.3937468687557858,
+        "mean_abs_corr": 0.8429642931697193,
+        "mean_signed_corr": 0.8429642931697193,
+        "same_side_overlap": 0.7534230260656896,
+        "surviving_gross": 0.9228417115119942,
+        "forward_return_mean": -0.0010448153910726972,
+        "forward_return_sd_across_books": 0.004628513290526717
+      }
+    },
+    {
+      "snapshot_id": "S05",
+      "date": "2024-02-29",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.3603448387723258,
+        "N_eff_over_null": 0.41522964736151835,
+        "mean_abs_corr": 0.8068929541633317,
+        "mean_signed_corr": 0.8068929541633317,
+        "same_side_overlap": 0.7314650647367625,
+        "surviving_gross": 0.8982390571630828,
+        "forward_return_mean": 0.03181828670077575,
+        "forward_return_sd_across_books": 0.010188463577969783
+      },
+      "information_same_model_m4": {
+        "N_eff": 3.0902513036884613,
+        "N_eff_over_null": 0.9432637391023976,
+        "mean_abs_corr": 0.26985845776161654,
+        "mean_signed_corr": 0.03590312404716832,
+        "same_side_overlap": 0.32739887413410634,
+        "surviving_gross": 0.4982004911630238,
+        "forward_return_mean": 0.017598791257251587,
+        "forward_return_sd_across_books": 0.019651890865523845
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.2908158824352667,
+        "N_eff_over_null": 0.394006731525482,
+        "mean_abs_corr": 0.8398682970571884,
+        "mean_signed_corr": 0.8398682970571884,
+        "same_side_overlap": 0.7754320208123432,
+        "surviving_gross": 0.9274954364577344,
+        "forward_return_mean": 0.030548158668383976,
+        "forward_return_sd_across_books": 0.01059763126292146
+      }
+    },
+    {
+      "snapshot_id": "S06",
+      "date": "2024-04-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.868666954699865,
+        "N_eff_over_null": 0.5703891384896196,
+        "mean_abs_corr": 0.6037017186393612,
+        "mean_signed_corr": 0.5944972414068745,
+        "same_side_overlap": 0.6345540038947365,
+        "surviving_gross": 0.8136814687126418,
+        "forward_return_mean": 0.023812591031954607,
+        "forward_return_sd_across_books": 0.024063945982173155
+      },
+      "information_same_model_m4": {
+        "N_eff": 2.968009733484411,
+        "N_eff_over_null": 0.9059509029434759,
+        "mean_abs_corr": 0.28759451580255063,
+        "mean_signed_corr": -0.015189805273316858,
+        "same_side_overlap": 0.3417738335471977,
+        "surviving_gross": 0.439393705271549,
+        "forward_return_mean": 0.014232134248228154,
+        "forward_return_sd_across_books": 0.02877315829135265
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.7346983654691959,
+        "N_eff_over_null": 0.5294967643810271,
+        "mean_abs_corr": 0.6533279664288992,
+        "mean_signed_corr": 0.641456140035321,
+        "same_side_overlap": 0.6639749361156903,
+        "surviving_gross": 0.8353999686003011,
+        "forward_return_mean": 0.03657603609175607,
+        "forward_return_sd_across_books": 0.017326665242501423
+      }
+    },
+    {
+      "snapshot_id": "S07",
+      "date": "2024-08-31",
+      "return_regime": "strong",
+      "volatility_regime": "high",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.7579491774231941,
+        "N_eff_over_null": 0.5365938078463005,
+        "mean_abs_corr": 0.6418634963891833,
+        "mean_signed_corr": 0.6015219529637228,
+        "same_side_overlap": 0.6345013718227291,
+        "surviving_gross": 0.8140663171005614,
+        "forward_return_mean": -0.02903636236494169,
+        "forward_return_sd_across_books": 0.015269980507661454
+      },
+      "information_same_model_m4": {
+        "N_eff": 2.673855255734897,
+        "N_eff_over_null": 0.8161636250529879,
+        "mean_abs_corr": 0.3575903777129497,
+        "mean_signed_corr": 0.26988595500503887,
+        "same_side_overlap": 0.41496680555514454,
+        "surviving_gross": 0.6422581745686372,
+        "forward_return_mean": -0.028251053905872098,
+        "forward_return_sd_across_books": 0.015334754137121943
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.5307912842949851,
+        "N_eff_over_null": 0.46725646839336055,
+        "mean_abs_corr": 0.7507880393506241,
+        "mean_signed_corr": 0.6856653938426722,
+        "same_side_overlap": 0.7070525068963214,
+        "surviving_gross": 0.8501132467374778,
+        "forward_return_mean": -0.030316775423219523,
+        "forward_return_sd_across_books": 0.0107362127861837
+      }
+    },
+    {
+      "snapshot_id": "S08",
+      "date": "2024-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "high",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.880772935433258,
+        "N_eff_over_null": 0.5740843501503837,
+        "mean_abs_corr": 0.5847661648963138,
+        "mean_signed_corr": 0.40622590736549624,
+        "same_side_overlap": 0.547458779721626,
+        "surviving_gross": 0.7283096897296606,
+        "forward_return_mean": -0.01011394315982438,
+        "forward_return_sd_across_books": 0.02636250994245537
+      },
+      "information_same_model_m4": {
+        "N_eff": 2.7960740487417657,
+        "N_eff_over_null": 0.8534695087339167,
+        "mean_abs_corr": 0.3148688939212795,
+        "mean_signed_corr": 0.13958762990941712,
+        "same_side_overlap": 0.3832258603647878,
+        "surviving_gross": 0.5151553533679977,
+        "forward_return_mean": -0.018805460675033876,
+        "forward_return_sd_across_books": 0.02451622690573257
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.4996408210060568,
+        "N_eff_over_null": 0.45774814703398903,
+        "mean_abs_corr": 0.7693186900702299,
+        "mean_signed_corr": 0.7243388116956729,
+        "same_side_overlap": 0.7234588392758466,
+        "surviving_gross": 0.8712948945239309,
+        "forward_return_mean": -0.015211420910246956,
+        "forward_return_sd_across_books": 0.01662417221315643
+      }
+    },
+    {
+      "snapshot_id": "S09",
+      "date": "2025-04-30",
+      "return_regime": "weak",
+      "volatility_regime": "high",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.9500995681089413,
+        "N_eff_over_null": 0.5952455090111507,
+        "mean_abs_corr": 0.5553406666354836,
+        "mean_signed_corr": 0.45034935260620174,
+        "same_side_overlap": 0.5577704305344252,
+        "surviving_gross": 0.722727908936084,
+        "forward_return_mean": 0.02850456885386227,
+        "forward_return_sd_across_books": 0.041624526316694735
+      },
+      "information_same_model_m4": {
+        "N_eff": 2.8732574805774465,
+        "N_eff_over_null": 0.8770288653542607,
+        "mean_abs_corr": 0.31733035010053223,
+        "mean_signed_corr": 0.09491845168950185,
+        "same_side_overlap": 0.3755583353001764,
+        "surviving_gross": 0.5224145954625125,
+        "forward_return_mean": 0.014503272286270687,
+        "forward_return_sd_across_books": 0.05649663770168439
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.6771165107581638,
+        "N_eff_over_null": 0.5119205641819201,
+        "mean_abs_corr": 0.6665289516522546,
+        "mean_signed_corr": 0.6629630903929736,
+        "same_side_overlap": 0.6723597514939713,
+        "surviving_gross": 0.8522686832571054,
+        "forward_return_mean": 0.04244366334022664,
+        "forward_return_sd_across_books": 0.025634528663033947
+      }
+    },
+    {
+      "snapshot_id": "S10",
+      "date": "2025-07-31",
+      "return_regime": "strong",
+      "volatility_regime": "normal",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.259927152607817,
+        "N_eff_over_null": 0.3845783013009279,
+        "mean_abs_corr": 0.8482285456917141,
+        "mean_signed_corr": 0.8482285456917141,
+        "same_side_overlap": 0.7565916469706867,
+        "surviving_gross": 0.9420319135096351,
+        "forward_return_mean": -0.06165400390183641,
+        "forward_return_sd_across_books": 0.00710886064569872
+      },
+      "information_same_model_m4": {
+        "N_eff": 2.49421525561879,
+        "N_eff_over_null": 0.7613305770094113,
+        "mean_abs_corr": 0.4129820471621831,
+        "mean_signed_corr": 0.3796896182724482,
+        "same_side_overlap": 0.5056290174886501,
+        "surviving_gross": 0.6838817942787562,
+        "forward_return_mean": -0.033239920085857425,
+        "forward_return_sd_across_books": 0.023911949440289734
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.1550612844609547,
+        "N_eff_over_null": 0.35256919874853543,
+        "mean_abs_corr": 0.9095889450668848,
+        "mean_signed_corr": 0.9095889450668848,
+        "same_side_overlap": 0.8214304438621376,
+        "surviving_gross": 0.9649859819206401,
+        "forward_return_mean": -0.0603418416305032,
+        "forward_return_sd_across_books": 0.006526684114261925
+      }
+    },
+    {
+      "snapshot_id": "S11",
+      "date": "2025-11-30",
+      "return_regime": "middle",
+      "volatility_regime": "normal",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.6255907711442166,
+        "N_eff_over_null": 0.49619292360127965,
+        "mean_abs_corr": 0.7172926515193898,
+        "mean_signed_corr": 0.7041684692820364,
+        "same_side_overlap": 0.6870616969335488,
+        "surviving_gross": 0.8303372857948815,
+        "forward_return_mean": -0.017725594272954125,
+        "forward_return_sd_across_books": 0.00617215958999338
+      },
+      "information_same_model_m4": {
+        "N_eff": 2.7992251692720482,
+        "N_eff_over_null": 0.8544313521057516,
+        "mean_abs_corr": 0.33544602885571884,
+        "mean_signed_corr": 0.07345146829116242,
+        "same_side_overlap": 0.36512878631460655,
+        "surviving_gross": 0.5211413539294547,
+        "forward_return_mean": -0.00832227887940225,
+        "forward_return_sd_across_books": 0.008518123027479948
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.394751173756621,
+        "N_eff_over_null": 0.4257317861834837,
+        "mean_abs_corr": 0.7987456866539248,
+        "mean_signed_corr": 0.7987456866539248,
+        "same_side_overlap": 0.7530879819644856,
+        "surviving_gross": 0.9135339521347152,
+        "forward_return_mean": -0.016443962310909416,
+        "forward_return_sd_across_books": 0.004913328855389532
+      }
+    },
+    {
+      "snapshot_id": "S12",
+      "date": "2026-01-31",
+      "return_regime": "weak",
+      "volatility_regime": "normal",
+      "role_labeled_full_packet_m4": {
+        "N_eff": 1.2934059895494607,
+        "N_eff_over_null": 0.39479733199163,
+        "mean_abs_corr": 0.8360955777405412,
+        "mean_signed_corr": 0.8360955777405412,
+        "same_side_overlap": 0.7497621571821692,
+        "surviving_gross": 0.9268846381608428,
+        "forward_return_mean": 0.007940326750753084,
+        "forward_return_sd_across_books": 0.010694728776680752
+      },
+      "information_same_model_m4": {
+        "N_eff": 3.1127459115476,
+        "N_eff_over_null": 0.9501299599477789,
+        "mean_abs_corr": 0.2639336799174231,
+        "mean_signed_corr": 0.14459212027661497,
+        "same_side_overlap": 0.3686701235425115,
+        "surviving_gross": 0.550810269402655,
+        "forward_return_mean": 0.01268292905547066,
+        "forward_return_sd_across_books": 0.02802326359464766
+      },
+      "sampling_same_model_m4": {
+        "N_eff": 1.2168714342347076,
+        "N_eff_over_null": 0.37143603748119114,
+        "mean_abs_corr": 0.8773819756239775,
+        "mean_signed_corr": 0.8773819756239775,
+        "same_side_overlap": 0.8066184714014529,
+        "surviving_gross": 0.9542992028116094,
+        "forward_return_mean": 0.00820910700766901,
+        "forward_return_sd_across_books": 0.008024380918479745
+      }
+    }
+  ],
+  "per_vendor_date": [
+    {
+      "snapshot_id": "S01",
+      "date": "2023-08-31",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.1176904813375264,
+        "N_eff_over_null": 0.6464007115873608,
+        "mean_abs_corr": 0.5300873627092629,
+        "mean_signed_corr": 0.5300873627092629,
+        "same_side_overlap": 0.5947622844991266,
+        "surviving_gross": 0.8104180906812485,
+        "forward_return_mean": -0.011047352736532104,
+        "forward_return_sd_across_books": 0.011116906422032745
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.6895082079572994,
+        "N_eff_over_null": 0.820941509046976,
+        "mean_abs_corr": 0.3757996767075687,
+        "mean_signed_corr": 0.1356210158000036,
+        "same_side_overlap": 0.40406539351851856,
+        "surviving_gross": 0.5973090277777777,
+        "forward_return_mean": -0.005823533769991642,
+        "forward_return_sd_across_books": 0.012863750675594808
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.091094353991952,
+        "N_eff_over_null": 0.3330440274651914,
+        "mean_abs_corr": 0.9425728740591494,
+        "mean_signed_corr": 0.9425728740591494,
+        "same_side_overlap": 0.8544684311510705,
+        "surviving_gross": 0.9853896103896105,
+        "forward_return_mean": -0.0177076385606608,
+        "forward_return_sd_across_books": 0.0034558881821610396
+      }
+    },
+    {
+      "snapshot_id": "S01",
+      "date": "2023-08-31",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.9479310523234143,
+        "N_eff_over_null": 0.5945835944588561,
+        "mean_abs_corr": 0.5378525671209243,
+        "mean_signed_corr": 0.21917622441086626,
+        "same_side_overlap": 0.47738866884129133,
+        "surviving_gross": 0.6728421708995851,
+        "forward_return_mean": -0.010852337993956986,
+        "forward_return_sd_across_books": 0.006438333645639847
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.77255172172718,
+        "N_eff_over_null": 0.8462895884129756,
+        "mean_abs_corr": 0.34594243076433323,
+        "mean_signed_corr": -0.11732477568808902,
+        "same_side_overlap": 0.2010331218077697,
+        "surviving_gross": 0.37809608232143443,
+        "forward_return_mean": -0.0035754223865787434,
+        "forward_return_sd_across_books": 0.022604185539330107
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.4530310017846728,
+        "N_eff_over_null": 0.4435210347259469,
+        "mean_abs_corr": 0.7499121784290194,
+        "mean_signed_corr": 0.7499121784290194,
+        "same_side_overlap": 0.7103374829892856,
+        "surviving_gross": 0.9049842590995345,
+        "forward_return_mean": -0.01791039562819049,
+        "forward_return_sd_across_books": 0.002611827047744163
+      }
+    },
+    {
+      "snapshot_id": "S01",
+      "date": "2023-08-31",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.2310927369560718,
+        "N_eff_over_null": 0.3757769268981295,
+        "mean_abs_corr": 0.8645744623029964,
+        "mean_signed_corr": 0.8645744623029964,
+        "same_side_overlap": 0.7547363536952774,
+        "surviving_gross": 0.9251536959281977,
+        "forward_return_mean": -0.017847845884324254,
+        "forward_return_sd_across_books": 0.007266771008419508
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.9389358943850903,
+        "N_eff_over_null": 0.8970764472815195,
+        "mean_abs_corr": 0.2631039453587092,
+        "mean_signed_corr": 0.10987942638910979,
+        "same_side_overlap": 0.4510608929678524,
+        "surviving_gross": 0.5849790759000231,
+        "forward_return_mean": -0.0158633674677316,
+        "forward_return_sd_across_books": 0.015239822233006753
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.831178273521376,
+        "N_eff_over_null": 0.5589461488724863,
+        "mean_abs_corr": 0.5010241054387222,
+        "mean_signed_corr": 0.5010241054387222,
+        "same_side_overlap": 0.6404848334383829,
+        "surviving_gross": 0.7923608449200035,
+        "forward_return_mean": -0.011430685714570761,
+        "forward_return_sd_across_books": 0.005334125004654529
+      }
+    },
+    {
+      "snapshot_id": "S01",
+      "date": "2023-08-31",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.8489896985883045,
+        "N_eff_over_null": 0.5643828819263063,
+        "mean_abs_corr": 0.5032866736743252,
+        "mean_signed_corr": 0.5032866736743252,
+        "same_side_overlap": 0.5270416567602526,
+        "surviving_gross": 0.8652973457257498,
+        "forward_return_mean": -0.029449391503250367,
+        "forward_return_sd_across_books": 0.0034614580678931496
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.3095041201211877,
+        "N_eff_over_null": 0.7049496230994949,
+        "mean_abs_corr": 0.4781351386001138,
+        "mean_signed_corr": 0.02326129777850038,
+        "same_side_overlap": 0.3776951956113885,
+        "surviving_gross": 0.4845564735228807,
+        "forward_return_mean": 0.0019707039112981696,
+        "forward_return_sd_across_books": 0.02234059743391164
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.7220689544035528,
+        "N_eff_over_null": 0.5256417816195212,
+        "mean_abs_corr": 0.6390068648235602,
+        "mean_signed_corr": 0.16009977010225993,
+        "same_side_overlap": 0.5112549787001018,
+        "surviving_gross": 0.5939576683935054,
+        "forward_return_mean": -0.018901937961770296,
+        "forward_return_sd_across_books": 0.017731761297027387
+      }
+    },
+    {
+      "snapshot_id": "S01",
+      "date": "2023-08-31",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.0453682148011367,
+        "N_eff_over_null": 0.6243251698758986,
+        "mean_abs_corr": 0.5247845055524896,
+        "mean_signed_corr": 0.4163220270799394,
+        "same_side_overlap": 0.6216673259164956,
+        "surviving_gross": 0.792253350057176,
+        "forward_return_mean": -0.01872170360441342,
+        "forward_return_sd_across_books": 0.009448925135001628
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.5089243447632192,
+        "N_eff_over_null": 0.7658203576329498,
+        "mean_abs_corr": 0.39245336378195955,
+        "mean_signed_corr": -0.0018980449791108172,
+        "same_side_overlap": 0.35422852038501224,
+        "surviving_gross": 0.543675783819917,
+        "forward_return_mean": -0.011577621066666651,
+        "forward_return_sd_across_books": 0.019281178617634866
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.6125855042228885,
+        "N_eff_over_null": 0.49222321515407513,
+        "mean_abs_corr": 0.6622707787983488,
+        "mean_signed_corr": 0.6622707787983488,
+        "same_side_overlap": 0.7308729362191304,
+        "surviving_gross": 0.8384888686184756,
+        "forward_return_mean": -0.020666423684935396,
+        "forward_return_sd_across_books": 0.002393208528726441
+      }
+    },
+    {
+      "snapshot_id": "S01",
+      "date": "2023-08-31",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.7397076395418904,
+        "N_eff_over_null": 0.5310257877929284,
+        "mean_abs_corr": 0.5263880867685078,
+        "mean_signed_corr": 0.38757050522228575,
+        "same_side_overlap": 0.5824178626113353,
+        "surviving_gross": 0.786630790441617,
+        "forward_return_mean": -0.002104466624583264,
+        "forward_return_sd_across_books": 0.013863911392449173
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.522234574986647,
+        "N_eff_over_null": 0.7698831526276088,
+        "mean_abs_corr": 0.3835771065374746,
+        "mean_signed_corr": 0.09633070674386353,
+        "same_side_overlap": 0.4127476997644402,
+        "surviving_gross": 0.5671610480999332,
+        "forward_return_mean": -0.0025898874137758273,
+        "forward_return_sd_across_books": 0.015044751571295083
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.5440726325444367,
+        "N_eff_over_null": 0.4713104474969842,
+        "mean_abs_corr": 0.6839562209254959,
+        "mean_signed_corr": 0.6839562209254959,
+        "same_side_overlap": 0.7169495242863535,
+        "surviving_gross": 0.9058441558441558,
+        "forward_return_mean": -0.0025719936601140015,
+        "forward_return_sd_across_books": 0.013142197588543774
+      }
+    },
+    {
+      "snapshot_id": "S01",
+      "date": "2023-08-31",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.8687988803854225,
+        "N_eff_over_null": 0.5704294072908312,
+        "mean_abs_corr": 0.5824607396930481,
+        "mean_signed_corr": 0.5824607396930481,
+        "same_side_overlap": 0.6958682846970069,
+        "surviving_gross": 0.7987832880625019,
+        "forward_return_mean": -0.002370581727967733,
+        "forward_return_sd_across_books": 0.00866342621584919
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.6572254851542176,
+        "N_eff_over_null": 0.811087578467513,
+        "mean_abs_corr": 0.34219303925449607,
+        "mean_signed_corr": -0.0001082277631772599,
+        "same_side_overlap": 0.35052639280644504,
+        "surviving_gross": 0.4928393410209612,
+        "forward_return_mean": 0.0052873098187750985,
+        "forward_return_sd_across_books": 0.018573034823471748
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.145146527498383,
+        "N_eff_over_null": 0.34954283299192396,
+        "mean_abs_corr": 0.9101465119638141,
+        "mean_signed_corr": 0.9101465119638141,
+        "same_side_overlap": 0.8468583524542024,
+        "surviving_gross": 0.9572647190008922,
+        "forward_return_mean": 0.00689112822266265,
+        "forward_return_sd_across_books": 0.00464623977143085
+      }
+    },
+    {
+      "snapshot_id": "S02",
+      "date": "2023-09-30",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.7138195730589267,
+        "N_eff_over_null": 0.5231237526543281,
+        "mean_abs_corr": 0.640584929974173,
+        "mean_signed_corr": 0.640584929974173,
+        "same_side_overlap": 0.6091356840910925,
+        "surviving_gross": 0.8277377916684749,
+        "forward_return_mean": 0.014618592948610405,
+        "forward_return_sd_across_books": 0.015123342336206299
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.0786327746150035,
+        "N_eff_over_null": 0.9397173164656303,
+        "mean_abs_corr": 0.26265521646187073,
+        "mean_signed_corr": -0.02289237821263178,
+        "same_side_overlap": 0.3096445547916136,
+        "surviving_gross": 0.45283677107206516,
+        "forward_return_mean": 0.020111796171327027,
+        "forward_return_sd_across_books": 0.035752769286061345
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.646004261497906,
+        "N_eff_over_null": 0.502423907216162,
+        "mean_abs_corr": 0.6805364005184794,
+        "mean_signed_corr": 0.6805364005184794,
+        "same_side_overlap": 0.6034069657267512,
+        "surviving_gross": 0.8220612533022558,
+        "forward_return_mean": 0.012848052207271187,
+        "forward_return_sd_across_books": 0.008258104767585
+      }
+    },
+    {
+      "snapshot_id": "S02",
+      "date": "2023-09-30",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.6866339128849954,
+        "N_eff_over_null": 0.5148256419359466,
+        "mean_abs_corr": 0.6694272916190914,
+        "mean_signed_corr": 0.6694272916190914,
+        "same_side_overlap": 0.5993556725344805,
+        "surviving_gross": 0.8583833660820416,
+        "forward_return_mean": 0.02202028425452726,
+        "forward_return_sd_across_books": 0.00879662656639678
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.8535334953066904,
+        "N_eff_over_null": 0.8710083452514822,
+        "mean_abs_corr": 0.3258154692879444,
+        "mean_signed_corr": 0.04108317870397334,
+        "same_side_overlap": 0.37157518407518414,
+        "surviving_gross": 0.518065268065268,
+        "forward_return_mean": 0.011183654009506303,
+        "forward_return_sd_across_books": 0.010664300707978247
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.055932031961161,
+        "N_eff_over_null": 0.3223111322748557,
+        "mean_abs_corr": 0.9633433941408871,
+        "mean_signed_corr": 0.9633433941408871,
+        "same_side_overlap": 0.9465554948059051,
+        "surviving_gross": 0.9677419354838711,
+        "forward_return_mean": 0.015150511376755143,
+        "forward_return_sd_across_books": 0.0023118081574491703
+      }
+    },
+    {
+      "snapshot_id": "S02",
+      "date": "2023-09-30",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.555750852280655,
+        "N_eff_over_null": 0.7801136115561123,
+        "mean_abs_corr": 0.3221117201573324,
+        "mean_signed_corr": 0.2669174066827133,
+        "same_side_overlap": 0.5276767121267579,
+        "surviving_gross": 0.6816536726854301,
+        "forward_return_mean": 0.010476203731263196,
+        "forward_return_sd_across_books": 0.036752428868692205
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.2887729902925527,
+        "N_eff_over_null": 1.0038602052136103,
+        "mean_abs_corr": 0.24395394857130234,
+        "mean_signed_corr": 0.0014881189493480458,
+        "same_side_overlap": 0.3671136680700702,
+        "surviving_gross": 0.5083289426043912,
+        "forward_return_mean": -0.019802338243796045,
+        "forward_return_sd_across_books": 0.025967489185867148
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.8070788316606423,
+        "N_eff_over_null": 0.5515900708691525,
+        "mean_abs_corr": 0.6065746714501019,
+        "mean_signed_corr": 0.6065746714501019,
+        "same_side_overlap": 0.6045163377252929,
+        "surviving_gross": 0.8265509410605615,
+        "forward_return_mean": 0.012592019251974633,
+        "forward_return_sd_across_books": 0.015435845020531238
+      }
+    },
+    {
+      "snapshot_id": "S02",
+      "date": "2023-09-30",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.439497709430244,
+        "N_eff_over_null": 0.7446286741089218,
+        "mean_abs_corr": 0.32537293618011454,
+        "mean_signed_corr": 0.19080848642036,
+        "same_side_overlap": 0.3992776039616581,
+        "surviving_gross": 0.5473381288950014,
+        "forward_return_mean": 0.05013192110892615,
+        "forward_return_sd_across_books": 0.022395414912530907
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.5077065726029137,
+        "N_eff_over_null": 0.7654486466591743,
+        "mean_abs_corr": 0.37803446776473687,
+        "mean_signed_corr": 0.3334959768752872,
+        "same_side_overlap": 0.5118113478978912,
+        "surviving_gross": 0.6485205888025569,
+        "forward_return_mean": 0.0337274497162061,
+        "forward_return_sd_across_books": 0.006912142126016028
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.4598619747287762,
+        "N_eff_over_null": 0.44560611080803497,
+        "mean_abs_corr": 0.7512931974026564,
+        "mean_signed_corr": 0.7512931974026564,
+        "same_side_overlap": 0.6591055662524183,
+        "surviving_gross": 0.8420451331876303,
+        "forward_return_mean": 0.04507941775948879,
+        "forward_return_sd_across_books": 0.0105984013900651
+      }
+    },
+    {
+      "snapshot_id": "S02",
+      "date": "2023-09-30",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.6326235436703187,
+        "N_eff_over_null": 0.49833959668942285,
+        "mean_abs_corr": 0.6557109128449822,
+        "mean_signed_corr": 0.6557109128449822,
+        "same_side_overlap": 0.7381339892524105,
+        "surviving_gross": 0.8358499288762448,
+        "forward_return_mean": 0.022689560811042786,
+        "forward_return_sd_across_books": 0.006420553107861539
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.5814045123788603,
+        "N_eff_over_null": 0.787944096836391,
+        "mean_abs_corr": 0.3504484086006821,
+        "mean_signed_corr": 0.22382908243191849,
+        "same_side_overlap": 0.47146844046379005,
+        "surviving_gross": 0.5992952109118049,
+        "forward_return_mean": 0.02726616910875206,
+        "forward_return_sd_across_books": 0.013815724483841158
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0778777362769079,
+        "N_eff_over_null": 0.32900980661418827,
+        "mean_abs_corr": 0.9504682307721741,
+        "mean_signed_corr": 0.9504682307721741,
+        "same_side_overlap": 0.8604575004326757,
+        "surviving_gross": 0.9965277777777778,
+        "forward_return_mean": 0.011902742348033138,
+        "forward_return_sd_across_books": 0.0021708963165516315
+      }
+    },
+    {
+      "snapshot_id": "S02",
+      "date": "2023-09-30",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.5401128676208178,
+        "N_eff_over_null": 0.47010177470608167,
+        "mean_abs_corr": 0.6827268403681591,
+        "mean_signed_corr": 0.6827268403681591,
+        "same_side_overlap": 0.7369913130417332,
+        "surviving_gross": 0.8986928104575163,
+        "forward_return_mean": 0.010725780160475555,
+        "forward_return_sd_across_books": 0.0027248375368467198
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.208119061000111,
+        "N_eff_over_null": 0.9792415190805818,
+        "mean_abs_corr": 0.24435787433885467,
+        "mean_signed_corr": 0.026065699487170708,
+        "same_side_overlap": 0.37171916815212086,
+        "surviving_gross": 0.45327293175059924,
+        "forward_return_mean": 0.02237588441892202,
+        "forward_return_sd_across_books": 0.03202983793779865
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.3830126903526023,
+        "N_eff_over_null": 0.42214874886420484,
+        "mean_abs_corr": 0.763741979612357,
+        "mean_signed_corr": 0.763741979612357,
+        "same_side_overlap": 0.8093388261723112,
+        "surviving_gross": 0.8944115862905672,
+        "forward_return_mean": 0.028038571330283077,
+        "forward_return_sd_across_books": 0.009942318395669043
+      }
+    },
+    {
+      "snapshot_id": "S02",
+      "date": "2023-09-30",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.4772573206057291,
+        "N_eff_over_null": 0.4509158404650662,
+        "mean_abs_corr": 0.7413130893183354,
+        "mean_signed_corr": 0.7413130893183354,
+        "same_side_overlap": 0.7246622022985844,
+        "surviving_gross": 0.8496349929374634,
+        "forward_return_mean": 0.02705451852544454,
+        "forward_return_sd_across_books": 0.005515360062611752
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.0632449726567117,
+        "N_eff_over_null": 0.9350203665462432,
+        "mean_abs_corr": 0.28904104028829297,
+        "mean_signed_corr": 0.14791975421346648,
+        "same_side_overlap": 0.4372905577922595,
+        "surviving_gross": 0.482966356323996,
+        "forward_return_mean": 0.020944923156799883,
+        "forward_return_sd_across_books": 0.009252059900153362
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.164253738369653,
+        "N_eff_over_null": 0.3553750897888841,
+        "mean_abs_corr": 0.8998540636186784,
+        "mean_signed_corr": 0.8998540636186784,
+        "same_side_overlap": 0.8400963047614097,
+        "surviving_gross": 0.9387960829493089,
+        "forward_return_mean": 0.026655275511954797,
+        "forward_return_sd_across_books": 0.002802475560053471
+      }
+    },
+    {
+      "snapshot_id": "S03",
+      "date": "2023-10-31",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.3348649397077408,
+        "N_eff_over_null": 0.4074522006422417,
+        "mean_abs_corr": 0.8142424091351304,
+        "mean_signed_corr": 0.8142424091351304,
+        "same_side_overlap": 0.7020520902174097,
+        "surviving_gross": 0.9431317393342707,
+        "forward_return_mean": -0.04102771989634108,
+        "forward_return_sd_across_books": 0.00953095502151367
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.1094086391751214,
+        "N_eff_over_null": 0.9491112958628517,
+        "mean_abs_corr": 0.2870428862506104,
+        "mean_signed_corr": 0.2870428862506104,
+        "same_side_overlap": 0.4183967466225531,
+        "surviving_gross": 0.7599014336917563,
+        "forward_return_mean": -0.020844533836408337,
+        "forward_return_sd_across_books": 0.017870164920141273
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.4101029763201327,
+        "N_eff_over_null": 0.43041774770083213,
+        "mean_abs_corr": 0.778137455654798,
+        "mean_signed_corr": 0.778137455654798,
+        "same_side_overlap": 0.6757675438596492,
+        "surviving_gross": 0.9095975232198142,
+        "forward_return_mean": -0.04687597691622503,
+        "forward_return_sd_across_books": 0.0034588181021130496
+      }
+    },
+    {
+      "snapshot_id": "S03",
+      "date": "2023-10-31",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.2296777770923433,
+        "N_eff_over_null": 0.37534502664129693,
+        "mean_abs_corr": 0.8633725984814054,
+        "mean_signed_corr": 0.8633725984814054,
+        "same_side_overlap": 0.7960585288448149,
+        "surviving_gross": 0.9622534118311015,
+        "forward_return_mean": -0.04818976845368443,
+        "forward_return_sd_across_books": 0.0022004960640209068
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.8657275358964736,
+        "N_eff_over_null": 0.8747304361726175,
+        "mean_abs_corr": 0.3053845256762178,
+        "mean_signed_corr": 0.02931833025262598,
+        "same_side_overlap": 0.3574716462874357,
+        "surviving_gross": 0.4971491228070176,
+        "forward_return_mean": -0.020345175212739805,
+        "forward_return_sd_across_books": 0.02948684358926889
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1286455581389288,
+        "N_eff_over_null": 0.3445061015007876,
+        "mean_abs_corr": 0.9205227721942592,
+        "mean_signed_corr": 0.9205227721942592,
+        "same_side_overlap": 0.8372762466802733,
+        "surviving_gross": 0.9644813324390789,
+        "forward_return_mean": -0.03904512178856782,
+        "forward_return_sd_across_books": 0.008053622388329802
+      }
+    },
+    {
+      "snapshot_id": "S03",
+      "date": "2023-10-31",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.134303198302998,
+        "N_eff_over_null": 0.3462330312198322,
+        "mean_abs_corr": 0.9170771440738236,
+        "mean_signed_corr": 0.9170771440738236,
+        "same_side_overlap": 0.840190778214034,
+        "surviving_gross": 0.9296103896103896,
+        "forward_return_mean": -0.034426826553719356,
+        "forward_return_sd_across_books": 0.0034262235757783143
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.528322072115055,
+        "N_eff_over_null": 1.0769798127836292,
+        "mean_abs_corr": 0.19672528207411813,
+        "mean_signed_corr": -0.13531295456449297,
+        "same_side_overlap": 0.31546951532107076,
+        "surviving_gross": 0.35513082368316656,
+        "forward_return_mean": -0.0003799525110396249,
+        "forward_return_sd_across_books": 0.013714046282388495
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.3116410289883151,
+        "N_eff_over_null": 0.4003633684700365,
+        "mean_abs_corr": 0.8184866110504915,
+        "mean_signed_corr": 0.8184866110504915,
+        "same_side_overlap": 0.7278938604932677,
+        "surviving_gross": 0.9362159342058022,
+        "forward_return_mean": -0.03154683465719513,
+        "forward_return_sd_across_books": 0.006115714993604566
+      }
+    },
+    {
+      "snapshot_id": "S03",
+      "date": "2023-10-31",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.0963082631011871,
+        "N_eff_over_null": 0.33463551337310027,
+        "mean_abs_corr": 0.9393194238966415,
+        "mean_signed_corr": 0.9393194238966415,
+        "same_side_overlap": 0.8296203459790094,
+        "surviving_gross": 0.9963138182534989,
+        "forward_return_mean": -0.04035128192304793,
+        "forward_return_sd_across_books": 0.005957211523836045
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.7950378450457425,
+        "N_eff_over_null": 0.8531532194497359,
+        "mean_abs_corr": 0.2385918935643747,
+        "mean_signed_corr": 0.137475853450136,
+        "same_side_overlap": 0.42524537410082636,
+        "surviving_gross": 0.5665756960565679,
+        "forward_return_mean": -0.022795074248701315,
+        "forward_return_sd_across_books": 0.028367819524240875
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1310456109027751,
+        "N_eff_over_null": 0.34523869005802454,
+        "mean_abs_corr": 0.9183299954063621,
+        "mean_signed_corr": 0.9183299954063621,
+        "same_side_overlap": 0.7995170575171179,
+        "surviving_gross": 0.9803054458953335,
+        "forward_return_mean": -0.03546658067213658,
+        "forward_return_sd_across_books": 0.006245497295931523
+      }
+    },
+    {
+      "snapshot_id": "S03",
+      "date": "2023-10-31",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.112447467465461,
+        "N_eff_over_null": 0.33956182025196546,
+        "mean_abs_corr": 0.9296947324708471,
+        "mean_signed_corr": 0.9296947324708471,
+        "same_side_overlap": 0.8110386386792255,
+        "surviving_gross": 0.9288087663485329,
+        "forward_return_mean": -0.042609217813110466,
+        "forward_return_sd_across_books": 0.008073775021635862
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.908509206429944,
+        "N_eff_over_null": 0.8877890500349535,
+        "mean_abs_corr": 0.2429035569295945,
+        "mean_signed_corr": 0.18375797109549852,
+        "same_side_overlap": 0.40393476044743076,
+        "surviving_gross": 0.5531582248506521,
+        "forward_return_mean": -0.010148563059044801,
+        "forward_return_sd_across_books": 0.02819878852665476
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1579980861530466,
+        "N_eff_over_null": 0.35346562375506435,
+        "mean_abs_corr": 0.9034635540596234,
+        "mean_signed_corr": 0.9034635540596234,
+        "same_side_overlap": 0.7754255153448701,
+        "surviving_gross": 0.9365030131159163,
+        "forward_return_mean": -0.03576647061827288,
+        "forward_return_sd_across_books": 0.00868287046079098
+      }
+    },
+    {
+      "snapshot_id": "S03",
+      "date": "2023-10-31",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.2363408643739575,
+        "N_eff_over_null": 0.37737885755198025,
+        "mean_abs_corr": 0.8572765435592351,
+        "mean_signed_corr": 0.8572765435592351,
+        "same_side_overlap": 0.7509101810165716,
+        "surviving_gross": 0.9029720121621595,
+        "forward_return_mean": -0.03599551938755556,
+        "forward_return_sd_across_books": 0.009662983208652012
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.9325662172439677,
+        "N_eff_over_null": 0.8951321764483225,
+        "mean_abs_corr": 0.2888050032738378,
+        "mean_signed_corr": 0.2607026669447997,
+        "same_side_overlap": 0.40097613738318955,
+        "surviving_gross": 0.6097117606141313,
+        "forward_return_mean": -0.02899275015651739,
+        "forward_return_sd_across_books": 0.015449233753999512
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.125800679913854,
+        "N_eff_over_null": 0.3436377350774252,
+        "mean_abs_corr": 0.9214792459276051,
+        "mean_signed_corr": 0.9214792459276051,
+        "same_side_overlap": 0.8143628996067896,
+        "surviving_gross": 0.935883180619435,
+        "forward_return_mean": -0.035127741523033065,
+        "forward_return_sd_across_books": 0.005914697077583703
+      }
+    },
+    {
+      "snapshot_id": "S03",
+      "date": "2023-10-31",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.3279479216526417,
+        "N_eff_over_null": 0.4053408602776882,
+        "mean_abs_corr": 0.8146815407449758,
+        "mean_signed_corr": 0.8146815407449758,
+        "same_side_overlap": 0.7656839417368588,
+        "surviving_gross": 0.9145635201977325,
+        "forward_return_mean": -0.04383773805707493,
+        "forward_return_sd_across_books": 0.0024746994701500794
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.9105168811790794,
+        "N_eff_over_null": 0.8884018697070981,
+        "mean_abs_corr": 0.28755599315494457,
+        "mean_signed_corr": 0.19164366549525388,
+        "same_side_overlap": 0.38785455124910145,
+        "surviving_gross": 0.6061718108034069,
+        "forward_return_mean": -0.0308051443277265,
+        "forward_return_sd_across_books": 0.02457335631177614
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0342256142663355,
+        "N_eff_over_null": 0.3156854974299157,
+        "mean_abs_corr": 0.9776146546126497,
+        "mean_signed_corr": 0.9776146546126497,
+        "same_side_overlap": 0.9202011918168161,
+        "surviving_gross": 0.9859154929577465,
+        "forward_return_mean": -0.04632223117075162,
+        "forward_return_sd_across_books": 0.001559452617669321
+      }
+    },
+    {
+      "snapshot_id": "S04",
+      "date": "2023-11-30",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.8208764472274068,
+        "N_eff_over_null": 0.5558016346454284,
+        "mean_abs_corr": 0.6196406820400181,
+        "mean_signed_corr": 0.6196406820400181,
+        "same_side_overlap": 0.6076984126984127,
+        "surviving_gross": 0.8217507002801119,
+        "forward_return_mean": -0.006913268185624972,
+        "forward_return_sd_across_books": 0.013816701884676886
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.7088177414503973,
+        "N_eff_over_null": 1.1320740440346062,
+        "mean_abs_corr": 0.1410730564694139,
+        "mean_signed_corr": 0.031667938166016624,
+        "same_side_overlap": 0.3181348034834212,
+        "surviving_gross": 0.42755276723048835,
+        "forward_return_mean": -0.004619115162140537,
+        "forward_return_sd_across_books": 0.019094291365018123
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.595706704675685,
+        "N_eff_over_null": 0.48707115533503975,
+        "mean_abs_corr": 0.6976259789237882,
+        "mean_signed_corr": 0.6976259789237882,
+        "same_side_overlap": 0.6520531915407722,
+        "surviving_gross": 0.8536996752734953,
+        "forward_return_mean": -0.0027525302114826274,
+        "forward_return_sd_across_books": 0.004063492903374012
+      }
+    },
+    {
+      "snapshot_id": "S04",
+      "date": "2023-11-30",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.0643903901652867,
+        "N_eff_over_null": 0.6301314705603877,
+        "mean_abs_corr": 0.4995534912651482,
+        "mean_signed_corr": 0.4995534912651482,
+        "same_side_overlap": 0.6169733044733045,
+        "surviving_gross": 0.7278138528138529,
+        "forward_return_mean": 0.00044952900242378096,
+        "forward_return_sd_across_books": 0.007389372745584195
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.950517796923671,
+        "N_eff_over_null": 0.9006116900889318,
+        "mean_abs_corr": 0.29257088780563983,
+        "mean_signed_corr": -0.059018060677056346,
+        "same_side_overlap": 0.2702008731420496,
+        "surviving_gross": 0.464596567537744,
+        "forward_return_mean": -0.007969130797350971,
+        "forward_return_sd_across_books": 0.016862975675693417
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.5243763173849163,
+        "N_eff_over_null": 0.46529837337804986,
+        "mean_abs_corr": 0.7328256261371101,
+        "mean_signed_corr": 0.7328256261371101,
+        "same_side_overlap": 0.5651821352310266,
+        "surviving_gross": 0.9063374887469364,
+        "forward_return_mean": -0.004729466620375498,
+        "forward_return_sd_across_books": 0.010928155506592176
+      }
+    },
+    {
+      "snapshot_id": "S04",
+      "date": "2023-11-30",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.3991752801659088,
+        "N_eff_over_null": 0.42708219388295815,
+        "mean_abs_corr": 0.7775580416763579,
+        "mean_signed_corr": 0.7775580416763579,
+        "same_side_overlap": 0.6645382499600324,
+        "surviving_gross": 0.8423461258756653,
+        "forward_return_mean": -0.012680938243760336,
+        "forward_return_sd_across_books": 0.011406058025697921
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.0690074213084246,
+        "N_eff_over_null": 0.9367792878531002,
+        "mean_abs_corr": 0.2733997940046145,
+        "mean_signed_corr": -0.015417135078208419,
+        "same_side_overlap": 0.35019453395393246,
+        "surviving_gross": 0.5083653390232339,
+        "forward_return_mean": -0.010480768029591863,
+        "forward_return_sd_across_books": 0.01887373961801904
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.2945399580564896,
+        "N_eff_over_null": 0.39514346286218005,
+        "mean_abs_corr": 0.8336565363778207,
+        "mean_signed_corr": 0.8336565363778207,
+        "same_side_overlap": 0.7338650719795671,
+        "surviving_gross": 0.9349291823159418,
+        "forward_return_mean": 0.007919183796128475,
+        "forward_return_sd_across_books": 0.004967772331639047
+      }
+    },
+    {
+      "snapshot_id": "S04",
+      "date": "2023-11-30",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.80832435494414,
+        "N_eff_over_null": 0.5519702525547419,
+        "mean_abs_corr": 0.6109520028241473,
+        "mean_signed_corr": 0.6109520028241473,
+        "same_side_overlap": 0.628811337052559,
+        "surviving_gross": 0.7124398542462049,
+        "forward_return_mean": -0.0041171168411658875,
+        "forward_return_sd_across_books": 0.009524151903911947
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.363498144406784,
+        "N_eff_over_null": 1.0266692007767424,
+        "mean_abs_corr": 0.21098500578952864,
+        "mean_signed_corr": 0.12101868880900768,
+        "same_side_overlap": 0.4343589200946109,
+        "surviving_gross": 0.5833466943143637,
+        "forward_return_mean": -0.01609757376204875,
+        "forward_return_sd_across_books": 0.013805544051368999
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.2841113949357297,
+        "N_eff_over_null": 0.39196026367348874,
+        "mean_abs_corr": 0.8383509800869917,
+        "mean_signed_corr": 0.8383509800869917,
+        "same_side_overlap": 0.7097447707136673,
+        "surviving_gross": 0.8709493111266582,
+        "forward_return_mean": -0.0024409887224988397,
+        "forward_return_sd_across_books": 0.005955705824546188
+      }
+    },
+    {
+      "snapshot_id": "S04",
+      "date": "2023-11-30",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.2622343470470174,
+        "N_eff_over_null": 0.3852825459204379,
+        "mean_abs_corr": 0.8482620187207534,
+        "mean_signed_corr": 0.8482620187207534,
+        "same_side_overlap": 0.7334052806366809,
+        "surviving_gross": 0.9399503753497146,
+        "forward_return_mean": -0.00851725132970613,
+        "forward_return_sd_across_books": 0.005775985093940804
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.880310256870747,
+        "N_eff_over_null": 0.8791816443627287,
+        "mean_abs_corr": 0.29944555002224654,
+        "mean_signed_corr": 0.13964131311468853,
+        "same_side_overlap": 0.3862695806381933,
+        "surviving_gross": 0.5617803567394354,
+        "forward_return_mean": -0.010173039742515336,
+        "forward_return_sd_across_books": 0.009030630017610506
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1102189154566688,
+        "N_eff_over_null": 0.338881580331643,
+        "mean_abs_corr": 0.9313740248261331,
+        "mean_signed_corr": 0.9313740248261331,
+        "same_side_overlap": 0.8270744797605712,
+        "surviving_gross": 0.976896227681568,
+        "forward_return_mean": -0.01137075243643472,
+        "forward_return_sd_across_books": 0.002463283265948913
+      }
+    },
+    {
+      "snapshot_id": "S04",
+      "date": "2023-11-30",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.0894259435607554,
+        "N_eff_over_null": 0.3325347643318632,
+        "mean_abs_corr": 0.9433595706171031,
+        "mean_signed_corr": 0.9433595706171031,
+        "same_side_overlap": 0.8436827847205205,
+        "surviving_gross": 0.9642857142857141,
+        "forward_return_mean": 0.003950221046242429,
+        "forward_return_sd_across_books": 0.003860710228366198
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.2143833001211695,
+        "N_eff_over_null": 0.981153606168421,
+        "mean_abs_corr": 0.23681642297963165,
+        "mean_signed_corr": 0.22792317894226402,
+        "same_side_overlap": 0.4194553836128534,
+        "surviving_gross": 0.5765927447212068,
+        "forward_return_mean": -0.004424255096863206,
+        "forward_return_sd_across_books": 0.020012970435588452
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0063615893667455,
+        "N_eff_over_null": 0.3071803236656142,
+        "mean_abs_corr": 0.9957678385612945,
+        "mean_signed_corr": 0.9957678385612945,
+        "same_side_overlap": 0.9728282232704403,
+        "surviving_gross": 0.9999999999999998,
+        "forward_return_mean": 0.00404196225388961,
+        "forward_return_sd_across_books": 0.0003152317968282
+      }
+    },
+    {
+      "snapshot_id": "S04",
+      "date": "2023-11-30",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.252439653955544,
+        "N_eff_over_null": 0.6875313498150405,
+        "mean_abs_corr": 0.3842548779255461,
+        "mean_signed_corr": 0.3842548779255461,
+        "same_side_overlap": 0.567656191427852,
+        "surviving_gross": 0.6516675544971223,
+        "forward_return_mean": -0.008536075966146719,
+        "forward_return_sd_across_books": 0.017745809469361648
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.8675270716851164,
+        "N_eff_over_null": 0.875279723816188,
+        "mean_abs_corr": 0.31626443225314227,
+        "mean_signed_corr": 0.2591075238464704,
+        "same_side_overlap": 0.49589792449582754,
+        "surviving_gross": 0.5708003031537716,
+        "forward_return_mean": -0.0122929247922577,
+        "forward_return_sd_across_books": 0.014391288613918434
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.214436894082388,
+        "N_eff_over_null": 0.3706929220444852,
+        "mean_abs_corr": 0.8711490672748975,
+        "mean_signed_corr": 0.8711490672748975,
+        "same_side_overlap": 0.8132133099637823,
+        "surviving_gross": 0.9170800954393598,
+        "forward_return_mean": 0.0020188842032647187,
+        "forward_return_sd_across_books": 0.0037059514047584896
+      }
+    },
+    {
+      "snapshot_id": "S05",
+      "date": "2024-02-29",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.4687448570244308,
+        "N_eff_over_null": 0.44831750866690967,
+        "mean_abs_corr": 0.7474459843286714,
+        "mean_signed_corr": 0.7474459843286714,
+        "same_side_overlap": 0.683064672090279,
+        "surviving_gross": 0.8228279037224832,
+        "forward_return_mean": 0.024681958555338543,
+        "forward_return_sd_across_books": 0.009857483037677198
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.669824776423015,
+        "N_eff_over_null": 0.8149333675067607,
+        "mean_abs_corr": 0.3506028500766023,
+        "mean_signed_corr": -0.18229199491030826,
+        "same_side_overlap": 0.24057881991734556,
+        "surviving_gross": 0.3419218908194337,
+        "forward_return_mean": 0.0063821121466275665,
+        "forward_return_sd_across_books": 0.014480562386598951
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.3383999353426599,
+        "N_eff_over_null": 0.408531217483469,
+        "mean_abs_corr": 0.8095769235097819,
+        "mean_signed_corr": 0.8095769235097819,
+        "same_side_overlap": 0.687712713466138,
+        "surviving_gross": 0.9304761904761903,
+        "forward_return_mean": 0.020107571679661037,
+        "forward_return_sd_across_books": 0.01489785628539454
+      }
+    },
+    {
+      "snapshot_id": "S05",
+      "date": "2024-02-29",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.2616658866825385,
+        "N_eff_over_null": 0.38510902991923446,
+        "mean_abs_corr": 0.8488819550375947,
+        "mean_signed_corr": 0.8488819550375947,
+        "same_side_overlap": 0.6845480666911509,
+        "surviving_gross": 0.9610440150295225,
+        "forward_return_mean": 0.0366090025509888,
+        "forward_return_sd_across_books": 0.012962647916143783
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.6157936043864574,
+        "N_eff_over_null": 1.103679493970353,
+        "mean_abs_corr": 0.1560548670464818,
+        "mean_signed_corr": -0.005067119398550586,
+        "same_side_overlap": 0.25920379879938366,
+        "surviving_gross": 0.5618092143695651,
+        "forward_return_mean": 0.022471561047449753,
+        "forward_return_sd_across_books": 0.026513148332695868
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0755331723745807,
+        "N_eff_over_null": 0.328294155395003,
+        "mean_abs_corr": 0.9518000558268288,
+        "mean_signed_corr": 0.9518000558268288,
+        "same_side_overlap": 0.8354354208006853,
+        "surviving_gross": 0.9924828275118973,
+        "forward_return_mean": 0.04191204906575043,
+        "forward_return_sd_across_books": 0.005527867658203989
+      }
+    },
+    {
+      "snapshot_id": "S05",
+      "date": "2024-02-29",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.5552251194470479,
+        "N_eff_over_null": 0.47471461611055016,
+        "mean_abs_corr": 0.7025256696094028,
+        "mean_signed_corr": 0.7025256696094028,
+        "same_side_overlap": 0.6593468802333502,
+        "surviving_gross": 0.8082138389178284,
+        "forward_return_mean": 0.03530843394605232,
+        "forward_return_sd_across_books": 0.010877187081816673
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.2961591366456475,
+        "N_eff_over_null": 1.0061147416062532,
+        "mean_abs_corr": 0.22418911900793015,
+        "mean_signed_corr": -0.06239360956903205,
+        "same_side_overlap": 0.30817248713216744,
+        "surviving_gross": 0.42247533945095544,
+        "forward_return_mean": 0.013116570170493804,
+        "forward_return_sd_across_books": 0.028988251786607747
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.7146107417918428,
+        "N_eff_over_null": 0.5233652478286464,
+        "mean_abs_corr": 0.6522265881801044,
+        "mean_signed_corr": 0.6522265881801044,
+        "same_side_overlap": 0.6424364751538102,
+        "surviving_gross": 0.8444020322240653,
+        "forward_return_mean": 0.023165125726466958,
+        "forward_return_sd_across_books": 0.017436637516185585
+      }
+    },
+    {
+      "snapshot_id": "S05",
+      "date": "2024-02-29",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1445470843771508,
+        "N_eff_over_null": 0.34935985985985607,
+        "mean_abs_corr": 0.9107845393646844,
+        "mean_signed_corr": 0.9107845393646844,
+        "same_side_overlap": 0.7836178960880161,
+        "surviving_gross": 0.9317224964133226,
+        "forward_return_mean": 0.0402308617438679,
+        "forward_return_sd_across_books": 0.009983412919700167
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.1970002512707056,
+        "N_eff_over_null": 0.9758476300375745,
+        "mean_abs_corr": 0.24705535892275035,
+        "mean_signed_corr": 0.08763984501537536,
+        "same_side_overlap": 0.32452380109525136,
+        "surviving_gross": 0.552669598306506,
+        "forward_return_mean": 0.026516258711655492,
+        "forward_return_sd_across_books": 0.018899604964149358
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.677148197525019,
+        "N_eff_over_null": 0.5119302362037873,
+        "mean_abs_corr": 0.6112394381135225,
+        "mean_signed_corr": 0.6112394381135225,
+        "same_side_overlap": 0.669268034611506,
+        "surviving_gross": 0.806707708612163,
+        "forward_return_mean": 0.031420612828555385,
+        "forward_return_sd_across_books": 0.018948377919602674
+      }
+    },
+    {
+      "snapshot_id": "S05",
+      "date": "2024-02-29",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.0957304188479149,
+        "N_eff_over_null": 0.33445913304755526,
+        "mean_abs_corr": 0.939532298816366,
+        "mean_signed_corr": 0.939532298816366,
+        "same_side_overlap": 0.8237254901960784,
+        "surviving_gross": 0.9714705882352942,
+        "forward_return_mean": 0.036222272780641385,
+        "forward_return_sd_across_books": 0.0037839047970075683
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.2381357236614603,
+        "N_eff_over_null": 0.6831652392799674,
+        "mean_abs_corr": 0.4918133549729256,
+        "mean_signed_corr": 0.4918133549729256,
+        "same_side_overlap": 0.5126420494210767,
+        "surviving_gross": 0.7418050623457133,
+        "forward_return_mean": 0.019916495381529026,
+        "forward_return_sd_across_books": 0.014648421455200265
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0561068528423692,
+        "N_eff_over_null": 0.32236449434216874,
+        "mean_abs_corr": 0.9637358474555849,
+        "mean_signed_corr": 0.9637358474555849,
+        "same_side_overlap": 0.8471058154318465,
+        "surviving_gross": 0.9949488598256204,
+        "forward_return_mean": 0.030920003933478213,
+        "forward_return_sd_across_books": 0.007840428337194345
+      }
+    },
+    {
+      "snapshot_id": "S05",
+      "date": "2024-02-29",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.140872933322704,
+        "N_eff_over_null": 0.34823836742410885,
+        "mean_abs_corr": 0.9130904978130937,
+        "mean_signed_corr": 0.9130904978130937,
+        "same_side_overlap": 0.8132113291887727,
+        "surviving_gross": 1.0000000000000002,
+        "forward_return_mean": 0.02876022900336609,
+        "forward_return_sd_across_books": 0.00842700022262697
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.59288708176172,
+        "N_eff_over_null": 1.0966875408709225,
+        "mean_abs_corr": 0.16480261294033027,
+        "mean_signed_corr": -0.013081347595841375,
+        "same_side_overlap": 0.2985065924702175,
+        "surviving_gross": 0.41826490012871964,
+        "forward_return_mean": 0.026668583493335552,
+        "forward_return_sd_across_books": 0.02011260454827969
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0475511737164778,
+        "N_eff_over_null": 0.31975297149507337,
+        "mean_abs_corr": 0.9689419568373134,
+        "mean_signed_corr": 0.9689419568373134,
+        "same_side_overlap": 0.8926153238772411,
+        "surviving_gross": 0.9793221979237363,
+        "forward_return_mean": 0.03846110497500822,
+        "forward_return_sd_across_books": 0.004074215626189541
+      }
+    },
+    {
+      "snapshot_id": "S05",
+      "date": "2024-02-29",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.8556275717044943,
+        "N_eff_over_null": 0.5664090165024138,
+        "mean_abs_corr": 0.5859897341735093,
+        "mean_signed_corr": 0.5859897341735093,
+        "same_side_overlap": 0.67274111866969,
+        "surviving_gross": 0.7923945578231294,
+        "forward_return_mean": 0.02091524832517525,
+        "forward_return_sd_across_books": 0.015427609070816126
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.0219585516702243,
+        "N_eff_over_null": 0.9224181604449507,
+        "mean_abs_corr": 0.25449104136429507,
+        "mean_signed_corr": -0.06529726018439044,
+        "same_side_overlap": 0.3481645701033018,
+        "surviving_gross": 0.4484574327202734,
+        "forward_return_mean": 0.00811995784966992,
+        "forward_return_sd_across_books": 0.013920642585135043
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.126361103453917,
+        "N_eff_over_null": 0.3438087979302261,
+        "mean_abs_corr": 0.9215572694771818,
+        "mean_signed_corr": 0.9215572694771818,
+        "same_side_overlap": 0.853450362345176,
+        "surviving_gross": 0.9441282386304671,
+        "forward_return_mean": 0.027850642469767605,
+        "forward_return_sd_across_books": 0.00545803549767955
+      }
+    },
+    {
+      "snapshot_id": "S06",
+      "date": "2024-04-30",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.1547981752762606,
+        "N_eff_over_null": 0.6577274092227083,
+        "mean_abs_corr": 0.42607478973476853,
+        "mean_signed_corr": 0.42607478973476853,
+        "same_side_overlap": 0.561729830922772,
+        "surviving_gross": 0.7456116136521284,
+        "forward_return_mean": 0.03520625606963963,
+        "forward_return_sd_across_books": 0.049660935757259106
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.9189080016032882,
+        "N_eff_over_null": 0.8909631628993866,
+        "mean_abs_corr": 0.2765621428487903,
+        "mean_signed_corr": -0.21430803313465177,
+        "same_side_overlap": 0.27479800922802217,
+        "surviving_gross": 0.286193236418655,
+        "forward_return_mean": 0.007729160094603827,
+        "forward_return_sd_across_books": 0.03322620064220375
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.2103841205962804,
+        "N_eff_over_null": 0.6746943809901893,
+        "mean_abs_corr": 0.46597453688548623,
+        "mean_signed_corr": 0.38287175213043917,
+        "same_side_overlap": 0.5743481823496849,
+        "surviving_gross": 0.727935920693645,
+        "forward_return_mean": 0.020269328019960346,
+        "forward_return_sd_across_books": 0.030702657614302055
+      }
+    },
+    {
+      "snapshot_id": "S06",
+      "date": "2024-04-30",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.1360962721333894,
+        "N_eff_over_null": 0.6520188679575304,
+        "mean_abs_corr": 0.46785146795898874,
+        "mean_signed_corr": 0.4311473790005858,
+        "same_side_overlap": 0.46984914688822926,
+        "surviving_gross": 0.7464125721347471,
+        "forward_return_mean": -0.013056700872344347,
+        "forward_return_sd_across_books": 0.04339766405931991
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.319189813589119,
+        "N_eff_over_null": 1.013144591386376,
+        "mean_abs_corr": 0.21223418022984145,
+        "mean_signed_corr": -0.18029322554708108,
+        "same_side_overlap": 0.19837507887966602,
+        "surviving_gross": 0.3933559050531529,
+        "forward_return_mean": 0.013354506083552207,
+        "forward_return_sd_across_books": 0.043471379860726175
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.1977027503653472,
+        "N_eff_over_null": 0.6708235382898904,
+        "mean_abs_corr": 0.4581904920358457,
+        "mean_signed_corr": 0.4581904920358457,
+        "same_side_overlap": 0.5060432744414411,
+        "surviving_gross": 0.7407725153758766,
+        "forward_return_mean": 0.023819019039161355,
+        "forward_return_sd_across_books": 0.01688629321289623
+      }
+    },
+    {
+      "snapshot_id": "S06",
+      "date": "2024-04-30",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1911234052027888,
+        "N_eff_over_null": 0.36357674716710703,
+        "mean_abs_corr": 0.8859377216739781,
+        "mean_signed_corr": 0.8859377216739781,
+        "same_side_overlap": 0.769532497586173,
+        "surviving_gross": 0.9268811683672364,
+        "forward_return_mean": 0.02834871427385225,
+        "forward_return_sd_across_books": 0.005069723296375323
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.9997464902033424,
+        "N_eff_over_null": 0.915638183642606,
+        "mean_abs_corr": 0.28739327394057657,
+        "mean_signed_corr": 0.25690030867614616,
+        "same_side_overlap": 0.4663512915211676,
+        "surviving_gross": 0.602928312267206,
+        "forward_return_mean": 0.034335720922258964,
+        "forward_return_sd_across_books": 0.017901995487808305
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.8582785647364246,
+        "N_eff_over_null": 0.5672182016960737,
+        "mean_abs_corr": 0.5989020061075302,
+        "mean_signed_corr": 0.5989020061075302,
+        "same_side_overlap": 0.6508909616688319,
+        "surviving_gross": 0.7920530749073488,
+        "forward_return_mean": 0.0255317104919916,
+        "forward_return_sd_across_books": 0.012782327290949046
+      }
+    },
+    {
+      "snapshot_id": "S06",
+      "date": "2024-04-30",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.2779543905206467,
+        "N_eff_over_null": 0.695319430281469,
+        "mean_abs_corr": 0.42705859026775,
+        "mean_signed_corr": 0.39933133859874687,
+        "same_side_overlap": 0.5884893493203843,
+        "surviving_gross": 0.7678604542417652,
+        "forward_return_mean": 0.03110059322799061,
+        "forward_return_sd_across_books": 0.043313875604179354
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.3259983431779747,
+        "N_eff_over_null": 0.7099842953591794,
+        "mean_abs_corr": 0.4190510983281166,
+        "mean_signed_corr": -0.09880795346504433,
+        "same_side_overlap": 0.3384819611535195,
+        "surviving_gross": 0.3475854890322109,
+        "forward_return_mean": -0.0036531717213544052,
+        "forward_return_sd_across_books": 0.0298878998803334
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.635700228359456,
+        "N_eff_over_null": 0.49927871937515744,
+        "mean_abs_corr": 0.6645726666977865,
+        "mean_signed_corr": 0.6645726666977865,
+        "same_side_overlap": 0.547704104533055,
+        "surviving_gross": 0.8909401532224914,
+        "forward_return_mean": 0.06970498684713722,
+        "forward_return_sd_across_books": 0.03823057124606166
+      }
+    },
+    {
+      "snapshot_id": "S06",
+      "date": "2024-04-30",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.302129893758355,
+        "N_eff_over_null": 0.3974602036143458,
+        "mean_abs_corr": 0.8266238724159874,
+        "mean_signed_corr": 0.8266238724159874,
+        "same_side_overlap": 0.7329528500019005,
+        "surviving_gross": 0.8956355485232067,
+        "forward_return_mean": 0.050213542390939364,
+        "forward_return_sd_across_books": 0.0063136149071530145
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.6170259908028424,
+        "N_eff_over_null": 0.7988171442453367,
+        "mean_abs_corr": 0.35089775367218357,
+        "mean_signed_corr": 0.31641206595753063,
+        "same_side_overlap": 0.4359812860333212,
+        "surviving_gross": 0.6609287836739272,
+        "forward_return_mean": 0.06279969550768359,
+        "forward_return_sd_across_books": 0.010580671551277036
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0709325794580946,
+        "N_eff_over_null": 0.3268898772150009,
+        "mean_abs_corr": 0.9543636182446019,
+        "mean_signed_corr": 0.9543636182446019,
+        "same_side_overlap": 0.8477626588166715,
+        "surviving_gross": 1.0000000000000002,
+        "forward_return_mean": 0.0597177823174751,
+        "forward_return_sd_across_books": 0.006502451990218663
+      }
+    },
+    {
+      "snapshot_id": "S06",
+      "date": "2024-04-30",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1977526845023803,
+        "N_eff_over_null": 0.3656002585793417,
+        "mean_abs_corr": 0.8813166938086551,
+        "mean_signed_corr": 0.8813166938086551,
+        "same_side_overlap": 0.7989323507180651,
+        "surviving_gross": 0.9393959435626104,
+        "forward_return_mean": 0.019767350285468742,
+        "forward_return_sd_across_books": 0.006192528582446624
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.3850010134572615,
+        "N_eff_over_null": 1.0332327047344214,
+        "mean_abs_corr": 0.21303204758298658,
+        "mean_signed_corr": -0.10970487692202137,
+        "same_side_overlap": 0.33104903482261977,
+        "surviving_gross": 0.380152764364751,
+        "forward_return_mean": -0.015282050099043702,
+        "forward_return_sd_across_books": 0.026346722360006326
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.1078008517295883,
+        "N_eff_over_null": 0.6433820156673277,
+        "mean_abs_corr": 0.4712400354579478,
+        "mean_signed_corr": 0.4712400354579478,
+        "same_side_overlap": 0.6316019054397258,
+        "surviving_gross": 0.7031619980666272,
+        "forward_return_mean": 0.0311471397178288,
+        "forward_return_sd_across_books": 0.01291402530424746
+      }
+    },
+    {
+      "snapshot_id": "S06",
+      "date": "2024-04-30",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.820813861505235,
+        "N_eff_over_null": 0.8610210526048342,
+        "mean_abs_corr": 0.3110488946153999,
+        "mean_signed_corr": 0.3110488946153999,
+        "same_side_overlap": 0.5203920018256312,
+        "surviving_gross": 0.6739729805067989,
+        "forward_return_mean": 0.015108381848135973,
+        "forward_return_sd_across_books": 0.014499279668478755
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.210198481557046,
+        "N_eff_over_null": 0.9798762383370252,
+        "mean_abs_corr": 0.2539911140153594,
+        "mean_signed_corr": -0.07652692247809624,
+        "same_side_overlap": 0.3473801731920676,
+        "surviving_gross": 0.40461144609093996,
+        "forward_return_mean": 0.00034107894989658747,
+        "forward_return_sd_across_books": 0.03999723825711357
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0620894630391808,
+        "N_eff_over_null": 0.32419061743355004,
+        "mean_abs_corr": 0.9600524095730951,
+        "mean_signed_corr": 0.9600524095730951,
+        "same_side_overlap": 0.889473465560422,
+        "surviving_gross": 0.992936117936118,
+        "forward_return_mean": 0.025842286208738036,
+        "forward_return_sd_across_books": 0.0032683300388348605
+      }
+    },
+    {
+      "snapshot_id": "S07",
+      "date": "2024-08-31",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.3762732537663105,
+        "N_eff_over_null": 0.42009161320464167,
+        "mean_abs_corr": 0.7937610723988873,
+        "mean_signed_corr": 0.7937610723988873,
+        "same_side_overlap": 0.7051141913567474,
+        "surviving_gross": 0.9266040355731326,
+        "forward_return_mean": -0.040649404624436024,
+        "forward_return_sd_across_books": 0.00599933062911436
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.8654128450568073,
+        "N_eff_over_null": 0.8746343804059779,
+        "mean_abs_corr": 0.2959999343114453,
+        "mean_signed_corr": 0.2134014312762823,
+        "same_side_overlap": 0.3861360486223475,
+        "surviving_gross": 0.6693254721243335,
+        "forward_return_mean": -0.01814184882436539,
+        "forward_return_sd_across_books": 0.018906415955771357
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.9517936206252247,
+        "N_eff_over_null": 0.5957625990966198,
+        "mean_abs_corr": 0.5648689756205475,
+        "mean_signed_corr": 0.5648689756205475,
+        "same_side_overlap": 0.6114107764503205,
+        "surviving_gross": 0.8070468002149972,
+        "forward_return_mean": -0.02949942875698629,
+        "forward_return_sd_across_books": 0.005917507890703843
+      }
+    },
+    {
+      "snapshot_id": "S07",
+      "date": "2024-08-31",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.7500887385155803,
+        "N_eff_over_null": 0.5341944990955423,
+        "mean_abs_corr": 0.6364961486786297,
+        "mean_signed_corr": 0.6364961486786297,
+        "same_side_overlap": 0.5966353611337009,
+        "surviving_gross": 0.851567441492726,
+        "forward_return_mean": -0.02495536176780154,
+        "forward_return_sd_across_books": 0.004441787057386152
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.1102561488527365,
+        "N_eff_over_null": 0.9493699884638316,
+        "mean_abs_corr": 0.29055303576238567,
+        "mean_signed_corr": 0.29055303576238567,
+        "same_side_overlap": 0.28459079147152544,
+        "surviving_gross": 0.7287750475823869,
+        "forward_return_mean": -0.06049552654031881,
+        "forward_return_sd_across_books": 0.04029936736785173
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.1715704580202524,
+        "N_eff_over_null": 0.662846956010213,
+        "mean_abs_corr": 0.4872924537823244,
+        "mean_signed_corr": 0.4872924537823244,
+        "same_side_overlap": 0.6121599401681671,
+        "surviving_gross": 0.7530493337659411,
+        "forward_return_mean": -0.032877525609188774,
+        "forward_return_sd_across_books": 0.012777553951907905
+      }
+    },
+    {
+      "snapshot_id": "S07",
+      "date": "2024-08-31",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 3.037510176261788,
+        "N_eff_over_null": 0.9271651153427113,
+        "mean_abs_corr": 0.2662811738248898,
+        "mean_signed_corr": 0.013452544646494822,
+        "same_side_overlap": 0.35391913837567696,
+        "surviving_gross": 0.49050802626387396,
+        "forward_return_mean": 0.00879682710823947,
+        "forward_return_sd_across_books": 0.037254895140016966
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.9968816331952652,
+        "N_eff_over_null": 0.9147637189250579,
+        "mean_abs_corr": 0.2617640717100775,
+        "mean_signed_corr": 0.0059174510955415744,
+        "same_side_overlap": 0.32730926899631213,
+        "surviving_gross": 0.48443071940590815,
+        "forward_return_mean": -0.028942289832481736,
+        "forward_return_sd_across_books": 0.008880470547895303
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.1941133928630125,
+        "N_eff_over_null": 0.6697279281126254,
+        "mean_abs_corr": 0.45022976527386444,
+        "mean_signed_corr": -0.005628753281799033,
+        "same_side_overlap": 0.40680950775094216,
+        "surviving_gross": 0.4242491070479295,
+        "forward_return_mean": -0.003546127323688469,
+        "forward_return_sd_across_books": 0.03653109691084225
+      }
+    },
+    {
+      "snapshot_id": "S07",
+      "date": "2024-08-31",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.7285721997451566,
+        "N_eff_over_null": 0.527626822612757,
+        "mean_abs_corr": 0.5024525205940137,
+        "mean_signed_corr": 0.4728903457941847,
+        "same_side_overlap": 0.5395438068871975,
+        "surviving_gross": 0.7566072526121695,
+        "forward_return_mean": -0.04492675740430615,
+        "forward_return_sd_across_books": 0.030487074757349845
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.2989460488851154,
+        "N_eff_over_null": 0.7017268930451592,
+        "mean_abs_corr": 0.4579661106034438,
+        "mean_signed_corr": 0.4579661106034438,
+        "same_side_overlap": 0.5304405926763508,
+        "surviving_gross": 0.6903879529933469,
+        "forward_return_mean": -0.02585379177426946,
+        "forward_return_sd_across_books": 0.011630212070025849
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1654368857726916,
+        "N_eff_over_null": 0.3557362319529429,
+        "mean_abs_corr": 0.8997643184095793,
+        "mean_signed_corr": 0.8997643184095793,
+        "same_side_overlap": 0.7615685072832182,
+        "surviving_gross": 0.9686213991769548,
+        "forward_return_mean": -0.029409549098542206,
+        "forward_return_sd_across_books": 0.007750887149389413
+      }
+    },
+    {
+      "snapshot_id": "S07",
+      "date": "2024-08-31",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.0783917070111189,
+        "N_eff_over_null": 0.32916669028120993,
+        "mean_abs_corr": 0.9501215030935892,
+        "mean_signed_corr": 0.9501215030935892,
+        "same_side_overlap": 0.8352672689629212,
+        "surviving_gross": 0.9656832298136647,
+        "forward_return_mean": -0.040696118742650944,
+        "forward_return_sd_across_books": 0.0054987195646666424
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.0624183504883793,
+        "N_eff_over_null": 0.6295295280850046,
+        "mean_abs_corr": 0.5353375510554027,
+        "mean_signed_corr": 0.5353375510554027,
+        "same_side_overlap": 0.4834280303030303,
+        "surviving_gross": 0.7958333333333335,
+        "forward_return_mean": -0.020840161299259495,
+        "forward_return_sd_across_books": 0.01087340380535098
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0331774672052967,
+        "N_eff_over_null": 0.31536556257065534,
+        "mean_abs_corr": 0.9782834201674571,
+        "mean_signed_corr": 0.9782834201674571,
+        "same_side_overlap": 0.8925930500658762,
+        "surviving_gross": 0.9978260869565219,
+        "forward_return_mean": -0.04111293919577953,
+        "forward_return_sd_across_books": 0.0032110461669625574
+      }
+    },
+    {
+      "snapshot_id": "S07",
+      "date": "2024-08-31",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1236993410031892,
+        "N_eff_over_null": 0.3429963254950947,
+        "mean_abs_corr": 0.9233053657863205,
+        "mean_signed_corr": 0.9233053657863205,
+        "same_side_overlap": 0.8068239703554657,
+        "surviving_gross": 0.9722203176895541,
+        "forward_return_mean": -0.03666288810167739,
+        "forward_return_sd_across_books": 0.01030683626259122
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.6812149426189578,
+        "N_eff_over_null": 0.8184100849964222,
+        "mean_abs_corr": 0.3382921057356148,
+        "mean_signed_corr": 0.3382921057356148,
+        "same_side_overlap": 0.47393805501407843,
+        "surviving_gross": 0.6762714372550253,
+        "forward_return_mean": -0.02282342966103122,
+        "forward_return_sd_across_books": 0.008807049062945374
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1177294825899067,
+        "N_eff_over_null": 0.3411740947392647,
+        "mean_abs_corr": 0.9269334416597865,
+        "mean_signed_corr": 0.9269334416597865,
+        "same_side_overlap": 0.8052573465384065,
+        "surviving_gross": 1.0,
+        "forward_return_mean": -0.032807549312652416,
+        "forward_return_sd_across_books": 0.0008363086644013614
+      }
+    },
+    {
+      "snapshot_id": "S07",
+      "date": "2024-08-31",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.211108825659216,
+        "N_eff_over_null": 0.6749155888921471,
+        "mean_abs_corr": 0.4206266903479534,
+        "mean_signed_corr": 0.4206266903479534,
+        "same_side_overlap": 0.6042058656873941,
+        "surviving_gross": 0.7352739162588084,
+        "forward_return_mean": -0.024160833021959264,
+        "forward_return_sd_across_books": 0.012901220142504973
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.701856821047021,
+        "N_eff_over_null": 0.8247107814494621,
+        "mean_abs_corr": 0.323219834812278,
+        "mean_signed_corr": 0.04773399950660132,
+        "same_side_overlap": 0.4189248518023671,
+        "surviving_gross": 0.4507832592861271,
+        "forward_return_mean": -0.020660329409378553,
+        "forward_return_sd_across_books": 0.007946360150013015
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0817176829885127,
+        "N_eff_over_null": 0.3301819062712029,
+        "mean_abs_corr": 0.9481439005408102,
+        "mean_signed_corr": 0.9481439005408102,
+        "same_side_overlap": 0.8595684200173191,
+        "surviving_gross": 0.9999999999999998,
+        "forward_return_mean": -0.04296430866569895,
+        "forward_return_sd_across_books": 0.008129088769078576
+      }
+    },
+    {
+      "snapshot_id": "S08",
+      "date": "2024-11-30",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.2093130836362183,
+        "N_eff_over_null": 0.674367459251993,
+        "mean_abs_corr": 0.5035748268573405,
+        "mean_signed_corr": 0.5035748268573405,
+        "same_side_overlap": 0.5164589872989453,
+        "surviving_gross": 0.8553145999726731,
+        "forward_return_mean": 0.006224062296237139,
+        "forward_return_sd_across_books": 0.012592414836272822
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.3640922874793446,
+        "N_eff_over_null": 1.0268505561297896,
+        "mean_abs_corr": 0.1873750596824986,
+        "mean_signed_corr": -0.165906651562112,
+        "same_side_overlap": 0.19158912396222913,
+        "surviving_gross": 0.3865794963992997,
+        "forward_return_mean": -0.010549634840568273,
+        "forward_return_sd_across_books": 0.04690200501085129
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.159472922174902,
+        "N_eff_over_null": 0.6591543220545892,
+        "mean_abs_corr": 0.49713115399402863,
+        "mean_signed_corr": 0.49713115399402863,
+        "same_side_overlap": 0.5938413317907404,
+        "surviving_gross": 0.8158879311039973,
+        "forward_return_mean": 0.020704758874384936,
+        "forward_return_sd_across_books": 0.03300711126110059
+      }
+    },
+    {
+      "snapshot_id": "S08",
+      "date": "2024-11-30",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.00080373544207,
+        "N_eff_over_null": 0.610722374083462,
+        "mean_abs_corr": 0.49288458372206295,
+        "mean_signed_corr": 0.49288458372206295,
+        "same_side_overlap": 0.5427404295051353,
+        "surviving_gross": 0.7870098039215688,
+        "forward_return_mean": -0.043123255163243585,
+        "forward_return_sd_across_books": 0.04504747159847899
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.5784426227263406,
+        "N_eff_over_null": 0.7870400140179129,
+        "mean_abs_corr": 0.3459802769596539,
+        "mean_signed_corr": -0.23425060824041158,
+        "same_side_overlap": 0.2639255037010649,
+        "surviving_gross": 0.29149150932193324,
+        "forward_return_mean": -0.002615059721631126,
+        "forward_return_sd_across_books": 0.03404050377827019
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.2733378621599882,
+        "N_eff_over_null": 0.38867176645733725,
+        "mean_abs_corr": 0.8399756320668472,
+        "mean_signed_corr": 0.8399756320668472,
+        "same_side_overlap": 0.7331915235435377,
+        "surviving_gross": 0.9291688111168297,
+        "forward_return_mean": -0.05404949478729598,
+        "forward_return_sd_across_books": 0.009572670116936991
+      }
+    },
+    {
+      "snapshot_id": "S08",
+      "date": "2024-11-30",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.9410778537328481,
+        "N_eff_over_null": 0.5924917342533016,
+        "mean_abs_corr": 0.5877918259184849,
+        "mean_signed_corr": 0.08875730041429604,
+        "same_side_overlap": 0.44061708238587927,
+        "surviving_gross": 0.5212419228937506,
+        "forward_return_mean": 0.021694224598469366,
+        "forward_return_sd_across_books": 0.03567729434173543
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.7479849220238877,
+        "N_eff_over_null": 0.8387908547927525,
+        "mean_abs_corr": 0.3390333934910746,
+        "mean_signed_corr": 0.20635899633885554,
+        "same_side_overlap": 0.37955309107770097,
+        "surviving_gross": 0.6114045618247299,
+        "forward_return_mean": 0.005051888748762244,
+        "forward_return_sd_across_books": 0.032372431608430875
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.505179135107848,
+        "N_eff_over_null": 0.7646771753749142,
+        "mean_abs_corr": 0.3914668254287739,
+        "mean_signed_corr": 0.0766076768068744,
+        "same_side_overlap": 0.429912184405474,
+        "surviving_gross": 0.5426341341960823,
+        "forward_return_mean": 0.028610794376589522,
+        "forward_return_sd_across_books": 0.03241772893661425
+      }
+    },
+    {
+      "snapshot_id": "S08",
+      "date": "2024-11-30",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.7733594248013411,
+        "N_eff_over_null": 0.5412976089724595,
+        "mean_abs_corr": 0.6285553051446194,
+        "mean_signed_corr": -0.12219197206691469,
+        "same_side_overlap": 0.34116564855499587,
+        "surviving_gross": 0.393405734675427,
+        "forward_return_mean": -0.0021273858636922695,
+        "forward_return_sd_across_books": 0.04435032931726436
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.5465232677436833,
+        "N_eff_over_null": 0.7772969972947288,
+        "mean_abs_corr": 0.33952696546973343,
+        "mean_signed_corr": 0.3035780227270454,
+        "same_side_overlap": 0.4901302368624205,
+        "surviving_gross": 0.5594044732419095,
+        "forward_return_mean": -0.04551138473359922,
+        "forward_return_sd_across_books": 0.010310047772052007
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0655680506313325,
+        "N_eff_over_null": 0.3252524163672004,
+        "mean_abs_corr": 0.9579719366351921,
+        "mean_signed_corr": 0.9579719366351921,
+        "same_side_overlap": 0.8411459636524157,
+        "surviving_gross": 0.9836152219873151,
+        "forward_return_mean": -0.03645328123377074,
+        "forward_return_sd_across_books": 0.008318439813594047
+      }
+    },
+    {
+      "snapshot_id": "S08",
+      "date": "2024-11-30",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.184781221326931,
+        "N_eff_over_null": 0.6668793898702622,
+        "mean_abs_corr": 0.4501516465768216,
+        "mean_signed_corr": 0.4501516465768216,
+        "same_side_overlap": 0.5850224152345044,
+        "surviving_gross": 0.7594282852766417,
+        "forward_return_mean": -0.004607368257083065,
+        "forward_return_sd_across_books": 0.022139658169178504
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.1473094580972543,
+        "N_eff_over_null": 0.6554415642628119,
+        "mean_abs_corr": 0.4745750373819986,
+        "mean_signed_corr": 0.4745750373819986,
+        "same_side_overlap": 0.5175394802663467,
+        "surviving_gross": 0.7340638679317124,
+        "forward_return_mean": -0.023623424099445425,
+        "forward_return_sd_across_books": 0.004766158501361162
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1020727375012556,
+        "N_eff_over_null": 0.33639505301639033,
+        "mean_abs_corr": 0.9353624715140221,
+        "mean_signed_corr": 0.9353624715140221,
+        "same_side_overlap": 0.8285753808309156,
+        "surviving_gross": 0.9726877543470218,
+        "forward_return_mean": -0.035519012076348874,
+        "forward_return_sd_across_books": 0.017127180291564636
+      }
+    },
+    {
+      "snapshot_id": "S08",
+      "date": "2024-11-30",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1411466196860154,
+        "N_eff_over_null": 0.3483219070450097,
+        "mean_abs_corr": 0.913412271683423,
+        "mean_signed_corr": 0.913412271683423,
+        "same_side_overlap": 0.779057927544585,
+        "surviving_gross": 1.0,
+        "forward_return_mean": -0.03040234415318019,
+        "forward_return_sd_across_books": 0.007303776196232517
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.8860488418594517,
+        "N_eff_over_null": 0.8809332815603708,
+        "mean_abs_corr": 0.31232448551528874,
+        "mean_signed_corr": 0.2731163534367828,
+        "same_side_overlap": 0.4021337887757798,
+        "surviving_gross": 0.5842116798573869,
+        "forward_return_mean": -0.019717602694952402,
+        "forward_return_sd_across_books": 0.0251569573121081
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1321636316224426,
+        "N_eff_over_null": 0.34557995304953876,
+        "mean_abs_corr": 0.9180699327207216,
+        "mean_signed_corr": 0.9180699327207216,
+        "same_side_overlap": 0.8275370903727629,
+        "surviving_gross": 0.954976666553122,
+        "forward_return_mean": -0.014773313918221644,
+        "forward_return_sd_across_books": 0.006902562836491041
+      }
+    },
+    {
+      "snapshot_id": "S08",
+      "date": "2024-11-30",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.9149286094073823,
+        "N_eff_over_null": 0.5845099775761988,
+        "mean_abs_corr": 0.5169926943714444,
+        "mean_signed_corr": 0.5169926943714444,
+        "same_side_overlap": 0.6271489675273373,
+        "surviving_gross": 0.7817674813675634,
+        "forward_return_mean": -0.018455535576278062,
+        "forward_return_sd_across_books": 0.01742662513802494
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.302116941262397,
+        "N_eff_over_null": 1.0079332930790508,
+        "mean_abs_corr": 0.20526703894870876,
+        "mean_signed_corr": 0.11964225928376104,
+        "same_side_overlap": 0.43770979790797226,
+        "surviving_gross": 0.4389318849990125,
+        "forward_return_mean": -0.03467300738380292,
+        "forward_return_sd_across_books": 0.018065484357054375
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.259691407844628,
+        "N_eff_over_null": 0.384506342917953,
+        "mean_abs_corr": 0.8452528781320244,
+        "mean_signed_corr": 0.8452528781320244,
+        "same_side_overlap": 0.8100084003350806,
+        "surviving_gross": 0.9000937423631475,
+        "forward_return_mean": -0.015000397607065903,
+        "forward_return_sd_across_books": 0.009023512235793445
+      }
+    },
+    {
+      "snapshot_id": "S09",
+      "date": "2025-04-30",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.720532751828508,
+        "N_eff_over_null": 0.5251728734167399,
+        "mean_abs_corr": 0.6418714877468301,
+        "mean_signed_corr": 0.6418714877468301,
+        "same_side_overlap": 0.6434063373718547,
+        "surviving_gross": 0.7712552453931762,
+        "forward_return_mean": 0.004941102789230186,
+        "forward_return_sd_across_books": 0.030144622280333447
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.7499832445654784,
+        "N_eff_over_null": 0.8394008198108931,
+        "mean_abs_corr": 0.3503934734578616,
+        "mean_signed_corr": 0.029878087106102902,
+        "same_side_overlap": 0.3475802469135802,
+        "surviving_gross": 0.5457248677248678,
+        "forward_return_mean": 0.011359803472248468,
+        "forward_return_sd_across_books": 0.08216962545423512
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.7177346277604366,
+        "N_eff_over_null": 0.8295572996958472,
+        "mean_abs_corr": 0.2940853678495259,
+        "mean_signed_corr": 0.26912433903455996,
+        "same_side_overlap": 0.4736223431207029,
+        "surviving_gross": 0.6345433818478394,
+        "forward_return_mean": 0.02970797670616379,
+        "forward_return_sd_across_books": 0.05001017539379709
+      }
+    },
+    {
+      "snapshot_id": "S09",
+      "date": "2025-04-30",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.483225913992205,
+        "N_eff_over_null": 0.7579762066186947,
+        "mean_abs_corr": 0.39945578354209216,
+        "mean_signed_corr": 0.11023154112822349,
+        "same_side_overlap": 0.4237803363390218,
+        "surviving_gross": 0.5239399359117669,
+        "forward_return_mean": 0.026126617477370648,
+        "forward_return_sd_across_books": 0.035559371957157644
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.3676494134836847,
+        "N_eff_over_null": 1.02793632801226,
+        "mean_abs_corr": 0.21333395847843584,
+        "mean_signed_corr": -0.107699482641935,
+        "same_side_overlap": 0.2512441241921934,
+        "surviving_gross": 0.38799033237609887,
+        "forward_return_mean": 0.008562841827813486,
+        "forward_return_sd_across_books": 0.08285329041212226
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.4339814674858995,
+        "N_eff_over_null": 0.4377063830407027,
+        "mean_abs_corr": 0.7677796382099911,
+        "mean_signed_corr": 0.7677796382099911,
+        "same_side_overlap": 0.685744798358919,
+        "surviving_gross": 0.9722222222222224,
+        "forward_return_mean": 0.005746559115033744,
+        "forward_return_sd_across_books": 0.015297535444840832
+      }
+    },
+    {
+      "snapshot_id": "S09",
+      "date": "2025-04-30",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.856242118813513,
+        "N_eff_over_null": 0.5665965999533829,
+        "mean_abs_corr": 0.5684909710559399,
+        "mean_signed_corr": 0.18105171008751267,
+        "same_side_overlap": 0.45023946436211704,
+        "surviving_gross": 0.6125695721202815,
+        "forward_return_mean": 0.05545393225542658,
+        "forward_return_sd_across_books": 0.06800940459476866
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.46167435141699,
+        "N_eff_over_null": 0.7513978395215163,
+        "mean_abs_corr": 0.4019424683875012,
+        "mean_signed_corr": -0.15625510189297706,
+        "same_side_overlap": 0.2866562889964556,
+        "surviving_gross": 0.37184209110817495,
+        "forward_return_mean": 0.0013155856564245096,
+        "forward_return_sd_across_books": 0.05017112416950519
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.779121881812429,
+        "N_eff_over_null": 0.5430565328309197,
+        "mean_abs_corr": 0.5439577078474541,
+        "mean_signed_corr": 0.5439577078474541,
+        "same_side_overlap": 0.6157485534262884,
+        "surviving_gross": 0.7804325955734407,
+        "forward_return_mean": 0.08448319316979709,
+        "forward_return_sd_across_books": 0.037683901395228654
+      }
+    },
+    {
+      "snapshot_id": "S09",
+      "date": "2025-04-30",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.9898368159492128,
+        "N_eff_over_null": 0.607374847791694,
+        "mean_abs_corr": 0.5323928370247152,
+        "mean_signed_corr": 0.5323928370247152,
+        "same_side_overlap": 0.5075434318554408,
+        "surviving_gross": 0.7719532580227875,
+        "forward_return_mean": 0.023114692480408497,
+        "forward_return_sd_across_books": 0.042310162347651455
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.383302029928028,
+        "N_eff_over_null": 1.03271410951385,
+        "mean_abs_corr": 0.20224176499972302,
+        "mean_signed_corr": -0.03169261795549135,
+        "same_side_overlap": 0.36358627606723193,
+        "surviving_gross": 0.38066201803814226,
+        "forward_return_mean": 0.0332094128476824,
+        "forward_return_sd_across_books": 0.03718909832274186
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.9449540015337219,
+        "N_eff_over_null": 0.5936748838772826,
+        "mean_abs_corr": 0.5414406629163437,
+        "mean_signed_corr": 0.5414406629163437,
+        "same_side_overlap": 0.5054109954149032,
+        "surviving_gross": 0.7675517816822259,
+        "forward_return_mean": 0.029492473091248222,
+        "forward_return_sd_across_books": 0.026379359853874254
+      }
+    },
+    {
+      "snapshot_id": "S09",
+      "date": "2025-04-30",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.689869792221362,
+        "N_eff_over_null": 0.5158133569604374,
+        "mean_abs_corr": 0.6369390550980761,
+        "mean_signed_corr": 0.6369390550980761,
+        "same_side_overlap": 0.6407640484628395,
+        "surviving_gross": 0.7966762989780893,
+        "forward_return_mean": 0.029056773918775456,
+        "forward_return_sd_across_books": 0.03904983306398534
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.8707107195246113,
+        "N_eff_over_null": 0.5710129742430856,
+        "mean_abs_corr": 0.5562501960877272,
+        "mean_signed_corr": 0.5562501960877272,
+        "same_side_overlap": 0.5719978632478633,
+        "surviving_gross": 0.766956272893773,
+        "forward_return_mean": 0.0160687208846873,
+        "forward_return_sd_across_books": 0.018606243213015253
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1071417114486064,
+        "N_eff_over_null": 0.33794229912976753,
+        "mean_abs_corr": 0.9330022581112489,
+        "mean_signed_corr": 0.9330022581112489,
+        "same_side_overlap": 0.8118967506942191,
+        "surviving_gross": 0.9936708860759492,
+        "forward_return_mean": 0.05928470388378597,
+        "forward_return_sd_across_books": 0.007086868984736122
+      }
+    },
+    {
+      "snapshot_id": "S09",
+      "date": "2025-04-30",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.1444442600851668,
+        "N_eff_over_null": 0.6545669954577038,
+        "mean_abs_corr": 0.49392623763408117,
+        "mean_signed_corr": 0.4356505428114042,
+        "same_side_overlap": 0.6190003082065202,
+        "surviving_gross": 0.7734171480348849,
+        "forward_return_mean": 0.03877845522843934,
+        "forward_return_sd_across_books": 0.03905148472115207
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.965951189069997,
+        "N_eff_over_null": 0.9053225558899108,
+        "mean_abs_corr": 0.31420068508950266,
+        "mean_signed_corr": 0.31420068508950266,
+        "same_side_overlap": 0.47457659958201814,
+        "surviving_gross": 0.6430198206434713,
+        "forward_return_mean": 0.011606786436871127,
+        "forward_return_sd_across_books": 0.056218218421944
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.720087085249195,
+        "N_eff_over_null": 0.5250368388089738,
+        "mean_abs_corr": 0.609465786405987,
+        "mean_signed_corr": 0.609465786405987,
+        "same_side_overlap": 0.6984956300355784,
+        "surviving_gross": 0.8174599153980597,
+        "forward_return_mean": 0.05318401183059472,
+        "forward_return_sd_across_books": 0.03193122702439398
+      }
+    },
+    {
+      "snapshot_id": "S09",
+      "date": "2025-04-30",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.7665453238726203,
+        "N_eff_over_null": 0.5392176828794021,
+        "mean_abs_corr": 0.6143082943466504,
+        "mean_signed_corr": 0.6143082943466504,
+        "same_side_overlap": 0.6196590871431824,
+        "surviving_gross": 0.8092839040916014,
+        "forward_return_mean": 0.0220604078273852,
+        "forward_return_sd_across_books": 0.03724680525181457
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.3135314160533373,
+        "N_eff_over_null": 1.0114174304883097,
+        "mean_abs_corr": 0.18294990420297394,
+        "mean_signed_corr": 0.05974739603358361,
+        "same_side_overlap": 0.3332669481018922,
+        "surviving_gross": 0.560706765453059,
+        "forward_return_mean": 0.019399754878167516,
+        "forward_return_sd_across_books": 0.06826886391822701
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.036794800016856,
+        "N_eff_over_null": 0.3164697118899475,
+        "mean_abs_corr": 0.9759712402252311,
+        "mean_signed_corr": 0.9759712402252311,
+        "same_side_overlap": 0.9155991894071884,
+        "surviving_gross": 0.9999999999999998,
+        "forward_return_mean": 0.03520672558496293,
+        "forward_return_sd_across_books": 0.011052632544366704
+      }
+    },
+    {
+      "snapshot_id": "S10",
+      "date": "2025-07-31",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1954703730853997,
+        "N_eff_over_null": 0.36490360921674536,
+        "mean_abs_corr": 0.8832238327138984,
+        "mean_signed_corr": 0.8832238327138984,
+        "same_side_overlap": 0.790946664540261,
+        "surviving_gross": 0.9424898498244294,
+        "forward_return_mean": -0.06091828480922002,
+        "forward_return_sd_across_books": 0.002288524543001506
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.872992997332612,
+        "N_eff_over_null": 0.8769481348796373,
+        "mean_abs_corr": 0.32908551777144135,
+        "mean_signed_corr": 0.20232971666957633,
+        "same_side_overlap": 0.38904873141276447,
+        "surviving_gross": 0.5820635814499769,
+        "forward_return_mean": -0.025460169710407897,
+        "forward_return_sd_across_books": 0.019310510298822692
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.2696554461489458,
+        "N_eff_over_null": 0.38754775123845825,
+        "mean_abs_corr": 0.8442005668921415,
+        "mean_signed_corr": 0.8442005668921415,
+        "same_side_overlap": 0.7516342378721658,
+        "surviving_gross": 0.9455503232500598,
+        "forward_return_mean": -0.04762240232672288,
+        "forward_return_sd_across_books": 0.004886656443130266
+      }
+    },
+    {
+      "snapshot_id": "S10",
+      "date": "2025-07-31",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.3555514092129637,
+        "N_eff_over_null": 0.4137665080097474,
+        "mean_abs_corr": 0.7994983498022278,
+        "mean_signed_corr": 0.7994983498022278,
+        "same_side_overlap": 0.6076088263588263,
+        "surviving_gross": 0.9704582590612004,
+        "forward_return_mean": -0.0646350107237536,
+        "forward_return_sd_across_books": 0.0035844063459540866
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.3125177115703095,
+        "N_eff_over_null": 1.0111080088306392,
+        "mean_abs_corr": 0.19942086503435788,
+        "mean_signed_corr": 0.19050447559076733,
+        "same_side_overlap": 0.3661837283229404,
+        "surviving_gross": 0.5648690934467931,
+        "forward_return_mean": -0.03053045828321406,
+        "forward_return_sd_across_books": 0.02998052577284157
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.2453518557917378,
+        "N_eff_over_null": 0.38012935924988744,
+        "mean_abs_corr": 0.8564959217384711,
+        "mean_signed_corr": 0.8564959217384711,
+        "same_side_overlap": 0.7319865319865322,
+        "surviving_gross": 0.9842592592592594,
+        "forward_return_mean": -0.07253520864177171,
+        "forward_return_sd_across_books": 0.009276880649558802
+      }
+    },
+    {
+      "snapshot_id": "S10",
+      "date": "2025-07-31",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.3307127278628714,
+        "N_eff_over_null": 0.4061847856376231,
+        "mean_abs_corr": 0.8135391933922995,
+        "mean_signed_corr": 0.8135391933922995,
+        "same_side_overlap": 0.7119160678275588,
+        "surviving_gross": 0.9403472101698132,
+        "forward_return_mean": -0.05401953514792754,
+        "forward_return_sd_across_books": 0.012330798886935028
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.209667366977012,
+        "N_eff_over_null": 0.6744756001751406,
+        "mean_abs_corr": 0.4966615635729765,
+        "mean_signed_corr": 0.4966615635729765,
+        "same_side_overlap": 0.5599045296898056,
+        "surviving_gross": 0.7801371940942494,
+        "forward_return_mean": -0.03674121467270149,
+        "forward_return_sd_across_books": 0.018841851514605282
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.3660127650000147,
+        "N_eff_over_null": 0.41695971678341454,
+        "mean_abs_corr": 0.7974101587605787,
+        "mean_signed_corr": 0.7974101587605787,
+        "same_side_overlap": 0.7200451439726696,
+        "surviving_gross": 0.9041071864324062,
+        "forward_return_mean": -0.05320840202216964,
+        "forward_return_sd_across_books": 0.012456111457234721
+      }
+    },
+    {
+      "snapshot_id": "S10",
+      "date": "2025-07-31",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.5627597326457978,
+        "N_eff_over_null": 0.4770144703036574,
+        "mean_abs_corr": 0.6734230419638281,
+        "mean_signed_corr": 0.6734230419638281,
+        "same_side_overlap": 0.6975313884332678,
+        "surviving_gross": 0.8572535644968646,
+        "forward_return_mean": -0.05474692624361166,
+        "forward_return_sd_across_books": 0.018773364440605612
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.44017469323561,
+        "N_eff_over_null": 0.7448353156447732,
+        "mean_abs_corr": 0.37195357526096456,
+        "mean_signed_corr": 0.37195357526096456,
+        "same_side_overlap": 0.5043678936098782,
+        "surviving_gross": 0.6678062848533897,
+        "forward_return_mean": -0.04292322074235733,
+        "forward_return_sd_across_books": 0.02950706133687868
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.058317569128362,
+        "N_eff_over_null": 0.32303929011283344,
+        "mean_abs_corr": 0.9624455121349303,
+        "mean_signed_corr": 0.9624455121349303,
+        "same_side_overlap": 0.8566553462948887,
+        "surviving_gross": 0.9625330727748169,
+        "forward_return_mean": -0.060148801671882114,
+        "forward_return_sd_across_books": 0.006285786173140262
+      }
+    },
+    {
+      "snapshot_id": "S10",
+      "date": "2025-07-31",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.0583423679088082,
+        "N_eff_over_null": 0.3230468596559127,
+        "mean_abs_corr": 0.9622452622003271,
+        "mean_signed_corr": 0.9622452622003271,
+        "same_side_overlap": 0.871479391104288,
+        "surviving_gross": 0.9877430979280662,
+        "forward_return_mean": -0.06909384484419977,
+        "forward_return_sd_across_books": 0.004378241284094142
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.3778626578093403,
+        "N_eff_over_null": 0.42057676054485416,
+        "mean_abs_corr": 0.7908369359160136,
+        "mean_signed_corr": 0.7908369359160136,
+        "same_side_overlap": 0.7117271941520382,
+        "surviving_gross": 0.9287647236484444,
+        "forward_return_mean": -0.04451572743528191,
+        "forward_return_sd_across_books": 0.02249176471226399
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0279272483163546,
+        "N_eff_over_null": 0.31376299351927156,
+        "mean_abs_corr": 0.9816848266859687,
+        "mean_signed_corr": 0.9816848266859687,
+        "same_side_overlap": 0.9051171450473651,
+        "surviving_gross": 0.9919323893941139,
+        "forward_return_mean": -0.06910079498465811,
+        "forward_return_sd_across_books": 0.0030362055598760237
+      }
+    },
+    {
+      "snapshot_id": "S10",
+      "date": "2025-07-31",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1565740745914475,
+        "N_eff_over_null": 0.35303096057135636,
+        "mean_abs_corr": 0.9040927633044826,
+        "mean_signed_corr": 0.9040927633044826,
+        "same_side_overlap": 0.7912571854710467,
+        "surviving_gross": 0.964717741935484,
+        "forward_return_mean": -0.06768077595742761,
+        "forward_return_sd_across_books": 0.0039232451378142155
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.321081856585052,
+        "N_eff_over_null": 0.7084835942604203,
+        "mean_abs_corr": 0.44181246649144534,
+        "mean_signed_corr": 0.44181246649144534,
+        "same_side_overlap": 0.5513904947939477,
+        "surviving_gross": 0.6909342644662847,
+        "forward_return_mean": -0.02387609345136309,
+        "forward_return_sd_across_books": 0.023288008792711902
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.094900167364461,
+        "N_eff_over_null": 0.33420570831224544,
+        "mean_abs_corr": 0.940172871161288,
+        "mean_signed_corr": 0.940172871161288,
+        "same_side_overlap": 0.8564694236413603,
+        "surviving_gross": 0.9665196423338246,
+        "forward_return_mean": -0.060975128537106585,
+        "forward_return_sd_across_books": 0.0068104760747545404
+      }
+    },
+    {
+      "snapshot_id": "S10",
+      "date": "2025-07-31",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1600793829474314,
+        "N_eff_over_null": 0.3541009157114532,
+        "mean_abs_corr": 0.9015773764649353,
+        "mean_signed_corr": 0.9015773764649353,
+        "same_side_overlap": 0.8254020050595584,
+        "surviving_gross": 0.9312136711515869,
+        "forward_return_mean": -0.06048364958671472,
+        "forward_return_sd_across_books": 0.00448344388148645
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.925209505821596,
+        "N_eff_over_null": 0.8928866247304149,
+        "mean_abs_corr": 0.26110340608808275,
+        "mean_signed_corr": 0.16372859440539306,
+        "same_side_overlap": 0.45678055043917626,
+        "surviving_gross": 0.5725974179921548,
+        "forward_return_mean": -0.02863255630567615,
+        "forward_return_sd_across_books": 0.02396392365390404
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0232639394768068,
+        "N_eff_over_null": 0.3123395720236376,
+        "mean_abs_corr": 0.9847127580948151,
+        "mean_signed_corr": 0.9847127580948151,
+        "same_side_overlap": 0.9281052782199821,
+        "surviving_gross": 1.0,
+        "forward_return_mean": -0.058802153229211326,
+        "forward_return_sd_across_books": 0.002934672442138869
+      }
+    },
+    {
+      "snapshot_id": "S11",
+      "date": "2025-11-30",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.326547232411003,
+        "N_eff_over_null": 0.4049133159644436,
+        "mean_abs_corr": 0.8181442838498404,
+        "mean_signed_corr": 0.8181442838498404,
+        "same_side_overlap": 0.7172169450786775,
+        "surviving_gross": 0.9285371904455242,
+        "forward_return_mean": -0.01927099350508638,
+        "forward_return_sd_across_books": 0.004977198075072116
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.086443675338963,
+        "N_eff_over_null": 0.9421015042544505,
+        "mean_abs_corr": 0.24746526995439996,
+        "mean_signed_corr": 0.2175879147442865,
+        "same_side_overlap": 0.45000408639129813,
+        "surviving_gross": 0.568835207220144,
+        "forward_return_mean": -0.009338162570985596,
+        "forward_return_sd_across_books": 0.003576683734149947
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.4435031247671948,
+        "N_eff_over_null": 0.4406127596317864,
+        "mean_abs_corr": 0.7664598258764445,
+        "mean_signed_corr": 0.7664598258764445,
+        "same_side_overlap": 0.6932506578233005,
+        "surviving_gross": 0.9049693636994115,
+        "forward_return_mean": -0.019252034109251998,
+        "forward_return_sd_across_books": 0.004690546407692762
+      }
+    },
+    {
+      "snapshot_id": "S11",
+      "date": "2025-11-30",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.9051233674578982,
+        "N_eff_over_null": 0.5815170400202678,
+        "mean_abs_corr": 0.5840596196511133,
+        "mean_signed_corr": 0.5840596196511133,
+        "same_side_overlap": 0.5976914478409138,
+        "surviving_gross": 0.7349532297669051,
+        "forward_return_mean": -0.016318766185344814,
+        "forward_return_sd_across_books": 0.005913305404631225
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.7629217122480285,
+        "N_eff_over_null": 0.8433501385572135,
+        "mean_abs_corr": 0.36337914117384434,
+        "mean_signed_corr": 0.17635295854448355,
+        "same_side_overlap": 0.3243589743589744,
+        "surviving_gross": 0.6480769230769232,
+        "forward_return_mean": -0.011369922371070191,
+        "forward_return_sd_across_books": 0.012675099297920303
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.556372681540984,
+        "N_eff_over_null": 0.47506489626747017,
+        "mean_abs_corr": 0.7192719315197708,
+        "mean_signed_corr": 0.7192719315197708,
+        "same_side_overlap": 0.6738721257592791,
+        "surviving_gross": 0.8480680831990235,
+        "forward_return_mean": -0.015176392164461268,
+        "forward_return_sd_across_books": 0.007807220552590197
+      }
+    },
+    {
+      "snapshot_id": "S11",
+      "date": "2025-11-30",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.497210077729155,
+        "N_eff_over_null": 0.7622447120826326,
+        "mean_abs_corr": 0.38408336338262283,
+        "mean_signed_corr": 0.2922140877211484,
+        "same_side_overlap": 0.4673468031710703,
+        "surviving_gross": 0.5640640816235507,
+        "forward_return_mean": -0.0085977689194686,
+        "forward_return_sd_across_books": 0.014233352828419716
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.2454289250823884,
+        "N_eff_over_null": 0.9906299268316424,
+        "mean_abs_corr": 0.24147465470311325,
+        "mean_signed_corr": -0.0024359014847799725,
+        "same_side_overlap": 0.34729347628519713,
+        "surviving_gross": 0.4543189882264394,
+        "forward_return_mean": -0.0045333650189077115,
+        "forward_return_sd_across_books": 0.006729902290904299
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.0750533528142014,
+        "N_eff_over_null": 0.633386217514501,
+        "mean_abs_corr": 0.5191267929263933,
+        "mean_signed_corr": 0.5191267929263933,
+        "same_side_overlap": 0.5769032151456969,
+        "surviving_gross": 0.7754704479058145,
+        "forward_return_mean": -0.008273686480814535,
+        "forward_return_sd_across_books": 0.011601601046966488
+      }
+    },
+    {
+      "snapshot_id": "S11",
+      "date": "2025-11-30",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.068883934075718,
+        "N_eff_over_null": 0.3262645517273394,
+        "mean_abs_corr": 0.9559770929949433,
+        "mean_signed_corr": 0.9559770929949433,
+        "same_side_overlap": 0.852371904629289,
+        "surviving_gross": 0.9831606217616581,
+        "forward_return_mean": -0.027721788844984836,
+        "forward_return_sd_across_books": 0.002972707846326647
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.7067268802777673,
+        "N_eff_over_null": 0.8261973111288319,
+        "mean_abs_corr": 0.34781456654036313,
+        "mean_signed_corr": 0.0060275579739759765,
+        "same_side_overlap": 0.3453432929899389,
+        "surviving_gross": 0.5353317010809391,
+        "forward_return_mean": -0.011442111743724701,
+        "forward_return_sd_across_books": 0.009170733903066457
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.1333291996264545,
+        "N_eff_over_null": 0.3459357293038292,
+        "mean_abs_corr": 0.9177003238522349,
+        "mean_signed_corr": 0.9177003238522349,
+        "same_side_overlap": 0.8129687226342922,
+        "surviving_gross": 0.9550913645741231,
+        "forward_return_mean": -0.024444333324216812,
+        "forward_return_sd_across_books": 0.0024029176049443633
+      }
+    },
+    {
+      "snapshot_id": "S11",
+      "date": "2025-11-30",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.162310302662755,
+        "N_eff_over_null": 0.35478187834701674,
+        "mean_abs_corr": 0.901686437563801,
+        "mean_signed_corr": 0.901686437563801,
+        "same_side_overlap": 0.7950596329491977,
+        "surviving_gross": 0.9581301667367242,
+        "forward_return_mean": -0.023264751019753005,
+        "forward_return_sd_across_books": 0.0020312253568900425
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.048005447983143,
+        "N_eff_over_null": 0.6251301550333112,
+        "mean_abs_corr": 0.5033671835227228,
+        "mean_signed_corr": 0.2401727902390612,
+        "same_side_overlap": 0.415344611528822,
+        "surviving_gross": 0.6539861673414307,
+        "forward_return_mean": -0.006757030761288552,
+        "forward_return_sd_across_books": 0.011089236929487727
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0805136076459825,
+        "N_eff_over_null": 0.329814376093835,
+        "mean_abs_corr": 0.9487840856998505,
+        "mean_signed_corr": 0.9487840856998505,
+        "same_side_overlap": 0.8436794808360925,
+        "surviving_gross": 0.9888059701492539,
+        "forward_return_mean": -0.024788041517187477,
+        "forward_return_sd_across_books": 0.0014587960737454848
+      }
+    },
+    {
+      "snapshot_id": "S11",
+      "date": "2025-11-30",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1528543113977159,
+        "N_eff_over_null": 0.35189554555364994,
+        "mean_abs_corr": 0.9061497256424534,
+        "mean_signed_corr": 0.9061497256424534,
+        "same_side_overlap": 0.8097921470933135,
+        "surviving_gross": 0.9492841993637327,
+        "forward_return_mean": -0.019159573082004503,
+        "forward_return_sd_across_books": 0.0024607411951269647
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 2.4790412104920576,
+        "N_eff_over_null": 0.7566988739092568,
+        "mean_abs_corr": 0.38461460960225335,
+        "mean_signed_corr": -0.05482331232757106,
+        "same_side_overlap": 0.33816199156841487,
+        "surviving_gross": 0.4393265478853761,
+        "forward_return_mean": -0.008326746960999653,
+        "forward_return_sd_across_books": 0.009101901657739157
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.3902887857050248,
+        "N_eff_over_null": 0.4243696934521093,
+        "mean_abs_corr": 0.773930982008327,
+        "mean_signed_corr": 0.773930982008327,
+        "same_side_overlap": 0.7778991747723901,
+        "surviving_gross": 0.9538834951456309,
+        "forward_return_mean": -0.014955030165326073,
+        "forward_return_sd_across_books": 0.005756977342496239
+      }
+    },
+    {
+      "snapshot_id": "S11",
+      "date": "2025-11-30",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 2.266206172275272,
+        "N_eff_over_null": 0.6917334215136074,
+        "mean_abs_corr": 0.47094803755095427,
+        "mean_signed_corr": 0.47094803755095427,
+        "same_side_overlap": 0.5699529977723793,
+        "surviving_gross": 0.6942315108660759,
+        "forward_return_mean": -0.009745518354036753,
+        "forward_return_sd_across_books": 0.010616586423486951
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.2660083334819925,
+        "N_eff_over_null": 0.9969115550255554,
+        "mean_abs_corr": 0.2600067764933349,
+        "mean_signed_corr": -0.06872172965131923,
+        "same_side_overlap": 0.33539507107959987,
+        "surviving_gross": 0.3481139426749307,
+        "forward_return_mean": -0.0064886127288393425,
+        "forward_return_sd_across_books": 0.00728330337909174
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0841974641965044,
+        "N_eff_over_null": 0.3309388310208549,
+        "mean_abs_corr": 0.945945864694452,
+        "mean_signed_corr": 0.945945864694452,
+        "same_side_overlap": 0.8930424967803475,
+        "surviving_gross": 0.9684489402697495,
+        "forward_return_mean": -0.00821821841510775,
+        "forward_return_sd_across_books": 0.0006752429592911872
+      }
+    },
+    {
+      "snapshot_id": "S12",
+      "date": "2026-01-31",
+      "vendor": "openai",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.6064796692265004,
+        "N_eff_over_null": 0.49035947910705496,
+        "mean_abs_corr": 0.6941892244034734,
+        "mean_signed_corr": 0.6941892244034734,
+        "same_side_overlap": 0.6219771313105679,
+        "surviving_gross": 0.8949956751843544,
+        "forward_return_mean": 0.019423137378258203,
+        "forward_return_sd_across_books": 0.01131998689424263
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.1048072146992043,
+        "N_eff_over_null": 0.9477067638588783,
+        "mean_abs_corr": 0.292029662128322,
+        "mean_signed_corr": 0.292029662128322,
+        "same_side_overlap": 0.42812581545795975,
+        "surviving_gross": 0.5782598640402953,
+        "forward_return_mean": 0.0037770691804998435,
+        "forward_return_sd_across_books": 0.02600083795777062
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.4480744605060698,
+        "N_eff_over_null": 0.44200810739415025,
+        "mean_abs_corr": 0.7576779843008592,
+        "mean_signed_corr": 0.7576779843008592,
+        "same_side_overlap": 0.7318946908052065,
+        "surviving_gross": 0.8826036228444868,
+        "forward_return_mean": 0.016352753326092057,
+        "forward_return_sd_across_books": 0.009362698487121127
+      }
+    },
+    {
+      "snapshot_id": "S12",
+      "date": "2026-01-31",
+      "vendor": "google",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1950248029260135,
+        "N_eff_over_null": 0.3647676040400552,
+        "mean_abs_corr": 0.8834754429661172,
+        "mean_signed_corr": 0.8834754429661172,
+        "same_side_overlap": 0.8069532985608037,
+        "surviving_gross": 0.9468813387423937,
+        "forward_return_mean": 0.010717291740140513,
+        "forward_return_sd_across_books": 0.007425044704459535
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.339000065749805,
+        "N_eff_over_null": 1.019191443467094,
+        "mean_abs_corr": 0.19267462718084113,
+        "mean_signed_corr": 0.1686713263166403,
+        "same_side_overlap": 0.22641598632781954,
+        "surviving_gross": 0.6104964127588061,
+        "forward_return_mean": 0.03651779162693222,
+        "forward_return_sd_across_books": 0.046243134132924205
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.4175402082559847,
+        "N_eff_over_null": 0.43268787738122744,
+        "mean_abs_corr": 0.7562607797024619,
+        "mean_signed_corr": 0.7562607797024619,
+        "same_side_overlap": 0.7029828249655837,
+        "surviving_gross": 0.9172818082300841,
+        "forward_return_mean": 0.025839471849699782,
+        "forward_return_sd_across_books": 0.01829590903223138
+      }
+    },
+    {
+      "snapshot_id": "S12",
+      "date": "2026-01-31",
+      "vendor": "meta",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.4697931401496176,
+        "N_eff_over_null": 0.4486374850581894,
+        "mean_abs_corr": 0.7349741997100804,
+        "mean_signed_corr": 0.7349741997100804,
+        "same_side_overlap": 0.7193466604084883,
+        "surviving_gross": 0.85828373015873,
+        "forward_return_mean": 0.005329990269232406,
+        "forward_return_sd_across_books": 0.020679178700428222
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.125720728792328,
+        "N_eff_over_null": 0.9540903739807169,
+        "mean_abs_corr": 0.23386343374759114,
+        "mean_signed_corr": 0.08747161517453135,
+        "same_side_overlap": 0.37933304208533575,
+        "surviving_gross": 0.5724108053007135,
+        "forward_return_mean": 0.011730344567663777,
+        "forward_return_sd_across_books": 0.0221644952897701
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.4448125681286073,
+        "N_eff_over_null": 0.4410124521874548,
+        "mean_abs_corr": 0.7612179762354098,
+        "mean_signed_corr": 0.7612179762354098,
+        "same_side_overlap": 0.6391166179585225,
+        "surviving_gross": 0.883966663060124,
+        "forward_return_mean": 0.009534692363474574,
+        "forward_return_sd_across_books": 0.01091644946202825
+      }
+    },
+    {
+      "snapshot_id": "S12",
+      "date": "2026-01-31",
+      "vendor": "alibaba",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.3861906729496876,
+        "N_eff_over_null": 0.4231187915735958,
+        "mean_abs_corr": 0.7854987333367531,
+        "mean_signed_corr": 0.7854987333367531,
+        "same_side_overlap": 0.6440595339395939,
+        "surviving_gross": 0.8348960654807732,
+        "forward_return_mean": -0.004832135069644394,
+        "forward_return_sd_across_books": 0.013633229970245192
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.5301977611551782,
+        "N_eff_over_null": 1.0775523453330915,
+        "mean_abs_corr": 0.18641635377885782,
+        "mean_signed_corr": 0.03422217593835972,
+        "same_side_overlap": 0.33998557803650614,
+        "surviving_gross": 0.5123970787257008,
+        "forward_return_mean": 0.010514651582948209,
+        "forward_return_sd_across_books": 0.021644976429581016
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0626645102524521,
+        "N_eff_over_null": 0.32436614399474045,
+        "mean_abs_corr": 0.9596476782294885,
+        "mean_signed_corr": 0.9596476782294885,
+        "same_side_overlap": 0.8750365525288938,
+        "surviving_gross": 0.9979784366576822,
+        "forward_return_mean": -0.013373778070933595,
+        "forward_return_sd_across_books": 0.005148634015176484
+      }
+    },
+    {
+      "snapshot_id": "S12",
+      "date": "2026-01-31",
+      "vendor": "mistral",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1284852751372467,
+        "N_eff_over_null": 0.3444571769543273,
+        "mean_abs_corr": 0.9207650725468862,
+        "mean_signed_corr": 0.9207650725468862,
+        "same_side_overlap": 0.8077917659015724,
+        "surviving_gross": 0.9967532467532467,
+        "forward_return_mean": 0.004052232966037588,
+        "forward_return_sd_across_books": 0.006513190956218008
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.8426367812221955,
+        "N_eff_over_null": 0.5624437268220557,
+        "mean_abs_corr": 0.5342232482843841,
+        "mean_signed_corr": 0.5342232482843841,
+        "same_side_overlap": 0.5629017328556628,
+        "surviving_gross": 0.762524463542122,
+        "forward_return_mean": -0.0017597880515583283,
+        "forward_return_sd_across_books": 0.014562624412338267
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0737665773997884,
+        "N_eff_over_null": 0.32775492255675026,
+        "mean_abs_corr": 0.9527971069905212,
+        "mean_signed_corr": 0.9527971069905212,
+        "same_side_overlap": 0.8418730663169223,
+        "surviving_gross": 0.9999999999999999,
+        "forward_return_mean": 0.005929137155055568,
+        "forward_return_sd_across_books": 0.00815460501103444
+      }
+    },
+    {
+      "snapshot_id": "S12",
+      "date": "2026-01-31",
+      "vendor": "deepseek",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.111570530587048,
+        "N_eff_over_null": 0.3392941453357212,
+        "mean_abs_corr": 0.930540875824757,
+        "mean_signed_corr": 0.930540875824757,
+        "same_side_overlap": 0.8370683716184947,
+        "surviving_gross": 1.0,
+        "forward_return_mean": 0.003355611969284797,
+        "forward_return_sd_across_books": 0.004526198278044611
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.612450560341503,
+        "N_eff_over_null": 1.1026590681486523,
+        "mean_abs_corr": 0.15851929814242824,
+        "mean_signed_corr": 0.02951924089218014,
+        "same_side_overlap": 0.33615634730405647,
+        "surviving_gross": 0.47230853324675975,
+        "forward_return_mean": 0.014083835842381796,
+        "forward_return_sd_across_books": 0.03037551298145999
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.066801737166128,
+        "N_eff_over_null": 0.32562898502111626,
+        "mean_abs_corr": 0.957024249167577,
+        "mean_signed_corr": 0.957024249167577,
+        "same_side_overlap": 0.8940978273498317,
+        "surviving_gross": 1.0,
+        "forward_return_mean": 0.0006792276515153665,
+        "forward_return_sd_across_books": 0.002573089799878906
+      }
+    },
+    {
+      "snapshot_id": "S12",
+      "date": "2026-01-31",
+      "vendor": "anthropic",
+      "role_labeled_full_packet_m4": {
+        "M": 4,
+        "N_eff": 1.1562978358701117,
+        "N_eff_over_null": 0.35294664187246577,
+        "mean_abs_corr": 0.903225495395721,
+        "mean_signed_corr": 0.903225495395721,
+        "same_side_overlap": 0.8111383385356642,
+        "surviving_gross": 0.9563824108064012,
+        "forward_return_mean": 0.017536158001962475,
+        "forward_return_sd_across_books": 0.010766271933127054
+      },
+      "information_same_model_m4": {
+        "M": 4,
+        "N_eff": 3.234408268872985,
+        "N_eff_over_null": 0.9872659980239639,
+        "mean_abs_corr": 0.2498091361595375,
+        "mean_signed_corr": -0.1339924267981127,
+        "same_side_overlap": 0.3077723627302399,
+        "surviving_gross": 0.3472747282041872,
+        "forward_return_mean": 0.013916598639427097,
+        "forward_return_sd_across_books": 0.03517126395868941
+      },
+      "sampling_same_model_m4": {
+        "M": 4,
+        "N_eff": 1.0044399779339217,
+        "N_eff_over_null": 0.3065937738328987,
+        "mean_abs_corr": 0.9970480547415247,
+        "mean_signed_corr": 0.9970480547415247,
+        "same_side_overlap": 0.9613277198852094,
+        "surviving_gross": 0.9982638888888891,
+        "forward_return_mean": 0.012502244778779318,
+        "forward_return_sd_across_books": 0.001719280621887625
+      }
+    }
+  ],
+  "paired_date_comparisons": {
+    "information_vs_role_labels": {
+      "N_eff": {
+        "treatment": "information_same_model_m4",
+        "control": "role_labeled_full_packet_m4",
+        "metric": "N_eff",
+        "n_dates": 12,
+        "treatment_mean": 2.877831999624492,
+        "control_mean": 1.630849202933588,
+        "mean_difference": 1.2469827966909037,
+        "bootstrap_95": [
+          1.0558667677123057,
+          1.4532344309571383
+        ],
+        "dates_treatment_higher": 12,
+        "dates_treatment_lower": 0,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "N_eff_over_null": {
+        "treatment": "information_same_model_m4",
+        "control": "role_labeled_full_packet_m4",
+        "metric": "N_eff_over_null",
+        "n_dates": 12,
+        "treatment_mean": 0.878425184784904,
+        "control_mean": 0.49779799954624787,
+        "mean_difference": 0.3806271852386562,
+        "bootstrap_95": [
+          0.3224810430011598,
+          0.44388454627385243
+        ],
+        "dates_treatment_higher": 12,
+        "dates_treatment_lower": 0,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "mean_abs_corr": {
+        "treatment": "information_same_model_m4",
+        "control": "role_labeled_full_packet_m4",
+        "metric": "mean_abs_corr",
+        "n_dates": 12,
+        "treatment_mean": 0.31202745089530987,
+        "control_mean": 0.6914904717314537,
+        "mean_difference": -0.3794630208361438,
+        "bootstrap_95": [
+          -0.45559435397760634,
+          -0.3081492598106946
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "mean_signed_corr": {
+        "treatment": "information_same_model_m4",
+        "control": "role_labeled_full_packet_m4",
+        "metric": "mean_signed_corr",
+        "n_dates": 12,
+        "treatment_mean": 0.12519253133694633,
+        "control_mean": 0.6536437147415607,
+        "mean_difference": -0.5284511834046144,
+        "bootstrap_95": [
+          -0.6174952147187784,
+          -0.4393598865835287
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "same_side_overlap": {
+        "treatment": "information_same_model_m4",
+        "control": "role_labeled_full_packet_m4",
+        "metric": "same_side_overlap",
+        "n_dates": 12,
+        "treatment_mean": 0.3851464564603228,
+        "control_mean": 0.664780854078114,
+        "mean_difference": -0.27963439761779124,
+        "bootstrap_95": [
+          -0.32539816857826853,
+          -0.23617164542244853
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "surviving_gross": {
+        "treatment": "information_same_model_m4",
+        "control": "role_labeled_full_packet_m4",
+        "metric": "surviving_gross",
+        "n_dates": 12,
+        "treatment_mean": 0.5424467465396745,
+        "control_mean": 0.8347919668123338,
+        "mean_difference": -0.2923452202726595,
+        "bootstrap_95": [
+          -0.33422673138446846,
+          -0.2502454972428731
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "forward_return_mean": {
+        "treatment": "information_same_model_m4",
+        "control": "role_labeled_full_packet_m4",
+        "metric": "forward_return_mean",
+        "n_dates": 12,
+        "treatment_mean": -0.0038564689007679984,
+        "control_mean": -0.005269746472291502,
+        "mean_difference": 0.0014132775715235031,
+        "bootstrap_95": [
+          -0.005575148847258886,
+          0.009208380652459533
+        ],
+        "dates_treatment_higher": 6,
+        "dates_treatment_lower": 6,
+        "exact_sign_flip_p_two_sided": 0.73046875
+      },
+      "forward_return_sd_across_books": {
+        "treatment": "information_same_model_m4",
+        "control": "role_labeled_full_packet_m4",
+        "metric": "forward_return_sd_across_books",
+        "n_dates": 12,
+        "treatment_mean": 0.02341256386850568,
+        "control_mean": 0.014990829236795825,
+        "mean_difference": 0.008421734631709855,
+        "bootstrap_95": [
+          0.004781036239805559,
+          0.01213202622608116
+        ],
+        "dates_treatment_higher": 11,
+        "dates_treatment_lower": 1,
+        "exact_sign_flip_p_two_sided": 0.00146484375
+      }
+    },
+    "role_labels_vs_repeated_draws": {
+      "N_eff": {
+        "treatment": "role_labeled_full_packet_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "N_eff",
+        "n_dates": 12,
+        "treatment_mean": 1.630849202933588,
+        "control_mean": 1.4026266325758163,
+        "mean_difference": 0.22822257035777152,
+        "bootstrap_95": [
+          0.14904047887979813,
+          0.31076779225374995
+        ],
+        "dates_treatment_higher": 12,
+        "dates_treatment_lower": 0,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "N_eff_over_null": {
+        "treatment": "role_labeled_full_packet_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "N_eff_over_null",
+        "n_dates": 12,
+        "treatment_mean": 0.49779799954624787,
+        "control_mean": 0.4281356795898466,
+        "mean_difference": 0.06966231995640122,
+        "bootstrap_95": [
+          0.04548756367405925,
+          0.09441233681269465
+        ],
+        "dates_treatment_higher": 12,
+        "dates_treatment_lower": 0,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "mean_abs_corr": {
+        "treatment": "role_labeled_full_packet_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "mean_abs_corr",
+        "n_dates": 12,
+        "treatment_mean": 0.6914904717314537,
+        "control_mean": 0.7940753056711327,
+        "mean_difference": -0.1025848339396791,
+        "bootstrap_95": [
+          -0.13959244212205996,
+          -0.06722773807147257
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "mean_signed_corr": {
+        "treatment": "role_labeled_full_packet_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "mean_signed_corr",
+        "n_dates": 12,
+        "treatment_mean": 0.6536437147415607,
+        "control_mean": 0.7779123464393605,
+        "mean_difference": -0.12426863169779963,
+        "bootstrap_95": [
+          -0.17970424320861791,
+          -0.0741226420696559
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "same_side_overlap": {
+        "treatment": "role_labeled_full_packet_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "same_side_overlap",
+        "n_dates": 12,
+        "treatment_mean": 0.664780854078114,
+        "control_mean": 0.745512067805353,
+        "mean_difference": -0.08073121372723886,
+        "bootstrap_95": [
+          -0.10715511631128714,
+          -0.055970201955807035
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "surviving_gross": {
+        "treatment": "role_labeled_full_packet_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "surviving_gross",
+        "n_dates": 12,
+        "treatment_mean": 0.8347919668123338,
+        "control_mean": 0.8995352179102362,
+        "mean_difference": -0.0647432510979022,
+        "bootstrap_95": [
+          -0.09154974237846239,
+          -0.039868037483226024
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "forward_return_mean": {
+        "treatment": "role_labeled_full_packet_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "forward_return_mean",
+        "n_dates": 12,
+        "treatment_mean": -0.005269746472291502,
+        "control_mean": -0.0028482770053977753,
+        "mean_difference": -0.002421469466893726,
+        "bootstrap_95": [
+          -0.005682443952714643,
+          0.0003619915512093947
+        ],
+        "dates_treatment_higher": 4,
+        "dates_treatment_lower": 8,
+        "exact_sign_flip_p_two_sided": 0.1904296875
+      },
+      "forward_return_sd_across_books": {
+        "treatment": "role_labeled_full_packet_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "forward_return_sd_across_books",
+        "n_dates": 12,
+        "treatment_mean": 0.014990829236795825,
+        "control_mean": 0.010427983230826188,
+        "mean_difference": 0.004562846005969636,
+        "bootstrap_95": [
+          0.002201924064373736,
+          0.007318161753138831
+        ],
+        "dates_treatment_higher": 11,
+        "dates_treatment_lower": 1,
+        "exact_sign_flip_p_two_sided": 0.00146484375
+      }
+    },
+    "information_vs_repeated_draws": {
+      "N_eff": {
+        "treatment": "information_same_model_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "N_eff",
+        "n_dates": 12,
+        "treatment_mean": 2.877831999624492,
+        "control_mean": 1.4026266325758163,
+        "mean_difference": 1.4752053670486756,
+        "bootstrap_95": [
+          1.318365157960951,
+          1.6389355373753447
+        ],
+        "dates_treatment_higher": 12,
+        "dates_treatment_lower": 0,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "N_eff_over_null": {
+        "treatment": "information_same_model_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "N_eff_over_null",
+        "n_dates": 12,
+        "treatment_mean": 0.878425184784904,
+        "control_mean": 0.4281356795898466,
+        "mean_difference": 0.45028950519505745,
+        "bootstrap_95": [
+          0.40258858479295234,
+          0.5001384529103776
+        ],
+        "dates_treatment_higher": 12,
+        "dates_treatment_lower": 0,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "mean_abs_corr": {
+        "treatment": "information_same_model_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "mean_abs_corr",
+        "n_dates": 12,
+        "treatment_mean": 0.31202745089530987,
+        "control_mean": 0.7940753056711327,
+        "mean_difference": -0.4820478547758229,
+        "bootstrap_95": [
+          -0.5376300160122961,
+          -0.42664360016083097
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "mean_signed_corr": {
+        "treatment": "information_same_model_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "mean_signed_corr",
+        "n_dates": 12,
+        "treatment_mean": 0.12519253133694633,
+        "control_mean": 0.7779123464393605,
+        "mean_difference": -0.6527198151024141,
+        "bootstrap_95": [
+          -0.7099327355972261,
+          -0.5893353186324128
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "same_side_overlap": {
+        "treatment": "information_same_model_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "same_side_overlap",
+        "n_dates": 12,
+        "treatment_mean": 0.3851464564603228,
+        "control_mean": 0.745512067805353,
+        "mean_difference": -0.36036561134503003,
+        "bootstrap_95": [
+          -0.38901678539766726,
+          -0.33282256723140596
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "surviving_gross": {
+        "treatment": "information_same_model_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "surviving_gross",
+        "n_dates": 12,
+        "treatment_mean": 0.5424467465396745,
+        "control_mean": 0.8995352179102362,
+        "mean_difference": -0.3570884713705617,
+        "bootstrap_95": [
+          -0.3871011527489425,
+          -0.3205187940985121
+        ],
+        "dates_treatment_higher": 0,
+        "dates_treatment_lower": 12,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      },
+      "forward_return_mean": {
+        "treatment": "information_same_model_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "forward_return_mean",
+        "n_dates": 12,
+        "treatment_mean": -0.0038564689007679984,
+        "control_mean": -0.0028482770053977753,
+        "mean_difference": -0.001008191895370223,
+        "bootstrap_95": [
+          -0.009700816718679835,
+          0.007694250086859177
+        ],
+        "dates_treatment_higher": 6,
+        "dates_treatment_lower": 6,
+        "exact_sign_flip_p_two_sided": 0.82861328125
+      },
+      "forward_return_sd_across_books": {
+        "treatment": "information_same_model_m4",
+        "control": "sampling_same_model_m4",
+        "metric": "forward_return_sd_across_books",
+        "n_dates": 12,
+        "treatment_mean": 0.02341256386850568,
+        "control_mean": 0.010427983230826188,
+        "mean_difference": 0.01298458063767949,
+        "bootstrap_95": [
+          0.0092664426833902,
+          0.017356634484290426
+        ],
+        "dates_treatment_higher": 12,
+        "dates_treatment_lower": 0,
+        "exact_sign_flip_p_two_sided": 0.00048828125
+      }
+    }
+  }
+}

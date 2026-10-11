@@ -1,0 +1,3439 @@
+{
+  "schema_version": "information-diversity-random-partition-plan-v1",
+  "frozen_before_collection": true,
+  "random_seed": 2026071601,
+  "randomization_unit": "date",
+  "assignment_sha256": "e40548139127dc31bbcc33c8618149346f2d6add8088b081742294f4db553111",
+  "job_manifest_sha256": "129774f03928fe58e807929282394aba41d173585c80afe8165358c3945e5e7f",
+  "hypothesis": "domain-structured assignment creates more independent books and less same-side concentration than an equally sized arbitrary partition of the same full packet",
+  "design": {
+    "n_dates": 34,
+    "pilot_dates": 12,
+    "heldout_dates": 22,
+    "n_models": 7,
+    "n_packets_per_date": 4,
+    "fields_per_packet": 8,
+    "full_packet_fields": 32,
+    "all_four_source_families_per_packet": true,
+    "team_union_equals_full_packet": true,
+    "temperature": 0.7,
+    "models": [
+      {
+        "vendor": "openai",
+        "model": "openai/gpt-4o"
+      },
+      {
+        "vendor": "google",
+        "model": "google/gemini-2.5-flash"
+      },
+      {
+        "vendor": "meta",
+        "model": "meta-llama/llama-3.1-70b-instruct"
+      },
+      {
+        "vendor": "alibaba",
+        "model": "qwen/qwen3-235b-a22b-2507"
+      },
+      {
+        "vendor": "mistral",
+        "model": "mistralai/mistral-large"
+      },
+      {
+        "vendor": "deepseek",
+        "model": "deepseek/deepseek-chat"
+      },
+      {
+        "vendor": "anthropic",
+        "model": "anthropic/claude-sonnet-4.5"
+      }
+    ],
+    "prompt_spec_version": "information-diversity-random-partition-placebo-v1",
+    "n_calls": 952,
+    "rendered_packet_characters": {
+      "minimum": 894,
+      "mean": 981.4044117647059,
+      "maximum": 1099
+    }
+  },
+  "directional_tests": {
+    "structured_minus_random_N_eff": "positive",
+    "structured_minus_random_same_side_overlap": "negative",
+    "structured_minus_random_surviving_gross": "negative",
+    "structured_minus_random_convex_coorder_adv_weighted": "negative",
+    "forward_return_mean": "descriptive; no directional hypothesis",
+    "full_consensus_alignment": "descriptive retention check"
+  },
+  "assignments": [
+    {
+      "sample": "held-out",
+      "snapshot_id": "H01",
+      "date": "2023-07-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.eight_k_30d",
+            "risk.downside_beta",
+            "fundamentals.revenue_growth",
+            "risk.market_beta",
+            "market.ret_90d",
+            "fundamentals.price_to_book",
+            "events.days_since_periodic_filing",
+            "fundamentals.roa"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1003,
+          "packet_sha256": "49c4c6202ac3dbe89c167ba5072f8857bee69a00cbb7e8dfa4a5e98f8da69dba"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "fundamentals.price_to_sales",
+            "risk.three_month_yield",
+            "fundamentals.pe",
+            "market.ret_7d",
+            "fundamentals.debt_to_assets",
+            "market.drawdown_90d",
+            "events.eight_k_90d",
+            "risk.market_corr"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 964,
+          "packet_sha256": "682254fd910f2b4aa0633e49d67108ceefa76607644a93b22e22bdf53b70aa47"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.ten_year_yield",
+            "risk.high_yield_return_3m",
+            "risk.yield_curve_spread",
+            "events.earnings_release_90d",
+            "fundamentals.accounting_age",
+            "events.latest_8k_items",
+            "risk.equity_market_return_3m",
+            "market.ret_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 932,
+          "packet_sha256": "b50a7bb6b6f31167da37b32849761613e9c0f0c2ea96d7c02ba5099713d3f224"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "fundamentals.cash_to_assets",
+            "risk.max_drawdown_1y",
+            "risk.vix",
+            "events.days_since_latest_8k",
+            "market.vol_30d",
+            "market.adv_bn",
+            "risk.idio_vol",
+            "events.material_event_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 973,
+          "packet_sha256": "ef09b04b97e8a9368f3d503402034725b4861d5c860c1bb77c744cb54e726222"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S01",
+      "date": "2023-08-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.days_since_latest_8k",
+            "market.ret_90d",
+            "events.days_since_periodic_filing",
+            "risk.market_corr",
+            "fundamentals.cash_to_assets",
+            "fundamentals.revenue_growth",
+            "events.material_event_90d",
+            "market.ret_7d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 985,
+          "packet_sha256": "bc95cd686c492634d26d6575c28fa448955b67c8d74bb7fd1f8fd16419b5b6ac"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "events.eight_k_90d",
+            "risk.idio_vol",
+            "risk.max_drawdown_1y",
+            "risk.downside_beta",
+            "fundamentals.roa",
+            "market.vol_30d",
+            "fundamentals.price_to_book",
+            "events.eight_k_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1036,
+          "packet_sha256": "cc4c12180ae24bced9f52e76c23a947f1fc82b84d373409b3e7287b25e7b59a2"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.vix",
+            "market.adv_bn",
+            "events.latest_8k_items",
+            "risk.ten_year_yield",
+            "risk.high_yield_return_3m",
+            "risk.three_month_yield",
+            "risk.equity_market_return_3m",
+            "fundamentals.price_to_sales"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 915,
+          "packet_sha256": "43d5ad976bc9ae23f8f21554f03dd6bcd500f34983a8e39d4f26f383a152da01"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.market_beta",
+            "market.drawdown_90d",
+            "risk.yield_curve_spread",
+            "market.ret_30d",
+            "fundamentals.accounting_age",
+            "fundamentals.pe",
+            "fundamentals.debt_to_assets",
+            "events.earnings_release_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 955,
+          "packet_sha256": "54825820bef2951f08e005f74569994edd1ca05a883d56252fb6391ef442be03"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S02",
+      "date": "2023-09-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.material_event_90d",
+            "risk.max_drawdown_1y",
+            "fundamentals.roa",
+            "events.days_since_latest_8k",
+            "risk.market_beta",
+            "market.vol_30d",
+            "events.eight_k_90d",
+            "fundamentals.price_to_book"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 991,
+          "packet_sha256": "630e6e6d360ad4e6899a64e23869027b26392c97743336783c520a5fd7f23d2c"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.market_corr",
+            "market.adv_bn",
+            "events.days_since_periodic_filing",
+            "risk.ten_year_yield",
+            "risk.idio_vol",
+            "market.ret_30d",
+            "fundamentals.accounting_age",
+            "market.drawdown_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 987,
+          "packet_sha256": "319a1e5f05381460c28150b096aac83733f53107fee53e0a8f596db5c6ce6ead"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "events.latest_8k_items",
+            "risk.vix",
+            "risk.high_yield_return_3m",
+            "risk.yield_curve_spread",
+            "market.ret_7d",
+            "risk.equity_market_return_3m",
+            "fundamentals.cash_to_assets",
+            "risk.three_month_yield"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 919,
+          "packet_sha256": "78af19d06cd56b31ef3cedfa691aaeaf56e779642a860b779dca7e224825664d"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "fundamentals.revenue_growth",
+            "risk.downside_beta",
+            "market.ret_90d",
+            "events.earnings_release_90d",
+            "events.eight_k_30d",
+            "fundamentals.price_to_sales",
+            "fundamentals.debt_to_assets",
+            "fundamentals.pe"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1000,
+          "packet_sha256": "748f42d7cdd3a5d2679d07494920cdb6a55b90928f93603aac890bf876eeb36f"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S03",
+      "date": "2023-10-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "market.vol_30d",
+            "market.ret_30d",
+            "fundamentals.pe",
+            "risk.downside_beta",
+            "risk.market_corr",
+            "events.earnings_release_90d",
+            "risk.market_beta",
+            "risk.high_yield_return_3m"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 971,
+          "packet_sha256": "f30544b30ef07f3275f27f9d0338b6ec0cdd1be571d1f7f4576c92a8b360bf1e"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "market.ret_7d",
+            "risk.max_drawdown_1y",
+            "events.eight_k_90d",
+            "fundamentals.price_to_sales",
+            "market.ret_90d",
+            "fundamentals.revenue_growth",
+            "events.eight_k_30d",
+            "events.days_since_periodic_filing"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 992,
+          "packet_sha256": "9366892a72a0fd5331e65cf137b4e60d0e9d21bf75fbb6fed22b64983e44594f"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "fundamentals.accounting_age",
+            "events.latest_8k_items",
+            "risk.three_month_yield",
+            "risk.equity_market_return_3m",
+            "risk.ten_year_yield",
+            "risk.yield_curve_spread",
+            "events.days_since_latest_8k",
+            "market.adv_bn"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 990,
+          "packet_sha256": "4b42516f0784ea208bfb17a67fa21d1ecde1ed8d402085bc807b88527aa1f923"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.idio_vol",
+            "fundamentals.price_to_book",
+            "market.drawdown_90d",
+            "fundamentals.roa",
+            "events.material_event_90d",
+            "fundamentals.cash_to_assets",
+            "fundamentals.debt_to_assets",
+            "risk.vix"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 996,
+          "packet_sha256": "1f19c0f5f43f0a8d95d5047cbf626104d712de3185d19f5e8be24e990b721b2a"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S04",
+      "date": "2023-11-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.eight_k_30d",
+            "market.ret_30d",
+            "fundamentals.price_to_sales",
+            "fundamentals.pe",
+            "risk.downside_beta",
+            "risk.max_drawdown_1y",
+            "events.material_event_90d",
+            "events.days_since_periodic_filing"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 989,
+          "packet_sha256": "a6b61237669b2c316079101c634d04ae192e0c9d75601318e0a7a926ea94a480"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "fundamentals.roa",
+            "risk.equity_market_return_3m",
+            "market.ret_90d",
+            "events.days_since_latest_8k",
+            "fundamentals.revenue_growth",
+            "fundamentals.debt_to_assets",
+            "market.vol_30d",
+            "fundamentals.price_to_book"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 993,
+          "packet_sha256": "a990dba6e63a43acc3088b09afe8f322778b8f1e638dd08540281748ab1899b0"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.three_month_yield",
+            "fundamentals.cash_to_assets",
+            "events.earnings_release_90d",
+            "market.adv_bn",
+            "risk.market_beta",
+            "market.drawdown_90d",
+            "risk.idio_vol",
+            "risk.market_corr"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 972,
+          "packet_sha256": "4dc83967adc54b70116ab5769569fb52d18dce0ef293d66439f5a86a88571ff4"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.vix",
+            "events.latest_8k_items",
+            "risk.yield_curve_spread",
+            "risk.ten_year_yield",
+            "risk.high_yield_return_3m",
+            "events.eight_k_90d",
+            "market.ret_7d",
+            "fundamentals.accounting_age"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 995,
+          "packet_sha256": "86f4138150d0742363ba0ab1729ed69613f2b7a2ab7147e6d56b5dd8bf5a4a9d"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H02",
+      "date": "2023-12-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "fundamentals.revenue_growth",
+            "events.material_event_90d",
+            "fundamentals.accounting_age",
+            "risk.market_corr",
+            "risk.downside_beta",
+            "market.ret_90d",
+            "events.earnings_release_90d",
+            "fundamentals.debt_to_assets"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 985,
+          "packet_sha256": "6531984934706252855dc260138dfb50763e48c592061fb9839c63eaec4b429c"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "fundamentals.pe",
+            "market.ret_30d",
+            "risk.ten_year_yield",
+            "events.latest_8k_items",
+            "risk.yield_curve_spread",
+            "risk.three_month_yield",
+            "risk.equity_market_return_3m",
+            "risk.vix"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 967,
+          "packet_sha256": "ae726fb723bcaa9343a0aa77fb5017d8873fb31998312c882f379afa35dec60b"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "fundamentals.price_to_sales",
+            "risk.high_yield_return_3m",
+            "market.ret_7d",
+            "market.drawdown_90d",
+            "risk.max_drawdown_1y",
+            "events.eight_k_30d",
+            "risk.idio_vol",
+            "fundamentals.price_to_book"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 999,
+          "packet_sha256": "7b955c8483144dbb62368b565ff6b882110c1a9062faeb8b90196fed1fcf7f4c"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "fundamentals.roa",
+            "events.eight_k_90d",
+            "risk.market_beta",
+            "fundamentals.cash_to_assets",
+            "events.days_since_periodic_filing",
+            "events.days_since_latest_8k",
+            "market.adv_bn",
+            "market.vol_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 992,
+          "packet_sha256": "18773ad372a51e476bfbba8f1ce3ddad706c30e5050e211ccc03cfa2184f107e"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H03",
+      "date": "2024-01-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.ten_year_yield",
+            "events.latest_8k_items",
+            "risk.high_yield_return_3m",
+            "risk.vix",
+            "fundamentals.accounting_age",
+            "events.eight_k_90d",
+            "market.ret_90d",
+            "risk.equity_market_return_3m"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 938,
+          "packet_sha256": "86ef9c73dec816d03530c99ae35c959c1c15ea594fa6aad2f133580861a659e2"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "events.days_since_periodic_filing",
+            "fundamentals.revenue_growth",
+            "fundamentals.debt_to_assets",
+            "events.material_event_90d",
+            "risk.market_beta",
+            "market.ret_7d",
+            "fundamentals.roa",
+            "fundamentals.pe"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1016,
+          "packet_sha256": "54c0f52ced53f7ea40c0bc4ff5dc3a2e2a33f325664d5f2b3c76e54a2f010bac"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "fundamentals.cash_to_assets",
+            "risk.market_corr",
+            "risk.three_month_yield",
+            "market.adv_bn",
+            "risk.idio_vol",
+            "fundamentals.price_to_sales",
+            "market.drawdown_90d",
+            "events.earnings_release_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 975,
+          "packet_sha256": "c3816f84ee2f016c2402a92241ce6a654035cc89efb9ef5349cbba307c8735fe"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "market.vol_30d",
+            "events.eight_k_30d",
+            "fundamentals.price_to_book",
+            "risk.yield_curve_spread",
+            "risk.max_drawdown_1y",
+            "market.ret_30d",
+            "events.days_since_latest_8k",
+            "risk.downside_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 957,
+          "packet_sha256": "a438c008adecf815636f1f36b7aaab0112f3e2cfcb217f737ae6e05f82ceca5f"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S05",
+      "date": "2024-02-29",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.earnings_release_90d",
+            "fundamentals.debt_to_assets",
+            "risk.yield_curve_spread",
+            "fundamentals.cash_to_assets",
+            "risk.idio_vol",
+            "market.ret_7d",
+            "risk.market_corr",
+            "risk.downside_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 982,
+          "packet_sha256": "b022acadc55e213f25144bb40832fad6d262e407a9cd2ed441f603de8927dca0"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.three_month_yield",
+            "risk.vix",
+            "events.latest_8k_items",
+            "events.material_event_90d",
+            "risk.equity_market_return_3m",
+            "risk.ten_year_yield",
+            "market.ret_30d",
+            "fundamentals.price_to_book"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 919,
+          "packet_sha256": "e367eee69cec16fa3ed995d270883616bc80347ce341cd1e7a3f372faade93e5"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "fundamentals.pe",
+            "fundamentals.roa",
+            "risk.max_drawdown_1y",
+            "events.days_since_periodic_filing",
+            "risk.high_yield_return_3m",
+            "market.vol_30d",
+            "fundamentals.revenue_growth",
+            "events.eight_k_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 973,
+          "packet_sha256": "48b61d537e7e079f17144b8f24512ff0f9b606d065993791bd4c64838b0635cb"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "fundamentals.accounting_age",
+            "market.drawdown_90d",
+            "market.adv_bn",
+            "events.days_since_latest_8k",
+            "market.ret_90d",
+            "events.eight_k_30d",
+            "fundamentals.price_to_sales",
+            "risk.market_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 975,
+          "packet_sha256": "abe883ff0d9b95397da73a923b1f00ee01325a315ac83fbe501dbac781062b24"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H04",
+      "date": "2024-03-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.ten_year_yield",
+            "events.earnings_release_90d",
+            "fundamentals.accounting_age",
+            "risk.vix",
+            "risk.high_yield_return_3m",
+            "events.latest_8k_items",
+            "market.ret_7d",
+            "risk.equity_market_return_3m"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 949,
+          "packet_sha256": "fd4873f9ef53188e8cd1630992cbebcad301178cb37f49028f448bbd9e5684b1"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "events.days_since_latest_8k",
+            "market.adv_bn",
+            "fundamentals.price_to_book",
+            "risk.market_corr",
+            "fundamentals.revenue_growth",
+            "market.drawdown_90d",
+            "risk.yield_curve_spread",
+            "risk.downside_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 981,
+          "packet_sha256": "10d1051b73c2e5c464bbc97f7d4103ae238bd15811098ba4f4ac4c03f58c7987"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.idio_vol",
+            "events.material_event_90d",
+            "events.days_since_periodic_filing",
+            "market.ret_90d",
+            "market.vol_30d",
+            "risk.three_month_yield",
+            "fundamentals.cash_to_assets",
+            "fundamentals.roa"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 967,
+          "packet_sha256": "b24015edc813dfd4a388fa1e39f983426cfdcf9d6b86f2bd73c7345ed0348ae5"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "market.ret_30d",
+            "fundamentals.debt_to_assets",
+            "fundamentals.pe",
+            "risk.market_beta",
+            "events.eight_k_30d",
+            "events.eight_k_90d",
+            "risk.max_drawdown_1y",
+            "fundamentals.price_to_sales"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1021,
+          "packet_sha256": "61a5cd4a89e4b2036fd986da96a39d763cac7cd9b92caba74cbe9bf81de45775"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S06",
+      "date": "2024-04-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "fundamentals.pe",
+            "fundamentals.cash_to_assets",
+            "fundamentals.debt_to_assets",
+            "events.days_since_periodic_filing",
+            "risk.yield_curve_spread",
+            "fundamentals.revenue_growth",
+            "market.drawdown_90d",
+            "market.ret_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1011,
+          "packet_sha256": "ce9c9f05c1bc1b08ea481548ff3a79cc2bd4e4096956fb4dc881286f3cb94622"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "market.ret_7d",
+            "risk.downside_beta",
+            "risk.idio_vol",
+            "events.eight_k_90d",
+            "fundamentals.price_to_book",
+            "events.earnings_release_90d",
+            "events.days_since_latest_8k",
+            "risk.max_drawdown_1y"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 993,
+          "packet_sha256": "08fd37567682bc29438218110601362840d215f99384fc57c33c7cd1c79062cf"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "fundamentals.price_to_sales",
+            "events.eight_k_30d",
+            "events.material_event_90d",
+            "risk.market_beta",
+            "risk.market_corr",
+            "market.adv_bn",
+            "market.ret_90d",
+            "fundamentals.roa"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 985,
+          "packet_sha256": "d602b2504efdbb782567b25fc3b1d23eed9e6014467fcb6dce53d3902eac0259"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.three_month_yield",
+            "fundamentals.accounting_age",
+            "risk.high_yield_return_3m",
+            "risk.vix",
+            "events.latest_8k_items",
+            "market.vol_30d",
+            "risk.ten_year_yield",
+            "risk.equity_market_return_3m"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 917,
+          "packet_sha256": "2c0f390ab07a89f8b9c8655a77b299f9978be592aefc27b99d2066186e161485"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H05",
+      "date": "2024-05-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.eight_k_90d",
+            "market.vol_30d",
+            "risk.high_yield_return_3m",
+            "market.ret_30d",
+            "fundamentals.revenue_growth",
+            "risk.market_corr",
+            "fundamentals.cash_to_assets",
+            "fundamentals.price_to_book"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 974,
+          "packet_sha256": "65d5e1a9ebde3c4d2e6d0ab92668a23237583d11f192c9e4f4199bfc6d58f640"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.ten_year_yield",
+            "market.ret_7d",
+            "risk.three_month_yield",
+            "events.latest_8k_items",
+            "events.earnings_release_90d",
+            "fundamentals.roa",
+            "risk.vix",
+            "risk.yield_curve_spread"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1012,
+          "packet_sha256": "8108ac451f4cf79a7640e74fadc9d2596d47c273cbf69043a688b2f535487f8d"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.downside_beta",
+            "risk.market_beta",
+            "events.eight_k_30d",
+            "market.ret_90d",
+            "fundamentals.price_to_sales",
+            "fundamentals.accounting_age",
+            "market.adv_bn",
+            "events.days_since_periodic_filing"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 981,
+          "packet_sha256": "4e73cc47a4e622593ff8c8cc25ca715d88fab103a3dbd7c800191e35aa66e4af"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "fundamentals.debt_to_assets",
+            "events.material_event_90d",
+            "fundamentals.pe",
+            "risk.max_drawdown_1y",
+            "market.drawdown_90d",
+            "risk.equity_market_return_3m",
+            "risk.idio_vol",
+            "events.days_since_latest_8k"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 980,
+          "packet_sha256": "fe2af73bf72921d87ac9540acd581f8fce0ec9373bb7601e6b4f55abbe7ed0ba"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H06",
+      "date": "2024-06-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.material_event_90d",
+            "risk.equity_market_return_3m",
+            "market.adv_bn",
+            "risk.three_month_yield",
+            "risk.high_yield_return_3m",
+            "events.latest_8k_items",
+            "fundamentals.price_to_sales",
+            "risk.ten_year_yield"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 894,
+          "packet_sha256": "6c1eb7aef76bdab81692c56de8cce3c40302bb8c64d27038d971d999cf0fd88b"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "fundamentals.pe",
+            "events.earnings_release_90d",
+            "market.ret_90d",
+            "events.eight_k_90d",
+            "fundamentals.price_to_book",
+            "risk.market_beta",
+            "fundamentals.revenue_growth",
+            "market.ret_7d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1002,
+          "packet_sha256": "014af1d9eea8bf6be95fa7af99cfeee26e89f32b41af0081d6008f22007b4387"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.downside_beta",
+            "risk.idio_vol",
+            "events.eight_k_30d",
+            "market.vol_30d",
+            "fundamentals.cash_to_assets",
+            "market.ret_30d",
+            "risk.yield_curve_spread",
+            "fundamentals.accounting_age"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 966,
+          "packet_sha256": "a11f2b8ef8ea970132bfc231d81b8e0cc16e7bfc0812ff702a99bc23daaa14bd"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.vix",
+            "events.days_since_periodic_filing",
+            "events.days_since_latest_8k",
+            "fundamentals.roa",
+            "risk.max_drawdown_1y",
+            "risk.market_corr",
+            "market.drawdown_90d",
+            "fundamentals.debt_to_assets"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 977,
+          "packet_sha256": "633f9b1efde538a27ca9a878e5b0b2cbe6be7f5d6f50f2f68c7d1f5612dc1c1d"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H07",
+      "date": "2024-07-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "market.ret_7d",
+            "fundamentals.cash_to_assets",
+            "risk.max_drawdown_1y",
+            "events.days_since_periodic_filing",
+            "fundamentals.roa",
+            "events.earnings_release_90d",
+            "risk.equity_market_return_3m",
+            "risk.idio_vol"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 969,
+          "packet_sha256": "68e3721e6fffe279d441dd280d6c24bd28302d133a745a214b54c927218567fa"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "market.ret_30d",
+            "market.vol_30d",
+            "fundamentals.price_to_book",
+            "risk.market_beta",
+            "risk.market_corr",
+            "events.eight_k_90d",
+            "fundamentals.debt_to_assets",
+            "fundamentals.price_to_sales"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1041,
+          "packet_sha256": "8ba00500dc676dbcfedc17fbc337ad7ba0403494cd5f337e3e3d0779d8fe62ef"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.yield_curve_spread",
+            "risk.vix",
+            "risk.high_yield_return_3m",
+            "events.latest_8k_items",
+            "events.eight_k_30d",
+            "fundamentals.accounting_age",
+            "risk.ten_year_yield",
+            "market.adv_bn"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 931,
+          "packet_sha256": "79a64a300cf7735e87060d9701572dc4d81bafa179b691c25212cf79556300c4"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "events.days_since_latest_8k",
+            "risk.three_month_yield",
+            "events.material_event_90d",
+            "fundamentals.pe",
+            "market.drawdown_90d",
+            "fundamentals.revenue_growth",
+            "market.ret_90d",
+            "risk.downside_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 954,
+          "packet_sha256": "d50c6bf12ba0f56a7a25d226ee134b1bee090fbfd672b0727ea07f6ec07e4a2d"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S07",
+      "date": "2024-08-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.eight_k_30d",
+            "events.days_since_periodic_filing",
+            "events.eight_k_90d",
+            "market.ret_30d",
+            "market.vol_30d",
+            "fundamentals.price_to_book",
+            "risk.downside_beta",
+            "market.drawdown_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 982,
+          "packet_sha256": "6caf90aa999e46e0b5ecd57d55a53088ac72ae8173883c19e68f6211bab45ad9"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "fundamentals.pe",
+            "fundamentals.debt_to_assets",
+            "risk.max_drawdown_1y",
+            "fundamentals.roa",
+            "events.material_event_90d",
+            "market.ret_90d",
+            "events.days_since_latest_8k",
+            "fundamentals.accounting_age"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1026,
+          "packet_sha256": "842de0815141affa64e53ad5aa1d09fdc464a68234ec916d6bd69d73a55040f6"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "fundamentals.revenue_growth",
+            "market.ret_7d",
+            "risk.ten_year_yield",
+            "risk.yield_curve_spread",
+            "risk.vix",
+            "risk.three_month_yield",
+            "events.latest_8k_items",
+            "risk.high_yield_return_3m"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 961,
+          "packet_sha256": "a0ad74bbefaa8551905f17cbbac71730910e89027aa5a22de9493c74a5803217"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.market_beta",
+            "fundamentals.cash_to_assets",
+            "market.adv_bn",
+            "risk.idio_vol",
+            "fundamentals.price_to_sales",
+            "risk.market_corr",
+            "risk.equity_market_return_3m",
+            "events.earnings_release_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 960,
+          "packet_sha256": "dbe07fa9e1cfb487e961b1883e1d1bd48b876399902ac03b4f5166fd83cfcd7b"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H08",
+      "date": "2024-09-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "market.adv_bn",
+            "risk.ten_year_yield",
+            "risk.equity_market_return_3m",
+            "risk.yield_curve_spread",
+            "risk.high_yield_return_3m",
+            "fundamentals.price_to_book",
+            "events.latest_8k_items",
+            "risk.vix"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 944,
+          "packet_sha256": "48b2b47bf70b4051fe43f8b0465c2c38e1da8a90c3696dfceac012e9bf58dcc6"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "fundamentals.price_to_sales",
+            "market.ret_30d",
+            "risk.market_corr",
+            "events.earnings_release_90d",
+            "fundamentals.pe",
+            "events.days_since_periodic_filing",
+            "market.ret_90d",
+            "events.eight_k_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 978,
+          "packet_sha256": "7df3880b3ac529604ccb93dad9a61abe62ad5aec114116d5ebda75f813ee3a51"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "events.eight_k_90d",
+            "risk.idio_vol",
+            "fundamentals.roa",
+            "market.vol_30d",
+            "events.material_event_90d",
+            "risk.three_month_yield",
+            "fundamentals.revenue_growth",
+            "risk.max_drawdown_1y"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 964,
+          "packet_sha256": "904da9663f76f753b712010ec59aaa07488df5e0e26c05a607f7593dfa2c80b4"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "market.ret_7d",
+            "events.days_since_latest_8k",
+            "market.drawdown_90d",
+            "fundamentals.debt_to_assets",
+            "fundamentals.accounting_age",
+            "fundamentals.cash_to_assets",
+            "risk.downside_beta",
+            "risk.market_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1045,
+          "packet_sha256": "93fd3af7727e30a0c38749a665c66e03af3a8c44b63951dcf8c53d1a03355fe7"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H09",
+      "date": "2024-10-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.days_since_latest_8k",
+            "fundamentals.revenue_growth",
+            "fundamentals.roa",
+            "market.ret_90d",
+            "events.eight_k_30d",
+            "risk.market_beta",
+            "market.adv_bn",
+            "fundamentals.pe"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1018,
+          "packet_sha256": "d0932a84435d37ac260170b25c0daceaf86b0443c74edc06fa9e569250eb0506"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "events.material_event_90d",
+            "risk.market_corr",
+            "risk.idio_vol",
+            "fundamentals.price_to_sales",
+            "risk.vix",
+            "risk.downside_beta",
+            "market.ret_30d",
+            "fundamentals.price_to_book"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 963,
+          "packet_sha256": "87da33aaea547b35200ccea335fb61e3493be8a2638a624b61082a64496dd567"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "events.eight_k_90d",
+            "events.earnings_release_90d",
+            "fundamentals.cash_to_assets",
+            "market.vol_30d",
+            "events.days_since_periodic_filing",
+            "market.ret_7d",
+            "fundamentals.debt_to_assets",
+            "risk.max_drawdown_1y"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1009,
+          "packet_sha256": "cc6586c1ef040463b1e804ff1395a2aef877323dab6d565d50ee0a397d6ca061"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.three_month_yield",
+            "market.drawdown_90d",
+            "risk.ten_year_yield",
+            "events.latest_8k_items",
+            "risk.high_yield_return_3m",
+            "fundamentals.accounting_age",
+            "risk.yield_curve_spread",
+            "risk.equity_market_return_3m"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 939,
+          "packet_sha256": "0fffc981de9e5d4337f9a2dca2ac39f1ec0be2b80057d791fd603a4820234ace"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S08",
+      "date": "2024-11-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.market_corr",
+            "events.days_since_periodic_filing",
+            "fundamentals.accounting_age",
+            "fundamentals.revenue_growth",
+            "risk.market_beta",
+            "events.material_event_90d",
+            "fundamentals.price_to_book",
+            "market.ret_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 990,
+          "packet_sha256": "c897a063fdb857cd19dc1adcfe5e493ff673e6e4746c1571a39c612e80cde1a9"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.three_month_yield",
+            "events.latest_8k_items",
+            "risk.yield_curve_spread",
+            "risk.ten_year_yield",
+            "market.ret_30d",
+            "risk.high_yield_return_3m",
+            "risk.vix",
+            "fundamentals.pe"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 948,
+          "packet_sha256": "edc1acb14287bdddcbd9fdd970eb58a79f8b86720b66fd5ca46012b88e27d8e3"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "market.ret_7d",
+            "fundamentals.debt_to_assets",
+            "fundamentals.roa",
+            "risk.downside_beta",
+            "risk.idio_vol",
+            "risk.equity_market_return_3m",
+            "events.earnings_release_90d",
+            "market.drawdown_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 983,
+          "packet_sha256": "2ec39264efc4456dcaf362eb11b0f895d754a6072e8e870ac8e2ab5cf1afea94"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "events.eight_k_90d",
+            "market.adv_bn",
+            "events.eight_k_30d",
+            "risk.max_drawdown_1y",
+            "fundamentals.price_to_sales",
+            "market.vol_30d",
+            "fundamentals.cash_to_assets",
+            "events.days_since_latest_8k"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 993,
+          "packet_sha256": "9945d8cee418689aca9bcacd63e135a587e9b8bb0d7fc9f1f2aa30f945447922"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H10",
+      "date": "2024-12-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.vix",
+            "fundamentals.price_to_sales",
+            "risk.high_yield_return_3m",
+            "risk.equity_market_return_3m",
+            "events.latest_8k_items",
+            "market.ret_90d",
+            "risk.yield_curve_spread",
+            "risk.three_month_yield"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 949,
+          "packet_sha256": "a69e771a560c7732a15d116790968868e8e8bf674769b570204108a7ef923530"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.max_drawdown_1y",
+            "events.material_event_90d",
+            "risk.ten_year_yield",
+            "fundamentals.revenue_growth",
+            "events.days_since_latest_8k",
+            "market.drawdown_90d",
+            "fundamentals.cash_to_assets",
+            "risk.downside_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 972,
+          "packet_sha256": "d4d39d59cbdfbee27a963f0a1093c4158981c53467c4adf423f550b13ee53835"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "events.eight_k_30d",
+            "market.ret_30d",
+            "risk.market_beta",
+            "market.ret_7d",
+            "events.days_since_periodic_filing",
+            "risk.market_corr",
+            "fundamentals.debt_to_assets",
+            "market.adv_bn"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1020,
+          "packet_sha256": "c59b90277c9d835359938a01c69924122541802fbe94ca96ac50b8d40b363ebd"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "fundamentals.price_to_book",
+            "market.vol_30d",
+            "events.eight_k_90d",
+            "fundamentals.accounting_age",
+            "fundamentals.roa",
+            "events.earnings_release_90d",
+            "risk.idio_vol",
+            "fundamentals.pe"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1002,
+          "packet_sha256": "6a24a916dd9f95cf4fb0c328b1605b0ce78505add1e05024be6affee60fa50f5"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H11",
+      "date": "2025-01-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "market.vol_30d",
+            "fundamentals.price_to_book",
+            "events.days_since_latest_8k",
+            "fundamentals.price_to_sales",
+            "risk.high_yield_return_3m",
+            "risk.market_beta",
+            "risk.downside_beta",
+            "fundamentals.debt_to_assets"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 968,
+          "packet_sha256": "7a8cf67e0c4fd4aee04a727b96aacf735ea7f69d58967c617ba71e213b72509e"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "fundamentals.revenue_growth",
+            "risk.market_corr",
+            "risk.vix",
+            "fundamentals.roa",
+            "fundamentals.cash_to_assets",
+            "market.drawdown_90d",
+            "events.eight_k_30d",
+            "risk.idio_vol"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 984,
+          "packet_sha256": "020e8928cc2713e8f1582ce035823aaff9c1344d92b13208203505779c87a79f"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "events.latest_8k_items",
+            "events.days_since_periodic_filing",
+            "risk.yield_curve_spread",
+            "risk.three_month_yield",
+            "fundamentals.accounting_age",
+            "market.adv_bn",
+            "risk.ten_year_yield",
+            "risk.equity_market_return_3m"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 926,
+          "packet_sha256": "753eafc1b88707794cd4cc6b7a9eb0c33a505242a94818aee754a6c500f14300"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "market.ret_30d",
+            "market.ret_7d",
+            "risk.max_drawdown_1y",
+            "events.earnings_release_90d",
+            "events.eight_k_90d",
+            "fundamentals.pe",
+            "events.material_event_90d",
+            "market.ret_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 999,
+          "packet_sha256": "bbb79a4c2c9eedbf2d8edf61a916dd413922faa3f105763e23e90b84ebcb74da"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H12",
+      "date": "2025-02-28",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.vix",
+            "risk.ten_year_yield",
+            "fundamentals.accounting_age",
+            "risk.high_yield_return_3m",
+            "events.latest_8k_items",
+            "events.days_since_periodic_filing",
+            "market.ret_90d",
+            "risk.three_month_yield"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 981,
+          "packet_sha256": "8eba8b6d61fd401e1ae15521bb889f83579ddc6488845acb93ce5ffe1a3d3cc9"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "market.ret_7d",
+            "risk.idio_vol",
+            "market.adv_bn",
+            "events.days_since_latest_8k",
+            "fundamentals.pe",
+            "fundamentals.price_to_book",
+            "risk.equity_market_return_3m",
+            "fundamentals.roa"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 991,
+          "packet_sha256": "b503b14e09b5925ad39ac7feb8aa511c4855115791b0df601a6abf5e2626bbfe"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.market_corr",
+            "risk.yield_curve_spread",
+            "fundamentals.revenue_growth",
+            "risk.downside_beta",
+            "fundamentals.cash_to_assets",
+            "market.ret_30d",
+            "events.earnings_release_90d",
+            "risk.market_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 967,
+          "packet_sha256": "58ae46d18dc4453930d99cfd8ae5fae6be5dcc8cd5a899ded2f7dbdb3285187a"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "market.vol_30d",
+            "market.drawdown_90d",
+            "events.eight_k_30d",
+            "events.eight_k_90d",
+            "fundamentals.debt_to_assets",
+            "risk.max_drawdown_1y",
+            "fundamentals.price_to_sales",
+            "events.material_event_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 998,
+          "packet_sha256": "6fa45e666ce9d4c426d96081202fa957ef9c96a4522f7ceeca153b92bba879d8"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H13",
+      "date": "2025-03-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.material_event_90d",
+            "market.adv_bn",
+            "risk.yield_curve_spread",
+            "risk.vix",
+            "risk.high_yield_return_3m",
+            "risk.three_month_yield",
+            "events.latest_8k_items",
+            "fundamentals.price_to_sales"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 982,
+          "packet_sha256": "56227653c2e9dc62d57427b6822d5fe74be3eb29474add11fffd93fffdb9a9be"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.max_drawdown_1y",
+            "market.drawdown_90d",
+            "events.earnings_release_90d",
+            "events.eight_k_30d",
+            "risk.idio_vol",
+            "events.eight_k_90d",
+            "fundamentals.accounting_age",
+            "risk.downside_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 973,
+          "packet_sha256": "ecf4b250d15e3f71775be13ee4a97a52f3a19a6d39dabd25e970b88bcc20ce54"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "market.ret_30d",
+            "market.vol_30d",
+            "market.ret_90d",
+            "fundamentals.cash_to_assets",
+            "fundamentals.price_to_book",
+            "risk.ten_year_yield",
+            "events.days_since_latest_8k",
+            "fundamentals.pe"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1016,
+          "packet_sha256": "bee661366cca40db4c468a652b23a25e8430c9989cb5ab08ba9ee6b281f22516"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "fundamentals.debt_to_assets",
+            "fundamentals.roa",
+            "risk.market_corr",
+            "risk.market_beta",
+            "events.days_since_periodic_filing",
+            "fundamentals.revenue_growth",
+            "risk.equity_market_return_3m",
+            "market.ret_7d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 977,
+          "packet_sha256": "900cab2165cc5b1746079a96820cc1e16fd7d2d7fac9c0a7f74b1077b2d80d77"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S09",
+      "date": "2025-04-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "market.ret_7d",
+            "market.drawdown_90d",
+            "events.days_since_periodic_filing",
+            "fundamentals.cash_to_assets",
+            "risk.max_drawdown_1y",
+            "risk.yield_curve_spread",
+            "events.days_since_latest_8k",
+            "fundamentals.revenue_growth"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 985,
+          "packet_sha256": "11bd0a5610c288bba4d26424bfe62be1f47dd594bbe1167304f2ffda8e15fb77"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.equity_market_return_3m",
+            "risk.ten_year_yield",
+            "events.latest_8k_items",
+            "market.adv_bn",
+            "fundamentals.accounting_age",
+            "risk.three_month_yield",
+            "risk.high_yield_return_3m",
+            "events.earnings_release_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 974,
+          "packet_sha256": "d298b77cf08cb9043fac4f971ce4c212d53e960ed645a79cf98289cc7519265c"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.downside_beta",
+            "fundamentals.pe",
+            "events.material_event_90d",
+            "fundamentals.roa",
+            "market.ret_90d",
+            "events.eight_k_90d",
+            "fundamentals.price_to_book",
+            "risk.market_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1008,
+          "packet_sha256": "34f1e54e7359d73aa91e84b826cca687f2fbbc8c6dcdecbcb0818b6570f59cd3"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "market.ret_30d",
+            "risk.idio_vol",
+            "risk.market_corr",
+            "risk.vix",
+            "fundamentals.price_to_sales",
+            "market.vol_30d",
+            "fundamentals.debt_to_assets",
+            "events.eight_k_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 982,
+          "packet_sha256": "9bd0e2b9a908faad389a8b2f3c094646918433710aaddd2bcf972554fa6357fd"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H14",
+      "date": "2025-05-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.material_event_90d",
+            "fundamentals.pe",
+            "market.ret_90d",
+            "market.ret_7d",
+            "risk.high_yield_return_3m",
+            "market.ret_30d",
+            "fundamentals.price_to_sales",
+            "fundamentals.debt_to_assets"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 982,
+          "packet_sha256": "04c10c77166ac597d1ee37527b64d76756ef9a0cf6c45ba1424e6b1dccf30b4f"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.max_drawdown_1y",
+            "events.days_since_latest_8k",
+            "market.drawdown_90d",
+            "fundamentals.revenue_growth",
+            "risk.yield_curve_spread",
+            "risk.market_corr",
+            "events.days_since_periodic_filing",
+            "fundamentals.price_to_book"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 977,
+          "packet_sha256": "ddf9434e18ffdb3b870312c70532feb94e4bec076813bad15ef4f4fa89ccea82"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "events.earnings_release_90d",
+            "market.adv_bn",
+            "risk.vix",
+            "events.latest_8k_items",
+            "risk.ten_year_yield",
+            "risk.three_month_yield",
+            "events.eight_k_30d",
+            "fundamentals.accounting_age"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 994,
+          "packet_sha256": "1afbeaefbee9b2a84186e5d294cbf2f0c26685092b690d8489b294dabc412850"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.market_beta",
+            "risk.downside_beta",
+            "risk.idio_vol",
+            "fundamentals.cash_to_assets",
+            "events.eight_k_90d",
+            "fundamentals.roa",
+            "risk.equity_market_return_3m",
+            "market.vol_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 976,
+          "packet_sha256": "dca4b3b7384c12f04bc58c7b8596aa2d83c8665e2990e8e753f9a3baa6da72a1"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H15",
+      "date": "2025-06-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.equity_market_return_3m",
+            "market.ret_30d",
+            "risk.three_month_yield",
+            "events.eight_k_90d",
+            "fundamentals.price_to_book",
+            "risk.vix",
+            "events.latest_8k_items",
+            "risk.ten_year_yield"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 920,
+          "packet_sha256": "7eaf201665b7d7659b80b7c29e5a8d1d99d090f566cb00df47022cf1d0bcc141"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "events.eight_k_30d",
+            "fundamentals.roa",
+            "risk.market_corr",
+            "fundamentals.accounting_age",
+            "risk.idio_vol",
+            "risk.high_yield_return_3m",
+            "market.ret_90d",
+            "market.vol_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 970,
+          "packet_sha256": "02385367c68839dcfb833c82432e89e8fc7f7a077b27d9964d95f9a77f782696"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "market.ret_7d",
+            "fundamentals.pe",
+            "risk.downside_beta",
+            "risk.max_drawdown_1y",
+            "fundamentals.price_to_sales",
+            "events.material_event_90d",
+            "fundamentals.cash_to_assets",
+            "events.earnings_release_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1026,
+          "packet_sha256": "d24ab522891b667a86f4facbbadc323e5c612b066c55af39fb3b853aa319d309"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "events.days_since_latest_8k",
+            "fundamentals.debt_to_assets",
+            "risk.yield_curve_spread",
+            "risk.market_beta",
+            "market.adv_bn",
+            "fundamentals.revenue_growth",
+            "market.drawdown_90d",
+            "events.days_since_periodic_filing"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 955,
+          "packet_sha256": "f3357870b82e6f6f4afa4c94315070b4e0ab06105642ca912df35304964597a6"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S10",
+      "date": "2025-07-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "market.ret_30d",
+            "risk.yield_curve_spread",
+            "risk.high_yield_return_3m",
+            "risk.three_month_yield",
+            "events.latest_8k_items",
+            "risk.equity_market_return_3m",
+            "fundamentals.accounting_age",
+            "risk.vix"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 929,
+          "packet_sha256": "cf707adc399f2edcab66d2e523edb7cfa1a4b182ca94230418834e0dc6029155"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.market_beta",
+            "fundamentals.pe",
+            "events.eight_k_90d",
+            "fundamentals.debt_to_assets",
+            "fundamentals.cash_to_assets",
+            "market.ret_90d",
+            "risk.downside_beta",
+            "events.material_event_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1004,
+          "packet_sha256": "8ea23e7674254f28f84dd895a120b28d901a7be1feb2ae59f387eb3c184e43f8"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.ten_year_yield",
+            "market.adv_bn",
+            "fundamentals.price_to_book",
+            "market.drawdown_90d",
+            "fundamentals.price_to_sales",
+            "events.earnings_release_90d",
+            "risk.market_corr",
+            "market.ret_7d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 962,
+          "packet_sha256": "5d735edb999081f728e14572eb6fdd7e3c203cedbc0c7a542be712fb1c1b25f1"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "events.days_since_periodic_filing",
+            "risk.max_drawdown_1y",
+            "fundamentals.roa",
+            "risk.idio_vol",
+            "market.vol_30d",
+            "fundamentals.revenue_growth",
+            "events.eight_k_30d",
+            "events.days_since_latest_8k"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1015,
+          "packet_sha256": "9f3e6819940c9766b0cb7b98a53adb25537ccdc6395343a24d462f0a677ac7a3"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H16",
+      "date": "2025-08-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.equity_market_return_3m",
+            "fundamentals.accounting_age",
+            "risk.high_yield_return_3m",
+            "market.drawdown_90d",
+            "risk.vix",
+            "risk.ten_year_yield",
+            "risk.three_month_yield",
+            "events.latest_8k_items"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1005,
+          "packet_sha256": "da6d707056c10bffd659b04b204841798499c5e7c0e4aeb3078c9c27de23f346"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "fundamentals.debt_to_assets",
+            "events.eight_k_30d",
+            "events.days_since_latest_8k",
+            "risk.market_corr",
+            "fundamentals.cash_to_assets",
+            "risk.market_beta",
+            "market.ret_90d",
+            "market.ret_7d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1012,
+          "packet_sha256": "1f1bd641667936ff4cb75f83f7971ff5c2bd1f836f1437b2684dfebfd8a32083"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "events.eight_k_90d",
+            "fundamentals.revenue_growth",
+            "events.material_event_90d",
+            "fundamentals.price_to_sales",
+            "fundamentals.pe",
+            "market.vol_30d",
+            "risk.downside_beta",
+            "risk.idio_vol"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1024,
+          "packet_sha256": "cf3cd47dd499cdbc1253e294278504b3291315d8e7b5ea87624328b9b87cc9ea"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "events.earnings_release_90d",
+            "risk.max_drawdown_1y",
+            "events.days_since_periodic_filing",
+            "market.adv_bn",
+            "fundamentals.price_to_book",
+            "fundamentals.roa",
+            "risk.yield_curve_spread",
+            "market.ret_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 957,
+          "packet_sha256": "6cca36cc31251d5eb95bd23118d1c8cade97a54d8f8df978ea1bf9f5f89087de"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H17",
+      "date": "2025-09-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "events.eight_k_30d",
+            "risk.idio_vol",
+            "fundamentals.price_to_sales",
+            "risk.max_drawdown_1y",
+            "fundamentals.price_to_book",
+            "events.eight_k_90d",
+            "market.vol_30d",
+            "events.earnings_release_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 989,
+          "packet_sha256": "3b3b1346713d20779d150fc024761548dde2a1f6a17ccf1c58ea782a15fb5f10"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "market.ret_90d",
+            "risk.high_yield_return_3m",
+            "risk.equity_market_return_3m",
+            "risk.ten_year_yield",
+            "fundamentals.accounting_age",
+            "risk.three_month_yield",
+            "events.latest_8k_items",
+            "risk.vix"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 903,
+          "packet_sha256": "608a0f7703b06c5a7f62e734d1b1e264c616c8731276d9892c1fa9b8132f64f5"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "events.days_since_latest_8k",
+            "risk.yield_curve_spread",
+            "fundamentals.pe",
+            "fundamentals.debt_to_assets",
+            "market.adv_bn",
+            "fundamentals.revenue_growth",
+            "market.drawdown_90d",
+            "events.days_since_periodic_filing"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 966,
+          "packet_sha256": "791eed0bd94be44c6a858043e41db710e865bc929dcb8c81155ccbe034ded40b"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "market.ret_30d",
+            "risk.market_corr",
+            "risk.market_beta",
+            "market.ret_7d",
+            "fundamentals.roa",
+            "events.material_event_90d",
+            "fundamentals.cash_to_assets",
+            "risk.downside_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1036,
+          "packet_sha256": "8c3a44fa063b70cd68b2ff40e29bca348c96f5828964bdd58c499bd413de0e0c"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H18",
+      "date": "2025-10-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.high_yield_return_3m",
+            "risk.yield_curve_spread",
+            "fundamentals.accounting_age",
+            "events.latest_8k_items",
+            "market.adv_bn",
+            "risk.three_month_yield",
+            "events.eight_k_30d",
+            "risk.vix"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1021,
+          "packet_sha256": "fff31e7086ffff949efcb78b0c1d92869d60dcd142d86edb696773a6a56ff6c1"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "market.ret_7d",
+            "fundamentals.price_to_book",
+            "market.vol_30d",
+            "risk.equity_market_return_3m",
+            "fundamentals.price_to_sales",
+            "fundamentals.roa",
+            "events.days_since_latest_8k",
+            "risk.market_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 965,
+          "packet_sha256": "5ed0fb6e75a3aba80b6afdc7def1d9e06aa0a0e58183fc026fe72280184f1336"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "events.eight_k_90d",
+            "market.ret_30d",
+            "events.earnings_release_90d",
+            "fundamentals.pe",
+            "risk.downside_beta",
+            "risk.idio_vol",
+            "risk.max_drawdown_1y",
+            "fundamentals.cash_to_assets"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1040,
+          "packet_sha256": "c23ec0a352fcfa3d61b833c7648112ea8e635a71bc9bd9feead0391af5dd759a"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.ten_year_yield",
+            "events.material_event_90d",
+            "market.ret_90d",
+            "fundamentals.debt_to_assets",
+            "fundamentals.revenue_growth",
+            "market.drawdown_90d",
+            "events.days_since_periodic_filing",
+            "risk.market_corr"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 937,
+          "packet_sha256": "71c7095818bb4abbd8059cefc25a754ebf48c834cbf7dd629a8024ae3266ff8a"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S11",
+      "date": "2025-11-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.downside_beta",
+            "fundamentals.pe",
+            "risk.yield_curve_spread",
+            "risk.market_beta",
+            "risk.idio_vol",
+            "events.earnings_release_90d",
+            "market.ret_30d",
+            "events.days_since_periodic_filing"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 953,
+          "packet_sha256": "0a69271aa2793c4e2089a3ff377a2cb8d9faf4f660d41f53424e0f6dd3bf1fc5"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "market.adv_bn",
+            "events.material_event_90d",
+            "fundamentals.accounting_age",
+            "fundamentals.cash_to_assets",
+            "market.vol_30d",
+            "market.ret_7d",
+            "risk.market_corr",
+            "fundamentals.roa"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1031,
+          "packet_sha256": "fda67245ca82e14f60dfd270d8973dd2e5088ed6ddffa37eca278090e8c376a1"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.ten_year_yield",
+            "events.latest_8k_items",
+            "risk.three_month_yield",
+            "events.eight_k_30d",
+            "risk.equity_market_return_3m",
+            "fundamentals.price_to_sales",
+            "market.drawdown_90d",
+            "risk.high_yield_return_3m"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1099,
+          "packet_sha256": "6a15c73ae45664aa67fd815e9bf181515919cd35ce0ee63cd889becbd8b92a45"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "events.days_since_latest_8k",
+            "fundamentals.revenue_growth",
+            "risk.vix",
+            "fundamentals.debt_to_assets",
+            "risk.max_drawdown_1y",
+            "market.ret_90d",
+            "fundamentals.price_to_book",
+            "events.eight_k_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 955,
+          "packet_sha256": "84d153c1b235593b17f6fd2681f55e2410f01e781795ce8de6b253118247b921"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H19",
+      "date": "2025-12-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "market.drawdown_90d",
+            "events.days_since_latest_8k",
+            "events.eight_k_90d",
+            "fundamentals.debt_to_assets",
+            "events.days_since_periodic_filing",
+            "fundamentals.revenue_growth",
+            "risk.downside_beta",
+            "risk.market_corr"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 993,
+          "packet_sha256": "a21c7025208a82e051ece07a80c0ee12ca2d3c1e8858355346b751fc3c1c37ec"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "events.earnings_release_90d",
+            "risk.ten_year_yield",
+            "market.vol_30d",
+            "market.ret_30d",
+            "fundamentals.accounting_age",
+            "fundamentals.cash_to_assets",
+            "risk.max_drawdown_1y",
+            "fundamentals.roa"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 972,
+          "packet_sha256": "bef999bc2e0077e38acf77e3c18432ffe9c1c59ad474ee2a9874e3d67b3b6213"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "fundamentals.price_to_book",
+            "risk.equity_market_return_3m",
+            "events.latest_8k_items",
+            "risk.high_yield_return_3m",
+            "market.ret_90d",
+            "risk.vix",
+            "risk.three_month_yield",
+            "risk.yield_curve_spread"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 985,
+          "packet_sha256": "d04dccaa7b83706dc7c32094fa57543e316375ee728b3e3497fa302c090553ea"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "market.ret_7d",
+            "risk.idio_vol",
+            "fundamentals.pe",
+            "events.eight_k_30d",
+            "market.adv_bn",
+            "risk.market_beta",
+            "fundamentals.price_to_sales",
+            "events.material_event_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1012,
+          "packet_sha256": "cea1794e4a3705a2eeac0d8faae9fe19d6f0c69d1a4c3043ffb557bdc0797f77"
+        }
+      ]
+    },
+    {
+      "sample": "pilot",
+      "snapshot_id": "S12",
+      "date": "2026-01-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.downside_beta",
+            "market.vol_30d",
+            "risk.idio_vol",
+            "fundamentals.pe",
+            "fundamentals.price_to_sales",
+            "fundamentals.roa",
+            "events.days_since_periodic_filing",
+            "events.eight_k_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1032,
+          "packet_sha256": "befc5eac5193cabb4e2ea31e1fe89a0a6c4e6413baba8b0ea477f52296b85fa9"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "risk.max_drawdown_1y",
+            "fundamentals.accounting_age",
+            "events.days_since_latest_8k",
+            "market.adv_bn",
+            "fundamentals.revenue_growth",
+            "risk.three_month_yield",
+            "risk.market_beta",
+            "market.ret_7d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 959,
+          "packet_sha256": "fe30c50221cb6e6388095ed18dc74ceece2bdf35ee8f01c5edec6f9d56dcaa34"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "market.ret_90d",
+            "market.drawdown_90d",
+            "events.eight_k_90d",
+            "fundamentals.price_to_book",
+            "risk.market_corr",
+            "fundamentals.cash_to_assets",
+            "events.earnings_release_90d",
+            "events.material_event_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 963,
+          "packet_sha256": "aa6d366588f0483bad04cce1bd62db935de0e6147f6730f5c78da52d8b344fa3"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.vix",
+            "risk.high_yield_return_3m",
+            "events.latest_8k_items",
+            "fundamentals.debt_to_assets",
+            "risk.yield_curve_spread",
+            "market.ret_30d",
+            "risk.equity_market_return_3m",
+            "risk.ten_year_yield"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1000,
+          "packet_sha256": "16be741ade316116036be2e48f7fdc8c64170c2384b7ce1019b3ddfe89ca1881"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H20",
+      "date": "2026-02-28",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "market.adv_bn",
+            "fundamentals.price_to_book",
+            "risk.three_month_yield",
+            "risk.high_yield_return_3m",
+            "events.latest_8k_items",
+            "risk.ten_year_yield",
+            "risk.equity_market_return_3m",
+            "events.eight_k_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1028,
+          "packet_sha256": "578817c5d87addf64a0e897ba8ade635b828c19ff176a742769f6bf880c2e606"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "market.vol_30d",
+            "fundamentals.accounting_age",
+            "fundamentals.price_to_sales",
+            "events.earnings_release_90d",
+            "market.ret_30d",
+            "fundamentals.roa",
+            "fundamentals.cash_to_assets",
+            "risk.yield_curve_spread"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 948,
+          "packet_sha256": "67eb081b93c30f33197f1fcbf459e5e02288aae79b5c28ee2f13e2730db940b8"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "risk.vix",
+            "risk.idio_vol",
+            "market.ret_90d",
+            "risk.market_corr",
+            "events.days_since_latest_8k",
+            "market.ret_7d",
+            "fundamentals.pe",
+            "risk.market_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 992,
+          "packet_sha256": "d70a37a6408e9ce3faf84f6e9aadf5f6fa7d067b8b2f3973b30ed98c4bb921f1"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "market.drawdown_90d",
+            "events.days_since_periodic_filing",
+            "fundamentals.revenue_growth",
+            "risk.max_drawdown_1y",
+            "risk.downside_beta",
+            "events.material_event_90d",
+            "fundamentals.debt_to_assets",
+            "events.eight_k_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1008,
+          "packet_sha256": "0fe654c4343c84564586b66686d2e949785a57b461d7baf416e5499edc270556"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H21",
+      "date": "2026-03-31",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "risk.vix",
+            "fundamentals.accounting_age",
+            "risk.equity_market_return_3m",
+            "events.latest_8k_items",
+            "events.material_event_90d",
+            "market.adv_bn",
+            "risk.yield_curve_spread",
+            "risk.ten_year_yield"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 969,
+          "packet_sha256": "a7d72d89f483b31767a2d01df43863e22b8f5f17966fe81d22159613a3fbf6ea"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "fundamentals.roa",
+            "risk.market_beta",
+            "fundamentals.price_to_sales",
+            "market.ret_30d",
+            "market.ret_7d",
+            "events.eight_k_90d",
+            "fundamentals.pe",
+            "events.eight_k_30d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1004,
+          "packet_sha256": "06dafdc0352e44fb29dafef310e9c0b0f002aa19f56df3b282bcc98228960ee3"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "fundamentals.debt_to_assets",
+            "events.days_since_periodic_filing",
+            "fundamentals.revenue_growth",
+            "fundamentals.cash_to_assets",
+            "market.drawdown_90d",
+            "market.ret_90d",
+            "risk.high_yield_return_3m",
+            "events.earnings_release_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 974,
+          "packet_sha256": "6c79fc29b9f2c691332764efd14c7ae3f8d2ff6b747d9e4ce2ad3f9a6b8247a3"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.idio_vol",
+            "risk.three_month_yield",
+            "fundamentals.price_to_book",
+            "risk.max_drawdown_1y",
+            "risk.downside_beta",
+            "events.days_since_latest_8k",
+            "market.vol_30d",
+            "risk.market_corr"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1008,
+          "packet_sha256": "f0b2ebd3ea9ea7e30330c0e7062d90c0cec0fdee059fd2844fdbd3484e30cdf4"
+        }
+      ]
+    },
+    {
+      "sample": "held-out",
+      "snapshot_id": "H22",
+      "date": "2026-04-30",
+      "packets": [
+        {
+          "label": "A",
+          "condition": "random_A",
+          "field_ids": [
+            "market.adv_bn",
+            "fundamentals.debt_to_assets",
+            "events.eight_k_90d",
+            "events.days_since_periodic_filing",
+            "risk.idio_vol",
+            "fundamentals.price_to_sales",
+            "events.days_since_latest_8k",
+            "risk.market_beta"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 972,
+          "packet_sha256": "dc247f5d367b539ef5bab6779d1dccc1872c0090e56742748f0947c12b112dab"
+        },
+        {
+          "label": "B",
+          "condition": "random_B",
+          "field_ids": [
+            "market.drawdown_90d",
+            "fundamentals.roa",
+            "risk.downside_beta",
+            "events.material_event_90d",
+            "fundamentals.price_to_book",
+            "fundamentals.cash_to_assets",
+            "risk.high_yield_return_3m",
+            "fundamentals.pe"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 979,
+          "packet_sha256": "a45d5a3c5296af244a697ced7bf9c5f568350b27cbbdbe92cda495529eeb40ba"
+        },
+        {
+          "label": "C",
+          "condition": "random_C",
+          "field_ids": [
+            "market.ret_7d",
+            "risk.three_month_yield",
+            "market.vol_30d",
+            "risk.market_corr",
+            "fundamentals.revenue_growth",
+            "risk.max_drawdown_1y",
+            "events.earnings_release_90d",
+            "market.ret_90d"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 1002,
+          "packet_sha256": "8fc96e02354dbda03882d3d8270c0f7017ed83cd859f6ad2923cad908da3fb5b"
+        },
+        {
+          "label": "D",
+          "condition": "random_D",
+          "field_ids": [
+            "risk.vix",
+            "risk.equity_market_return_3m",
+            "fundamentals.accounting_age",
+            "events.latest_8k_items",
+            "risk.ten_year_yield",
+            "events.eight_k_30d",
+            "market.ret_30d",
+            "risk.yield_curve_spread"
+          ],
+          "source_families": [
+            "events",
+            "fundamentals",
+            "market",
+            "risk"
+          ],
+          "n_fields": 8,
+          "rendered_characters": 970,
+          "packet_sha256": "076a3bd740e22d15a0cc3f1369625d89433b400f1d05180bde0a49c5daf2d9a8"
+        }
+      ]
+    }
+  ],
+  "pit_correction": {
+    "id": "2026-07-20-price-share-basis-v2",
+    "reason": "align dividend-unadjusted split-adjusted closes with split-adjusted as-filed SEC shares and select the newest eligible US-GAAP/DEI share fact",
+    "scope": "input correction only; dates, fields, models, prompts, and assignments unchanged"
+  }
+}

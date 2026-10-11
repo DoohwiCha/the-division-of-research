@@ -1,0 +1,92 @@
+{
+  "schema_version": "information-capacity-long-only-plan-v1",
+  "frozen_before_collection": true,
+  "research_question": "Under the same frozen capacity-curve design, does separating information access increase independent benchmark-relative active books in a fully invested long-only mandate?",
+  "mandate": {
+    "portfolio": "fully invested long-only",
+    "horizon": "one month",
+    "benchmark": "equal weight over the common 14-stock universe",
+    "analysis_representation": "portfolio weights minus equal benchmark weights",
+    "raw_holdings_similarity_used": false
+  },
+  "design": {
+    "n_dates": 34,
+    "pilot_dates": 12,
+    "heldout_dates": 22,
+    "team_sizes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "architectures": [
+      "mixed",
+      "coherent"
+    ],
+    "n_models": 7,
+    "models": [
+      {
+        "vendor": "openai",
+        "model": "openai/gpt-4o"
+      },
+      {
+        "vendor": "google",
+        "model": "google/gemini-2.5-flash"
+      },
+      {
+        "vendor": "meta",
+        "model": "meta-llama/llama-3.1-70b-instruct"
+      },
+      {
+        "vendor": "alibaba",
+        "model": "qwen/qwen3-235b-a22b-2507"
+      },
+      {
+        "vendor": "mistral",
+        "model": "mistralai/mistral-large"
+      },
+      {
+        "vendor": "deepseek",
+        "model": "deepseek/deepseek-chat"
+      },
+      {
+        "vendor": "anthropic",
+        "model": "anthropic/claude-sonnet-4.5"
+      }
+    ],
+    "full_packet_fields": 32,
+    "team_union_equals_full_packet": true,
+    "each_field_appears_once_per_partitioned_team": true,
+    "packet_size_profile_matched_between_architectures": true,
+    "architecture_and_role_labels_hidden_from_prompt": true,
+    "temperature": 0.7,
+    "prompt_spec_version": "information-capacity-long-only-neutral-packet-v1",
+    "n_new_calls": 12852,
+    "new_calls_by_sample": {
+      "pilot": 4536,
+      "held-out": 8316
+    },
+    "shared_full_packet_control": "238 complete responses reused from cohort_agents_information_diversity_longonly.json"
+  },
+  "source_signed_plan": {
+    "path": "data/results/information_capacity_experiment_plan.json",
+    "assignment_sha256": "d9a4cc28de37cb99ebcc66b236bb306aee7fb3ab746a6376538a3e6b7ba65bd5",
+    "job_manifest_sha256": "dea54a16edf804c02476c91bbe9852292351a27e5274cff157ee44936f8b0c33"
+  },
+  "pre_specified_tests": {
+    "coherent_minus_mixed_N_eff": "positive at matched K",
+    "mixed_minus_shared_N_eff": "positive at matched K",
+    "coherent_minus_mixed_same_side_active_overlap": "negative at matched K",
+    "coherent_minus_mixed_order_concentration": "negative at matched K",
+    "active_return": "descriptive; no directional alpha hypothesis"
+  },
+  "inference_unit": "date; model subsets and packet assignments are averaged within date before inference",
+  "job_manifest_sha256": "2d1cf7505a4dd923f716233ad8149b1845a2bb55d8bdf6292afc4b566a3f131c",
+  "pit_correction": {
+    "id": "2026-07-20-price-share-basis-v2",
+    "reason": "align dividend-unadjusted split-adjusted closes with split-adjusted as-filed SEC shares and select the newest eligible US-GAAP/DEI share fact",
+    "scope": "input correction only; dates, fields, models, prompts, and assignments unchanged"
+  }
+}

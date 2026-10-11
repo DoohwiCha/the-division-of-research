@@ -1,0 +1,64 @@
+{
+  "schema_version": "information-capacity-audited-long-only-validation-v1",
+  "passed": true,
+  "failures": [],
+  "checks": {
+    "rows_checked": 3570,
+    "generation_ids_unique": 3570,
+    "dates": 34,
+    "designs": [
+      "shared",
+      "mixed",
+      "coherent"
+    ],
+    "retried_rows": 1,
+    "shared_access_control_checked": true,
+    "spot_recomputation": [
+      {
+        "date": "2023-07-31",
+        "design": "shared",
+        "max_abs_error": 0.0
+      },
+      {
+        "date": "2023-07-31",
+        "design": "mixed",
+        "max_abs_error": 0.0
+      },
+      {
+        "date": "2023-07-31",
+        "design": "coherent",
+        "max_abs_error": 0.0
+      },
+      {
+        "date": "2024-11-30",
+        "design": "shared",
+        "max_abs_error": 0.0
+      },
+      {
+        "date": "2024-11-30",
+        "design": "mixed",
+        "max_abs_error": 0.0
+      },
+      {
+        "date": "2024-11-30",
+        "design": "coherent",
+        "max_abs_error": 0.0
+      },
+      {
+        "date": "2026-04-30",
+        "design": "shared",
+        "max_abs_error": 0.0
+      },
+      {
+        "date": "2026-04-30",
+        "design": "mixed",
+        "max_abs_error": 0.0
+      },
+      {
+        "date": "2026-04-30",
+        "design": "coherent",
+        "max_abs_error": 0.0
+      }
+    ]
+  }
+}

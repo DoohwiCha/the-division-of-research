@@ -1,0 +1,9 @@
+{
+  "schema_version": "information-capacity-crossmarket-data-validation-v1",
+  "market": "crypto",
+  "n_snapshots": 12,
+  "n_assets": 12,
+  "n_fields": 32,
+  "issues": [],
+  "passed": true
+}

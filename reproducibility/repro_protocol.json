@@ -1,0 +1,2206 @@
+{
+  "schema_version": "crowdbench-audited-reproducibility-objects-v1",
+  "scope": "final audited primary protocol, offline extraction only",
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "NVDA",
+    "GOOGL",
+    "META",
+    "AMZN",
+    "TSLA",
+    "WMT",
+    "PG",
+    "JPM",
+    "BAC",
+    "XOM",
+    "JNJ",
+    "UNH"
+  ],
+  "common_core": "ticker company               sector                    \nAAPL   Apple                 Information Technology    \nMSFT   Microsoft             Information Technology    \nNVDA   NVIDIA                Information Technology    \nGOOGL  Alphabet              Communication Services    \nMETA   Meta Platforms        Communication Services    \nAMZN   Amazon                Consumer Discretionary    \nTSLA   Tesla                 Consumer Discretionary    \nWMT    Walmart               Consumer Staples          \nPG     Procter & Gamble      Consumer Staples          \nJPM    JPMorgan Chase        Financials                \nBAC    Bank of America       Financials                \nXOM    Exxon Mobil           Energy                    \nJNJ    Johnson & Johnson     Health Care               \nUNH    UnitedHealth Group    Health Care               ",
+  "date_labels": [
+    "2023-07-31",
+    "2023-08-31",
+    "2023-09-30",
+    "2023-10-31",
+    "2023-11-30",
+    "2023-12-31",
+    "2024-01-31",
+    "2024-02-29",
+    "2024-03-31",
+    "2024-04-30",
+    "2024-05-31",
+    "2024-06-30",
+    "2024-07-31",
+    "2024-08-31",
+    "2024-09-30",
+    "2024-10-31",
+    "2024-11-30",
+    "2024-12-31",
+    "2025-01-31",
+    "2025-02-28",
+    "2025-03-31",
+    "2025-04-30",
+    "2025-05-31",
+    "2025-06-30",
+    "2025-07-31",
+    "2025-08-31",
+    "2025-09-30",
+    "2025-10-31",
+    "2025-11-30",
+    "2025-12-31",
+    "2026-01-31",
+    "2026-02-28",
+    "2026-03-31",
+    "2026-04-30"
+  ],
+  "routes": [
+    {
+      "vendor": "openai",
+      "requested_model": "openai/gpt-4o",
+      "canonical_slug": "openai/gpt-4o",
+      "observed_response_models": [
+        "openai/gpt-4o"
+      ],
+      "observed_response_provider_counts": {
+        "OpenAI": 1870
+      },
+      "seed_supported": true,
+      "n_primary_rows": 1870
+    },
+    {
+      "vendor": "google",
+      "requested_model": "google/gemini-2.5-flash",
+      "canonical_slug": "google/gemini-2.5-flash",
+      "observed_response_models": [
+        "google/gemini-2.5-flash"
+      ],
+      "observed_response_provider_counts": {
+        "Google": 1870
+      },
+      "seed_supported": true,
+      "n_primary_rows": 1870
+    },
+    {
+      "vendor": "meta",
+      "requested_model": "meta-llama/llama-3.1-70b-instruct",
+      "canonical_slug": "meta-llama/llama-3.1-70b-instruct",
+      "observed_response_models": [
+        "meta-llama/llama-3.1-70b-instruct"
+      ],
+      "observed_response_provider_counts": {
+        "DeepInfra": 1401,
+        "WandB": 469
+      },
+      "seed_supported": true,
+      "n_primary_rows": 1870
+    },
+    {
+      "vendor": "alibaba",
+      "requested_model": "qwen/qwen3-235b-a22b-2507",
+      "canonical_slug": "qwen/qwen3-235b-a22b-07-25",
+      "observed_response_models": [
+        "qwen/qwen3-235b-a22b-2507"
+      ],
+      "observed_response_provider_counts": {
+        "AtlasCloud": 108,
+        "DeepInfra": 439,
+        "Friendli": 113,
+        "Google": 82,
+        "Nebius": 114,
+        "Novita": 424,
+        "Parasail": 590
+      },
+      "seed_supported": true,
+      "n_primary_rows": 1870
+    },
+    {
+      "vendor": "mistral",
+      "requested_model": "mistralai/mistral-large",
+      "canonical_slug": "mistralai/mistral-large",
+      "observed_response_models": [
+        "mistralai/mistral-large"
+      ],
+      "observed_response_provider_counts": {
+        "Mistral": 1870
+      },
+      "seed_supported": true,
+      "n_primary_rows": 1870
+    },
+    {
+      "vendor": "deepseek",
+      "requested_model": "deepseek/deepseek-chat",
+      "canonical_slug": "deepseek/deepseek-chat-v3",
+      "observed_response_models": [
+        "deepseek/deepseek-chat"
+      ],
+      "observed_response_provider_counts": {
+        "DeepInfra": 1870
+      },
+      "seed_supported": true,
+      "n_primary_rows": 1870
+    },
+    {
+      "vendor": "anthropic",
+      "requested_model": "anthropic/claude-sonnet-4.5",
+      "canonical_slug": "anthropic/claude-4.5-sonnet-20250929",
+      "observed_response_models": [
+        "anthropic/claude-sonnet-4.5"
+      ],
+      "observed_response_provider_counts": {
+        "Amazon Bedrock": 1868,
+        "Anthropic": 2
+      },
+      "seed_supported": false,
+      "n_primary_rows": 1870
+    }
+  ],
+  "catalog_retrieved_at_utc": "2026-07-21T01:07:39+00:00",
+  "matrix_row_order": "seats 1 through 7",
+  "matrix_column_order": [
+    "market.ret_7d",
+    "market.ret_30d",
+    "market.ret_90d",
+    "market.vol_30d",
+    "market.drawdown_90d",
+    "market.adv_bn",
+    "fundamentals.pe",
+    "fundamentals.price_to_sales",
+    "fundamentals.price_to_book",
+    "fundamentals.roa",
+    "fundamentals.debt_to_assets",
+    "fundamentals.cash_to_assets",
+    "fundamentals.revenue_growth",
+    "fundamentals.accounting_age",
+    "events.eight_k_30d",
+    "events.eight_k_90d",
+    "events.earnings_release_90d",
+    "events.material_event_90d",
+    "events.days_since_latest_8k",
+    "events.days_since_periodic_filing",
+    "events.latest_8k_items",
+    "risk.market_beta",
+    "risk.downside_beta",
+    "risk.market_corr",
+    "risk.idio_vol",
+    "risk.max_drawdown_1y",
+    "risk.ten_year_yield",
+    "risk.three_month_yield",
+    "risk.yield_curve_spread",
+    "risk.vix",
+    "risk.equity_market_return_3m",
+    "risk.high_yield_return_3m"
+  ],
+  "access_matrices": {
+    "coherent": [
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "mixed": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "frozen_assignment": {
+    "coherent": [
+      {
+        "seat": 1,
+        "name": "market_trend",
+        "field_ids": [
+          "market.ret_7d",
+          "market.ret_30d",
+          "market.ret_90d",
+          "market.drawdown_90d"
+        ]
+      },
+      {
+        "seat": 2,
+        "name": "market_liquidity",
+        "field_ids": [
+          "market.vol_30d",
+          "market.adv_bn"
+        ]
+      },
+      {
+        "seat": 3,
+        "name": "valuation",
+        "field_ids": [
+          "fundamentals.pe",
+          "fundamentals.price_to_sales",
+          "fundamentals.price_to_book"
+        ]
+      },
+      {
+        "seat": 4,
+        "name": "company_quality",
+        "field_ids": [
+          "fundamentals.roa",
+          "fundamentals.debt_to_assets",
+          "fundamentals.cash_to_assets",
+          "fundamentals.revenue_growth",
+          "fundamentals.accounting_age"
+        ]
+      },
+      {
+        "seat": 5,
+        "name": "corporate_events",
+        "field_ids": [
+          "events.eight_k_30d",
+          "events.eight_k_90d",
+          "events.earnings_release_90d",
+          "events.material_event_90d",
+          "events.days_since_latest_8k",
+          "events.days_since_periodic_filing",
+          "events.latest_8k_items"
+        ]
+      },
+      {
+        "seat": 6,
+        "name": "systematic_risk_and_rates",
+        "field_ids": [
+          "risk.market_beta",
+          "risk.downside_beta",
+          "risk.market_corr",
+          "risk.ten_year_yield",
+          "risk.three_month_yield",
+          "risk.yield_curve_spread",
+          "risk.equity_market_return_3m"
+        ]
+      },
+      {
+        "seat": 7,
+        "name": "idiosyncratic_and_stress_risk",
+        "field_ids": [
+          "risk.idio_vol",
+          "risk.max_drawdown_1y",
+          "risk.vix",
+          "risk.high_yield_return_3m"
+        ]
+      }
+    ],
+    "mixed": [
+      {
+        "seat": 1,
+        "field_ids": [
+          "market.ret_90d",
+          "events.eight_k_90d",
+          "risk.high_yield_return_3m",
+          "fundamentals.price_to_book"
+        ]
+      },
+      {
+        "seat": 2,
+        "field_ids": [
+          "events.days_since_latest_8k",
+          "fundamentals.roa"
+        ]
+      },
+      {
+        "seat": 3,
+        "field_ids": [
+          "fundamentals.debt_to_assets",
+          "risk.vix",
+          "events.material_event_90d"
+        ]
+      },
+      {
+        "seat": 4,
+        "field_ids": [
+          "risk.market_beta",
+          "fundamentals.accounting_age",
+          "risk.three_month_yield",
+          "market.ret_30d",
+          "events.earnings_release_90d"
+        ]
+      },
+      {
+        "seat": 5,
+        "field_ids": [
+          "market.ret_7d",
+          "risk.market_corr",
+          "fundamentals.revenue_growth",
+          "events.eight_k_30d",
+          "fundamentals.pe",
+          "market.vol_30d",
+          "risk.ten_year_yield"
+        ]
+      },
+      {
+        "seat": 6,
+        "field_ids": [
+          "risk.idio_vol",
+          "events.days_since_periodic_filing",
+          "fundamentals.price_to_sales",
+          "market.adv_bn",
+          "fundamentals.cash_to_assets",
+          "risk.equity_market_return_3m",
+          "risk.max_drawdown_1y"
+        ]
+      },
+      {
+        "seat": 7,
+        "field_ids": [
+          "risk.yield_curve_spread",
+          "risk.downside_beta",
+          "market.drawdown_90d",
+          "events.latest_8k_items"
+        ]
+      }
+    ],
+    "packet_sizes": [
+      4,
+      2,
+      3,
+      5,
+      7,
+      7,
+      4
+    ],
+    "coherent_fine_domain_nmi": 0.8772473036597886,
+    "mixed_fine_domain_nmi": 0.17548964840424272
+  },
+  "assignment_sha256": "62dac5bf0f016fef5c40159f02ad5b097228c80f801b140f938584d6fea35cf3",
+  "fields": [
+    {
+      "index": 1,
+      "field_id": "market.ret_7d",
+      "display_label": "ret_7d%",
+      "format_kind": "percent",
+      "definition": "Adjusted-close simple return over 5 sessions: P[t]/P[t-5]-1; the historical label is ret_7d.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 1,
+      "mixed_seat": 5,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "580-611"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "79"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.market.<ticker>.ret_7d",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[0].field_ids",
+        "mixed": "$.assignment.mixed[4].field_ids"
+      }
+    },
+    {
+      "index": 2,
+      "field_id": "market.ret_30d",
+      "display_label": "ret_30d%",
+      "format_kind": "percent",
+      "definition": "Adjusted-close simple return over 21 sessions: P[t]/P[t-21]-1.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 1,
+      "mixed_seat": 4,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "580-611"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "80"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.market.<ticker>.ret_30d",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[0].field_ids",
+        "mixed": "$.assignment.mixed[3].field_ids"
+      }
+    },
+    {
+      "index": 3,
+      "field_id": "market.ret_90d",
+      "display_label": "ret_90d%",
+      "format_kind": "percent",
+      "definition": "Adjusted-close simple return over 63 sessions: P[t]/P[t-63]-1.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 1,
+      "mixed_seat": 1,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "580-611"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "81"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.market.<ticker>.ret_90d",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[0].field_ids",
+        "mixed": "$.assignment.mixed[0].field_ids"
+      }
+    },
+    {
+      "index": 4,
+      "field_id": "market.vol_30d",
+      "display_label": "vol_30d%",
+      "format_kind": "percent",
+      "definition": "Sample standard deviation of the last 21 daily log returns, multiplied by sqrt(252).",
+      "raw_units": "annualized fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 2,
+      "mixed_seat": 5,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "580-611"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "82"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.market.<ticker>.vol_30d",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[1].field_ids",
+        "mixed": "$.assignment.mixed[4].field_ids"
+      }
+    },
+    {
+      "index": 5,
+      "field_id": "market.drawdown_90d",
+      "display_label": "dd_90d%",
+      "format_kind": "percent",
+      "definition": "Current adjusted close divided by the maximum of the last 63 closes, minus one; not the worst peak-to-trough loss within that window.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 1,
+      "mixed_seat": 7,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "580-611"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "83"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.market.<ticker>.drawdown_90d",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[0].field_ids",
+        "mixed": "$.assignment.mixed[6].field_ids"
+      }
+    },
+    {
+      "index": 6,
+      "field_id": "market.adv_bn",
+      "display_label": "ADV_$bn",
+      "format_kind": "number",
+      "definition": "Mean of the last 21 products of split-adjusted, dividend-unadjusted quote close and volume, divided by 1e9; missing volume is zero.",
+      "raw_units": "USD billions/day",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 2,
+      "mixed_seat": 6,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "580-611"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "84"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.market.<ticker>.adv_bn",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[1].field_ids",
+        "mixed": "$.assignment.mixed[5].field_ids"
+      }
+    },
+    {
+      "index": 7,
+      "field_id": "fundamentals.pe",
+      "display_label": "P/E",
+      "format_kind": "number",
+      "definition": "Split-consistent market capitalization M divided by latest eligible annual net income N; NA if N is missing or nonpositive.",
+      "raw_units": "multiple",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 3,
+      "mixed_seat": 5,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "377-466"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "85"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.fundamentals.<ticker>.pe",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[2].field_ids",
+        "mixed": "$.assignment.mixed[4].field_ids"
+      }
+    },
+    {
+      "index": 8,
+      "field_id": "fundamentals.price_to_sales",
+      "display_label": "P/S",
+      "format_kind": "number",
+      "definition": "M divided by latest eligible annual revenue R.",
+      "raw_units": "multiple",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 3,
+      "mixed_seat": 6,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "377-466"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "86"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.fundamentals.<ticker>.price_to_sales",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[2].field_ids",
+        "mixed": "$.assignment.mixed[5].field_ids"
+      }
+    },
+    {
+      "index": 9,
+      "field_id": "fundamentals.price_to_book",
+      "display_label": "P/B",
+      "format_kind": "number",
+      "definition": "M divided by selected stockholders equity E.",
+      "raw_units": "multiple",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 3,
+      "mixed_seat": 1,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "377-466"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "87"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.fundamentals.<ticker>.price_to_book",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[2].field_ids",
+        "mixed": "$.assignment.mixed[0].field_ids"
+      }
+    },
+    {
+      "index": 10,
+      "field_id": "fundamentals.roa",
+      "display_label": "ROA%",
+      "format_kind": "percent",
+      "definition": "Latest eligible annual net income N divided by selected assets A; not trailing-quarter or TTM income.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 4,
+      "mixed_seat": 2,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "377-466"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "88"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.fundamentals.<ticker>.roa",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[3].field_ids",
+        "mixed": "$.assignment.mixed[1].field_ids"
+      }
+    },
+    {
+      "index": 11,
+      "field_id": "fundamentals.debt_to_assets",
+      "display_label": "debt/A%",
+      "format_kind": "percent",
+      "definition": "Selected long-term debt/finance-lease fact D divided by A; not a constructed total-debt measure.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 4,
+      "mixed_seat": 3,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "377-466"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "89"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.fundamentals.<ticker>.debt_to_assets",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[3].field_ids",
+        "mixed": "$.assignment.mixed[2].field_ids"
+      }
+    },
+    {
+      "index": 12,
+      "field_id": "fundamentals.cash_to_assets",
+      "display_label": "cash/A%",
+      "format_kind": "percent",
+      "definition": "Selected cash fact C divided by A.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 4,
+      "mixed_seat": 6,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "377-466"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "90"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.fundamentals.<ticker>.cash_to_assets",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[3].field_ids",
+        "mixed": "$.assignment.mixed[5].field_ids"
+      }
+    },
+    {
+      "index": 13,
+      "field_id": "fundamentals.revenue_growth",
+      "display_label": "rev_g%",
+      "format_kind": "percent",
+      "definition": "(Latest eligible annual revenue R minus previous annual revenue R_prev) divided by abs(R_prev).",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 4,
+      "mixed_seat": 5,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "377-466"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "91"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.fundamentals.<ticker>.revenue_growth",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[3].field_ids",
+        "mixed": "$.assignment.mixed[4].field_ids"
+      }
+    },
+    {
+      "index": 14,
+      "field_id": "fundamentals.accounting_age",
+      "display_label": "age_d",
+      "format_kind": "integer",
+      "definition": "Calendar days from the filing date of the selected latest annual revenue fact to the snapshot label; not days since the accounting period ended.",
+      "raw_units": "calendar days",
+      "display_transform": "int(round(float(value)))",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 4,
+      "mixed_seat": 4,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "453-454"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "92"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "139-145"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.fundamentals.<ticker>.accounting_filed; $.snapshots[*].date",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[3].field_ids",
+        "mixed": "$.assignment.mixed[3].field_ids"
+      }
+    },
+    {
+      "index": 15,
+      "field_id": "events.eight_k_30d",
+      "display_label": "8K_30d",
+      "format_kind": "integer",
+      "definition": "Count of 8-K and 8-K/A filings with filing age between 0 and 30 calendar days, inclusive.",
+      "raw_units": "count",
+      "display_transform": "int(round(float(value)))",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 5,
+      "mixed_seat": 5,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "538-577"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "93"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.events.<ticker>.eight_k_30d",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[4].field_ids",
+        "mixed": "$.assignment.mixed[4].field_ids"
+      }
+    },
+    {
+      "index": 16,
+      "field_id": "events.eight_k_90d",
+      "display_label": "8K_90d",
+      "format_kind": "integer",
+      "definition": "Count of 8-K and 8-K/A filings with filing age between 0 and 90 calendar days, inclusive.",
+      "raw_units": "count",
+      "display_transform": "int(round(float(value)))",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 5,
+      "mixed_seat": 1,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "538-577"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "94"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.events.<ticker>.eight_k_90d",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[4].field_ids",
+        "mixed": "$.assignment.mixed[0].field_ids"
+      }
+    },
+    {
+      "index": 17,
+      "field_id": "events.earnings_release_90d",
+      "display_label": "earn_90d",
+      "format_kind": "integer",
+      "definition": "Count of item-code 2.02 occurrences across the eligible 90-day filings; counts item occurrences, not distinct event days.",
+      "raw_units": "count",
+      "display_transform": "int(round(float(value)))",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 5,
+      "mixed_seat": 4,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "538-577"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "95"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.events.<ticker>.earnings_release_90d",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[4].field_ids",
+        "mixed": "$.assignment.mixed[3].field_ids"
+      }
+    },
+    {
+      "index": 18,
+      "field_id": "events.material_event_90d",
+      "display_label": "material",
+      "format_kind": "integer",
+      "definition": "Count of item-code occurrences in {1.01,1.02,2.01,2.05,2.06,5.02,8.01} across eligible 90-day filings.",
+      "raw_units": "count",
+      "display_transform": "int(round(float(value)))",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 5,
+      "mixed_seat": 3,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "538-577"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "96"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.events.<ticker>.material_event_90d",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[4].field_ids",
+        "mixed": "$.assignment.mixed[2].field_ids"
+      }
+    },
+    {
+      "index": 19,
+      "field_id": "events.days_since_latest_8k",
+      "display_label": "last_8K_d",
+      "format_kind": "integer",
+      "definition": "Calendar days since latest 8-K/8-K/A within the prior 90 days; NA if none exists in that window.",
+      "raw_units": "calendar days",
+      "display_transform": "int(round(float(value)))",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 5,
+      "mixed_seat": 2,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "538-577"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "97"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.events.<ticker>.days_since_latest_8k",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[4].field_ids",
+        "mixed": "$.assignment.mixed[1].field_ids"
+      }
+    },
+    {
+      "index": 20,
+      "field_id": "events.days_since_periodic_filing",
+      "display_label": "periodic_d",
+      "format_kind": "integer",
+      "definition": "Calendar days since latest 10-Q or 10-K filed by the snapshot label; no lookback cap and no amended forms in this field.",
+      "raw_units": "calendar days",
+      "display_transform": "int(round(float(value)))",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 5,
+      "mixed_seat": 6,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "538-577"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "98"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.events.<ticker>.days_since_periodic_filing",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[4].field_ids",
+        "mixed": "$.assignment.mixed[5].field_ids"
+      }
+    },
+    {
+      "index": 21,
+      "field_id": "events.latest_8k_items",
+      "display_label": "latest_event",
+      "format_kind": "text",
+      "definition": "First three mapped item labels, in source order, of latest eligible 90-day 8-K/8-K/A, joined by semicolon-space; unknown code becomes item <code>; none in prior 90d if no labels.",
+      "raw_units": "text",
+      "display_transform": "strip text; empty becomes none",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 5,
+      "mixed_seat": 7,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "538-577"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "99"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.events.<ticker>.latest_8k_items",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[4].field_ids",
+        "mixed": "$.assignment.mixed[6].field_ids"
+      }
+    },
+    {
+      "index": 22,
+      "field_id": "risk.market_beta",
+      "display_label": "beta",
+      "format_kind": "number",
+      "definition": "Sample covariance of stock and equal-weight 50-stock reference daily simple returns divided by reference sample variance, over at most 252 returns. Zero if variance <= 1e-12.",
+      "raw_units": "dimensionless",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 6,
+      "mixed_seat": 4,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "614-639"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "100"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.risk.<ticker>.market_beta",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[5].field_ids",
+        "mixed": "$.assignment.mixed[3].field_ids"
+      }
+    },
+    {
+      "index": 23,
+      "field_id": "risk.downside_beta",
+      "display_label": "down_beta",
+      "format_kind": "number",
+      "definition": "Same beta calculation restricted to days with negative reference return; denominator is the sample variance on that subset. Zero if variance <= 1e-12.",
+      "raw_units": "dimensionless",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 6,
+      "mixed_seat": 7,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "614-639"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "101"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.risk.<ticker>.downside_beta",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[5].field_ids",
+        "mixed": "$.assignment.mixed[6].field_ids"
+      }
+    },
+    {
+      "index": 24,
+      "field_id": "risk.market_corr",
+      "display_label": "mkt_corr",
+      "format_kind": "number",
+      "definition": "Pearson correlation between stock and reference daily simple returns over the risk window.",
+      "raw_units": "dimensionless",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 6,
+      "mixed_seat": 5,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "614-639"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "102"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.risk.<ticker>.market_corr",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[5].field_ids",
+        "mixed": "$.assignment.mixed[4].field_ids"
+      }
+    },
+    {
+      "index": 25,
+      "field_id": "risk.idio_vol",
+      "display_label": "idio_vol%",
+      "format_kind": "percent",
+      "definition": "Sample standard deviation of stock return minus estimated beta times reference return, multiplied by sqrt(252); no intercept fitted.",
+      "raw_units": "annualized fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 7,
+      "mixed_seat": 6,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "614-639"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "103"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.risk.<ticker>.idio_vol",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[6].field_ids",
+        "mixed": "$.assignment.mixed[5].field_ids"
+      }
+    },
+    {
+      "index": 26,
+      "field_id": "risk.max_drawdown_1y",
+      "display_label": "max_dd%",
+      "format_kind": "percent",
+      "definition": "Minimum of P[u]/max_{v<=u} P[v]-1 over the last 253 available closes; running peak starts at the window beginning.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 7,
+      "mixed_seat": 6,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "614-639"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "104"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.risk.<ticker>.max_drawdown_1y",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[6].field_ids",
+        "mixed": "$.assignment.mixed[5].field_ids"
+      }
+    },
+    {
+      "index": 27,
+      "field_id": "risk.ten_year_yield",
+      "display_label": "10y%",
+      "format_kind": "macro_number",
+      "definition": "Last finite Yahoo ^TNX quote close at or before the snapshot label, used directly without an extra scale factor.",
+      "raw_units": "percent yield level",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 6,
+      "mixed_seat": 5,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "94-100,155-173,271-273,804-810"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "105"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.macro.ten_year_yield",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[5].field_ids",
+        "mixed": "$.assignment.mixed[4].field_ids"
+      }
+    },
+    {
+      "index": 28,
+      "field_id": "risk.three_month_yield",
+      "display_label": "3m%",
+      "format_kind": "macro_number",
+      "definition": "Last finite Yahoo ^IRX quote close at or before the snapshot label, used directly without an extra scale factor.",
+      "raw_units": "percent yield level",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 6,
+      "mixed_seat": 4,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "94-100,155-173,271-273,804-810"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "106"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.macro.three_month_yield",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[5].field_ids",
+        "mixed": "$.assignment.mixed[3].field_ids"
+      }
+    },
+    {
+      "index": 29,
+      "field_id": "risk.yield_curve_spread",
+      "display_label": "10y-3m_pp",
+      "format_kind": "macro_number",
+      "definition": "Ten-year yield minus three-month yield, derived before display rounding; NA if either source value is missing.",
+      "raw_units": "percentage points",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 6,
+      "mixed_seat": 7,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "804-810"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "107"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "146-149"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.macro.ten_year_yield; $.snapshots[*].features.macro.three_month_yield",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[5].field_ids",
+        "mixed": "$.assignment.mixed[6].field_ids"
+      }
+    },
+    {
+      "index": 30,
+      "field_id": "risk.vix",
+      "display_label": "VIX",
+      "format_kind": "macro_number",
+      "definition": "Last finite Yahoo ^VIX quote close at or before the snapshot label.",
+      "raw_units": "index points",
+      "display_transform": "fixed two decimals; no scaling",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 7,
+      "mixed_seat": 3,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "94-100,155-173,271-273,804-810"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "108"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.macro.vix",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[6].field_ids",
+        "mixed": "$.assignment.mixed[2].field_ids"
+      }
+    },
+    {
+      "index": 31,
+      "field_id": "risk.equity_market_return_3m",
+      "display_label": "SPY_3m%",
+      "format_kind": "macro_percent",
+      "definition": "Simple return over 63 available SPY quote-close observations: Q[t]/Q[t-63]-1; not adjusted-close total return. NA with fewer than 64 observations.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 6,
+      "mixed_seat": 6,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "94-100,155-173,276-280,804-810"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "109"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.macro.equity_market_return_3m",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[5].field_ids",
+        "mixed": "$.assignment.mixed[5].field_ids"
+      }
+    },
+    {
+      "index": 32,
+      "field_id": "risk.high_yield_return_3m",
+      "display_label": "HYG_3m%",
+      "format_kind": "macro_percent",
+      "definition": "Simple return over 63 available HYG quote-close observations: Q[t]/Q[t-63]-1; not adjusted-close total return. NA with fewer than 64 observations.",
+      "raw_units": "fraction",
+      "display_transform": "multiply by 100; fixed two decimals",
+      "missing_display": "NA for None or non-finite float before formatting",
+      "coherent_seat": 7,
+      "mixed_seat": 1,
+      "sources": [
+        {
+          "path": "src/cohort_information_diversity_data.py",
+          "lines": "94-100,155-173,276-280,804-810"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "110"
+        },
+        {
+          "path": "src/cohort_information_diversity_random_placebo.py",
+          "lines": "155-165"
+        }
+      ],
+      "packet_json_path": "$.snapshots[*].features.macro.high_yield_return_3m",
+      "assignment_json_paths": {
+        "coherent": "$.assignment.coherent[6].field_ids",
+        "mixed": "$.assignment.mixed[0].field_ids"
+      }
+    }
+  ],
+  "global_field_rules": {
+    "availability": "Price/macro rows at or before snapshot label. SEC facts require filed and end dates <= snapshot and finite values. Events require filingDate <= snapshot. No download-vintage guarantee.",
+    "market_prices": {
+      "source": "data/jfs_global_prices_united_states.csv",
+      "basis": "repository adjusted close",
+      "selection": "14 investable columns; <= snapshot, ffill, drop incomplete rows; require >=253 rows"
+    },
+    "valuation_and_adv": {
+      "source": "data/information_diversity_us_split_adjusted_close.csv",
+      "basis": "Yahoo quote close, dividend-unadjusted and split-adjusted to recorded corporate-action cutoff",
+      "volume_source": "data/jfs_global_volumes_united_states.csv",
+      "volume_missing": "zero",
+      "corporate_action_cutoff": "2026-07-20"
+    },
+    "instant_fact_selection": {
+      "eligible_forms": [
+        "10-Q",
+        "10-K",
+        "10-Q/A",
+        "10-K/A"
+      ],
+      "max_order": [
+        "filed",
+        "end",
+        "negative tag-priority index",
+        "accn"
+      ],
+      "namespaces": "shares: us-gaap then dei candidates pooled; other instant values: us-gaap"
+    },
+    "annual_fact_selection": {
+      "forms": [
+        "10-K",
+        "10-K/A"
+      ],
+      "duration_days_inclusive": [
+        300,
+        390
+      ],
+      "within_period_end_max": [
+        "filed",
+        "negative tag-priority index",
+        "accn"
+      ],
+      "final_order": "period end",
+      "namespace": "us-gaap"
+    },
+    "tag_candidates": [
+      {
+        "quantity": "A",
+        "unit": "USD",
+        "ordered_tags": [
+          "Assets"
+        ]
+      },
+      {
+        "quantity": "E",
+        "unit": "USD",
+        "ordered_tags": [
+          "StockholdersEquity",
+          "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+        ]
+      },
+      {
+        "quantity": "C",
+        "unit": "USD",
+        "ordered_tags": [
+          "CashAndCashEquivalentsAtCarryingValue",
+          "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+        ]
+      },
+      {
+        "quantity": "D",
+        "unit": "USD",
+        "ordered_tags": [
+          "LongTermDebtAndFinanceLeaseObligations",
+          "LongTermDebt",
+          "LongTermDebtNoncurrent"
+        ]
+      },
+      {
+        "quantity": "Instant shares",
+        "unit": "shares",
+        "ordered_tags": [
+          "CommonStockSharesOutstanding",
+          "EntityCommonStockSharesOutstanding"
+        ]
+      },
+      {
+        "quantity": "Annual shares fallback",
+        "unit": "shares",
+        "ordered_tags": [
+          "WeightedAverageNumberOfDilutedSharesOutstanding",
+          "WeightedAverageNumberOfSharesOutstandingBasic"
+        ]
+      },
+      {
+        "quantity": "R",
+        "unit": "USD",
+        "ordered_tags": [
+          "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "Revenues",
+          "SalesRevenueNet"
+        ]
+      },
+      {
+        "quantity": "N",
+        "unit": "USD",
+        "ordered_tags": [
+          "NetIncomeLoss",
+          "ProfitLoss"
+        ]
+      }
+    ],
+    "shares": "Selected instant shares; if absent, latest annual diluted/basic weighted-average shares. As-filed shares multiplied by all split factors strictly after shares period end through recorded action cutoff.",
+    "safe_ratio": "NA if operand missing, abs(denominator)<=1e-12, or result non-finite; P/E additionally requires positive net income.",
+    "event_history": "SEC recent plus all archived filing tables; deduplicate tuple(accessionNumber,filingDate,form,primaryDocument); sort(filingDate,accessionNumber). Latest filingDate tie keeps first row.",
+    "event_labels": {
+      "1.01": "material agreement",
+      "1.02": "agreement termination",
+      "2.01": "acquisition or disposal",
+      "2.02": "earnings release",
+      "2.05": "restructuring costs",
+      "2.06": "material impairment",
+      "5.02": "director or officer change",
+      "7.01": "regulation FD disclosure",
+      "8.01": "other material event"
+    },
+    "risk_reference": {
+      "columns": [
+        "AAPL",
+        "MSFT",
+        "NVDA",
+        "AMZN",
+        "GOOGL",
+        "META",
+        "BRK-B",
+        "LLY",
+        "AVGO",
+        "JPM",
+        "TSLA",
+        "V",
+        "XOM",
+        "UNH",
+        "MA",
+        "COST",
+        "HD",
+        "PG",
+        "NFLX",
+        "JNJ",
+        "ABBV",
+        "BAC",
+        "KO",
+        "CRM",
+        "WMT",
+        "ORCL",
+        "CSCO",
+        "CVX",
+        "MRK",
+        "AMD",
+        "PEP",
+        "TMO",
+        "LIN",
+        "MCD",
+        "DIS",
+        "ABT",
+        "QCOM",
+        "IBM",
+        "ADBE",
+        "GE",
+        "CAT",
+        "NOW",
+        "AXP",
+        "TXN",
+        "VZ",
+        "PM",
+        "INTU",
+        "AMGN",
+        "ISRG",
+        "SPGI"
+      ],
+      "prices": "all 50 adjusted-close columns, <= snapshot, ffill, last 253 rows",
+      "returns": "pct_change(fill_method=None).dropna(); arithmetic row mean",
+      "sample_normalization": "ddof=1 for variance/covariance/std",
+      "low_or_nonfinite_beta_variance": "beta=0 when variance >1e-12 is false"
+    },
+    "macro": {
+      "tickers": {
+        "ten_year_yield": "^TNX",
+        "three_month_yield": "^IRX",
+        "vix": "^VIX",
+        "equity_market_return_3m": "SPY",
+        "high_yield_return_3m": "HYG"
+      },
+      "basis": "Yahoo quote close (not adjusted close)",
+      "staleness_cap": null
+    },
+    "rendering": {
+      "missing": "None/non-finite float -> NA",
+      "percent": "100*x formatted .2f",
+      "number": "x formatted .2f",
+      "integer": "str(int(round(float(x))))",
+      "text": "str(x).strip(); empty -> none",
+      "normalization_or_winsorization": "none"
+    },
+    "packet_order": "RESEARCH PACKET newline; ticker | asset headers; 14 asset rows; optional final market context | macro label=value pairs. Asset and macro subsequences preserve frozen field order. Shared uses registry order."
+  },
+  "prompt_template": "You are an institutional U.S. equity analyst. Construct a one-month active long/short book that seeks the best expected risk-adjusted return from the supplied evidence. Do not create different positions merely to appear diversified.\n\nYou receive one packet from a research workflow. Its field composition was fixed before model collection. Use only the supplied packet. Do not infer missing fields, import current facts, or use outside knowledge. The calendar date is intentionally hidden.\n\nCOMMON UNIVERSE\n{snapshot['common_core']}\n\nPERMITTED INFORMATION\n{packet_text}\n\nGive every listed ticker a signed conviction score from -1 to +1, with both positive and negative scores. Positive means long and negative means short. These are research scores, not final capital weights. The fixed evaluation pipeline subtracts their mean and rescales absolute exposure to 1, imposing the same dollar-neutral book construction on every response.\n\nReply with one JSON object and no markdown. The weights field must be an object containing every listed ticker exactly once. Use this schema: {\"weights\":{\"{example}\":0.10,\"...\":0.00},\"thesis\":\"at most 35 words\",\"primary_signals\":[\"signal 1\",\"signal 2\"]}}.",
+  "prompt_placeholders": {
+    "{snapshot['common_core']}": "fixed-width common_core string",
+    "{packet_text}": "rendered RESEARCH PACKET",
+    "{example}": "first ticker AAPL"
+  },
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "active_book",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "weights": {
+            "type": "object",
+            "properties": {
+              "AAPL": {
+                "type": "number"
+              },
+              "MSFT": {
+                "type": "number"
+              },
+              "NVDA": {
+                "type": "number"
+              },
+              "GOOGL": {
+                "type": "number"
+              },
+              "META": {
+                "type": "number"
+              },
+              "AMZN": {
+                "type": "number"
+              },
+              "TSLA": {
+                "type": "number"
+              },
+              "WMT": {
+                "type": "number"
+              },
+              "PG": {
+                "type": "number"
+              },
+              "JPM": {
+                "type": "number"
+              },
+              "BAC": {
+                "type": "number"
+              },
+              "XOM": {
+                "type": "number"
+              },
+              "JNJ": {
+                "type": "number"
+              },
+              "UNH": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "AAPL",
+              "MSFT",
+              "NVDA",
+              "GOOGL",
+              "META",
+              "AMZN",
+              "TSLA",
+              "WMT",
+              "PG",
+              "JPM",
+              "BAC",
+              "XOM",
+              "JNJ",
+              "UNH"
+            ],
+            "additionalProperties": false
+          },
+          "thesis": {
+            "type": "string"
+          },
+          "primary_signals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "weights",
+          "thesis",
+          "primary_signals"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response_format_sha256": "2a710fc200d028a7f3cd3a01a8a9372ed980bf15db13489882d2af416671f97e",
+  "request": {
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "temperature": 0.7,
+    "max_tokens": 1400,
+    "messages": [
+      {
+        "role": "user",
+        "content": "<expanded prompt_template>"
+      }
+    ],
+    "provider": {
+      "require_parameters": true
+    },
+    "seed": "Included only for catalog seed support. 2026072100 + int(SHA256(date|architecture|team_size|packet_index|vendor)[:7],16) % 100000000 + applicable recovery offset",
+    "curve_seed_recovery_offsets": [
+      {
+        "date": "2023-10-31",
+        "architecture": "mixed_audited",
+        "team_size": 5,
+        "packet_index": 2,
+        "vendor": "google",
+        "offset": 1
+      },
+      {
+        "date": "2024-03-31",
+        "architecture": "mixed_audited",
+        "team_size": 5,
+        "packet_index": 2,
+        "vendor": "google",
+        "offset": 1
+      },
+      {
+        "date": "2024-08-31",
+        "architecture": "mixed_audited",
+        "team_size": 5,
+        "packet_index": 3,
+        "vendor": "google",
+        "offset": 1
+      },
+      {
+        "date": "2024-09-30",
+        "architecture": "coherent_audited",
+        "team_size": 3,
+        "packet_index": 2,
+        "vendor": "google",
+        "offset": 1
+      },
+      {
+        "date": "2024-11-30",
+        "architecture": "coherent_audited",
+        "team_size": 3,
+        "packet_index": 2,
+        "vendor": "google",
+        "offset": 1
+      }
+    ],
+    "maximum_attempts_per_job": 5
+  },
+  "protocol_ids": {
+    "prompt_spec_version": "information-capacity-neutral-packet-v3-unified-object",
+    "request_spec_version": "openrouter-json-schema-audited-v4-portable-object",
+    "integrity_correction_id": "2026-07-21-sec-history-unified-prompt-v1"
+  },
+  "historical_prompt_typo": "The literal textual example ends with ]}}. (one excess closing brace); retained verbatim. The actual response_format schema is well-formed and distinct.",
+  "runtime_constraint_boundary": "Schema requires all ticker-number properties and thesis/primary_signals; it has no score bounds, thesis word count, or signal count. Collector checks finite complete nonconstant scores and abs(score)<=1+1e-12; mixed signs and 35-word thesis are prompt-only constraints."
+}

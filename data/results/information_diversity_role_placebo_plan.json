@@ -1,0 +1,71 @@
+{
+  "schema_version": "information-diversity-role-placebo-plan-v1",
+  "analysis_status": "post-hoc mechanism validation",
+  "frozen_before_collection": true,
+  "frozen_before_role_placebo_collection": true,
+  "prompt_spec_version": "information-diversity-role-placebo-v1",
+  "n_dates": 12,
+  "dates": [
+    "2023-08-31",
+    "2023-09-30",
+    "2023-10-31",
+    "2023-11-30",
+    "2024-02-29",
+    "2024-04-30",
+    "2024-08-31",
+    "2024-11-30",
+    "2025-04-30",
+    "2025-07-31",
+    "2025-11-30",
+    "2026-01-31"
+  ],
+  "n_models": 7,
+  "models": [
+    {
+      "vendor": "openai",
+      "model": "openai/gpt-4o"
+    },
+    {
+      "vendor": "google",
+      "model": "google/gemini-2.5-flash"
+    },
+    {
+      "vendor": "meta",
+      "model": "meta-llama/llama-3.1-70b-instruct"
+    },
+    {
+      "vendor": "alibaba",
+      "model": "qwen/qwen3-235b-a22b-2507"
+    },
+    {
+      "vendor": "mistral",
+      "model": "mistralai/mistral-large"
+    },
+    {
+      "vendor": "deepseek",
+      "model": "deepseek/deepseek-chat"
+    },
+    {
+      "vendor": "anthropic",
+      "model": "anthropic/claude-sonnet-4.5"
+    }
+  ],
+  "roles": [
+    "market",
+    "fundamentals",
+    "events",
+    "risk"
+  ],
+  "n_calls": 336,
+  "temperature": 0.7,
+  "matched_roster_size": 4,
+  "complete_symbol_rows_required": true,
+  "placebo_definition": "four role-labeled calls from one model; every call receives the identical full packet",
+  "primary_comparison": "four restricted-information specialists versus four role-labeled full-packet agents",
+  "analysis_unit": "date; model families are averaged within date before paired inference",
+  "pit_correction": {
+    "id": "2026-07-20-price-share-basis-v2",
+    "reason": "align dividend-unadjusted split-adjusted closes with split-adjusted as-filed SEC shares and select the newest eligible US-GAAP/DEI share fact",
+    "scope": "input correction only; dates, fields, models, prompts, and assignments unchanged"
+  }
+}

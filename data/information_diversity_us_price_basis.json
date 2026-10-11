@@ -1,0 +1,67 @@
+{
+  "schema_version": "information-diversity-price-basis-v1",
+  "return_price_basis": "repository adjusted close; used only for returns, volatility, drawdown, and beta",
+  "valuation_price_basis": "Yahoo quote close; dividend-unadjusted and split-adjusted to the recorded corporate-action cutoff",
+  "share_basis": "as-filed SEC shares multiplied by splits after the share measurement date",
+  "corporate_action_cutoff": "2026-07-20",
+  "sources": {
+    "AAPL": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "eb840f2bba89da1b098aec18034489f0b19ea90074b5c0da184a2998102f4d3f"
+    },
+    "MSFT": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "57685e219c30193c4941ffd476ef0c0e8271e0c5c0db39b18d509fbac675349e"
+    },
+    "NVDA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "82f02e7b718fc64d92dbdd09287aa9301a3816cb6c2d62e74640561a8fc72d6b"
+    },
+    "GOOGL": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "29c00bb8927fb69378d53f239562a815d674c9db537fa12d7f9eb0d429cf313d"
+    },
+    "META": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "036a40af4f1a74cf857c89cb1ec329183d1e5092cb9418d60bb85746bf82c90d"
+    },
+    "AMZN": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "7a35be0c8be3a73308f8d5dc1ad5be10330ce9b64236277b1353791bfb2ab932"
+    },
+    "TSLA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "ca93dd89cb193e58209e60613e408b1d2669401519b6126bd38e0c8bc9e77eff"
+    },
+    "WMT": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "54931d8b850a48f81f16328355ffa6387fef61234859459bd1992ab1cb38faeb"
+    },
+    "PG": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/PG?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "415922e3dfbef2361d4fbfb8f8ddfa93bba67cbefb73b11868adf010ae3f13d3"
+    },
+    "JPM": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/JPM?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "3fa749505323fcd4170423341dd2070fcaf128c892c5728023c6ec4cba49d459"
+    },
+    "BAC": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAC?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "4dce4bedb935ea554b61412194b5eb9cd07c74677159e48f497e5f1c8b5d15ba"
+    },
+    "XOM": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XOM?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "b1524930549ade34124d5860680ecd67e1d8260c9c7580b51bdbc8caf73d3649"
+    },
+    "JNJ": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/JNJ?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "1cd53c0f9e4059e2fdd8ad4b8d0274bcc7bf4547a246f7be6712977380ec2587"
+    },
+    "UNH": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/UNH?period1=1640995200&period2=1784592000&interval=1d&events=div%2Csplits",
+      "sha256": "67ac2742e1a01c930da01e2f2325fd4a2f3ad94f5601ff4043238fe1e0cfbde2"
+    }
+  },
+  "raw_close_sha256": "441c28c31a79d3c0456b620c595dfe1b1d3bd4986f35b9cb99f7b5af1dd78707",
+  "split_sha256": "2f8c40bd7a811b7cb90881564086c13d4b4212c3579fb2bb6de318580837e53b"
+}

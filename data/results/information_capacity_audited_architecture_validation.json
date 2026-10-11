@@ -1,0 +1,24 @@
+{
+  "schema_version": "information-capacity-audited-architecture-validation-v1",
+  "passed": true,
+  "failures": [],
+  "checks": {
+    "rows_checked": 3570,
+    "generation_ids_unique": 3570,
+    "frozen_manifest_rows": 3332,
+    "dates": 34,
+    "designs": [
+      "coherent",
+      "mixed",
+      "shared"
+    ],
+    "retry_rows": 4,
+    "ticker_mask_pairs": 217,
+    "short_packet_broadcast_checked": true,
+    "explicit_narrative_exclusion_checked": true,
+    "complement_dates_checked": 22,
+    "post_latest_route_registration_dates_checked": 8,
+    "within_route_split_checked": true,
+    "mixed_partition_candidates_checked": 100000
+  }
+}

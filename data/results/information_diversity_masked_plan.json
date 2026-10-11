@@ -1,0 +1,52 @@
+{
+  "schema_version": "information-diversity-masked-plan-v1",
+  "frozen_before_collection": true,
+  "frozen_before_masked_collection": true,
+  "prompt_spec_version": "information-diversity-identity-mask-v1",
+  "n_calls": 420,
+  "n_dates": 12,
+  "models": [
+    {
+      "vendor": "openai",
+      "model": "openai/gpt-4o"
+    },
+    {
+      "vendor": "google",
+      "model": "google/gemini-2.5-flash"
+    },
+    {
+      "vendor": "meta",
+      "model": "meta-llama/llama-3.1-70b-instruct"
+    },
+    {
+      "vendor": "alibaba",
+      "model": "qwen/qwen3-235b-a22b-2507"
+    },
+    {
+      "vendor": "mistral",
+      "model": "mistralai/mistral-large"
+    },
+    {
+      "vendor": "deepseek",
+      "model": "deepseek/deepseek-chat"
+    },
+    {
+      "vendor": "anthropic",
+      "model": "anthropic/claude-sonnet-4.5"
+    }
+  ],
+  "conditions": [
+    "rich",
+    "market",
+    "fundamentals",
+    "events",
+    "risk"
+  ],
+  "masking": "company and ticker identity removed; sector and packet values retained",
+  "complete_symbol_rows_required": true,
+  "pit_correction": {
+    "id": "2026-07-20-price-share-basis-v2",
+    "reason": "align dividend-unadjusted split-adjusted closes with split-adjusted as-filed SEC shares and select the newest eligible US-GAAP/DEI share fact",
+    "scope": "input correction only; dates, fields, models, prompts, and assignments unchanged"
+  }
+}
