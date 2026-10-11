@@ -57,15 +57,22 @@ python3 src/cohort_information_capacity_crossmarket_analysis.py --market europe
 python3 src/cohort_information_capacity_crossmarket_analysis.py --market crypto
 python3 src/cohort_information_capacity_audited_longonly_analysis.py   # long-only sensitivity (Table 4, Figure 5)
 python3 src/export_information_capacity_prompt_examples.py             # rendered prompt examples
-python3 src/icaif_v4_assets.py                                         # paper/tables/*.tex macros and paper/fig_*.pdf
+python3 src/icaif_v4_assets.py                                         # table fragments, number macros, figures
 ```
+
+Generators write to `submissions/icaif-2026-v4-information-architecture/` (tables, `numbers.tex`, figures) and
+`submissions/icaif-2026-v7-camera-ready-review/tables/` (assignment-sensitivity tables); the copies under `paper/`
+are the files the camera-ready PDF was built from.
 
 Verified before publishing (2026-10-11, clean `git clone`, no `OPENROUTER_API_KEY` in the environment): every
 command above exits 0; the regenerated `data/results/*_results.json`, `*_summary.csv`,
 `information_capacity_crossmarket_combined.json`, and `information_capacity_assignment_dispersion_results.json`
 are numerically identical to the shipped files (differences limited to run timestamps and the provenance hashes
-that embed them); `paper/tables/numbers.tex`, `paper/tables/assignment_dispersion_numbers.tex`, and all five
-`paper/fig_*.pdf` are byte-identical to the shipped files. Total wall time is roughly 20 minutes on a laptop.
+that embed them); all seven regenerated table fragments (`numbers.tex`, `protocol.tex`, `primary_results.tex`,
+`market_results.tex`, `longonly_results.tex`, `assignment_dispersion.tex`, `assignment_dispersion_numbers.tex`)
+are byte-identical to `paper/tables/`; the five regenerated figures carry identical labels and values to
+`paper/fig_*.pdf` (sub-pixel canvas differences arise from the local matplotlib/font build). Total wall time is
+roughly 20 minutes on a laptop.
 
 To intentionally refresh the external LLM caches, set `OPENROUTER_API_KEY` in the shell and run the relevant
 collector (`src/cohort_information_capacity_experiment.py`, `..._crossmarket_experiment.py`, `..._integrity.py`).

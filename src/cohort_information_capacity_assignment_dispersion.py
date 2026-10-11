@@ -183,7 +183,7 @@ def _write_tables(result: dict) -> None:
         numbers = {
             "MeanNeff": f"{summary['mean_N_eff_across_dates']:.2f}",
             "MeanGap": f"{summary['mean_gap_across_dates']:+.2f}",
-            "AbovePercent": f"{100 * summary['fraction_above_shared']['mean_across_dates']:.3f}",
+            "AbovePercent": f"{100 * summary['fraction_above_shared']['mean_across_dates']:.1f}",
             "MinAbovePercent": f"{100 * summary['fraction_above_shared']['min_across_dates']:.2f}",
             "MinGap": f"{summary['worst_dates_by_minimum_gap'][0]['min_gap']:+.3f}",
             "WorstDate": summary["worst_dates_by_minimum_gap"][0]["date"],

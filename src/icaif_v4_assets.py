@@ -47,6 +47,8 @@ def _latex_fragment(gt: GT) -> str:
         r"N\_eff": r"$N_{\mathrm{eff}}$",
         "Overlap O": r"Overlap $O$",
         "Order Q": r"Order $Q$",
+        "Concentration Q": r"Concentration $Q$",
+        "External gross (M)": r"Proposed external gross (\$M)",
         "중첩 O": r"중첩 $O$",
         "주문 Q": r"주문 $Q$",
         "{[}": "[",
@@ -549,7 +551,7 @@ def primary_results_table(
             lambda d: f"{value(d, 'same_side_overlap'):.3f}",
         ),
         (
-            "1억 달러 중 외부 주문 (낮을수록 좋음)" if ko else "External order of $100M (lower)",
+            "1억 달러 중 외부 주문 (낮을수록 좋음)" if ko else "Proposed external gross from $100M (lower)",
             lambda d: f"${100 * value(d, 'surviving_gross'):.1f}M",
         ),
         (
@@ -574,7 +576,20 @@ def primary_results_table(
         "coherent": "repeat_coherent_split",
     }
     within_route = endpoint["within_route_split_diagnostic"]
+    complement_rows = [
+        row for row in primary["per_date"]
+        if row["sample"] == "complement" and row["team_size"] == 7
+    ]
+    complement_levels = {
+        design: sum(row[design]["N_eff"] for row in complement_rows) / len(complement_rows)
+        for design in DESIGNS
+    }
     rows.extend([
+        [
+            f"보완 {len(complement_rows)}개 날짜: 유효 북 수" if ko else
+            f"Complementary {len(complement_rows)} dates: effective books",
+            *[f"{complement_levels[design]:.2f}" for design in DESIGNS],
+        ],
         [
             "단일 경로 내 분할 검산" if ko else "Within-route split check",
             "N/A",
@@ -628,7 +643,7 @@ def market_results_table(results: dict[str, dict], ko: bool) -> GT:
     labels = (
         ("시장", "중첩률 O", "$100M 중 외부 주문", "집중도 Q")
         if ko else
-        ("Market", "Overlap O", "External order of $100M", "Concentration Q")
+        ("Market", "Overlap O", "External gross (M)", "Concentration Q")
     )
     df = pd.DataFrame(rows, columns=["market", "overlap", "external", "order"])
     return (
