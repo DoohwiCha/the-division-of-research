@@ -93,6 +93,11 @@ model weights, and serving providers can vary. Never commit an API key or `.env`
   recovery offsets.
 - Nothing in this repository is investment advice. See the Disclaimer in the paper.
 
+## License
+
+- Code (`src/`): [MIT License](LICENSE).
+- Data, results, figures, the reproducibility record, and the paper PDF (`data/`, `reproducibility/`, `paper/`, `The_Division_of_Research_ICAIF26.pdf`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-DATA). Please cite the paper when reusing them.
+
 ## Citation
 
 ```bibtex
