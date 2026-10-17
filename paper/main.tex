@@ -1,20 +1,18 @@
-
 %% Final derivation- and positioning-enhanced information-access paper for ICAIF 2026.
 %% Compile: latexmk -pdf -interaction=nonstopmode main.tex
 \documentclass[sigconf]{acmart}
 
 \settopmatter{authorsperrow=4}
 \AtBeginDocument{\providecommand\BibTeX{{\normalfont B\kern-0.5em{\scshape i\kern-0.25em b\kern-0.8em\TeX}}}}
-% Team camera-ready license setting; ACM rights completion remains pending.
+% ACM publication metadata (CC BY-NC-ND).
 \setcopyright{cc}
-\setcctype{by}
-\acmConference[ICAIF '26]{7th ACM International Conference on AI in Finance}{November 14--17, 2026}{Milan, Italy}
-\acmBooktitle{7th ACM International Conference on AI in Finance (ICAIF '26), November 14--17, 2026, Milan, Italy}
+\setcctype{by-nc-nd}
+\acmConference[ICAIF '26]{7th ACM International Conference on AI in Finance}{November 14--17, 2026}{Milan, AA, Italy}
+\acmBooktitle{7th ACM International Conference on AI in Finance (ICAIF '26), November 14--17, 2026, Milan, AA, Italy}
 \acmYear{2026}
 \copyrightyear{2026}
-% TODO(camera-ready): fill \acmDOI and \acmISBN after the ACM rights form is completed.
-\acmDOI{}
-\acmISBN{}
+\acmDOI{10.1145/3858063.3858812}
+\acmISBN{979-8-4007-3087-0/2026/11}
 
 \usepackage{amsmath}
 \usepackage{array}
@@ -50,42 +48,48 @@
 \orcid{0009-0000-2513-6965}
 \affiliation{%
   \institution{Mirae Asset Securities}
-  \country{South Korea}}
+  \city{Seoul}
+  \country{Republic of Korea}}
 \email{doohwicha@gmail.com}
 
 \author{Minjae Lee}
 \orcid{0000-0002-8937-9605}
 \affiliation{%
   \institution{Independent Researcher}
-  \country{South Korea}}
+  \city{Seoul}
+  \country{Republic of Korea}}
 \email{abraxasnz13@gmail.com}
 
 \author{Minsuk Sung}
 \orcid{0009-0007-2282-6873}
 \affiliation{%
   \institution{Korea University}
-  \country{South Korea}}
+  \city{Seoul}
+  \country{Republic of Korea}}
 \email{minsuksung@korea.ac.kr}
 
 \author{Juyeong Lee}
 \orcid{0000-0002-4619-925X}
 \affiliation{%
   \institution{EY Consulting}
-  \country{South Korea}}
+  \city{Seoul}
+  \country{Republic of Korea}}
 \email{juyeong.lee0839@gmail.com}
 
 \author{Donghwa Seo}
 \orcid{0009-0003-5718-1535}
 \affiliation{%
   \institution{DS Investment \& Securities}
-  \country{South Korea}}
-\email{properitas95@gmail.com}
+  \city{Seoul}
+  \country{Republic of Korea}}
+\email{properitas95@kaist.ac.kr}
 
 \author{Seunghan Son}
 \orcid{0009-0000-2902-9999}
 \affiliation{%
   \institution{Independent Researcher}
-  \country{South Korea}}
+  \city{Seoul}
+  \country{Republic of Korea}}
 \email{qzpm5n@g.skku.edu}
 
 \author{Yoontae Hwang}
@@ -94,8 +98,8 @@
 \affiliation{%
   \institution{Pusan National University}
   \city{Busan}
-  \country{South Korea}}
-\email{Yoontae.hwang@pusan.ac.kr}
+  \country{Republic of Korea}}
+\email{yoontae.hwang@pusan.ac.kr}
 
 \renewcommand{\shortauthors}{Cha et al.}
 
@@ -129,7 +133,7 @@ LLMs make analyst-like seats inexpensive and easy to scale. A desk can combine p
 
 Relevant literatures study financial LLM decision quality, diversity and aggregation in agent teams, and crowding among funded portfolios. We ask a different, intermediate question: how does the allocation of a fixed evidence set relate to the covariance structure of pre-allocation books? The same team-level information can produce either distinct sleeves or repeated versions of one trade, depending on who sees what.
 
-Because an LLM team is defined jointly by its model roster and information-access matrix, access architecture is a portfolio-design variable. Two teams can use the same models and the same evidence union yet possess different independent capacity because the evidence is distributed differently. We therefore measure seat-level books before deliberation, aggregation, or capital sizing. This point of measurement reveals whether nominally separate agents provide distinct active-risk directions or repeatedly load the same trade.
+Because an LLM team is defined jointly by its model roster and information-access matrix, access architecture is a portfolio-design variable. Two teams can use the same models and the same evidence union yet possess different independent capacity because the evidence is distributed differently. We therefore measure seat-level books before deliberation, aggregation, or capital sizing. This reveals whether nominally separate agents provide distinct active-risk directions or repeatedly load the same trade.
 
 We change access to 32 point-in-time fields while holding the requested model-route roster, assets, dates, mandate, prompt, parser, output rule, and team-level information fixed. Shared seats read the complete packet; split seats receive each field once in mixed packets or coherent domains. The shared-versus-split comparison is a bundled treatment because packet scope and assignment structure change together; it does not identify a single mechanism.
 
@@ -152,7 +156,7 @@ Specifically, our contributions are the following:
 \end{itemize}
 
 \section{Related Work}
-Our study connects financial LLM decisions, diversity in model teams, and dependence among funded portfolios. We focus on evidence organization before research outputs are aggregated or capitalized.
+Our study connects financial LLM decisions, diversity in model teams, and dependence among funded portfolios. We focus on evidence organization before outputs are aggregated or capitalized.
 
 \subsection{Financial LLM decisions and agent teams}
 Financial LLM research shows that model outputs can contain return-relevant information while also inheriting systematic confirmation and portfolio biases~\cite{lopezlira2023chatgpt,lee2025yourai,winder2025biasedechoes}. Related systems translate text into allocations, construct multi-model portfolios from shared public information, or use synthetic personas to produce heterogeneous views~\cite{oh2025democratizing,iadisernia2025prompting}. Multi-agent trading frameworks assign technical, fundamental, news, and risk functions, while market simulations evaluate returns and aggregate dynamics~\cite{xiao2024tradingagents,miyazaki2026expertteams,wang2026macroeconomists,lopezlira2025market}.
@@ -171,7 +175,7 @@ We locate dependence at the mapping from an information-access matrix to propose
 
 \section{Information-Access Architecture}\label{sec:architecture}
 \subsection{Problem statement}
-We consider a team of $K$ research seats that allocates across $D$ assets at decision date $t$. The team observes a point-in-time evidence vector $x_t$ containing $F$ fields. Seat $i$ uses model route $m_i$, a common prompt $P$, and an access row $A_i\in\{0,1\}^{F}$. The complete architecture is the binary matrix $A\in\{0,1\}^{K\times F}$. Each model returns asset scores $s_{i,t}$, which are converted into a unit-gross, dollar-neutral active book:
+We consider a team of $K$ research seats that allocates across $D$ assets at decision date $t$. The team observes a point-in-time evidence vector $x_t$ containing $F$ fields. Seat $i$ uses model route $m_i$, a common prompt $P$, and an access row $A_i\in\{0,1\}^{F}$. The complete architecture is the binary matrix $A\in\{0,1\}^{K\times F}$. Each model returns asset scores $s_{i,t}$, converted into a unit-gross, dollar-neutral active book:
 \begin{align}
 s_{i,t}&=\mathcal{M}_{m_i}(P,x_t\odot A_i),\\
 w_{i,t}&=\frac{s_{i,t}-\bar{s}_{i,t}\mathbf{1}}
@@ -292,7 +296,6 @@ The pooled U.S. collection contains 13,090 archived books. Deterministic scripts
 
 \paragraph{Executed-protocol record.}
 The accompanying reproducibility record supplies requested and canonical route identifiers, observed providers, both frozen $7\times32$ access matrices, all 32 field definitions and transformations, and the full executed prompt and application programming interface (API) output schema. Machine-readable protocol, schema, template, and rendered examples are available in the public repository. The record distinguishes API-schema constraints from collector checks and prompt-only instructions.
-\FloatBarrier
 
 \subsection{Robustness and transfer panels}\label{sec:transferprotocol}
 The repeatability panel probes whether the access comparisons persist across stochastic generation. Six frozen dates span three return and two volatility regimes. Seven routes are evaluated under shared-full, shared-small, mixed, and coherent conditions at temperatures 0.0 and 0.7, with three calls per route-packet cell. Shared-small broadcasts one short packet, and a common complete-block rule retains 35 of 36 replicate blocks. This six-date repeat check is distinct from the 34-date broadcast control.
@@ -329,9 +332,8 @@ The coherent curve rises faster at small and intermediate team sizes and ends at
 \tabnote{The first five rows are 34-date means at $K=7$. The complementary row uses 22 dates not used in development and is non-confirmatory. The within-route row has no matched shared baseline; the repeat row averages three $T=0.7$ calls over six dates, and the risk row uses trailing 252-day returns. Proposed external gross is $100G$ million under a \$100 million normalization, not measured deployable capacity.}
 \end{table}
 
-\FloatBarrier
 \subsection{Within-route diagnostic}
-Seven mixed packets through one fixed route yield \WithinRouteMixedNeff\ effective books, versus \MixedKSeven\ across seven routes; coherent counts are \WithinRouteCoherentNeff\ and \CoherentKSeven. These are descriptive breadth levels for split access. Without a matched within-route shared baseline, the diagnostic identifies neither a within-route access effect nor route diversity's contribution.
+Seven mixed packets through one fixed route yield \WithinRouteMixedNeff\ effective books, versus \MixedKSeven\ across seven routes; coherent counts are \WithinRouteCoherentNeff\ and \CoherentKSeven. These are descriptive breadth levels for split access. Without a matched within-route shared baseline, it identifies neither a within-route access effect nor route diversity's contribution.
 
 \subsection{Date and assignment sensitivity}
 For the seven-route teams at $K=7$, mixed raises assignment-averaged breadth from \SharedKSeven\ to \MixedKSeven, a paired gain of \MixedSharedNeff\ (95\% interval: \MixedSharedNeffCI), positive on all 34 dates. Figure~\ref{fig:time} compares these same-date means; it does not assert that every individual assignment outperforms shared access.
@@ -351,12 +353,11 @@ Across all 5,040 route-to-packet bijections within each date, mixed access has d
 
 Three secondary or exploratory checks preserve the reported access comparisons. First, the 34-date broadcast control yields \ShortMixedBroadcastNeff\ to \ShortCoherentBroadcastNeff\ effective books across packet sets, versus \MixedKSeven\ and \CoherentKSeven\ when packets differ. Second, in six-date repeats, shared yields \RepeatSharedTZero\ to \RepeatSharedTSeven\ and mixed \RepeatMixedTZero\ to \RepeatMixedTSeven, with positive paired gaps on all dates. The persistent shared-small condition averages \RepeatSmallTZero\ at 0.0 and \RepeatSmallTSeven\ at 0.7, reaches \RepeatSmallException\ on one date, and mixed remains \RepeatMixedExceptionRange\ there. Third, risk-space counts are \RiskSharedNeff, \RiskMixedNeff, and \RiskCoherentNeff\ against \RiskNullNeff; mixed reaches \RiskMixedNullShare, exceeds shared on \RiskMixedPositiveDates\ of 34 dates, and has a gain of \RiskMixedSharedNeff\ (\RiskMixedSharedNeffCI). The ordering also survives 25\% and 50\% shrinkage.
 
-\FloatBarrier
 \subsection{Operational consequences and cross-market transfer}
 Effective-book count records independent directions, while order diagnostics distinguish whether those directions coincide in proposed demand. Relative to shared access, mixed lowers same-side overlap from \SharedOverlap\ to \MixedOverlap, proposed external gross from \$79.0 million to \$45.7 million for \$100 million of equal seat budgets, order concentration from \SharedOrder\ to \MixedOrder, and common-book correlation from \SharedCommonBeta\ to \MixedCommonBeta.
 
 \paragraph{Prompt usage and request cost.}
-Mixed access uses \MixedPromptTokenReduction\ fewer prompt tokens (team means of 18{,}480 versus 5{,}944) and \MixedReportedCostReduction\ less model-reported request cost than shared access. These are archived inference-usage and reported-cost measures, not evidence of lower end-to-end operating cost, latency, or improved investment quality.
+Mixed access uses \MixedPromptTokenReduction\ fewer prompt tokens (team means of 18{,}480 versus 5{,}944) and \MixedReportedCostReduction\ less model-reported request cost than shared access. These are archived usage and reported-cost measures, not evidence of lower end-to-end operating cost, latency, or improved investment quality.
 
 For coherent minus mixed, the difference in overlap is $\CoherentMixedOverlap$ ($\CoherentMixedOverlapCI$), the difference in proposed external gross is $\CoherentMixedGross$ ($\CoherentMixedGrossCI$), and the difference in order concentration is $\CoherentMixedOrder$ ($\CoherentMixedOrderCI$). These exploratory, pointwise intervals exclude zero without multiplicity correction; they describe the pooled-panel tendency toward less same-side demand under coherent access, not a universally superior design.
 
@@ -368,9 +369,9 @@ For coherent minus mixed, the difference in overlap is $\CoherentMixedOverlap$ (
 \label{fig:crossmarket}
 \end{figure}
 
-In harmonized U.S. equities, European equities, and crypto perpetuals, both splits exceed shared, and coherent exceeds mixed, reversing the pooled U.S. order. Europe moves from \CrossEUSharedNeff\ to \CrossEUCoherentNeff, and crypto from \CrossCryptoSharedNeff\ to \CrossCryptoCoherentNeff. The secondary mixed-minus-shared intervals exclude zero in all markets under the convention above. Low-retry three-route gains are \CrossUSStableMixedGain, \CrossEUStableMixedGain, and \CrossCryptoStableMixedGain; all-route $K=3$ gains are \CrossUSKThreeMixedGain, \CrossEUKThreeMixedGain, and \CrossCryptoKThreeMixedGain. These estimates track the full roster despite retry rates \CrossUSRetryRate, \CrossEURetryRate, and \CrossCryptoRetryRate. They describe harmonized-protocol transfer, not a mechanism or quality attribution.
+In harmonized U.S. equities, European equities, and crypto perpetuals, both splits exceed shared, and coherent exceeds mixed, reversing the pooled U.S. order. Europe moves from \CrossEUSharedNeff\ to \CrossEUCoherentNeff, and crypto from \CrossCryptoSharedNeff\ to \CrossCryptoCoherentNeff. The secondary mixed-minus-shared intervals exclude zero in all markets under the convention above. Low-retry three-route gains are \CrossUSStableMixedGain, \CrossEUStableMixedGain, and \CrossCryptoStableMixedGain; all-route $K=3$ gains are \CrossUSKThreeMixedGain, \CrossEUKThreeMixedGain, and \CrossCryptoKThreeMixedGain. These track the full roster despite retry rates \CrossUSRetryRate, \CrossEURetryRate, and \CrossCryptoRetryRate. They describe harmonized-protocol transfer, not a mechanism or quality attribution.
 
-\begin{table}[H]
+\begin{table}[!t]
 \caption{Coherent access reduces overlap in proposed orders across all three markets.}
 \label{tab:markets}
 \centering
@@ -380,7 +381,6 @@ In harmonized U.S. equities, European equities, and crypto perpetuals, both spli
 
 For \$100 million of equal seat budgets, coherent lowers proposed external gross from \$84.5 million to \$45.0 million in the United States, \$89.8 million to \$42.2 million in Europe, and \$84.9 million to \$49.8 million in crypto. In each harmonized panel, lower demand in the proposed books accompanies greater measured breadth than under shared access.
 
-\FloatBarrier
 \subsection{Long-only mandate transfer}\label{sec:longonly}
 We report a long-only sensitivity under a fully invested institutional mandate. Shared access remains the experimental control, while equal weight provides a passive within-universe reference.
 
@@ -393,7 +393,7 @@ We report a long-only sensitivity under a fully invested institutional mandate. 
 \label{fig:allocation-decomposition}
 \end{figure*}
 
-\begin{table}[H]
+\begin{table}[!t]
 \caption{Descriptive long-only gross-return sensitivity.}
 \label{tab:longonly}
 \centering
@@ -426,7 +426,6 @@ For split architecture $p$ relative to shared access $s$, the fraction of the te
 \end{equation}
 Mean pairwise seat-return correlation falls from \AllocationSharedCorrelation\ under shared access to \AllocationMixedCorrelation\ under mixed and \AllocationCoherentCorrelation\ under coherent access. Team variance falls by \AllocationMixedVarianceReduction\ and \AllocationCoherentVarianceReduction. Equation~\eqref{eq:covariance-share} reports \AllocationMixedCovarianceShare\ and \AllocationCoherentCovarianceShare\ as the shares of those observed declines attributable to lower cross-seat covariance. Mixed delivers the larger observed covariance reduction, while coherent delivers lower position overlap, common-book correlation, and order concentration.
 
-\FloatBarrier
 \subsection{Discussion}
 \paragraph{What makes information access consequential?}
 The bundled comparisons document three aspects of portfolio organization; they do not isolate the mechanism behind each difference.

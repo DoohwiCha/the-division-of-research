@@ -96,7 +96,8 @@ model weights, and serving providers can vary. Never commit an API key or `.env`
 ## License
 
 - Code (`src/`): [MIT License](LICENSE).
-- Data, results, figures, the reproducibility record, and the paper PDF (`data/`, `reproducibility/`, `paper/`, `The_Division_of_Research_ICAIF26.pdf`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-DATA). Please cite the paper when reusing them.
+- Data, results, and the reproducibility record (`data/`, `reproducibility/`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-DATA). Please cite the paper when reusing them.
+- The paper (`The_Division_of_Research_ICAIF26.pdf` and the LaTeX source, tables, and figures in `paper/`): published by ACM under [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](LICENSE-PAPER). The ACM template files `paper/acmart.cls` and `paper/ACM-Reference-Format.bst` keep their own licenses.
 
 ## Citation
 
@@ -107,6 +108,7 @@ model weights, and serving providers can vary. Never commit an API key or `.env`
   booktitle = {7th ACM International Conference on AI in Finance (ICAIF '26)},
   year      = {2026},
   address   = {Milan, Italy},
-  publisher = {ACM}
+  publisher = {ACM},
+  doi       = {10.1145/3858063.3858812}
 }
 ```
